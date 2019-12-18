@@ -1,0 +1,43 @@
+[filter "lfs"]
+process = git-lfs filter-process
+required = true
+clean = git-lfs clean -- %f
+smudge = git-lfs smudge -- %f
+[user]
+	name = Felix
+	email = felix@intelllex.com
+# signingkey = 0ECD022F
+[alias]
+co = checkout
+br = branch
+ci = commit
+recommit = !"git add --all; git commit --amend --no-edit"
+ver = describe --abbrev=0 --tags
+st = status
+mer = merge
+merc = merge --no-commit --no-ff
+reset-remote = !"git reset --hard $(git rev-parse --abbrev-ref '@{upstream}')"
+reset-head = reset --hard HEAD
+reset-back = reset --hard HEAD~1
+abort = merge --abort
+remote-tag = ls-remote --tags origin
+arch = "!f() { git checkout dev; git tag archive/$(date +%F)/$1 $1; git push origin archive/$(date +%F)/$1; git branch -D $1; git push origin :$1; }; f"
+lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+lg = !"git lg1"
+prune-local = !"git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}' | xargs git branch -d"
+do-not-track = !"git update-index --assume-unchanged $1; git rm -f $1"
+local-history= !"git for-each-ref --sort=-committerdate refs/heads/ --color --format='%(color:white)%(committerdate:short)%(color:reset) %(color:bold blue)%(refname:short)%0a%(color:reset)  %(color:bold red)%(authorname):%(color:reset) %(subject)%0a'"
+remote-history= !"git for-each-ref --sort=-committerdate refs/remotes/ --color --format='%(color:white)%(committerdate:short)%(color:reset) %(color:bold blue)%(refname:short)%0a%(color:reset)  %(color:bold red)%(authorname):%(color:reset) %(subject)%0a'"
+[core]
+excludesfile = /Users/felixtioh/.gitignore_global
+[commit]
+gpgsign = false
+[url "git@gitlab.com:"]
+	insteadOf = https://gitlab.com/
+[sendemail]
+	smtpencryption = tls
+  # smtpserver = smtp.office365.com
+  smtpserver = smtp.gmail.com
+  smtpuser = felix@intelllex.com
+	smtpserverport = 587
