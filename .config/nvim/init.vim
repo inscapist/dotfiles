@@ -4,8 +4,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
@@ -49,8 +48,6 @@ set nocursorcolumn              " Do not highlight column (speeds up highlightin
 set nocursorline                " Do not highlight cursor (speeds up highlighting)
 set lazyredraw                  " Wait to redraw
 
-let g:NERDTreeWinPos = "right"
-
 " Enable to copy to clipboard for operations like yank, delete, change and put
 " http://stackoverflow.com/questions/20186975/vim-mac-how-to-copy-to-clipboard-without-pbcopy
 if has('unnamedplus')
@@ -58,11 +55,13 @@ if has('unnamedplus')
   set clipboard^=unnamedplus
 endif
 
-"" GruvBox
+"" UI - Gruvbox
+set background=dark
+set termguicolors
+let g:NERDTreeWinPos = "right"
 let g:gruvbox_contrast_dark='medium'
 let g:gruvbox_italic=1
 colorscheme gruvbox
-set background=dark
 
 let g:lightline = {
       \ 'colorscheme': 'seoul256',
@@ -79,4 +78,4 @@ let g:lightline = {
 source ~/.config/nvim/keymaps.vim
 source ~/.config/nvim/coc-plug.vim
 source ~/.config/nvim/go.vim
-
+source ~/.config/nvim/denite.vim
