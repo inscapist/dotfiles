@@ -95,3 +95,19 @@ function! s:denite_quickfix()
   call denite#call_map('toggle_select_all')
   call denite#call_map('do_action', 'quickfix')
 endfunction
+
+
+" Really experimental
+" https://github.com/Shougo/denite.nvim/blob/master/doc/denite.txt#L596
+" https://github.com/mhartington/dotfiles/blob/master/config/nvim/init.vim
+call denite#custom#option('_', {
+       \ 'prompt': 'λ',
+       \ 'winheight': 10,
+       \ 'updatetime': 1,
+       \ 'auto_resize': 1,
+       \ 'highlight_matched_char': 'Underlined',
+       \ 'highlight_mode_normal': 'CursorLine',
+       \ 'reversed': 1,
+       \ 'auto-accel': 1,
+       \ 'start_filter': 1,
+       \})
