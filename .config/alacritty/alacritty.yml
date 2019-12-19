@@ -8,16 +8,13 @@ env:
 
 font:
   normal:
-    # family: Cascadia Code PL
-    # style: Regular
-    family: Victor Mono
-    style: Medium
+    # family: Victor Mono
+    # style: medium
+    family: Cascadia Code PL
   bold:
-    family: Victor Mono
-    style: SemiBold
+    family: Cascadia Code PL
   italic:
-    family: Victor Mono
-    style: Italic
+    family: Cascadia Code PL
   size: 16.0
   offset:
     x: 1

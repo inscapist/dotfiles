@@ -38,12 +38,12 @@ call denite#custom#var('buffer', 'date_format', '')
 "   <C-h>         - Open currently selected file in a horizontal split
 autocmd FileType denite-filter call s:denite_filter_my_settings()
 function! s:denite_filter_my_settings() abort
-  imap <silent><buffer> <C-o>
+  imap <silent><buffer> <Esc>
   \ <Plug>(denite_filter_quit)
-  inoremap <silent><buffer><expr> <Esc>
-  \ denite#do_map('quit')
-  nnoremap <silent><buffer><expr> <Esc>
-  \ denite#do_map('quit')
+  " inoremap <silent><buffer><expr> <Esc>
+  " \ denite#do_map('quit')
+  " nnoremap <silent><buffer><expr> <Esc>
+  " \ denite#do_map('quit')
   inoremap <silent><buffer><expr> <CR>
   \ denite#do_map('do_action')
   inoremap <silent><buffer><expr> <C-t>
@@ -77,8 +77,8 @@ function! s:denite_my_settings() abort
   \ denite#do_map('do_action', 'preview')
   nnoremap <silent><buffer><expr> i
   \ denite#do_map('open_filter_buffer')
-  nnoremap <silent><buffer><expr> <C-o>
-  \ denite#do_map('open_filter_buffer')
+  " nnoremap <silent><buffer><expr> <C-o>
+  " \ denite#do_map('open_filter_buffer')
   nnoremap <silent><buffer><expr> <C-t>
   \ denite#do_map('do_action', 'tabopen')
   nnoremap <silent><buffer><expr> <C-v>
@@ -87,7 +87,7 @@ function! s:denite_my_settings() abort
   \ denite#do_map('do_action', 'split')
   nnoremap <silent><buffer><expr> ,
   \ denite#do_map('toggle_select').'j'
-  nnoremap <silent><buffer> <C-b>
+  nnoremap <silent><buffer> <C-a>
   \ :<C-u>call <SID>denite_quickfix()<CR>
 endfunction
 

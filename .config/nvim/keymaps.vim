@@ -1,3 +1,8 @@
+let mapleader=","
+
+" Quick reload vimrc
+nnoremap <silent> <leader>sc :source $MYVIMRC<CR>
+
 " Quick exit
 nnoremap Q :qa<CR>
 
@@ -5,14 +10,14 @@ nnoremap Q :qa<CR>
 nnoremap <leader>j <C-w>w
 nnoremap <leader>\ :vsp<CR>
 nnoremap <leader>- :sp<CR>
-nnoremap <leader>Q <C-w>q
+nnoremap <leader>qq <C-w>q
 set splitbelow
 set splitright
 
 " Quickfix list
-nnoremap ,n :cnext<CR>
-nnoremap ,m :cprevious<CR>
-nnoremap ,w :cclose<CR>
+nnoremap \n :cnext<CR>
+nnoremap \m :cprevious<CR>
+nnoremap \w :cclose<CR>
 
 " NERDTree
 nnoremap <leader>o :NERDTreeToggle<CR>
