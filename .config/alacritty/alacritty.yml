@@ -14,7 +14,7 @@ font:
     style: Medium
   bold:
     family: Victor Mono
-    style: Bold
+    style: SemiBold
   italic:
     family: Victor Mono
     style: Italic
