@@ -1,15 +1,17 @@
 call plug#begin('~/.config/nvim/plugged')
 Plug 'tpope/vim-sensible'
-Plug 'itchyny/lightline.vim'
-Plug 'itchyny/vim-gitbranch'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-abolish'
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'dense-analysis/ale'
 " Themes
 Plug 'morhetz/gruvbox'
 " Languages
@@ -61,21 +63,11 @@ endif
 "" UI - Gruvbox
 set background=dark
 set termguicolors
+let g:airline#extensions#ale#enabled = 1
 let g:NERDTreeWinPos = "right"
 let g:gruvbox_contrast_dark='medium'
 let g:gruvbox_italic=1
 colorscheme gruvbox
-
-let g:lightline = {
-      \ 'colorscheme': 'seoul256',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'gitbranch#name'
-      \ },
-      \ }
 
 " Source additional vim files
 source ~/.config/nvim/keymaps.vim
