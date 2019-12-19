@@ -10,7 +10,7 @@ nnoremap <leader>K gg"_dG
 nnoremap Q :qa<CR>
 
 " Pane navigation
-nnoremap <leader>[ <C-w>w
+nnoremap <leader>g <C-w>w
 nnoremap <leader>\ :vsp<CR>
 nnoremap <leader>- :sp<CR>
 nnoremap <leader>qq <C-w>q
