@@ -65,6 +65,8 @@ endfunction
 "   <C-h>       - Open currently selected file in a horizontal split
 autocmd FileType denite call s:denite_my_settings()
 function! s:denite_my_settings() abort
+  nnoremap <silent><buffer><expr> c
+  \ denite#do_map('choose_action')
   nnoremap <silent><buffer><expr> <CR>
   \ denite#do_map('do_action')
   nnoremap <silent><buffer><expr> q
@@ -87,7 +89,9 @@ function! s:denite_my_settings() abort
   \ denite#do_map('do_action', 'split')
   nnoremap <silent><buffer><expr> ,
   \ denite#do_map('toggle_select').'j'
-  nnoremap <silent><buffer> <C-a>
+  nnoremap <silent><buffer><expr> <C-a>
+  \ denite#do_map('toggle_select_all')
+  nnoremap <silent><buffer> <C-b>
   \ :<C-u>call <SID>denite_quickfix()<CR>
 endfunction
 
