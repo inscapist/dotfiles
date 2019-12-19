@@ -25,9 +25,6 @@ brew install gpg
 brew install ruby-build
 brew install bat
 brew install git
-brew install rainbarf
 brew install neovim --head
 
 brew cask install alacritty
-brew cask install notion
-brew cask install slack
