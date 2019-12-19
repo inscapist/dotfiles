@@ -108,6 +108,7 @@ call denite#custom#option('_', {
        \ 'prompt': 'λ',
        \ 'winheight': 10,
        \ 'updatetime': 1,
+       \ 'auto_resume': 1,
        \ 'auto_resize': 1,
        \ 'highlight_matched_char': 'Underlined',
        \ 'highlight_mode_normal': 'CursorLine',
