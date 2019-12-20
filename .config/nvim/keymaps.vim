@@ -20,6 +20,9 @@ nnoremap <space>qq <C-w>q
 set splitbelow
 set splitright
 
+" Alias to <C-o>, jump back to previous loc
+nnoremap <space>o <C-o>
+
 " Quickfix list
 nnoremap <C-n> :cnext<CR>
 nnoremap <C-m> :cprevious<CR>
