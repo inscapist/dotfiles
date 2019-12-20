@@ -17,10 +17,10 @@ nnoremap <silent> <leader>C :%y+<CR>
 nnoremap Q :qa<CR>
 
 " Pane navigation
-nnoremap <space>g <C-w>w
-nnoremap <space>\ :vsp<CR>
-nnoremap <space>- :sp<CR>
-nnoremap <space>qq <C-w>q
+nnoremap <silent> <space>g <C-w>w
+nnoremap <silent> <space>\ :vsp<CR>
+nnoremap <silent> <space>- :sp<CR>
+nnoremap <silent> <space>qq <C-w>q
 set splitbelow
 set splitright
 
@@ -33,7 +33,7 @@ nnoremap <C-m> :cprevious<CR>
 nnoremap <C-w> :cclose<CR>
 
 " NERDTree
-nnoremap <space>l :NERDTreeToggle<CR>
+nnoremap <silent> <space>l :NERDTreeToggle<CR>
 
 " Denite shorcuts
 nnoremap <silent> <leader>l :Denite outline<CR>
