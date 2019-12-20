@@ -10,10 +10,10 @@ nnoremap <leader>K gg"_dG
 nnoremap Q :qa<CR>
 
 " Pane navigation
-nnoremap <leader>g <C-w>w
-nnoremap <leader>\ :vsp<CR>
-nnoremap <leader>- :sp<CR>
-nnoremap <leader>qq <C-w>q
+nnoremap <space>g <C-w>w
+nnoremap <space>\ :vsp<CR>
+nnoremap <space>- :sp<CR>
+nnoremap <space>qq <C-w>q
 set splitbelow
 set splitright
 
