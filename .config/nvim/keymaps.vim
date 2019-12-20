@@ -1,5 +1,9 @@
 let mapleader=","
 
+" easymotion prefix
+map \\ <Plug>(easymotion-prefix)
+map \\r <Plug>(easymotion-lineanywhere)
+
 " Quick reload vimrc
 nnoremap <silent> <leader>sc :source $MYVIMRC<CR>
 
