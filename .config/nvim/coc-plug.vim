@@ -117,8 +117,9 @@ nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
 nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
 " Show commands
 nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
-" Find symbol of current document
-nnoremap <silent> <space>l  :<C-u>CocList outline<cr>
+" " Find symbol of current document
+" " not used because denite outline is better
+" nnoremap <silent> <space>l  :<C-u>CocList outline<cr>
 " " Search workspace symbols
 " " not used because :Denite decls is better
 " nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>

@@ -29,9 +29,10 @@ nnoremap <C-m> :cprevious<CR>
 nnoremap <C-w> :cclose<CR>
 
 " NERDTree
-nnoremap <leader>o :NERDTreeToggle<CR>
+nnoremap <space>l :NERDTreeToggle<CR>
 
 " Denite shorcuts
+nnoremap <leader>l :Denite outline<CR>
 nnoremap <leader>; :Denite buffer<CR>
 nnoremap <leader>p :Denite -start-filter=1 file/rec<CR>
 nnoremap <silent> <space>s :<C-u>Denite -start-filter=1 decls<CR>
