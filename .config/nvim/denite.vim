@@ -96,7 +96,8 @@ function! s:denite_my_settings() abort
 endfunction
 
 function! s:denite_quickfix()
-  call denite#call_map('toggle_select_all')
+  " " allow partial selection in the denite list
+  " call denite#call_map('toggle_select_all')
   call denite#call_map('do_action', 'quickfix')
 endfunction
 
