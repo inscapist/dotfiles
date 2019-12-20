@@ -6,6 +6,9 @@ nnoremap <silent> <leader>sc :source $MYVIMRC<CR>
 " Remove everything from buffer, expecting a new paste
 nnoremap <leader>K gg"_dG
 
+" Copy everything to register
+nnoremap <leader>C :%y+<CR>
+
 " Quick exit
 nnoremap Q :qa<CR>
 
