@@ -42,4 +42,4 @@ nnoremap <leader>p :Denite -start-filter=1 file/rec<CR>
 nnoremap <silent> <space>s :<C-u>Denite -start-filter=1 decls<CR>
 nnoremap <leader>ff :<C-u>Denite grep:. -no-empty<CR>
 nnoremap <leader>c :<C-u>DeniteCursorWord grep:.<CR>
-
+nnoremap <space>p :Denite -resume<CR>

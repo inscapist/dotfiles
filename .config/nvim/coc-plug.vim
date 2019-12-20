@@ -127,5 +127,7 @@ nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
 nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
-" Resume latest coc list
-nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+" " Resume latest coc list
+" " Denite is our favourite for this function
+" " equiv to :Denite -resume
+" nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
