@@ -1,4 +1,6 @@
-" vim-go
+" https://github.com/fatih/vim-go/issues/216
+let g:go_def_mapping_enabled = 0
+
 let g:go_fmt_command = "goimports"
 let g:go_autodetect_gopath = 1
 let g:go_list_type = "quickfix"

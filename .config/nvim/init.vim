@@ -11,12 +11,10 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-abolish'
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'dense-analysis/ale'
 " Themes
 Plug 'morhetz/gruvbox'
 " Languages
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'vim-ruby/vim-ruby'
 call plug#end()
 
 
@@ -63,7 +61,8 @@ endif
 "" UI - Gruvbox
 set background=dark
 set termguicolors
-let g:airline#extensions#ale#enabled = 1
+" coc.nvim supersedes ale
+" let g:airline#extensions#ale#enabled = 1
 let g:NERDTreeWinPos = "right"
 let g:gruvbox_contrast_dark='medium'
 let g:gruvbox_italic=1
