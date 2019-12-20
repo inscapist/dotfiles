@@ -85,6 +85,8 @@ function! s:denite_my_settings() abort
   \ denite#do_map('do_action', 'tabopen')
   nnoremap <silent><buffer><expr> <C-v>
   \ denite#do_map('do_action', 'vsplit')
+  nnoremap <silent><buffer><expr> P
+  \ denite#do_map('do_action', 'vsplit')
   nnoremap <silent><buffer><expr> <C-h>
   \ denite#do_map('do_action', 'split')
   nnoremap <silent><buffer><expr> ,
@@ -108,12 +110,9 @@ endfunction
 call denite#custom#option('_', {
        \ 'prompt': 'λ',
        \ 'winheight': 10,
-       \ 'updatetime': 1,
        \ 'auto_resume': 1,
        \ 'auto_resize': 1,
        \ 'highlight_matched_char': 'Underlined',
        \ 'highlight_mode_normal': 'CursorLine',
-       \ 'reversed': 1,
-       \ 'auto-accel': 1,
-       \ 'start_filter': 1,
+       \ 'start_filter': 0,
        \})

@@ -28,6 +28,7 @@ nnoremap <leader>o :NERDTreeToggle<CR>
 " Denite shorcuts
 nnoremap <leader>p :Denite file/rec<CR>
 nnoremap <leader>ff :<C-u>Denite grep:. -no-empty<CR>
+nnoremap <silent> <space>s :<C-u>Denite decls<CR>
 nnoremap <leader>; :Denite buffer<CR>
 nnoremap <leader>c :<C-u>DeniteCursorWord grep:.<CR>
 
