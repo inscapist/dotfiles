@@ -8,10 +8,10 @@ map \\r <Plug>(easymotion-lineanywhere)
 nnoremap <silent> <leader>sc :source $MYVIMRC<CR>
 
 " Remove everything from buffer, expecting a new paste
-nnoremap <leader>K gg"_dG
+nnoremap <silent> <leader>K gg"_dG
 
 " Copy everything to register
-nnoremap <leader>C :%y+<CR>
+nnoremap <silent> <leader>C :%y+<CR>
 
 " Quick exit
 nnoremap Q :qa<CR>
@@ -36,10 +36,10 @@ nnoremap <C-w> :cclose<CR>
 nnoremap <space>l :NERDTreeToggle<CR>
 
 " Denite shorcuts
-nnoremap <leader>l :Denite outline<CR>
-nnoremap <leader>; :Denite buffer<CR>
-nnoremap <leader>p :Denite -start-filter=1 file/rec<CR>
+nnoremap <silent> <leader>l :Denite outline<CR>
+nnoremap <silent> <leader>; :Denite buffer<CR>
+nnoremap <silent> <leader>p :Denite -start-filter=1 file/rec<CR>
 nnoremap <silent> <space>s :<C-u>Denite -start-filter=1 decls<CR>
-nnoremap <leader>ff :<C-u>Denite grep:. -no-empty<CR>
-nnoremap <leader>c :<C-u>DeniteCursorWord grep:.<CR>
-nnoremap <space>p :Denite -resume<CR>
+nnoremap <silent> <leader>ff :<C-u>Denite grep:. -no-empty<CR>
+nnoremap <silent> <leader>c :<C-u>DeniteCursorWord grep:.<CR>
+nnoremap <silent> <space>p :Denite -resume<CR>
