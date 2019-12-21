@@ -9,6 +9,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-eunuch'
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 " Snippets
@@ -67,8 +68,6 @@ endif
 "" UI - Gruvbox
 set background=dark
 set termguicolors
-" coc.nvim supersedes ale
-" let g:airline#extensions#ale#enabled = 1
 let g:NERDTreeWinPos = "right"
 let g:gruvbox_contrast_dark='medium'
 let g:gruvbox_italic=1
