@@ -37,11 +37,11 @@ nnoremap <silent> <space>l :NERDTreeToggle<CR>
 
 " Denite shorcuts
 nnoremap <silent> <space>p :Denite file/rec -start-filter=1<CR>
-nnoremap <silent> <space>u :Denite -resume<CR>
+nnoremap <silent> <space>r :Denite -resume<CR>
 nnoremap <silent> <space>s :<C-u>Denite decls -start-filter=1 -auto-action=preview<CR>
-nnoremap <silent> <space>t :<C-u>Denite tag -start-filter=1 -auto-action=preview<CR>
-nnoremap <silent> <space>o :Denite outline -auto-action=preview<CR>
-nnoremap <silent> <space>; :Denite buffer<CR>
+nnoremap <silent> <space>t :<C-u>Denite tag -start-filter=1 -auto-action=preview -no-empty<CR>
+nnoremap <silent> <space>o :Denite outline -auto-action=preview -no-empty<CR>
+nnoremap <silent> <space>; :Denite buffer -auto-action=preview -no-empty<CR>
 nnoremap <silent> <space>ff :<C-u>Denite grep:. -auto-action=preview -no-empty<CR>
 " space c is used by coc command
 nnoremap <silent> <leader>c :<C-u>DeniteCursorWord grep:. -auto-action=preview <CR>
