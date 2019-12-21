@@ -54,6 +54,9 @@ set nocursorline                " Do not highlight cursor (speeds up highlightin
 set lazyredraw                  " Wait to redraw
 set tabstop=2 shiftwidth=2 expandtab
 
+" Almighty auto-save
+autocmd TextChanged,TextChangedI <buffer> silent write
+
 " Enable to copy to clipboard for operations like yank, delete, change and put
 " http://stackoverflow.com/questions/20186975/vim-mac-how-to-copy-to-clipboard-without-pbcopy
 if has('unnamedplus')
@@ -76,4 +79,4 @@ source ~/.config/nvim/keymaps.vim
 source ~/.config/nvim/coc-plug.vim
 source ~/.config/nvim/go.vim
 source ~/.config/nvim/denite.vim
-
+source ~/.config/nvim/autoclose.vim

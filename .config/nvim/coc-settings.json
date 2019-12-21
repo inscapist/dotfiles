@@ -1,5 +1,7 @@
 {
   "codeLens.enable": true,
+  "coc.preferences.formatOnType": false,
+  "coc.preferences.formatOnSaveFiletypes": ["json", "python"],
   "languageserver": {
     "golang": {
       "command": "go-langserver",
