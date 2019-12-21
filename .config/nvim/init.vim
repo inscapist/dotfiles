@@ -11,6 +11,8 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-abolish'
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
+" Snippets
+Plug 'honza/vim-snippets'
 " Themes
 Plug 'morhetz/gruvbox'
 " Languages
