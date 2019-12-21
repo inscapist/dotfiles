@@ -14,7 +14,7 @@ nnoremap <silent> <leader>K gg"_dG
 nnoremap <silent> <leader>C :%y+<CR>
 
 " Quick exit
-nnoremap Q :qa<CR>
+nnoremap Q :qa!<CR>
 
 " Pane navigation
 nnoremap <silent> <space>g <C-w>w
@@ -25,7 +25,7 @@ set splitbelow
 set splitright
 
 " Alias to <C-o>, jump back to previous loc
-nnoremap <space>o <C-o>
+nnoremap <leader>o <C-o>
 
 " Quickfix list
 nnoremap <C-n> :cnext<CR>
@@ -36,11 +36,12 @@ nnoremap <C-w> :cclose<CR>
 nnoremap <silent> <space>l :NERDTreeToggle<CR>
 
 " Denite shorcuts
-nnoremap <silent> <leader>l :Denite outline -auto-action=preview<CR>
-nnoremap <silent> <leader>; :Denite buffer<CR>
-nnoremap <silent> <leader>p :Denite file/rec -start-filter=1<CR>
+nnoremap <silent> <space>p :Denite file/rec -start-filter=1<CR>
+nnoremap <silent> <space>u :Denite -resume<CR>
 nnoremap <silent> <space>s :<C-u>Denite decls -start-filter=1 -auto-action=preview<CR>
 nnoremap <silent> <space>t :<C-u>Denite tag -start-filter=1 -auto-action=preview<CR>
-nnoremap <silent> <leader>ff :<C-u>Denite grep:. -auto-action=preview -no-empty<CR>
+nnoremap <silent> <space>o :Denite outline -auto-action=preview<CR>
+nnoremap <silent> <space>; :Denite buffer<CR>
+nnoremap <silent> <space>ff :<C-u>Denite grep:. -auto-action=preview -no-empty<CR>
+" space c is used by coc command
 nnoremap <silent> <leader>c :<C-u>DeniteCursorWord grep:. -auto-action=preview <CR>
-nnoremap <silent> <space>p :Denite -resume<CR>
