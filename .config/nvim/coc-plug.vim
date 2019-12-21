@@ -121,9 +121,8 @@ nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
 " " Find symbol of current document
 " " not used because denite outline is better
 " nnoremap <silent> <space>l  :<C-u>CocList outline<cr>
-" " Search workspace symbols
-" " not used because :Denite decls is better
-" nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
+" Search workspace symbols
+nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
 " Do default action for next item.
 nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
