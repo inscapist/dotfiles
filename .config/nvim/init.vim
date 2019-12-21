@@ -79,4 +79,4 @@ source ~/.config/nvim/keymaps.vim
 source ~/.config/nvim/coc-plug.vim
 source ~/.config/nvim/go.vim
 source ~/.config/nvim/denite.vim
-source ~/.config/nvim/autoclose.vim
+" source ~/.config/nvim/autoclose.vim
