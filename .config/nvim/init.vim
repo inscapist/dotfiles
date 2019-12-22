@@ -18,6 +18,8 @@ Plug 'honza/vim-snippets'
 " Themes
 Plug 'morhetz/gruvbox'
 " Languages
+Plug 'lervag/vimtex'
+Plug 'KeitaNakamura/tex-conceal.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 
@@ -80,4 +82,4 @@ source ~/.config/nvim/keymaps.vim
 source ~/.config/nvim/coc-plug.vim
 source ~/.config/nvim/go.vim
 source ~/.config/nvim/denite.vim
-
+source ~/.config/nvim/tex.vim

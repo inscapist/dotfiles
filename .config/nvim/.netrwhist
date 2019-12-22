@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =5
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/Users/felix/intelllex-eng/microservices/search-api'
 let g:netrw_dirhist_5='/Users/felix/go/src/gitlab.com/intelllex/go-search'
 let g:netrw_dirhist_4='/Users/felix/.config/alacritty'
 let g:netrw_dirhist_3='/Users/felix/.config/nvim'

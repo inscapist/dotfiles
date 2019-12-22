@@ -27,4 +27,10 @@ brew install bat
 brew install git
 brew install neovim --head
 
+brew tap zegervdv/zathura
+brew install zathura
+brew install zathura-pdf-poppler
+mkdir -p $(brew --prefix zathura)/lib/zathura
+ln -s $(brew --prefix zathura-pdf-poppler)/libpdf-poppler.dylib $(brew --prefix zathura)/lib/zathura/libpdf-poppler.dylib
+
 brew cask install alacritty
