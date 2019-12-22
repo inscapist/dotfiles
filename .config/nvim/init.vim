@@ -14,6 +14,7 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 " Snippets
+Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 " Themes
 Plug 'morhetz/gruvbox'
@@ -69,7 +70,7 @@ if has('unnamedplus')
   set clipboard^=unnamedplus
 endif
 
-"" UI - Gruvbox
+" UI - Gruvbox
 set background=dark
 set termguicolors
 let g:NERDTreeWinPos = "right"
@@ -77,9 +78,18 @@ let g:gruvbox_contrast_dark='medium'
 let g:gruvbox_italic=1
 colorscheme gruvbox
 
+" Snippets
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
 " Source additional vim files
 source ~/.config/nvim/keymaps.vim
 source ~/.config/nvim/coc-plug.vim
 source ~/.config/nvim/go.vim
 source ~/.config/nvim/denite.vim
 source ~/.config/nvim/tex.vim
+
