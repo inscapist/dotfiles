@@ -1,0 +1,14 @@
+# GENERAL
+--exclude=.git
+--exclude=.DS_Store
+
+# RUBY
+--exclude=vendor
+--exclude=Gemfile.lock
+
+# JAVASCRIPT
+--exclude=node_modules
+--exclude=flow-typed
+--exclude=.next
+--exclude=package-lock.json
+--exclude=yarn.lock

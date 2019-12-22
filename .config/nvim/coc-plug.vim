@@ -110,7 +110,6 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " Add status line support, for integration with other plugin, checkout `:h coc-status`
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
-" Using CocList
 " Show all diagnostics
 nnoremap <silent> <space>m  :<C-u>CocList marketplace<cr>
 nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
@@ -118,16 +117,9 @@ nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
 nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
 " Show commands
 nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
-" " Find symbol of current document
-" " not used because denite outline is better
-" nnoremap <silent> <space>l  :<C-u>CocList outline<cr>
 " Search workspace symbols
 nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
 " Do default action for next item.
 nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
-" " Resume latest coc list
-" " Denite is our favourite for this function
-" " equiv to :Denite -resume
-" nnoremap <silent> <space>p  :<C-u>CocListResume<CR>

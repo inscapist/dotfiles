@@ -1,7 +1,11 @@
 " https://github.com/fatih/vim-go/issues/216
 let g:go_def_mapping_enabled = 0
 
+" disable all autosaves
+let g:go_fmt_autosave = 0
 let g:go_fmt_command = "goimports"
+let g:go_metalinter_autosave = 0
+let g:go_metalinter_autosave_enabled = ['vet', 'golint']
 let g:go_autodetect_gopath = 1
 let g:go_list_type = "quickfix"
 
@@ -11,11 +15,6 @@ let g:go_highlight_functions = 1
 let g:go_highlight_function_calls = 1
 let g:go_highlight_extra_types = 1
 let g:go_highlight_generate_tags = 1
-
-" Open :GoDeclsDir with ctrl-g
-nmap <C-g> :GoDeclsDir<cr>
-imap <C-g> <esc>:<C-u>GoDeclsDir<cr>
-
 
 augroup go
   autocmd!
