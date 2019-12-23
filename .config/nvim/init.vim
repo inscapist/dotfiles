@@ -9,6 +9,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-abolish'
 Plug 'Chiel92/vim-autoformat'
+Plug 'jiangmiao/auto-pairs'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
