@@ -1,5 +1,14 @@
 {
   "codeLens.enable": true,
+  "emmet.showExpandedAbbreviation": "always",
+  "emmet.showSuggestionsAsSnippets": true,
+  "coc.preferences.formatOnSaveFiletypes": ["css", "Markdown", "js", "ts", "html"],
+  "html.format.enable": true,
+  "yaml.validate": true,
+  "yaml.format.enable": true,
+  "yaml.schemas": {
+    "kubernetes": "/*.yaml"
+  },
   "languageserver": {
     "golang": {
       "command": "gopls",

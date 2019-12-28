@@ -77,7 +77,10 @@ let g:gruvbox_italic=1
 colorscheme gruvbox
 
 " Auto format skip filetypes
-autocmd FileType snippets let b:autoformat_autoindent=0
+autocmd FileType js,css,html,yaml,snippets let b:autoformat_autoindent=0
+
+" manual folding
+set foldmethod=manual
 
 " Source additional vim files
 source ~/.config/nvim/keymaps.vim

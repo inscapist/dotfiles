@@ -35,7 +35,7 @@ nnoremap <C-m> :cprevious<CR>
 nnoremap <C-w> :cclose<CR>
 
 " NERDTree
-nnoremap <silent> <leader>; :NERDTreeToggle<CR>
+nnoremap <silent> <space>n :NERDTreeToggle<CR>
 
 " Denite shorcuts
 nnoremap <silent> <space>p :Denite file/rec -start-filter=1<CR>
