@@ -34,7 +34,7 @@ nnoremap <leader>o <C-o>
 " Quickfix list
 nnoremap <C-n> :cnext<CR>
 nnoremap <C-m> :cprevious<CR>
-nnoremap <C-w> :cclose<CR>
+" nnoremap <C-w> :cclose<CR>
 
 " NERDTree
 nnoremap <silent> <space>n :NERDTreeToggle<CR>
