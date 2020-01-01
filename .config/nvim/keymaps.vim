@@ -20,6 +20,8 @@ nnoremap S :write<CR>
 
 " Pane navigation
 nnoremap <silent> <space>g <C-w>w
+nnoremap <silent> <space>j <C-w>J
+nnoremap <silent> <space>h <C-w>H
 nnoremap <silent> <space>\ :vsp<CR>
 nnoremap <silent> <space>- :sp<CR>
 nnoremap <silent> <space>qq <C-w>q
