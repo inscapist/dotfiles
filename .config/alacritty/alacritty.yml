@@ -123,7 +123,8 @@ window:
   startup_mode: Windowed
 
 key_bindings:
-  - { key: 36,      mods: Command, action: ToggleFullscreen }
+  - { key: K,         mods: Command,   chars: "\x60K"                       }
+  - { key: 36,        mods: Command,   action: ToggleFullscreen             }
   - { key: A,         mods: Alt,       chars: "\x1ba"                       }
   - { key: B,         mods: Alt,       chars: "\x1bb"                       }
   - { key: C,         mods: Alt,       chars: "\x1bc"                       }
