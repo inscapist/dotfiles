@@ -31,7 +31,7 @@ set splitright
 " Alias to <C-o>, jump back to previous loc
 nnoremap <leader>o <C-o>
 " Alias to :b#, jumps back to previous buffer
-nnoremap <leader>b :b#<CR>
+nnoremap <space>b :b#<CR>
 
 " Quickfix list
 nnoremap <C-n> :cnext<CR>
