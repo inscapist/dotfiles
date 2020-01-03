@@ -98,8 +98,7 @@ function! s:denite_my_settings() abort
 endfunction
 
 function! s:denite_quickfix()
-  " " allow partial selection in the denite list
-  " call denite#call_map('toggle_select_all')
+  call denite#call_map('toggle_select_all')
   call denite#call_map('do_action', 'quickfix')
 endfunction
 
@@ -116,3 +115,4 @@ call denite#custom#option('_', {
        \ 'highlight_mode_normal': 'CursorLine',
        \ 'start_filter': 0,
        \})
+
