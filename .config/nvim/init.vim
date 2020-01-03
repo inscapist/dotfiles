@@ -8,7 +8,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-abolish'
-Plug 'Chiel92/vim-autoformat'
 Plug 'jiangmiao/auto-pairs'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ludovicchabant/vim-gutentags'
@@ -75,9 +74,6 @@ let g:NERDTreeWinPos = "right"
 let g:gruvbox_contrast_dark='medium'
 let g:gruvbox_italic=1
 colorscheme gruvbox
-
-" Auto format skip filetypes
-autocmd FileType markdown,js,css,html,yaml,snippets let b:autoformat_autoindent=0
 
 " manual folding
 set foldmethod=manual
