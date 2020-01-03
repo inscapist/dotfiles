@@ -131,6 +131,9 @@ window:
 
 key_bindings:
   - { key: K,         mods: Command,   chars: "\x60K"                       }
+  - { key: N,         mods: Command,   chars: "\x60n"                       }
+  - { key: E,         mods: Command,   chars: "\x60e"                       }
+  - { key: W,         mods: Command,   chars: "\x60x"                       }
   - { key: 123,       mods: Command,   chars: "\x60,"                       }
   - { key: 124,       mods: Command,   chars: "\x60."                       }
   - { key: 36,        mods: Command,   action: ToggleFullscreen             }
