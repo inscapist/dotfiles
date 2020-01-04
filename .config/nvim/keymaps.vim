@@ -39,7 +39,15 @@ noremap <C-m> :cprevious<CR>
 noremap <C-w> :cclose<CR>
 
 " NERDTree
-nnoremap <silent> <space>n :NERDTreeToggle<CR>
+" toggle Nerdtree and open the current folder
+function! ToggleNerdTree()
+    if exists("t:NERDTreeBufName") && bufwinnr(t:NERDTreeBufName) != -1
+        execute ":NERDTreeClose"
+    else 
+        execute ":NERDTreeFind"
+    endif
+endfunction
+nnoremap <silent> <space>w :NERDTreeToggle<CR>
 
 " Set syntax folding
 nnoremap <silent> <space>fo :setlocal foldmethod=syntax<CR>

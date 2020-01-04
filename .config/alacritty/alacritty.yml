@@ -131,7 +131,7 @@ window:
 
 key_bindings:
   - { key: K,         mods: Command,   chars: "\x60K"                       }
-  - { key: T,         mods: Command,   chars: "\x60t"                       }
+  - { key: N,         mods: Command,   chars: "\x60n"                       }
   - { key: E,         mods: Command,   chars: "\x60e"                       }
   - { key: W,         mods: Command,   chars: "\x60x"                       }
   - { key: 123,       mods: Command,   chars: "\x60,"                       }
