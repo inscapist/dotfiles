@@ -47,7 +47,7 @@ function! ToggleNerdTree()
         execute ":NERDTreeFind"
     endif
 endfunction
-nnoremap <silent> <space>w :NERDTreeToggle<CR>
+nnoremap <silent> <space>w :call ToggleNerdTree()<CR>
 
 " Set syntax folding
 nnoremap <silent> <space>fo :setlocal foldmethod=syntax<CR>
