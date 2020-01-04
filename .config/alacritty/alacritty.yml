@@ -22,10 +22,10 @@ font:
   #   family: Cascadia Code PL
   # italic:
   #   family: Cascadia Code PL
-  size: 16.0
+  size: 17.0
   offset:
     x: 1
-    y: 4
+    y: 3
   use_thin_strokes: true
 
 background_opacity: 1.0
@@ -131,7 +131,7 @@ window:
 
 key_bindings:
   - { key: K,         mods: Command,   chars: "\x60K"                       }
-  - { key: N,         mods: Command,   chars: "\x60n"                       }
+  - { key: T,         mods: Command,   chars: "\x60t"                       }
   - { key: E,         mods: Command,   chars: "\x60e"                       }
   - { key: W,         mods: Command,   chars: "\x60x"                       }
   - { key: 123,       mods: Command,   chars: "\x60,"                       }
