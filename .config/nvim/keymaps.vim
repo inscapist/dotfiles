@@ -41,6 +41,9 @@ nnoremap <C-m> :cprevious<CR>
 " NERDTree
 nnoremap <silent> <space>n :NERDTreeToggle<CR>
 
+" Set syntax folding
+nnoremap <silent> <space>fs :setlocal foldmethod=syntax<CR>
+
 " Denite shorcuts
 nnoremap <silent> <space>p :Denite file/rec -start-filter=1<CR>
 nnoremap <silent> <space>r :Denite -resume<CR>
