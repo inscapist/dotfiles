@@ -34,15 +34,18 @@ nnoremap <leader>o <C-o>
 nnoremap <space>b :b#<CR>
 
 " Quickfix list
-nnoremap <C-n> :cnext<CR>
-nnoremap <C-m> :cprevious<CR>
-" nnoremap <C-w> :cclose<CR>
+noremap <C-n> :cnext<CR>
+noremap <C-m> :cprevious<CR>
+noremap <C-w> :cclose<CR>
 
 " NERDTree
 nnoremap <silent> <space>n :NERDTreeToggle<CR>
 
 " Set syntax folding
-nnoremap <silent> <space>fs :setlocal foldmethod=syntax<CR>
+nnoremap <silent> <space>fo :setlocal foldmethod=syntax<CR>
+
+" Quicktype :%s/
+nnoremap <space>fs :%s/
 
 " Denite shorcuts
 nnoremap <silent> <space>p :Denite file/rec -start-filter=1<CR>
@@ -50,6 +53,6 @@ nnoremap <silent> <space>r :Denite -resume<CR>
 nnoremap <silent> <space>t :<C-u>Denite tag -start-filter=1 -no-empty<CR>
 nnoremap <silent> <space>o :Denite outline -no-empty<CR>
 nnoremap <silent> <space>; :Denite buffer -auto-action=preview -no-empty<CR>
-nnoremap <silent> <space>ff :<C-u>Denite grep:. -auto-action=preview -no-empty<CR>
+nnoremap <silent> <space>fw :<C-u>Denite grep:. -auto-action=preview -no-empty<CR>
 " space c is used by coc command
 nnoremap <silent> <leader>c :<C-u>DeniteCursorWord grep:. -auto-action=preview <CR>
