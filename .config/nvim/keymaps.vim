@@ -52,8 +52,9 @@ nnoremap <silent> <space>w :NERDTreeToggle<CR>
 " Set syntax folding
 nnoremap <silent> <space>fo :setlocal foldmethod=syntax<CR>
 
-" Quicktype :%s/
-nnoremap <space>fs :%s/
+" quicktypes
+nnoremap <space>fs :%s///g
+nnoremap <space>fc :cfdo %s///g \| update
 
 " Denite shorcuts
 nnoremap <silent> <space>p :Denite file/rec -start-filter=1<CR>
