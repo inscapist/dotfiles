@@ -5,18 +5,18 @@ map \\ <Plug>(easymotion-prefix)
 map \\r <Plug>(easymotion-lineanywhere)
 
 " Quick reload vimrc
-nnoremap <silent> <leader>sc :source $MYVIMRC<CR>
+nnoremap <leader>sc :source $MYVIMRC<CR>
 
 " Remove everything from buffer, expecting a new paste
-nnoremap <silent> <leader>K gg"_dG
+nnoremap <leader>K gg"_dG
 
 " Copy everything to register
-nnoremap <silent> <leader>C :%y+<CR>
+nnoremap <leader>C :%y+<CR>
 
 " Quick exit
 nnoremap Q :qa!<CR>
 " Quick save
-nnoremap S :write<CR>
+nnoremap <silent> S :write<CR>
 
 " Pane navigation
 nnoremap <silent> <space>g <C-w>w
@@ -29,14 +29,14 @@ set splitbelow
 set splitright
 
 " Alias to <C-o>, jump back to previous loc
-nnoremap <leader>o <C-o>
+nnoremap <silent> <leader>o <C-o>
 " Alias to :b#, jumps back to previous buffer
-nnoremap <space>b :b#<CR>
+nnoremap <silent> <space>b :b#<CR>
 
 " Quickfix list
-noremap <C-n> :cnext<CR>
-noremap <C-m> :cprevious<CR>
-noremap <C-w> :cclose<CR>
+noremap <silent> <C-n> :cnext<CR>
+noremap <silent> <C-m> :cprevious<CR>
+noremap <silent> <C-w> :cclose<CR>
 
 " NERDTree
 " toggle Nerdtree and open the current folder
