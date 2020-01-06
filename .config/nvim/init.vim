@@ -5,7 +5,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-abolish'
 Plug 'jiangmiao/auto-pairs'
@@ -83,4 +83,5 @@ source ~/.config/nvim/coc-plug.vim
 source ~/.config/nvim/go.vim
 source ~/.config/nvim/denite.vim
 source ~/.config/nvim/tex.vim
+source ~/.config/nvim/embedded-term.vim
 
