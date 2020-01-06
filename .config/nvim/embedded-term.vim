@@ -1,15 +1,3 @@
-let s:lazygit_open = 0
-function! ToggleLazyGit()
-    if s:lazygit_open
-        bd!
-        let s:lazygit_open = 0
-    else
-        call OpenTerm('lazygit')
-        let s:lazygit_open = 1
-    endif
-endfunction
-nnoremap <silent> <Leader>l :call ToggleLazyGit()<CR>
-
 " When term starts, auto go into insert mode
 autocmd TermOpen * startinsert
 
