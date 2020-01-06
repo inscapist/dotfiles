@@ -57,6 +57,7 @@ set tabstop=2 shiftwidth=2 expandtab
 
 " events hook
 autocmd TextChanged,TextChangedI <buffer> silent write
+au VimEnter *  NERDTree
 
 " Enable to copy to clipboard for operations like yank, delete, change and put
 " http://stackoverflow.com/questions/20186975/vim-mac-how-to-copy-to-clipboard-without-pbcopy

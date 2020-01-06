@@ -6,12 +6,12 @@
 let mapleader=","
 
 " easymotion prefix
-map \\ <Plug>(easymotion-prefix)
-map \\r <Plug>(easymotion-lineanywhere)
+map \ <Plug>(easymotion-prefix)
+map \r <Plug>(easymotion-lineanywhere)
 " Alias to <C-o>, jump back to previous loc
-nnoremap <silent> \\o <C-o>
+nnoremap <silent> \o <C-o>
 " Alias to :b#, jumps back to previous buffer
-nnoremap <silent> \\b :b#<CR>
+nnoremap <silent> \b :b#<CR>
 
 " Quick reload vimrc
 nnoremap <leader>sc :source $MYVIMRC<CR>
