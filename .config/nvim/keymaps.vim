@@ -6,8 +6,8 @@
 let mapleader=","
 
 " easymotion prefix
-map \ <Plug>(easymotion-prefix)
-map \r <Plug>(easymotion-lineanywhere)
+map \\ <Plug>(easymotion-prefix)
+map \\r <Plug>(easymotion-lineanywhere)
 " Alias to <C-o>, jump back to previous loc
 nnoremap <silent> \o <C-o>
 " Alias to :b#, jumps back to previous buffer
@@ -62,11 +62,11 @@ nnoremap <space>fc :cfdo %s///g \| update
 " Denite shorcuts
 nnoremap <silent> <space>p :Denite file/rec -start-filter=1<CR>
 nnoremap <silent> <space>r :Denite -resume<CR>
-nnoremap <silent> <space>t :<C-u>Denite tag -start-filter=1 -no-empty<CR>
+nnoremap <silent> <space>tt :<C-u>Denite tag -start-filter=1 -no-empty<CR>
 nnoremap <silent> <space>o :Denite outline -no-empty<CR>
 nnoremap <silent> <space>; :Denite buffer -auto-action=preview -no-empty<CR>
 nnoremap <silent> <space>fw :<C-u>Denite grep:. -auto-action=preview -no-empty<CR>
-nnoremap <silent> <leader>c :<C-u>DeniteCursorWord grep:. -auto-action=preview <CR>
+nnoremap <silent> <space>t* :<C-u>DeniteCursorWord grep:. -auto-action=preview <CR>
 
 " lazygit
 let s:lazygit_open = 0
@@ -79,4 +79,4 @@ function! ToggleLazyGit()
         let s:lazygit_open = 1
     endif
 endfunction
-nnoremap <silent> <leader>l :call ToggleLazyGit()<CR>
+nnoremap <silent> <space>tlg :call ToggleLazyGit()<CR>
