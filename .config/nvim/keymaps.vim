@@ -45,7 +45,11 @@ function! ToggleNerdTree()
     if exists("t:NERDTreeBufName") && bufwinnr(t:NERDTreeBufName) != -1
         execute ":NERDTreeClose"
     else 
+      if @% != ""
         execute ":NERDTreeFind"
+      else
+        execute ":NERDTreeToggle"
+      endif
     endif
 endfunction
 nnoremap <silent> <space>w :call ToggleNerdTree()<CR>
