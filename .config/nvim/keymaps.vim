@@ -28,8 +28,6 @@ nnoremap <silent> S :write<CR>
 
 " Pane navigation
 nnoremap <silent> <space>g <C-w>w
-nnoremap <silent> <space>j <C-w>J
-nnoremap <silent> <space>h <C-w>H
 nnoremap <silent> <space>\ :vsp<CR>
 nnoremap <silent> <space>- :sp<CR>
 nnoremap <silent> <space>qq <C-w>q
@@ -62,7 +60,7 @@ nnoremap <space>fc :cfdo %s///g \| update
 " Denite shorcuts
 nnoremap <silent> <space>p :Denite file/rec -start-filter=1<CR>
 nnoremap <silent> <space>r :Denite -resume<CR>
-nnoremap <silent> <space>tt :<C-u>Denite tag -start-filter=1 -no-empty<CR>
+nnoremap <silent> <space>t :<C-u>Denite tag -start-filter=1 -no-empty<CR>
 nnoremap <silent> <space>o :Denite outline -no-empty<CR>
 nnoremap <silent> <space>; :Denite buffer -auto-action=preview -no-empty<CR>
 nnoremap <silent> <space>fw :<C-u>Denite grep:. -auto-action=preview -no-empty<CR>
@@ -79,4 +77,4 @@ function! ToggleLazyGit()
         let s:lazygit_open = 1
     endif
 endfunction
-nnoremap <silent> <space>tlg :call ToggleLazyGit()<CR>
+nnoremap <silent> <space>lg :call ToggleLazyGit()<CR>
