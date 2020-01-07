@@ -67,14 +67,7 @@ nnoremap <silent> <space>fw :<C-u>Denite grep:. -auto-action=preview -no-empty<C
 nnoremap <silent> <space>t* :<C-u>DeniteCursorWord grep:. -auto-action=preview <CR>
 
 " lazygit
-let s:lazygit_open = 0
 function! ToggleLazyGit()
-    if s:lazygit_open
-        bd!
-        let s:lazygit_open = 0
-    else
-        call OpenTerm('lazygit')
-        let s:lazygit_open = 1
-    endif
+  call OpenTerm('lazygit')
 endfunction
-nnoremap <silent> <space>lg :call ToggleLazyGit()<CR>
+nnoremap <silent> <space>lg :<C-u>call ToggleLazyGit()<CR>
