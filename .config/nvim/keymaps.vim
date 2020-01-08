@@ -18,6 +18,10 @@ inoremap jj <Esc>
 nnoremap B ^
 nnoremap E $
 
+" quick scroll up and down
+nnoremap zj ztLzz
+nnoremap zk zbHzz
+
 " Quick reload vimrc
 nnoremap <leader>sc :source $MYVIMRC<CR>
 
