@@ -20,8 +20,6 @@ Plug 'KeitaNakamura/tex-conceal.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 
-
-
 """"""""""""""""""""""
 "      Settings      "
 """"""""""""""""""""""
@@ -55,8 +53,8 @@ set nocursorline                " Do not highlight cursor (speeds up highlightin
 set lazyredraw                  " Wait to redraw
 set tabstop=2 shiftwidth=2 expandtab
 
-" events hook
-autocmd TextChanged,TextChangedI <buffer> silent write
+" autosave on focus lost
+:au FocusLost * silent! wa
 
 " Enable to copy to clipboard for operations like yank, delete, change and put
 " http://stackoverflow.com/questions/20186975/vim-mac-how-to-copy-to-clipboard-without-pbcopy
