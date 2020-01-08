@@ -56,6 +56,7 @@ set tabstop=2 shiftwidth=2 expandtab
 
 " autosave on focus lost
 :au FocusLost * silent! wa
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Enable to copy to clipboard for operations like yank, delete, change and put
 " http://stackoverflow.com/questions/20186975/vim-mac-how-to-copy-to-clipboard-without-pbcopy
