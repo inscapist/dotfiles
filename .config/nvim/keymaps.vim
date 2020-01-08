@@ -15,6 +15,8 @@ nnoremap <silent> \b :b#<CR>
 
 " Simple glucose
 inoremap jj <Esc>
+vnoremap B ^
+vnoremap E $
 nnoremap B ^
 nnoremap E $
 
