@@ -13,6 +13,11 @@ nnoremap <silent> \o <C-o>
 " Alias to :b#, jumps back to previous buffer
 nnoremap <silent> \b :b#<CR>
 
+" Simple glucose
+inoremap jj <Esc>
+nnoremap B ^
+nnoremap E $
+
 " Quick reload vimrc
 nnoremap <leader>sc :source $MYVIMRC<CR>
 
