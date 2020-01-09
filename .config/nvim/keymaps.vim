@@ -79,7 +79,7 @@ nnoremap <silent> <space>t :<C-u>Denite tag -start-filter=1 -no-empty<CR>
 nnoremap <silent> <space>o :Denite outline -no-empty<CR>
 nnoremap <silent> <space>; :Denite buffer -auto-action=preview -no-empty<CR>
 nnoremap <silent> <space>fw :<C-u>Denite grep:. -auto-action=preview -no-empty<CR>
-nnoremap <silent> <space>t* :<C-u>DeniteCursorWord grep:. -auto-action=preview <CR>
+nnoremap <silent> <space>* :<C-u>DeniteCursorWord grep:. -auto-action=preview <CR>
 
 " lazygit
 function! ToggleLazyGit()
