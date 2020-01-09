@@ -21,8 +21,8 @@ nnoremap B ^
 nnoremap E $
 
 " quick scroll up and down
-nnoremap zj ztLzz
-nnoremap zk zbHzz
+nnoremap gj ztLzz
+nnoremap gk zbHzz
 
 " Quick reload vimrc
 nnoremap <leader>sc :source $MYVIMRC<CR>
