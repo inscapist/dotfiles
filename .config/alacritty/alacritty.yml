@@ -131,12 +131,18 @@ window:
 
 key_bindings:
   - { key: K,         mods: Command,   chars: "\x60K"                       }
+  - { key: N,         mods: Command|Shift,   action: SpawnNewInstance       }
   - { key: N,         mods: Command,   chars: "\x60n"                       }
   - { key: E,         mods: Command,   chars: "\x60e"                       }
+  - { key: W,         mods: Command|Shift,   action: Quit                   }
   - { key: W,         mods: Command,   chars: "\x60x"                       }
+  # arrow left
   - { key: 123,       mods: Command,   chars: "\x60,"                       }
+  # arrow right
   - { key: 124,       mods: Command,   chars: "\x60."                       }
+  # enter
   - { key: 36,        mods: Command,   action: ToggleFullscreen             }
+
   - { key: A,         mods: Alt,       chars: "\x1ba"                       }
   - { key: B,         mods: Alt,       chars: "\x1bb"                       }
   - { key: C,         mods: Alt,       chars: "\x1bc"                       }
