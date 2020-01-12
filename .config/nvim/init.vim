@@ -65,12 +65,14 @@ if has('unnamedplus')
   set clipboard^=unnamedplus
 endif
 
+let g:NERDTreeWinPos = "left"
+let g:gruvbox_contrast_dark='medium'
+let g:gruvbox_italic=1
+let g:AutoPairsMapBS=0
+
 " UI - Gruvbox
 set background=dark
 set termguicolors
-let g:NERDTreeWinPos = "right"
-let g:gruvbox_contrast_dark='medium'
-let g:gruvbox_italic=1
 colorscheme gruvbox
 
 " manual folding
