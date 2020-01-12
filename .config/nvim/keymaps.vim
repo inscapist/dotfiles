@@ -41,7 +41,9 @@ nnoremap <silent> S :write<CR>
 nnoremap <silent> <space>g <C-w>w
 nnoremap <silent> <space>\ :vsp<CR>
 nnoremap <silent> <space>- :sp<CR>
-nnoremap <silent> <space>qq <C-w>q
+nnoremap <silent> ss :sp<CR>
+nnoremap <silent> vv :vsp<CR>
+nnoremap <silent> qq <C-w>q
 set splitbelow
 set splitright
 
