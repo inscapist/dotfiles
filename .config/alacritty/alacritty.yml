@@ -55,38 +55,14 @@ colors:
     cyan:    '0x8ec07c'
     white:   '0xebdbb2'
 
-# # Colors (Neutron)
-# colors:
-#   primary:
-#     background: '0x252727'
-#     foreground: '0xebecf2'
-#   normal:
-#     black:   '0x2e3138'
-#     red:     '0xd27d72'
-#     green:   '0x6ac389'
-#     yellow:  '0xe5c178'
-#     blue:    '0x7c8fa4'
-#     magenta: '0xb48dac'
-#     cyan:    '0x85c0cd'
-#     white:   '0xebecf2'
-#   bright:
-#     black:   '0x2e3138'
-#     red:     '0xd27d72'
-#     green:   '0x6ac389'
-#     yellow:  '0xe5c178'
-#     blue:    '0x7c8fa4'
-#     magenta: '0xb48dac'
-#     cyan:    '0x85c0cd'
-#     white:   '0xeff0f5'
-
 window:
   # Window dimensions (changes require restart)
   #
   # Specified in number of columns/lines, not pixels.
   # If both are `0`, this setting is ignored.
   dimensions:
-    columns: 130
-    lines: 40
+    columns: 100
+    lines: 30
 
   # Window position (changes require restart)
   #
