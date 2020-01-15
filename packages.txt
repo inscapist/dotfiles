@@ -1,5 +1,3 @@
-#!/bin/sh
-
 brew install bat
 brew install tmux-mem-cpu-load
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
