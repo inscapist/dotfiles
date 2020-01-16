@@ -12,7 +12,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/goyo.vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Themes
 Plug 'morhetz/gruvbox'
 " Languages
@@ -65,6 +65,7 @@ if has('unnamedplus')
   set clipboard^=unnamedplus
 endif
 
+let g:deoplete#enable_at_startup = 1
 let g:NERDTreeWinPos = "left"
 let g:gruvbox_contrast_dark='medium'
 let g:gruvbox_italic=1
@@ -80,9 +81,8 @@ set foldmethod=manual
 
 " Source additional vim files
 source ~/.config/nvim/keymaps.vim
-source ~/.config/nvim/coc-plug.vim
-source ~/.config/nvim/go.vim
 source ~/.config/nvim/denite.vim
-source ~/.config/nvim/tex.vim
 source ~/.config/nvim/embedded-term.vim
+source ~/.config/nvim/go.vim
+source ~/.config/nvim/tex.vim
 
