@@ -8,13 +8,13 @@ env:
 
 font:
   normal:
-    family: Victor Mono
+    family: VictorMono Nerd Font
     style: Medium
   bold:
-    family: Victor Mono
-    style: SemiBold
+    family: VictorMono Nerd Font
+    style: Bold
   italic:
-    family: Victor Mono
+    family: VictorMono Nerd Font
     style: Italic
   size: 16
   offset:
