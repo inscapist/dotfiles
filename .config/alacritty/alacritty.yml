@@ -9,7 +9,7 @@ env:
 font:
   normal:
     family: VictorMono Nerd Font
-    style: Medium
+    style: Regular
   bold:
     family: VictorMono Nerd Font
     style: Bold
