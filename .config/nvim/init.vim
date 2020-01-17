@@ -56,6 +56,10 @@ set nocursorcolumn              " Do not highlight column (speeds up highlightin
 set nocursorline                " Do not highlight cursor (speeds up highlighting)
 set lazyredraw                  " Wait to redraw
 set tabstop=2 shiftwidth=2 expandtab
+set cmdheight=2
+set updatetime=300
+set shortmess+=c
+set signcolumn=yes
 
 " autosave on focus lost
 :au FocusLost * silent! wa
@@ -73,11 +77,6 @@ let g:NERDTreeWinPos = "left"
 let g:gruvbox_contrast_dark='medium'
 let g:gruvbox_italic=1
 let g:AutoPairsMapBS=0
-
-set cmdheight=2
-set updatetime=300
-set shortmess+=c
-set signcolumn=yes
 
 " UI - Gruvbox
 set background=dark
