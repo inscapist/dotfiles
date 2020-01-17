@@ -16,6 +16,9 @@ Plug 'junegunn/goyo.vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Snippet support
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
 " Themes
 Plug 'morhetz/gruvbox'
 " Languages
@@ -72,8 +75,8 @@ if has('unnamedplus')
   set clipboard^=unnamedplus
 endif
 
-let g:deoplete#enable_at_startup = 1
 let g:NERDTreeWinPos = "left"
+let g:NERDTreeIgnore = ['^\.DS_Store$', '^tags$', '\.git$[[dir]]', '\.sass-cache$']
 let g:gruvbox_contrast_dark='medium'
 let g:gruvbox_italic=1
 let g:AutoPairsMapBS=0
@@ -93,4 +96,5 @@ source ~/.config/nvim/embedded-term.vim
 source ~/.config/nvim/go.vim
 source ~/.config/nvim/tex.vim
 source ~/.config/nvim/coc-plug.vim
+source ~/.config/nvim/autocomplete.vim
 
