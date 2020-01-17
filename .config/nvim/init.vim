@@ -1,18 +1,21 @@
 call plug#begin('~/.config/nvim/plugged')
 Plug 'tpope/vim-sensible'
+Plug 'ntpeters/vim-better-whitespace'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdtree'
+Plug 'jceb/vim-orgmode'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-abolish'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/goyo.vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Themes
 Plug 'morhetz/gruvbox'
 " Languages
@@ -71,6 +74,11 @@ let g:gruvbox_contrast_dark='medium'
 let g:gruvbox_italic=1
 let g:AutoPairsMapBS=0
 
+set cmdheight=2
+set updatetime=300
+set shortmess+=c
+set signcolumn=yes
+
 " UI - Gruvbox
 set background=dark
 set termguicolors
@@ -85,4 +93,5 @@ source ~/.config/nvim/denite.vim
 source ~/.config/nvim/embedded-term.vim
 source ~/.config/nvim/go.vim
 source ~/.config/nvim/tex.vim
+source ~/.config/nvim/coc-plug.vim
 
