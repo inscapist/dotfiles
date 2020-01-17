@@ -76,7 +76,7 @@ if has('unnamedplus')
 endif
 
 let g:NERDTreeWinPos = "left"
-let g:NERDTreeIgnore = ['^\.DS_Store$', '^tags$', '\.git$[[dir]]', '\.sass-cache$']
+let g:NERDTreeIgnore = ['^\.DS_Store$', '^tags$', '^tags.lock$', '^tags.temp$','\.git$[[dir]]', '\.sass-cache$']
 let g:gruvbox_contrast_dark='medium'
 let g:gruvbox_italic=1
 let g:AutoPairsMapBS=0
