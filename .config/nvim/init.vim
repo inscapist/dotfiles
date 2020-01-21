@@ -5,15 +5,11 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdtree'
-Plug 'jceb/vim-orgmode'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-abolish'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/vim-easy-align'
-Plug 'junegunn/goyo.vim'
-Plug 'ludovicchabant/vim-gutentags'
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Snippet support
@@ -22,8 +18,6 @@ Plug 'Shougo/neosnippet-snippets'
 " Themes
 Plug 'morhetz/gruvbox'
 " Languages
-Plug 'lervag/vimtex'
-Plug 'KeitaNakamura/tex-conceal.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 
@@ -93,8 +87,7 @@ set foldmethod=manual
 source ~/.config/nvim/keymaps.vim
 source ~/.config/nvim/denite.vim
 source ~/.config/nvim/embedded-term.vim
-source ~/.config/nvim/go.vim
-source ~/.config/nvim/tex.vim
+source ~/.config/nvim/langs/go.vim
 source ~/.config/nvim/coc-plug.vim
 source ~/.config/nvim/autocomplete.vim
 
