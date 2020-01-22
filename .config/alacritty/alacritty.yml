@@ -8,13 +8,13 @@ env:
 
 font:
   normal:
-    family: FuraCode Nerd Font Mono
-    style: Regular
+    family: FuraCode Nerd Font
+    style: Retina
   bold:
-    family: FuraCode Nerd Font Mono
+    family: FuraCode Nerd Font
     style: Bold
   italic:
-    family: FuraCode Nerd Font Mono
+    family: FuraCode Nerd Font
     style: Light
   size: 16
   offset:
