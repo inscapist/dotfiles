@@ -88,3 +88,19 @@ function! ToggleLazyGit()
   call OpenTerm('lazygit')
 endfunction
 nnoremap <silent> <space>lg :<C-u>call ToggleLazyGit()<CR>
+
+" Scroll using arrows
+function! ScrollQuarter(move)
+    let height=winheight(0)
+
+    if a:move == 'up'
+        let key="\<C-Y>"
+    else
+        let key="\<C-E>"
+    endif
+
+    execute 'normal! ' . height/4 . key
+endfunction
+
+nnoremap <silent> <up> :call ScrollQuarter('up')<CR>
+nnoremap <silent> <down> :call ScrollQuarter('down')<CR>
