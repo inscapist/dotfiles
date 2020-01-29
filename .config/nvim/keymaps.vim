@@ -67,8 +67,9 @@ function! ToggleNerdTree()
 endfunction
 nnoremap <silent> <space>w :call ToggleNerdTree()<CR>
 
-" Set syntax folding
-nnoremap <space>fo :setlocal foldmethod=syntax
+" Set custom folding
+nnoremap <space>fos :setlocal foldmethod=syntax<CR>
+nnoremap <space>foi :setlocal foldmethod=indent<CR>
 
 " quicktypes
 nnoremap <space>fs :%s///g
