@@ -8,17 +8,17 @@ env:
 
 font:
   normal:
-    family: FuraCode Nerd Font
-    style: Retina
+    family: VictorMono Nerd Font
+    style: Regular
   bold:
-    family: FuraCode Nerd Font
-    style: Bold
+    family: VictorMono Nerd Font
+    style: Bold Italic
   italic:
-    family: FuraCode Nerd Font
-    style: Light
-  size: 15
+    family: VictorMono Nerd Font
+    style: ExtraLight Oblique
+  size: 16
   offset:
-    x: 0
+    x: 1
     y: 3
   use_thin_strokes: true
 
