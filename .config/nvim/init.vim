@@ -71,13 +71,15 @@ endif
 
 let g:NERDTreeWinPos = "left"
 let g:NERDTreeIgnore = ['^\.DS_Store$', '^tags$', '^tags.lock$', '^tags.temp$','\.git$[[dir]]', '\.sass-cache$', '\.pyc$', '__pycache__']
-let g:gruvbox_contrast_dark='medium'
-let g:gruvbox_italic=1
 let g:AutoPairsMapBS=1
 
 " UI - Gruvbox
 set background=dark
 set termguicolors
+" Valid options are: soft, hard, medium
+let g:gruvbox_contrast_dark='soft'
+let g:gruvbox_contrast_light='soft'
+let g:gruvbox_italic=1
 colorscheme gruvbox
 
 " manual folding
