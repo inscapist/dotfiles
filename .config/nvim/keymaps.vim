@@ -13,6 +13,10 @@ nnoremap <silent> \o <C-o>
 " Alias to :b#, jumps back to previous buffer
 nnoremap <silent> \b :b#<CR>
 
+" Switch theme
+nnoremap <silent> <space>mtl :set background=light<CR>
+nnoremap <silent> <space>mtd :set background=dark<CR>
+
 " Simple glucose
 inoremap jj <Esc>
 vnoremap B ^
