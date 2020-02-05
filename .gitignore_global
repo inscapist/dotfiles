@@ -73,3 +73,13 @@ cscope.files
 cscope.out
 cscope.in.out
 cscope.po.out
+
+# python
+*.py[cod]
+*$py.class
+.ipynb_checkpoints
+__pycache__
+## Setuptools distribution folder.
+/dist/
+## Python egg metadata, regenerated from source files by setuptools.
+/*.egg-info
