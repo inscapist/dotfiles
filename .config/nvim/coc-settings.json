@@ -12,7 +12,7 @@
   },
   "python.jediEnabled": false,
   "python.formatting.provider": "black",
-  "python.formatting.blackArgs": ["--line-length", "99"],
+  "python.formatting.blackArgs": ["--line-length", "88"],
   "languageserver": {
     "golang": {
       "command": "gopls",
