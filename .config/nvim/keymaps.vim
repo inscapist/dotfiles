@@ -19,6 +19,8 @@ nnoremap <silent> <space>mtd :set background=dark<CR>
 
 " Simple glucose
 inoremap jj <Esc>
+nnoremap j gj
+nnoremap k gk
 vnoremap B ^
 vnoremap E $
 nnoremap B ^
@@ -107,5 +109,5 @@ function! ScrollQuarter(move)
     execute 'normal! ' . height/4 . key
 endfunction
 
-nnoremap <silent> <up> :call ScrollQuarter('up')<CR>
-nnoremap <silent> <down> :call ScrollQuarter('down')<CR>
+nnoremap <silent> <s-up> :call ScrollQuarter('up')<CR>
+nnoremap <silent> <s-down> :call ScrollQuarter('down')<CR>
