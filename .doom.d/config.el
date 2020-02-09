@@ -54,9 +54,7 @@
 
 (load! "doom-persist-frame")
 
-
-(map! :n "S" #'evil-write
-      :n "v" nil
+(map! :n "v" nil
       :n "v v" #'evil-window-vsplit
       :n "q" nil
       :n "qq" #'evil-quit)
