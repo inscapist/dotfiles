@@ -45,6 +45,7 @@ nnoremap <silent> S :write<CR>
 
 " Pane navigation
 nnoremap <silent> <C-\> <C-w>w
+nnoremap <silent> <C-e> <C-w>w
 nnoremap <silent> <space>\ :vsp<CR>
 nnoremap <silent> <space>- :sp<CR>
 nnoremap <silent> ss :sp<CR>
@@ -56,7 +57,7 @@ set splitright
 " Quickfix list
 noremap <silent> <C-n> :cnext<CR>
 noremap <silent> <C-m> :cprevious<CR>
-noremap <silent> <C-w> :cclose<CR>
+noremap <silent> <C-q> :cclose<CR>
 
 " NERDTree
 " toggle Nerdtree and open the current folder
