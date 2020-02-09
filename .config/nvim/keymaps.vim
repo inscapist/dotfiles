@@ -44,7 +44,7 @@ nnoremap <silent> Q :qa!<CR>
 nnoremap <silent> S :write<CR>
 
 " Pane navigation
-nnoremap <silent> <space>g <C-w>w
+nnoremap <silent> <C-\> <C-w>w
 nnoremap <silent> <space>\ :vsp<CR>
 nnoremap <silent> <space>- :sp<CR>
 nnoremap <silent> ss :sp<CR>
