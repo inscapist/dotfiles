@@ -31,7 +31,6 @@ filetype plugin indent on       " ... and enable filetype detection
 set laststatus=2                " Show status line always
 set encoding=utf-8              " Set default encoding to UTF-8
 set autoread                    " Automatically read changed files
-set autoindent                  " Enabile Autoindent
 set backspace=indent,eol,start  " Makes backspace key more powerful.
 set incsearch                   " Shows the match while typing
 set hlsearch                    " Highlight found searches
@@ -53,11 +52,14 @@ set pumheight=10                " Completion window max size
 set nocursorcolumn              " Do not highlight column (speeds up highlighting)
 set nocursorline                " Do not highlight cursor (speeds up highlighting)
 set lazyredraw                  " Wait to redraw
-set tabstop=2 shiftwidth=2 expandtab
 set cmdheight=2
 set updatetime=300
 set shortmess+=c
 set signcolumn=yes
+
+set autoindent                  " Autoindent based on current line
+set tabstop=2 shiftwidth=2 expandtab
+au BufRead,BufNewFile *.py set tabstop=4 shiftwidth=4 expandtab
 
 " autosave on focus lost
 :au FocusLost * silent! wa
