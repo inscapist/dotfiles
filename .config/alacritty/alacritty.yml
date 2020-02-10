@@ -103,7 +103,7 @@ key_bindings:
   - { key: K,         mods: Command,   chars: "\x60K"                       }
   - { key: N,         mods: Command|Shift,   action: SpawnNewInstance       }
   - { key: N,         mods: Command,   chars: "\x60n"                       }
-  - { key: E,         mods: Command,   chars: "\x05"                        }
+  # - { key: E,         mods: Command,   chars: "\x05"                        }
   - { key: W,         mods: Command|Shift,   action: Quit                   }
   - { key: W,         mods: Command,   chars: "\x60x"                       }
   # arrow left

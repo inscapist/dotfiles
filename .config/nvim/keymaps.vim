@@ -45,7 +45,7 @@ nnoremap <silent> S :write<CR>
 
 " Pane navigation
 nnoremap <silent> <C-\> <C-w>w
-nnoremap <silent> <C-e> <C-w>w
+nnoremap <silent> <space>g <C-w>w
 nnoremap <silent> <space>\ :vsp<CR>
 nnoremap <silent> <space>- :sp<CR>
 nnoremap <silent> ss :sp<CR>
@@ -72,7 +72,7 @@ function! ToggleNerdTree()
       endif
     endif
 endfunction
-nnoremap <silent> <space>op :call ToggleNerdTree()<CR>
+nnoremap <silent> <space>w :call ToggleNerdTree()<CR>
 
 " Set custom folding
 nnoremap <space>fos :setlocal foldmethod=syntax<CR>
@@ -87,7 +87,7 @@ nnoremap <silent> <space>p :Denite file/rec -start-filter=1<CR>
 nnoremap <silent> <space>or :Denite -resume<CR>
 nnoremap <silent> <space>ot :<C-u>Denite tag -start-filter=1 -no-empty<CR>
 nnoremap <silent> <space>oo :Denite outline -no-empty<CR>
-nnoremap <silent> <space>ob :Denite buffer -auto-action=preview -no-empty<CR>
+nnoremap <silent> <space>b :Denite buffer -auto-action=preview -no-empty<CR>
 nnoremap <silent> <space>fw :<C-u>Denite grep:. -auto-action=preview -no-empty<CR>
 nnoremap <silent> <space>* :<C-u>DeniteCursorWord grep:. -auto-action=preview <CR>
 
