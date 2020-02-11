@@ -79,8 +79,8 @@ nnoremap <space>fos :setlocal foldmethod=syntax<CR>
 nnoremap <space>foi :setlocal foldmethod=indent<CR>
 
 " quicktypes
-nnoremap <space>fs :%s///g
-nnoremap <space>fc :cfdo %s///g \| update
+nnoremap <space>ss :%s///g
+nnoremap <space>sc :cfdo %s///g \| update
 
 " Denite shorcuts
 nnoremap <silent> <space>p :Denite file/rec -start-filter=1<CR>
