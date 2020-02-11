@@ -58,3 +58,5 @@
       :n "v v" #'evil-window-vsplit
       :n "q" nil
       :n "qq" #'evil-quit)
+
+(find-file "~/todo.org")
