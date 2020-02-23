@@ -13,6 +13,9 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/vim-easy-align'
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'mattn/emmet-vim'
 Plug 'mtth/scratch.vim'
 " Snippet support
 Plug 'Shougo/neosnippet'
@@ -73,7 +76,7 @@ if has('unnamedplus')
 endif
 
 let g:NERDTreeWinPos = "left"
-let g:NERDTreeIgnore = ['^\.DS_Store$', '^tags$', '^tags.lock$', '^tags.temp$','\.git$[[dir]]', '\.sass-cache$', '\.pyc$', '__pycache__', '\.dll$', '\.pdb$', '\.scc$', '\.csproj$']
+let g:NERDTreeIgnore = ['^\.DS_Store$', '^tags$', '^tags.lock$', '^tags.temp$','\.git$[[dir]]', '\.sass-cache$', '\.pyc$', '__pycache__', '\.dll$', '\.pdb$', '\.scc$', '\.csproj$','\.resx$', 'node_modules']
 let g:AutoPairsMapBS=1
 let g:scratch_persistence_file="~/.scratchpad"
 
@@ -88,6 +91,10 @@ colorscheme gruvbox
 
 " manual folding
 set foldmethod=manual
+
+" emmet
+let g:user_emmet_leader_key=','
+let g:user_emmet_mode='inv'  "enable for insert, visual, normal mode
 
 " Source additional vim files
 source ~/.config/nvim/keymaps.vim
