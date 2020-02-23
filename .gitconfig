@@ -36,3 +36,5 @@ gpgsign = false
   smtpserver = smtp.gmail.com
   smtpuser = zen9.felix@gmail.com
 	smtpserverport = 587
+[merge]
+	ff = false
