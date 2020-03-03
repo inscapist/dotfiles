@@ -2,11 +2,9 @@
       user-mail-address "zen9.felix@gmail.com")
 (setq doom-theme 'doom-gruvbox)
 (setq doom-font (font-spec :family "Victor Mono" :size 17))
-(setq display-line-numbers-type nil)
+(setq display-line-numbers-type t)
 (setq org-directory "~/org"
-      org-archive-location (concat org-directory "archive/%s::")
-      org-ellipsis " ▼ "
-      org-bullets-bullet-list '("☰ " "☱ " "☲ " "☳ " "☴ " "☵ " "☶ " "☷ " "☷ " "☷ " "☷ "))
+      org-archive-location (concat org-directory "archive/%s::"))
 
 (when (not (display-graphic-p))
   (add-hook 'evil-insert-state-entry-hook (lambda () (send-string-to-terminal "\033[5 q")))
@@ -35,3 +33,8 @@
       :n "q" nil
       :n "qq" #'evil-quit)
 
+
+(def-package! graphviz-dot-mode
+  :config
+  (setq graphviz-dot-indent-width 4
+        graphviz-dot-preview-extension "png"))
