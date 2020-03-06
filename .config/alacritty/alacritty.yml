@@ -8,14 +8,14 @@ env:
 
 font:
   normal:
-    family: VictorMono Nerd Font
-    style: Regular
+    family: Iosevka Nerd Font
+    style: Light
   bold:
-    family: VictorMono Nerd Font
+    family: Iosevka Nerd Font
     style: Bold Italic
   italic:
-    family: VictorMono Nerd Font
-    style: ExtraLight Oblique
+    family: Iosevka Nerd Font
+    style: Thin Italic
   size: 16
   offset:
     x: 1
