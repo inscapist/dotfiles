@@ -40,12 +40,12 @@ nnoremap <leader>K gg"_dG
 nnoremap <leader>C :%y+<CR>
 
 " Quick exit/save
-nnoremap <silent> Q :qa!<CR>
+nnoremap <silent> Q :qa<CR>
 nnoremap <silent> S :write<CR>
 
 " Pane navigation
 nnoremap <silent> <C-\> <C-w>w
-nnoremap <silent> <space>g <C-w>w
+nnoremap <silent> <space>w <C-w>w
 nnoremap <silent> <space>\ :vsp<CR>
 nnoremap <silent> <space>- :sp<CR>
 nnoremap <silent> ss :sp<CR>
@@ -72,7 +72,7 @@ function! ToggleNerdTree()
       endif
     endif
 endfunction
-nnoremap <silent> <space>w :call ToggleNerdTree()<CR>
+nnoremap <silent> <space>op :call ToggleNerdTree()<CR>
 
 " Set custom folding
 nnoremap <space>fos :setlocal foldmethod=syntax<CR>
