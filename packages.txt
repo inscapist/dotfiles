@@ -24,6 +24,8 @@ brew install ruby-build
 brew install bat
 brew install git
 brew install neovim --head
+brew install htop
+brew install glances
 
 brew tap zegervdv/zathura
 brew install zathura
