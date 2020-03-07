@@ -15,7 +15,7 @@ font:
     style: Bold Italic
   italic:
     family: Iosevka Nerd Font
-    style: Thin Italic
+    style: Extralight Italic
   size: 16
   offset:
     x: 1
