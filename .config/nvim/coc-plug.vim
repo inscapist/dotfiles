@@ -1,6 +1,14 @@
-" Some servers have issues with backup files, see #649
+"g:coc_filetype_map Some servers have issues with backup files, see #649
 set nobackup
 set nowritebackup
+
+let g:coc_global_extensions = ["coc-tsserver", "coc-prettier", "coc-json", "coc-html", "coc-json", "coc-css", "coc-python", "coc-pyright"]
+" let g:coc_filetype_map={
+"       \   "tsx": "typescriptreact",
+"       \   "ts": "typescript",
+"       \   "jsx": "javascriptreact",
+"       \   "js": "javascript",
+"       \ }
 
 " Use `[g` and `]g` to navigate diagnostics
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
