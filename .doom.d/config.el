@@ -1,6 +1,6 @@
 (setq user-full-name "Felix"
       user-mail-address "zen9.felix@gmail.com")
-(setq doom-theme 'doom-gruvbox)
+(setq doom-theme 'doom-one)
 (setq doom-font (font-spec :family "Victor Mono" :size 17))
 (setq display-line-numbers-type t)
 (setq org-directory "~/org"
