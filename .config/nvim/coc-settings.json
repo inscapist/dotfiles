@@ -4,9 +4,11 @@
   "diagnostic.infoSign": "⚑",
   "diagnostic.hintSign": "⚑",
   "codeLens.enable": false,
+  "tsserver.npm": "/usr/local/bin/npm",
+  "tsserver.log": "verbose",
+  "tsserver.trace.server": "verbose",
   "emmet.showExpandedAbbreviation": "always",
   "emmet.showSuggestionsAsSnippets": true,
-  "solargraph.checkGemVersion": false,
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
     "Markdown",
