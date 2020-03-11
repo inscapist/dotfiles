@@ -13,6 +13,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/vim-easy-align'
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'liuchengxu/vista.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'mattn/emmet-vim'
@@ -103,4 +104,5 @@ source ~/.config/nvim/embedded-term.vim
 source ~/.config/nvim/langs/go.vim
 source ~/.config/nvim/coc-plug.vim
 source ~/.config/nvim/autocomplete.vim
+source ~/.config/nvim/vista.vim
 

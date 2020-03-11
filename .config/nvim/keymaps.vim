@@ -86,7 +86,8 @@ nnoremap <space>sc :cfdo %s///g \| update
 nnoremap <silent> <space>p :Denite file/rec -start-filter=1<CR>
 nnoremap <silent> <space>or :Denite -resume<CR>
 nnoremap <silent> <space>ot :<C-u>Denite tag -start-filter=1 -no-empty<CR>
-nnoremap <silent> <space>oo :Denite outline -no-empty<CR>
+" replaced by Vista
+" nnoremap <silent> <space>oo :Denite outline -no-empty<CR>
 nnoremap <silent> <space>b :Denite buffer -auto-action=preview -no-empty<CR>
 nnoremap <silent> <space>fw :<C-u>Denite grep:. -auto-action=preview -no-empty<CR>
 nnoremap <silent> <space>* :<C-u>DeniteCursorWord grep:. -auto-action=preview <CR>
