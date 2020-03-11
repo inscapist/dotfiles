@@ -16,9 +16,9 @@ font:
   italic:
     family: Iosevka Nerd Font
     style: Extralight Italic
-  size: 17
+  size: 16
   offset:
-    x: 1
+    x: 0
     y: 3
   use_thin_strokes: true
 
