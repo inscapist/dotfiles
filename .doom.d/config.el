@@ -6,10 +6,12 @@
 (setq org-directory "~/org"
       org-archive-location (concat org-directory "archive/%s::"))
 
+;; clever cursor
 (when (not (display-graphic-p))
   (add-hook 'evil-insert-state-entry-hook (lambda () (send-string-to-terminal "\033[5 q")))
   (add-hook 'evil-normal-state-entry-hook (lambda () (send-string-to-terminal "\033[0 q"))))
 
+;; Remember window position and dim
 (when-let (dims (doom-cache-get 'last-frame-size))
   (cl-destructuring-bind ((left . top) width height fullscreen) dims
     (setq initial-frame-alist
@@ -19,22 +21,19 @@
                     (width . ,width)
                     (height . ,height)
                     (fullscreen . ,fullscreen))))))
-
 (defun save-frame-dimensions ()
   (doom-cache-set 'last-frame-size
                   (list (frame-position)
                         (frame-width)
                         (frame-height)
                         (frame-parameter nil 'fullscreen))))
-
 (add-hook 'kill-emacs-hook #'save-frame-dimensions)
 
-(map! :n "S" #'save-buffer
-      :n "q" nil
-      :n "qq" #'evil-quit)
-
-
+;; customize graphviz package
 (def-package! graphviz-dot-mode
   :config
   (setq graphviz-dot-indent-width 4
         graphviz-dot-preview-extension "png"))
+
+(load! "+org")
+(load! "+keybindings")
