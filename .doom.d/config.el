@@ -1,7 +1,7 @@
 (setq user-full-name "Felix"
       user-mail-address "zen9.felix@gmail.com")
 (setq doom-theme 'doom-gruvbox)
-(setq doom-font (font-spec :family "Victor Mono" :size 17))
+(setq doom-font (font-spec :family "Iosevka Nerd Font" :size 17))
 (setq display-line-numbers-type t)
 (setq org-directory "~/org"
       org-archive-location (concat org-directory "archive/%s::"))
