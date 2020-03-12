@@ -80,6 +80,7 @@ let g:NERDTreeWinPos = "left"
 let g:NERDTreeIgnore = ['^\.DS_Store$', '^tags$', '^tags.lock$', '^tags.temp$','\.git$[[dir]]', '\.sass-cache$', '\.pyc$', '__pycache__', '\.dll$', '\.pdb$', '\.scc$', '\.csproj$','\.resx$', 'node_modules']
 let g:AutoPairsMapBS=1
 let g:scratch_persistence_file="~/.scratchpad"
+let g:EasyMotion_smartcase = 1
 
 " UI - Gruvbox
 set background=dark

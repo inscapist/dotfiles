@@ -25,7 +25,8 @@ vnoremap B ^
 vnoremap E $
 nnoremap B ^
 nnoremap E $
-nmap f <Plug>(easymotion-s)
+nmap f <Plug>(easymotion-sl)
+nmap F <Plug>(easymotion-s2)
 nmap zp :NERDTreeFind<CR>
 
 " Quick reload vimrc
