@@ -63,11 +63,12 @@ set signcolumn=yes
 
 set autoindent                  " Autoindent based on current line
 set tabstop=2 shiftwidth=2 expandtab
-au BufRead,BufNewFile *.py set tabstop=4 shiftwidth=4 expandtab
+autocmd BufRead,BufNewFile *.py set tabstop=4 shiftwidth=4 expandtab
 
 " autosave on focus lost
 :au FocusLost * silent! wa
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 
 " Enable to copy to clipboard for operations like yank, delete, change and put
 " http://stackoverflow.com/questions/20186975/vim-mac-how-to-copy-to-clipboard-without-pbcopy
@@ -76,8 +77,6 @@ if has('unnamedplus')
   set clipboard^=unnamedplus
 endif
 
-let g:NERDTreeWinPos = "left"
-let g:NERDTreeIgnore = ['^\.DS_Store$', '^tags$', '^tags.lock$', '^tags.temp$','\.git$[[dir]]', '\.sass-cache$', '\.pyc$', '__pycache__', '\.dll$', '\.pdb$', '\.scc$', '\.csproj$','\.resx$', 'node_modules']
 let g:AutoPairsMapBS=1
 let g:scratch_persistence_file="~/.scratchpad"
 let g:EasyMotion_smartcase = 1
@@ -106,4 +105,5 @@ source ~/.config/nvim/langs/go.vim
 source ~/.config/nvim/coc-plug.vim
 source ~/.config/nvim/autocomplete.vim
 source ~/.config/nvim/vista.vim
+source ~/.config/nvim/nerdtree.vim
 

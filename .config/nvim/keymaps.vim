@@ -27,7 +27,6 @@ nnoremap B ^
 nnoremap E $
 nmap f <Plug>(easymotion-sl)
 nmap F <Plug>(easymotion-s2)
-nmap zp :NERDTreeFind<CR>
 
 " Quick reload vimrc
 nnoremap <leader>sc :source $MYVIMRC<CR>
@@ -43,6 +42,11 @@ nnoremap <silent> Q :qa<CR>
 nnoremap <silent> S :write<CR>
 
 " Pane navigation
+"Switch between different windows by their direction`
+noremap <C-j> <C-w>j| "switching to below window
+noremap <C-k> <C-w>k| "switching to above window
+noremap <C-l> <C-w>l| "switching to right window
+noremap <C-h> <C-w>h| "switching to left window
 nnoremap <silent> <C-\> <C-w>w
 nnoremap <silent> <space>w <C-w>w
 nnoremap <silent> <space>\ :vsp<CR>
@@ -57,21 +61,6 @@ set splitright
 noremap <silent> <C-n> :cnext<CR>
 noremap <silent> <C-m> :cprevious<CR>
 noremap <silent> <C-q> :cclose<CR>
-
-" NERDTree
-" toggle Nerdtree and open the current folder
-function! ToggleNerdTree()
-    if exists("t:NERDTreeBufName") && bufwinnr(t:NERDTreeBufName) != -1
-        execute ":NERDTreeClose"
-    else 
-      if @% != ""
-        execute ":NERDTreeFind"
-      else
-        execute ":NERDTreeToggle"
-      endif
-    endif
-endfunction
-nnoremap <silent> <space>op :call ToggleNerdTree()<CR>
 
 " Set custom folding
 nnoremap <space>fos :setlocal foldmethod=syntax<CR>
