@@ -25,10 +25,8 @@ vnoremap B ^
 vnoremap E $
 nnoremap B ^
 nnoremap E $
-
-" quick scroll up and down
-nnoremap zj ztLzz
-nnoremap zk zbHzz
+nmap f <Plug>(easymotion-s)
+nmap zp :NERDTreeFind<CR>
 
 " Quick reload vimrc
 nnoremap <leader>sc :source $MYVIMRC<CR>
