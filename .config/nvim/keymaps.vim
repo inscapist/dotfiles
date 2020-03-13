@@ -67,8 +67,10 @@ noremap <silent> <C-m> :cprevious<CR>
 noremap <silent> <C-q> :cclose<CR>
 
 " Set custom folding
+set foldcolumn=1
 nnoremap <space>fos :setlocal foldmethod=syntax<CR>
 nnoremap <space>foi :setlocal foldmethod=indent<CR>
+nnoremap <tab> za
 
 " quicktypes
 nnoremap <space>ss :%s///g
