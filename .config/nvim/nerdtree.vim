@@ -15,7 +15,6 @@ function! ToggleNerdTree()
     endif
 endfunction
 
-nnoremap <silent> <space>op :call ToggleNerdTree()<CR>
 nnoremap zp :NERDTreeFind<CR>
-
+nnoremap <silent> <space>op :call ToggleNerdTree()<CR>
 

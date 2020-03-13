@@ -5,6 +5,10 @@
 
 let mapleader=","
 
+" disable interfering features
+nnoremap q: <nop>
+nnoremap q <nop>
+
 " easymotion prefix
 map \\ <Plug>(easymotion-prefix)
 map \\r <Plug>(easymotion-lineanywhere)
@@ -71,7 +75,8 @@ nnoremap <space>ss :%s///g
 nnoremap <space>sc :cfdo %s///g \| update
 
 " Denite shorcuts
-nnoremap <silent> <space>p :Denite file/rec -start-filter=1<CR>
+" nnoremap <silent> <space>p :Denite file/rec -start-filter=1<CR>
+nnoremap <silent> <expr> <space>p (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Denite file/rec -start-filter=1\<cr>"
 nnoremap <silent> <space>or :Denite -resume<CR>
 nnoremap <silent> <space>ot :<C-u>Denite tag -start-filter=1 -no-empty<CR>
 " replaced by Vista
