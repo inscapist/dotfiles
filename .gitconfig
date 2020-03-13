@@ -6,7 +6,7 @@ smudge = git-lfs smudge -- %f
 [user]
 	name = Felix
 	email = zen9.felix@gmail.com
-# signingkey = 0ECD022F
+	signingKey = 534D1F4267E311C1
 [alias]
 co = checkout
 br = branch
@@ -28,7 +28,7 @@ remote-history= !"git for-each-ref --sort=-committerdate refs/remotes/ --color -
 [core]
 	excludesfile = /Users/felix/.gitignore_global
 [commit]
-gpgsign = false
+  gpgsign = false
 [url "git@gitlab.com:"]
 	insteadOf = https://gitlab.com/
 [sendemail]
@@ -38,3 +38,5 @@ gpgsign = false
 	smtpserverport = 587
 [merge]
 	ff = false
+[gpg]
+	program = gpg
