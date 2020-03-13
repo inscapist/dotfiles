@@ -78,14 +78,11 @@ nnoremap <space>sc :cfdo %s///g \| update
 
 " Denite shorcuts
 " nnoremap <silent> <space>p :Denite file/rec -start-filter=1<CR>
-nnoremap <silent> <expr> <space>p (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Denite file/rec -start-filter=1\<cr>"
-nnoremap <silent> <space>or :Denite -resume<CR>
-nnoremap <silent> <space>ot :<C-u>Denite tag -start-filter=1 -no-empty<CR>
-" replaced by Vista
-" nnoremap <silent> <space>oo :Denite outline -no-empty<CR>
-nnoremap <silent> <space>b :Denite buffer -auto-action=preview -no-empty<CR>
-nnoremap <silent> <space>fw :<C-u>Denite grep:. -auto-action=preview -no-empty<CR>
-nnoremap <silent> <space>* :<C-u>DeniteCursorWord grep:. -auto-action=preview <CR>
+nnoremap <silent> <expr> <space><space> (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Denite file/rec -start-filter=1\<cr>"
+nnoremap <silent> <expr> <space>or (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Denite -resume\<cr>"
+nnoremap <silent> <expr> <space>b (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Denite buffer -auto-action=preview -no-empty\<cr>"
+nnoremap <silent> <expr> <space>fw (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":\<c-u>Denite grep:. -auto-action=preview -no-empty\<cr>"
+nnoremap <silent> <expr> <space>* (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":\<c-u>DeniteCursorWord grep:. -auto-action=preview -no-empty\<cr>"
 
 " lazygit
 function! ToggleLazyGit()
