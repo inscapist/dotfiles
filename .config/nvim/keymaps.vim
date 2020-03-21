@@ -106,3 +106,5 @@ endfunction
 
 nnoremap <silent> <s-up> :call ScrollQuarter('up')<CR>
 nnoremap <silent> <s-down> :call ScrollQuarter('down')<CR>
+nnoremap <silent> K :call ScrollQuarter('up')<CR>
+nnoremap <silent> J :call ScrollQuarter('down')<CR>
