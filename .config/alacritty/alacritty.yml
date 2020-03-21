@@ -100,7 +100,6 @@ window:
   startup_mode: Windowed
 
 key_bindings:
-  - { key: K,         mods: Command,   chars: "\x60K"                       }
   - { key: N,         mods: Command|Shift,   action: SpawnNewInstance       }
   - { key: N,         mods: Command,   chars: "\x60n"                       }
   # - { key: E,         mods: Command,   chars: "\x05"                        }
@@ -108,8 +107,14 @@ key_bindings:
   - { key: W,         mods: Command,   chars: "\x60x"                       }
   # arrow left
   - { key: 123,       mods: Command,   chars: "\x60,"                       }
+  - { key: H,       mods: Command,   chars: "\x60,"                       }
   # arrow right
   - { key: 124,       mods: Command,   chars: "\x60."                       }
+  - { key: L,       mods: Command,   chars: "\x60."                       }
+  # command J maps to tmux switch pane
+  - { key: J,       mods: Command,   chars: "\x60;"                       }
+  # command K clears the tmux buffer
+  - { key: K,         mods: Command,   chars: "\x60K"                       }
   # enter
   - { key: 36,        mods: Command,   action: ToggleFullscreen             }
 

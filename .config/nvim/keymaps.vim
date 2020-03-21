@@ -22,6 +22,7 @@ nnoremap <silent> <space>mtl :set background=light<CR>
 nnoremap <silent> <space>mtd :set background=dark<CR>
 
 " Simple glucose
+nnoremap rr :noh<cr>
 inoremap jj <Esc>
 nnoremap j gj
 nnoremap k gk
