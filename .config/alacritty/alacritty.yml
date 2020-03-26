@@ -114,7 +114,7 @@ key_bindings:
   # command J maps to tmux switch pane
   - { key: J,       mods: Command,   chars: "\x60;"                       }
   # command K clears the tmux buffer
-  - { key: K,         mods: Command,   chars: "\x60K"                       }
+  - { key: K,         mods: Command,   chars: "\x0c"                       }
   # enter
   - { key: 36,        mods: Command,   action: ToggleFullscreen             }
 

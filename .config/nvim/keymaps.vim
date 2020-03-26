@@ -23,6 +23,7 @@ nnoremap <silent> <space>mtd :set background=dark<CR>
 
 " Simple glucose
 nnoremap rr :noh<cr>
+nnoremap rf :set foldmethod=manual<CR> zE
 inoremap jj <Esc>
 nnoremap j gj
 nnoremap k gk
@@ -71,6 +72,7 @@ noremap <silent> <C-q> :cclose<CR>
 set foldcolumn=1
 nnoremap <space>fos :setlocal foldmethod=syntax<CR>
 nnoremap <space>foi :setlocal foldmethod=indent<CR>
+nnoremap <space>fom :setlocal foldmethod=indent<CR>
 nnoremap <tab> za
 
 " quicktypes
