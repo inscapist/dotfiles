@@ -36,9 +36,9 @@ endfunction
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Remap for rename current word
-nmap <space>rn <Plug>(coc-rename)
+nmap rn <Plug>(coc-rename)
 " alias to space-c-r
-nmap <silent><space>rs :<C-u>CocRestart<CR>
+nmap <silent>rs :<C-u>CocRestart<CR>
 
 " Remap for format selected region
 " xmap <leader>fs  <Plug>(coc-format-selected)
