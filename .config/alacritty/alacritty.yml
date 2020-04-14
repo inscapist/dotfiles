@@ -8,18 +8,18 @@ env:
 
 font:
   normal:
-    family: Iosevka Nerd Font
+    family: OperatorMono Nerd Font
     style: Light
   bold:
-    family: Iosevka Nerd Font
-    style: Bold Italic
+    family: OperatorMono Nerd Font
+    style: Bold
   italic:
-    family: Iosevka Nerd Font
-    style: Extralight Italic
-  size: 16
+    family: OperatorMono Nerd Font
+    style: Extra Light Italic
+  size: 15
   offset:
     x: 0
-    y: 3
+    y: 1
   use_thin_strokes: true
 
 background_opacity: 1.0
