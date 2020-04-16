@@ -24,8 +24,12 @@ Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 " Themes
 Plug 'morhetz/gruvbox'
+Plug 'dylanaraps/wal.vim'
+Plug 'Yggdroot/indentLine'
 " Languages
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 call plug#end()
 
 """"""""""""""""""""""
@@ -81,6 +85,9 @@ endif
 let g:AutoPairsMapBS=1
 let g:scratch_persistence_file="~/.scratchpad"
 let g:EasyMotion_smartcase = 1
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_math = 1
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
 " UI - Gruvbox
 set background=dark
