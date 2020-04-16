@@ -73,7 +73,8 @@ set foldcolumn=1
 nnoremap <space>fos :setlocal foldmethod=syntax<CR>
 nnoremap <space>foi :setlocal foldmethod=indent<CR>
 nnoremap <space>fom :setlocal foldmethod=indent<CR>
-nnoremap <tab> za
+autocmd BufRead,BufNewFile *.py nnoremap <tab> za
+autocmd BufRead,BufNewFile *.json nnoremap <tab> za
 
 " quicktypes
 nnoremap <space>ss :%s///g

@@ -28,6 +28,7 @@ Plug 'dylanaraps/wal.vim'
 Plug 'Yggdroot/indentLine'
 " Languages
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'jceb/vim-orgmode'
 call plug#end()
 
 """"""""""""""""""""""
@@ -82,8 +83,12 @@ endif
 
 let g:AutoPairsMapBS=1
 let g:scratch_persistence_file="~/.scratchpad"
-let g:EasyMotion_smartcase = 1
+let g:EasyMotion_smartcase=1
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+
+" org mode
+let g:org_indent=1
+let g:org_export_emacs="/usr/local/bin/emacs"
 
 " UI - Gruvbox
 set background=dark
