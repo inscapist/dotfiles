@@ -26,6 +26,7 @@ background_opacity: 1.0
 live_config_reload: true
 
 # Colors (Gruvbox dark)
+# BEGIN ACE
 colors:
   primary:
     background: '0x282828'
@@ -48,7 +49,7 @@ colors:
     magenta: '0xd3869b'
     cyan:    '0x8ec07c'
     white:   '0xebdbb2'
-
+# END ACE
 window:
   # Window dimensions (changes require restart)
   #
