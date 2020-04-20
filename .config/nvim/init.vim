@@ -84,7 +84,7 @@ endif
 let g:AutoPairsMapBS=1
 let g:scratch_persistence_file="~/.scratchpad"
 let g:EasyMotion_smartcase=1
-let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+let g:indentLine_fileType = ['python']
 
 " org mode
 let g:org_indent=1
