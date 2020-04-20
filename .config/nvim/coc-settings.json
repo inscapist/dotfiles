@@ -18,7 +18,8 @@
     "typescript",
     "html",
     "json",
-    "python"
+    "python",
+    "ruby"
   ],
   "html.format.enable": true,
   "yaml.validate": true,
@@ -29,6 +30,7 @@
   "python.jediEnabled": false,
   "python.formatting.provider": "black",
   "python.formatting.blackArgs": ["--line-length", "88"],
+  "solargraph.formatting": true,
   "languageserver": {
     "golang": {
       "command": "gopls",

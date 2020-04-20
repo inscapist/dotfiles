@@ -23,9 +23,8 @@ Plug 'mtth/scratch.vim'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 " Themes
+Plug 'sheerun/vim-polyglot'
 Plug 'morhetz/gruvbox'
-Plug 'dylanaraps/wal.vim'
-Plug 'Yggdroot/indentLine'
 " Languages
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'jceb/vim-orgmode'
@@ -84,17 +83,16 @@ endif
 let g:AutoPairsMapBS=1
 let g:scratch_persistence_file="~/.scratchpad"
 let g:EasyMotion_smartcase=1
-let g:indentLine_fileType = ['python']
 
 " org mode
 let g:org_indent=1
 let g:org_export_emacs="/usr/local/bin/emacs"
 
-" UI - Gruvbox
 set background=dark
 set termguicolors
+
 " Valid options are: soft, hard, medium
-let g:gruvbox_contrast_dark='soft'
+let g:gruvbox_contrast_dark='medium'
 let g:gruvbox_contrast_light='soft'
 let g:gruvbox_italic=1
 colorscheme gruvbox

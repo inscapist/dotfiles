@@ -12,7 +12,7 @@ font:
     style: Light
   bold:
     family: OperatorMono Nerd Font
-    style: Bold
+    style: Medium
   italic:
     family: OperatorMono Nerd Font
     style: Extra Light Italic
