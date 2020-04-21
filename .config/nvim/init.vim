@@ -66,7 +66,6 @@ set signcolumn=yes
 
 set autoindent                  " Autoindent based on current line
 set tabstop=2 shiftwidth=2 expandtab
-autocmd BufRead,BufNewFile *.py set tabstop=4 shiftwidth=4 expandtab
 
 " autosave on focus lost
 :au FocusLost * silent! wa
@@ -113,3 +112,4 @@ source ~/.config/nvim/coc-plug.vim
 source ~/.config/nvim/autocomplete.vim
 source ~/.config/nvim/vista.vim
 source ~/.config/nvim/nerdtree.vim
+source ~/.config/nvim/python.vim
