@@ -105,12 +105,15 @@ let g:user_emmet_leader_key=','
 let g:user_emmet_mode='inv'  "enable for insert, visual, normal mode
 
 " Source additional vim files
-source ~/.config/nvim/keymaps.vim
+source ~/.config/nvim/autocomplete.vim
+source ~/.config/nvim/coc-plug.vim
 source ~/.config/nvim/denite.vim
 source ~/.config/nvim/embedded-term.vim
-source ~/.config/nvim/langs/go.vim
-source ~/.config/nvim/coc-plug.vim
-source ~/.config/nvim/autocomplete.vim
-source ~/.config/nvim/vista.vim
+source ~/.config/nvim/keymaps.vim
 source ~/.config/nvim/nerdtree.vim
-source ~/.config/nvim/python.vim
+source ~/.config/nvim/vista.vim
+source ~/.config/nvim/zen.vim
+
+" languages
+source ~/.config/nvim/langs/go.vim
+source ~/.config/nvim/langs/python.vim

@@ -16,7 +16,7 @@ font:
   italic:
     family: OperatorMono Nerd Font
     style: Extra Light Italic
-  size: 16
+  size: 15
   offset:
     x: 0
     y: 1
