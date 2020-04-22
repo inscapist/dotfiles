@@ -95,6 +95,7 @@ set termguicolors
 let g:gruvbox_contrast_dark='medium'
 let g:gruvbox_contrast_light='soft'
 let g:gruvbox_italic=1
+let g:gruvbox_bold=1
 colorscheme gruvbox
 
 " manual folding
@@ -117,3 +118,11 @@ source ~/.config/nvim/zen.vim
 " languages
 source ~/.config/nvim/langs/go.vim
 source ~/.config/nvim/langs/python.vim
+
+" TODO NOTE TODO OPTIMIZE
+augroup vimrc_todo
+    au!
+    au Syntax * syn match MyTodo /\v<(FIXME|NOTE|TODO|OPTIMIZE|IGNORE|SKIP)/
+          \ containedin=.*Comment,vimCommentTitle
+augroup END
+hi def link MyTodo Todo
