@@ -26,6 +26,7 @@ Plug 'Shougo/neosnippet-snippets'
 " Themes
 Plug 'sheerun/vim-polyglot'
 Plug 'morhetz/gruvbox'
+Plug 'Yggdroot/indentLine'
 " Languages
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'jceb/vim-orgmode'
@@ -83,6 +84,9 @@ endif
 let g:AutoPairsMapBS=1
 let g:scratch_persistence_file="~/.scratchpad"
 let g:EasyMotion_smartcase=1
+
+" toggle indent line with :IndentLinesEnable
+let g:indentLine_enabled=0
 
 " org mode
 let g:org_indent=1
