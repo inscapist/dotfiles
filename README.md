@@ -1,3 +1,3 @@
-# My personal IDE
+# My Dots
 
 ![](screenshot2.png)
