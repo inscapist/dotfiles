@@ -1,3 +1,3 @@
 # My personal IDE
 
-![](screenshot.png)
+![](screenshot2.png)
