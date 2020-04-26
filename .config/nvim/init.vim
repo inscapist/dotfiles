@@ -86,7 +86,8 @@ let g:scratch_persistence_file="~/.scratchpad"
 let g:EasyMotion_smartcase=1
 
 " toggle indent line with :IndentLinesEnable
-let g:indentLine_enabled=0
+let g:indentLine_enabled=1
+let g:indentLine_fileType=["python"]
 
 " org mode
 let g:org_indent=1

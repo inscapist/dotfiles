@@ -63,6 +63,12 @@ nnoremap <silent> qq <C-w>q
 set splitbelow
 set splitright
 
+" Tab movement
+nnoremap <silent> gj :tabnew<CR>
+nnoremap <silent> gk :tabclose<CR>
+nnoremap <silent> gh :tabprevious<CR>
+nnoremap <silent> gl :tabnext<CR>
+
 " Quickfix list
 noremap <silent> <C-n> :cnext<CR>
 noremap <silent> <C-m> :cprevious<CR>
