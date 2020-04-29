@@ -22,9 +22,9 @@ nnoremap <silent> <space>mtl :set background=light<CR>
 nnoremap <silent> <space>mtd :set background=dark<CR>
 
 " Simple glucose
-nnoremap rr :noh<cr>
-nnoremap rf :set foldmethod=manual<CR> zE
-inoremap jj <Esc>
+nnoremap <silent> rr :noh<cr>
+nnoremap <silent> rf :set foldmethod=manual<CR> zE
+inoremap <silent> jj <Esc>
 nnoremap j gj
 nnoremap k gk
 vnoremap B ^
@@ -49,12 +49,6 @@ nnoremap <silent> S :write<CR>
 
 " Pane navigation
 "Switch between different windows by their direction`
-noremap <C-j> <C-w>j| "switching to below window
-noremap <C-k> <C-w>k| "switching to above window
-noremap <C-l> <C-w>l| "switching to right window
-noremap <C-h> <C-w>h| "switching to left window
-nnoremap <silent> <C-\> <C-w>w
-nnoremap <silent> <space>w <C-w>w
 nnoremap <silent> <space>\ :vsp<CR>
 nnoremap <silent> <space>- :sp<CR>
 nnoremap <silent> ss :sp<CR>

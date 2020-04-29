@@ -1,4 +1,5 @@
 call plug#begin('~/.config/nvim/plugged')
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-sensible'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'michaeljsmith/vim-indent-object'
