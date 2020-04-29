@@ -114,15 +114,9 @@ key_bindings:
   # enter
   - { key: 36,        mods: Command,   action: ToggleFullscreen             }
 
-  # tmux pane (hljk to left-right-down-up)
-  - { key: H,         mods: Command,   chars: "\x60\x1b[D"                  }
-  - { key: L,         mods: Command,   chars: "\x60\x1b[C"                  }
-  - { key: J,         mods: Command,   chars: "\x60\x1b[B"                  }
-  - { key: K,         mods: Command,   chars: "\x60\x1b[A"                  }
-
   # tmux window (HL to left-right)
-  - { key: H,         mods: Command|Shift,   chars: "\x60,"                 }
-  - { key: L,         mods: Command|Shift,   chars: "\x60."                 }
+  - { key: H,         mods: Command,   chars: "\x60,"                 }
+  - { key: L,         mods: Command,   chars: "\x60."                 }
 
   - { key: A,         mods: Alt,       chars: "\x1ba"                       }
   - { key: B,         mods: Alt,       chars: "\x1bb"                       }
