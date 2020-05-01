@@ -107,9 +107,12 @@ window:
 # https://godoc.org/github.com/tiborvass/uniline/ansi#Code
 key_bindings:
   - { key: N,         mods: Command|Shift,   action: SpawnNewInstance       }
-  - { key: N,         mods: Command,   chars: "\x60n"                       }
   - { key: W,         mods: Command|Shift,   action: Quit                   }
+
+  # tmux binding
+  - { key: N,         mods: Command,   chars: "\x60n"                       }
   - { key: W,         mods: Command,   chars: "\x60x"                       }
+  - { key: K,         mods: Command,   chars: "\x60K"                       }
 
   # enter
   - { key: 36,        mods: Command,   action: ToggleFullscreen             }
