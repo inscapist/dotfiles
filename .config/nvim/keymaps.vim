@@ -23,6 +23,8 @@ nnoremap <silent> <space>mtd :set background=dark<CR>
 
 " Simple glucose
 nnoremap <silent> rr :noh<cr>
+nnoremap <silent> re :e!<cr>
+nnoremap <silent> rw <C-w>=
 nnoremap <silent> rf :set foldmethod=manual<CR> zE
 inoremap <silent> jj <Esc>
 nnoremap j gj
