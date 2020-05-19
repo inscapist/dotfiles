@@ -19,6 +19,6 @@ function SetLSPShortcuts()
 endfunction()
 
 augroup LSP
-  autocmd!	" Remove ALL autocommands for the current group.
+  autocmd!
   autocmd FileType typescript call SetLSPShortcuts()
 augroup END
