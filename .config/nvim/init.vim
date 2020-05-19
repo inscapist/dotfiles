@@ -16,24 +16,15 @@ Plug 'airblade/vim-gitgutter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/goyo.vim'
 Plug 'mtth/scratch.vim'
-" Dark powered
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'Shougo/neosnippet'
-Plug 'Shougo/neosnippet-snippets'
 " UI
 Plug 'morhetz/gruvbox'
 Plug 'Yggdroot/indentLine'
 Plug 'sheerun/vim-polyglot'
-" Languages
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+" Language servers etc
 Plug 'leafgarland/typescript-vim'
-Plug 'https://github.com/vim-scripts/dbext.vim'
 Plug 'mattn/emmet-vim'
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 
@@ -96,7 +87,6 @@ let g:indentLine_fileType=["python"]
 " emmet
 let g:user_emmet_leader_key=','
 let g:user_emmet_mode='inv'  "enable for insert, visual, normal mode
-let g:deoplete#enable_at_startup = 1
 
 
 " ===========================================================================
@@ -131,8 +121,3 @@ source ~/.config/nvim/modules/syntax.vim
 source ~/.config/nvim/modules/zen.vim
 
 
-" ===========================================================================
-" LANGUAGES
-" ===========================================================================
-source ~/.config/nvim/langs/go.vim
-source ~/.config/nvim/langs/python.vim
