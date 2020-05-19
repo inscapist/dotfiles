@@ -16,8 +16,7 @@
     "typescript",
     "html",
     "json",
-    "python",
-    "ruby"
+    "python"
   ],
   "html.format.enable": true,
   "python.jediEnabled": false,
