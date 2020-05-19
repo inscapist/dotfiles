@@ -1,6 +1,6 @@
 call plug#begin('~/.config/nvim/plugged')
-Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-sensible'
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'vim-airline/vim-airline'
@@ -14,9 +14,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/goyo.vim'
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'https://github.com/vim-scripts/dbext.vim'
-Plug 'liuchengxu/vista.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'mattn/emmet-vim'
@@ -25,7 +23,7 @@ Plug 'mtth/scratch.vim'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 " Themes
-Plug 'sheerun/vim-polyglot'
+" Plug 'sheerun/vim-polyglot'
 Plug 'morhetz/gruvbox'
 Plug 'Yggdroot/indentLine'
 " Languages
@@ -62,8 +60,9 @@ set pumheight=10                " Completion window max size
 set nocursorcolumn              " Do not highlight column (speeds up highlighting)
 set nocursorline                " Do not highlight cursor (speeds up highlighting)
 set lazyredraw                  " Wait to redraw
+set ttyfast
 set cmdheight=2
-set updatetime=300
+set updatetime=500
 set shortmess+=c
 set signcolumn=yes
 
