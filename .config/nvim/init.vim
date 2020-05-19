@@ -24,10 +24,10 @@ Plug 'Shougo/neosnippet-snippets'
 " UI
 Plug 'morhetz/gruvbox'
 Plug 'Yggdroot/indentLine'
+Plug 'sheerun/vim-polyglot'
 " Languages
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
 Plug 'https://github.com/vim-scripts/dbext.vim'
 Plug 'mattn/emmet-vim'
 call plug#end()
