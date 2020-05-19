@@ -1,8 +1,12 @@
-" When term starts, auto go into insert mode
-autocmd TermOpen * startinsert
+augroup floatingWindow
+  autocmd!
 
-" Turn off line numbers etc
-autocmd TermOpen * setlocal listchars= nonumber norelativenumber
+  " When term starts, auto go into insert mode
+  autocmd TermOpen * startinsert
+
+  " Turn off line numbers etc
+  autocmd TermOpen * setlocal listchars= nonumber norelativenumber
+augroup END
 
 function! OpenTerm(cmd)
     call CreateCenteredFloatingWindow()

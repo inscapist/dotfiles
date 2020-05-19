@@ -30,6 +30,10 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'leafgarland/typescript-vim'
 Plug 'https://github.com/vim-scripts/dbext.vim'
 Plug 'mattn/emmet-vim'
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
 call plug#end()
 
 
@@ -92,6 +96,7 @@ let g:indentLine_fileType=["python"]
 " emmet
 let g:user_emmet_leader_key=','
 let g:user_emmet_mode='inv'  "enable for insert, visual, normal mode
+let g:deoplete#enable_at_startup = 1
 
 
 " ===========================================================================
@@ -118,11 +123,12 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " MODULES
 " ===========================================================================
 source ~/.config/nvim/modules/denite.vim
-source ~/.config/nvim/modules/embedded-term.vim
+source ~/.config/nvim/modules/floating-window.vim
+source ~/.config/nvim/modules/intellisense.vim
 source ~/.config/nvim/modules/keymaps.vim
 source ~/.config/nvim/modules/nerdtree.vim
-source ~/.config/nvim/modules/zen.vim
 source ~/.config/nvim/modules/syntax.vim
+source ~/.config/nvim/modules/zen.vim
 
 
 " ===========================================================================

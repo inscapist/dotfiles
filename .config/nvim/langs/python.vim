@@ -1,6 +1,9 @@
+augroup pythonsyntax
+    autocmd!
+    autocmd Filetype python set tabstop=4 shiftwidth=4 expandtab
+augroup END
 
-autocmd BufRead,BufNewFile *.py set tabstop=4 shiftwidth=4 expandtab
-
+" Customize vim-polyglot
 let g:python_highlight_all = 0
 let g:python_highlight_builtins = 0
 let g:python_highlight_builtin_objs = 1
