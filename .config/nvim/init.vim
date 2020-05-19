@@ -115,14 +115,18 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 
 " ===========================================================================
-" SOURCES
+" MODULES
 " ===========================================================================
-source ~/.config/nvim/denite.vim
-source ~/.config/nvim/embedded-term.vim
-source ~/.config/nvim/keymaps.vim
-source ~/.config/nvim/nerdtree.vim
-source ~/.config/nvim/zen.vim
-source ~/.config/nvim/syntax.vim
-" languages
+source ~/.config/nvim/modules/denite.vim
+source ~/.config/nvim/modules/embedded-term.vim
+source ~/.config/nvim/modules/keymaps.vim
+source ~/.config/nvim/modules/nerdtree.vim
+source ~/.config/nvim/modules/zen.vim
+source ~/.config/nvim/modules/syntax.vim
+
+
+" ===========================================================================
+" LANGUAGES
+" ===========================================================================
 source ~/.config/nvim/langs/go.vim
 source ~/.config/nvim/langs/python.vim
