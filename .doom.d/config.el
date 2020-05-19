@@ -2,9 +2,9 @@
       user-mail-address "zen9.felix@gmail.com")
 (setq doom-theme 'doom-one)
 (setq doom-themes-enable-bold nil)
-(setq doom-font (font-spec :family "OperatorMono Nerd Font" :size 15 :weight 'light))
+(setq doom-font (font-spec :family "OperatorMono Nerd Font" :size 17 :weight 'light))
 ;; (setq doom-themes-treemacs-enable-variable-pitch nil)
-(setq doom-variable-pitch-font (font-spec :family "Iosevka Nerd Font" :size 15 :weight 'light))
+(setq doom-variable-pitch-font (font-spec :family "Iosevka Nerd Font" :size 17 :weight 'light))
 (setq display-line-numbers-type t)
 (setq org-directory "~/org"
       org-archive-location (concat org-directory "archive/%s::"))
