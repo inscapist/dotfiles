@@ -28,7 +28,6 @@ Plug 'morhetz/gruvbox'
 Plug 'Yggdroot/indentLine'
 " Languages
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'jceb/vim-orgmode'
 call plug#end()
 
 """"""""""""""""""""""
@@ -65,14 +64,10 @@ set cmdheight=2
 set updatetime=500
 set shortmess+=c
 set signcolumn=yes
+set foldmethod=manual
 
 set autoindent                  " Autoindent based on current line
 set tabstop=2 shiftwidth=2 expandtab
-
-" autosave on focus lost
-:au FocusLost * silent! wa
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
 
 " Enable to copy to clipboard for operations like yank, delete, change and put
 " http://stackoverflow.com/questions/20186975/vim-mac-how-to-copy-to-clipboard-without-pbcopy
@@ -89,14 +84,9 @@ let g:EasyMotion_smartcase=1
 let g:indentLine_enabled=1
 let g:indentLine_fileType=["python"]
 
-" org mode
-let g:org_indent=1
-let g:org_export_emacs="/usr/local/bin/emacs"
-
+" UI
 set background=dark
 set termguicolors
-
-" Valid options are: soft, hard, medium
 let g:gruvbox_contrast_dark='medium'
 let g:gruvbox_contrast_light='soft'
 let g:gruvbox_italic=1
@@ -104,30 +94,23 @@ let g:gruvbox_bold=1
 colorscheme gruvbox
 
 " manual folding
-set foldmethod=manual
 
 " emmet
 let g:user_emmet_leader_key=','
 let g:user_emmet_mode='inv'  "enable for insert, visual, normal mode
 
+" autosave on focus lost
+:au FocusLost * silent! wa
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 " Source additional vim files
-source ~/.config/nvim/autocomplete.vim
-source ~/.config/nvim/coc-plug.vim
 source ~/.config/nvim/denite.vim
 source ~/.config/nvim/embedded-term.vim
 source ~/.config/nvim/keymaps.vim
 source ~/.config/nvim/nerdtree.vim
-source ~/.config/nvim/vista.vim
 source ~/.config/nvim/zen.vim
+source ~/.config/nvim/syntax.vim
 
 " languages
 source ~/.config/nvim/langs/go.vim
 source ~/.config/nvim/langs/python.vim
-
-" TODO NOTE TODO OPTIMIZE
-augroup vimrc_todo
-    au!
-    au Syntax * syn match MyTodo /\v<(FIXME|URGENT|NOTE|TODO|OPTIMIZE|IGNORE|SKIP)/
-          \ containedin=.*Comment,vimCommentTitle
-augroup END
-hi def link MyTodo Todo
