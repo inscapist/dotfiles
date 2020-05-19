@@ -42,7 +42,7 @@ omap af <Plug>(coc-funcobj-a)
 
 
 " ===========================================================================
-" Supertab behavior
+" https://github.com/neoclide/coc.nvim/wiki/Completion-with-sources
 " ===========================================================================
 function! s:check_back_space() abort
   let col = col('.') - 1
