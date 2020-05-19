@@ -1,3 +1,6 @@
+" ===========================================================================
+" PLUGINS
+" ===========================================================================
 call plug#begin('~/.config/nvim/plugged')
 Plug 'tpope/vim-sensible'
 Plug 'christoomey/vim-tmux-navigator'
@@ -19,7 +22,8 @@ Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'mattn/emmet-vim'
 Plug 'mtth/scratch.vim'
-" Snippet support
+" Dark powered
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 " Themes
@@ -30,9 +34,10 @@ Plug 'Yggdroot/indentLine'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 
-""""""""""""""""""""""
-"      Settings      "
-""""""""""""""""""""""
+
+" ===========================================================================
+" VIM EDITOR CONFIG
+" ===========================================================================
 filetype off                    " Reset filetype detection first ...
 filetype plugin indent on       " ... and enable filetype detection
 set laststatus=2                " Show status line always
@@ -76,15 +81,24 @@ if has('unnamedplus')
   set clipboard^=unnamedplus
 endif
 
+
+" ===========================================================================
+" PLUGINS CONFIG
+" ===========================================================================
 let g:AutoPairsMapBS=1
 let g:scratch_persistence_file="~/.scratchpad"
 let g:EasyMotion_smartcase=1
-
 " toggle indent line with :IndentLinesEnable
 let g:indentLine_enabled=1
 let g:indentLine_fileType=["python"]
+" emmet
+let g:user_emmet_leader_key=','
+let g:user_emmet_mode='inv'  "enable for insert, visual, normal mode
 
+
+" ===========================================================================
 " UI
+" ===========================================================================
 set background=dark
 set termguicolors
 let g:gruvbox_contrast_dark='medium'
@@ -93,24 +107,24 @@ let g:gruvbox_italic=1
 let g:gruvbox_bold=1
 colorscheme gruvbox
 
-" manual folding
 
-" emmet
-let g:user_emmet_leader_key=','
-let g:user_emmet_mode='inv'  "enable for insert, visual, normal mode
-
+" ===========================================================================
+" HOOKS
+" ===========================================================================
 " autosave on focus lost
 :au FocusLost * silent! wa
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-" Source additional vim files
+
+" ===========================================================================
+" SOURCES
+" ===========================================================================
 source ~/.config/nvim/denite.vim
 source ~/.config/nvim/embedded-term.vim
 source ~/.config/nvim/keymaps.vim
 source ~/.config/nvim/nerdtree.vim
 source ~/.config/nvim/zen.vim
 source ~/.config/nvim/syntax.vim
-
 " languages
 source ~/.config/nvim/langs/go.vim
 source ~/.config/nvim/langs/python.vim
