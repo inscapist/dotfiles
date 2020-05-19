@@ -51,8 +51,6 @@ nnoremap <silent> S :write<CR>
 
 " Pane navigation
 "Switch between different windows by their direction`
-nnoremap <silent> <space>\ :vsp<CR>
-nnoremap <silent> <space>- :sp<CR>
 nnoremap <silent> ss :sp<CR>
 nnoremap <silent> vv :vsp<CR>
 nnoremap <silent> qq <C-w>q
@@ -83,7 +81,6 @@ nnoremap <space>ss :%s///g
 nnoremap <space>sc :cfdo %s///g \| update
 
 " Denite shorcuts
-" nnoremap <silent> <space>p :Denite file/rec -start-filter=1<CR>
 nnoremap <silent> <expr> <space><space> (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Denite file/rec -start-filter=1\<cr>"
 nnoremap <silent> <expr> <space>or (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Denite -resume\<cr>"
 nnoremap <silent> <expr> <space>b (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Denite buffer -auto-action=preview -no-empty\<cr>"
