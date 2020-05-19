@@ -7,8 +7,6 @@
   "tsserver.npm": "/usr/local/bin/npm",
   "tsserver.log": "verbose",
   "tsserver.trace.server": "verbose",
-  "emmet.showExpandedAbbreviation": "always",
-  "emmet.showSuggestionsAsSnippets": true,
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
     "Markdown",
@@ -22,15 +20,9 @@
     "ruby"
   ],
   "html.format.enable": true,
-  "yaml.validate": true,
-  "yaml.format.enable": true,
-  "yaml.schemas": {
-    "kubernetes": "/*.yaml"
-  },
   "python.jediEnabled": false,
   "python.formatting.provider": "black",
   "python.formatting.blackArgs": ["--line-length", "88"],
-  "solargraph.formatting": true,
   "languageserver": {
     "golang": {
       "command": "gopls",
