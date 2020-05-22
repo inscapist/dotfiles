@@ -17,18 +17,32 @@
       user-mail-address "zen9.felix@gmail.com")
 (display-time-mode 1)
 (setq display-time-day-and-date t)
+(setq doom-theme 'doom-rouge)
 (setq doom-themes-enable-bold nil)
 (setq doom-font (font-spec :family "OperatorMono Nerd Font" :size 17 :weight 'light))
-(setq doom-themes-treemacs-enable-variable-pitch nil)
-(setq doom-variable-pitch-font (font-spec :family "Iosevka Nerd Font" :size 17 :weight 'light))
-(setq doom-theme 'gruvbox-dark-soft)
+(setq doom-variable-pitch-font (font-spec :family "OperatorMono Nerd Font" :size 15 :weight 'light))
+(setq all-the-icons-scale-factor 0.7)
 (setq org-directory "~/org/")
 (setq display-line-numbers-type nil)
+
+;; Switch to the new window after splitting
+(setq evil-split-window-below t
+      evil-vsplit-window-right t)
+
+;; Silence all that useless output
+(setq direnv-always-show-summary nil)
+
 
 
 ;; =============================================================================================
 ;; Editor Enhancements
 ;; =============================================================================================
+
+;; History & backup settings (save nothing, that's what git is for)
+(setq auto-save-default nil
+      create-lockfiles nil
+      history-length 500
+      make-backup-files nil)
 
 ;; clever cursor
 (when (not (display-graphic-p))
@@ -57,7 +71,7 @@
 
 
 ;; =============================================================================================
-;; Load external
+;; Editor Enhancements
 ;; =============================================================================================
 (load! "+org")
 (load! "+keybindings")
