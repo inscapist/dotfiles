@@ -25,4 +25,8 @@
   "gl" #'+workspace/switch-right))
 
 (map! :leader
-      "\\" #'vterm)
+      "\\"
+      (lambda () (interactive)
+        (progn
+          (call-interactively #'evil-window-vsplit)
+          (call-interactively #'+vterm/here))))
