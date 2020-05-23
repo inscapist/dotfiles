@@ -15,15 +15,17 @@
 ;; =============================================================================================
 (setq user-full-name "Felix"
       user-mail-address "zen9.felix@gmail.com")
-(display-time-mode 1)
-(setq display-time-day-and-date t)
 (setq doom-theme 'doom-rouge)
-(setq doom-themes-enable-bold nil)
-(setq doom-font (font-spec :family "OperatorMono Nerd Font" :size 17 :weight 'light))
-(setq doom-variable-pitch-font (font-spec :family "OperatorMono Nerd Font" :size 15 :weight 'light))
+(setq doom-themes-enable-bold t)
+(setq doom-font (font-spec :family "OperatorMono Nerd Font" :size 16 :weight 'light))
+(setq doom-variable-pitch-font (font-spec :family "Overpass" :size 13 :weight 'Thin))
 (setq all-the-icons-scale-factor 0.7)
 (setq org-directory "~/org/")
 (setq display-line-numbers-type nil)
+
+;; treemacs customization
+(setq treemacs--width-is-locked nil)
+(setq treemacs-width 25)
 
 ;; Switch to the new window after splitting
 (setq evil-split-window-below t
@@ -32,7 +34,10 @@
 ;; Silence all that useless output
 (setq direnv-always-show-summary nil)
 
-
+;; Make doom-modeline slightly smaller than editor font
+(custom-set-faces
+  '(mode-line ((t (:family "OperatorMono Nerd Font" :height 0.98))))
+  '(mode-line-inactive ((t (:family "OperatorMono Nerd Font" :height 0.98)))))
 
 ;; =============================================================================================
 ;; Editor Enhancements
@@ -44,7 +49,7 @@
       history-length 500
       make-backup-files nil)
 
-;; clever cursor
+;; make evil usable in terminal
 (when (not (display-graphic-p))
   (add-hook 'evil-insert-state-entry-hook (lambda () (send-string-to-terminal "\033[5 q")))
   (add-hook 'evil-normal-state-entry-hook (lambda () (send-string-to-terminal "\033[0 q"))))

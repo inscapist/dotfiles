@@ -23,3 +23,6 @@
   "C-l" #'evil-window-right
   "gh" #'+workspace/switch-left
   "gl" #'+workspace/switch-right))
+
+(map! :leader
+      "\\" #'vterm)
