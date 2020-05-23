@@ -1,3 +1,3 @@
 # My Dots
 
-![](screenshot2.png)
+![](screenshot.png)
