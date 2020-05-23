@@ -18,7 +18,7 @@
 (setq doom-theme 'doom-rouge)
 (setq doom-themes-enable-bold t)
 (setq doom-font (font-spec :family "OperatorMono Nerd Font" :size 16 :weight 'light))
-(setq doom-variable-pitch-font (font-spec :family "Overpass" :size 13 :weight 'Thin))
+(setq doom-variable-pitch-font (font-spec :family "Overpass" :size 14 :weight 'Thin))
 (setq all-the-icons-scale-factor 0.7)
 (setq org-directory "~/org/")
 (setq display-line-numbers-type nil)
@@ -36,8 +36,8 @@
 
 ;; Make doom-modeline slightly smaller than editor font
 (custom-set-faces
-  '(mode-line ((t (:family "OperatorMono Nerd Font" :height 0.98))))
-  '(mode-line-inactive ((t (:family "OperatorMono Nerd Font" :height 0.98)))))
+  '(mode-line ((t (:family "OperatorMono Nerd Font" :height 0.96))))
+  '(mode-line-inactive ((t (:family "OperatorMono Nerd Font" :height 0.96)))))
 
 ;; =============================================================================================
 ;; Editor Enhancements
