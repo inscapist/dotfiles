@@ -19,5 +19,5 @@
 
 (load! "+bindings")
 (load! "+editor")
-(load! "+orgmode")
+(load! "+gtd")
 (load! "+ui")
