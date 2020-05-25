@@ -2,7 +2,7 @@
 (setq doom-themes-enable-bold t)
 (setq doom-font (font-spec :family "OperatorMono Nerd Font" :size 16 :weight 'light))
 (setq doom-variable-pitch-font (font-spec :family "Overpass" :size 14 :weight 'Thin))
-(setq all-the-icons-scale-factor 0.7)
+(setq all-the-icons-scale-factor 0.8)
 
 (after! treemacs
   (setq treemacs--width-is-locked nil)

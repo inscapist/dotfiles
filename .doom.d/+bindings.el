@@ -8,22 +8,25 @@
       :n "J" #'evil-scroll-down
       :n "K" #'evil-scroll-up)
 
-(map!
  ;; Easier navigation
+(map!
  :ne "C-h"   #'evil-window-left
+ :ne "C-l"   #'evil-window-right
  :ne "C-j"   #'evil-window-down
  :ne "C-k"   #'evil-window-up
- :ne "C-l"   #'evil-window-right
- :ne "gh" #'+workspace/switch-left
- :ne "gj" #'+workspace/new
- :ne "gk" #'+workspace/delete
- :ne "gl" #'+workspace/switch-right
+ :ne "` h"   #'+workspace/switch-left
+ :ne "` l"   #'+workspace/switch-right
+ :ne "` j"   #'+workspace/new
+ :ne "` k"   #'+workspace/delete
  (:map evil-treemacs-state-map
   "C-h" #'evil-window-left
   "C-l" #'evil-window-right
-  "gh" #'+workspace/switch-left
-  "gl" #'+workspace/switch-right))
+  "` h"   #'+workspace/switch-left
+  "` l"   #'+workspace/switch-right
+  "` j"   #'+workspace/new
+  "` k"   #'+workspace/delete))
 
+;; open terminal in vertical window
 (map! :leader
       "\\"
       (lambda () (interactive)
