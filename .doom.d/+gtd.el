@@ -9,7 +9,7 @@
   (setq org-default-inbox-file (expand-file-name "inbox.org" org-directory)
         org-archive-location (expand-file-name ".archive/%s::" org-directory)))
 
-;; Reference
+;; Capture and refile
 ;; https://www.gnu.org/software/emacs/manual/html_node/org/Template-elements.html#Template-elements
 (after! org-capture
   (setq org-capture-templates
@@ -27,13 +27,8 @@
                              ("readings.org" :level . 2)
                              ("projects.org" :maxlevel . 2))))
 
-;; (setq org-capture-templates
-;;       `(("i" "inbox" entry (file ,(concat jethro/org-agenda-directory "inbox.org"))
-;;          "* TODO %?")
-;;         ("c" "org-protocol-capture" entry (file ,(concat jethro/org-agenda-directory "inbox.org"))
-;;          "* TODO [[%:link][%:description]]\n\n %i"
-;;          :immediate-finish t)
-;;         ("w" "Weekly Review" entry (file+olp+datetree ,(concat jethro/org-agenda-directory "reviews.org"))
-;;          (file ,(concat jethro/org-agenda-directory "templates/weekly_review.org")))
-;;         ("r" "Reading" todo ""
-;;          ((org-agenda-files '(,(concat jethro/org-agenda-directory "reading.org")))))))
+
+;; Customize agenda
+;; https://orgmode.org/worg/org-tutorials/org-custom-agenda-commands.html
+(after! org-agenda
+  (setq org-agenda-block-separator nil))

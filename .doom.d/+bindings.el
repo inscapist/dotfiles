@@ -3,7 +3,7 @@
 (map! :n "q" nil
       :n "s" nil)
 
-;; additive sugar
+;; Simple sugar
 (map! :n "S" #'save-buffer
       :n "vv" #'evil-window-vsplit
       :n "ss" #'evil-window-split
@@ -21,17 +21,23 @@
  :ne "s-l"   #'+workspace/switch-right
  :ne "s-n"   #'+workspace/new
  :ne "s-w"   #'+workspace/close-window-or-workspace
- :ne "s-r"   #'+workspace/rename
- (:map evil-treemacs-state-map
-  "C-h" #'evil-window-left
-  "C-l" #'evil-window-right
+ :ne "s-r"   #'+workspace/rename)
+
+;; Add/override treemacs keybindings
+(map!
+ (:map treemacs-mode-map
+  "p"     #'treemacs-peek
+  "x"     #'treemacs-collapse-parent-node
+  "X"     #'treemacs-collapse-all-projects
+  "C-h"   #'evil-window-left
+  "C-l"   #'evil-window-right
   "s-h"   #'+workspace/switch-left
   "s-l"   #'+workspace/switch-right
   "s-n"   #'+workspace/new
   "s-w"   #'+workspace/close-window-or-workspace
   "s-r"   #'+workspace/rename))
 
-;; open terminal in vertical window
+;; Open terminal in vertical window
 (map! :leader
       "\\"
       (lambda () (interactive)

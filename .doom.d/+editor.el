@@ -9,7 +9,7 @@
 (setq direnv-always-show-summary nil)
 
 
-;; do not display line number
+;; Do not display line number
 (setq display-line-numbers-type nil)
 
 
