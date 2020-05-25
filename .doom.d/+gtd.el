@@ -1,24 +1,34 @@
 ;;; $DOOMDIR/+gtd.el -*- lexical-binding: t; -*-
 
 ;; Sets up a Getting-Things-Done (GTD) workflow using Org-mode
-;;
-;; http://doc.norang.ca/org-mode.html
-;; refer https://github.com/hlissner/doom-emacs/blob/master/modules/lang/org/config.el
+;; For doom defaults, refer https://github.com/hlissner/doom-emacs/blob/master/modules/lang/org/config.el
+;; Some configs can be set in the header of org files.
+;; For example
+;;   #+STARTUP: http://doc.endlessparentheses.com/Var/org-startup-options.html
+;;   #+TAGS: https://orgmode.org/manual/Setting-Tags.html#Setting-Tags
+;;   #+FILETAGS: http://doc.norang.ca/org-mode.html
+
 
 (after! org
-  (setq org-default-inbox-file (expand-file-name "inbox.org" org-directory)
-        org-archive-location (expand-file-name ".archive/%s::" org-directory)))
+  (setq felix/org-agenda-directory (concat org-directory "/gtd/")
+        org-archive-location (expand-file-name ".archive/%s::" org-directory)
+        org-enforce-todo-dependencies t
+        org-log-done 'time
+        org-log-redeadline 'note
+        org-log-reschedule 'time
+        org-tags-column -1000))
 
-;; Capture and refile
-;; https://www.gnu.org/software/emacs/manual/html_node/org/Template-elements.html#Template-elements
+
+;; Refer https://www.gnu.org/software/emacs/manual/html_node/org/Template-elements.html#Template-elements
 (after! org-capture
   (setq org-capture-templates
         `(("i" "inbox" entry
-           (file+headline org-default-inbox-file "Tasks")
+           (file ,(expand-file-name "inbox.org" felix/org-agenda-directory))
            "* TODO %?")
-          ("l" "readings" entry
-           (file+headline ,(expand-file-name "readings.org" org-directory) "Uncategorized")
+          ("r" "readings" entry
+           (file+headline ,(expand-file-name "readings.org" felix/org-agenda-directory) "Uncategorized")
            "* %?"))))
+
 
 (after! org-refile
   (setq org-refile-allow-creating-parent-nodes 'confirm)
@@ -29,6 +39,44 @@
 
 
 ;; Customize agenda
-;; https://orgmode.org/worg/org-tutorials/org-custom-agenda-commands.html
+;; Refer https://orgmode.org/worg/org-tutorials/org-custom-agenda-commands.html
+(defun felix/switch-to-agenda ()
+    (interactive)
+    (org-agenda nil " "))
+
+(map! (:leader
+       (:prefix-map ("n" . "notes")
+        :desc "Org agenda" "a" #'felix/switch-to-agenda)))
+
 (after! org-agenda
-  (setq org-agenda-block-separator nil))
+  (setq org-agenda-block-separator nil
+        org-agenda-files (list felix/org-agenda-directory)
+        org-agenda-start-with-log-mode t)
+  (setq org-columns-default-format "%40ITEM(Task) %Effort(EE){:} %CLOCKSUM(Time Spent) %SCHEDULED(Scheduled) %DEADLINE(Deadline)")
+  (setq org-agenda-custom-commands `((" " "Agenda"
+                                      ((agenda ""
+                                               ((org-agenda-span 'week)
+                                                (org-deadline-warning-days 365)))
+                                       (todo "TODO"
+                                             ((org-agenda-overriding-header "To Refile")
+                                              (org-agenda-files '(,(concat felix/org-agenda-directory "inbox.org")))))
+                                       (todo "STRT|PROJ"
+                                             ((org-agenda-overriding-header "In Progress")
+                                              (org-agenda-files '(,(concat felix/org-agenda-directory "someday.org")
+                                                                  ,(concat felix/org-agenda-directory "projects.org")
+                                                                  ,(concat felix/org-agenda-directory "next.org")
+                                                                  ,(concat felix/org-agenda-directory "reading.org")))))
+                                       (todo "TODO"
+                                             ((org-agenda-overriding-header "Reading")
+                                              (org-agenda-files '(,(concat felix/org-agenda-directory "reading.org")))))
+                                       (todo "TODO|PROJ"
+                                             ((org-agenda-overriding-header "Projects")
+                                              (org-agenda-files '(,(concat felix/org-agenda-directory "projects.org")
+                                                                  ,(concat felix/org-agenda-directory "next.org")))))
+                                       (todo "TODO"
+                                             ((org-agenda-overriding-header "One-off Tasks")
+                                              (org-agenda-files '(,(concat felix/org-agenda-directory "next.org")
+                                                                  ,(concat felix/org-agenda-directory "someday.org")))
+                                              (org-agenda-skip-function '(org-agenda-skip-entry-if 'deadline 'scheduled)))))))))
+
+
