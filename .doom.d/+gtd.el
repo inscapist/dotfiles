@@ -31,7 +31,9 @@
 
 
 (after! org-refile
-  (setq org-refile-allow-creating-parent-nodes 'confirm)
+  (setq org-refile-allow-creating-parent-nodes 'confirm
+        org-refile-use-outline-path 'file
+        org-outline-path-complete-in-steps nil)
   (setq org-refile-targets '(("next.org" :level . 0)
                              ("someday.org" :level . 0)
                              ("readings.org" :level . 2)
