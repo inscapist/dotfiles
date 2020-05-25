@@ -1,3 +1,5 @@
+;;; $DOOMDIR/+ui.el -*- lexical-binding: t; -*-
+
 (setq doom-theme 'doom-rouge)
 (setq doom-themes-enable-bold t)
 (setq doom-font (font-spec :family "OperatorMono Nerd Font" :size 16 :weight 'light))
@@ -38,3 +40,4 @@
                         (frame-height)
                         (frame-parameter nil 'fullscreen))))
 (add-hook 'kill-emacs-hook #'save-frame-dimensions)
+

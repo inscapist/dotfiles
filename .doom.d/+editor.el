@@ -1,3 +1,5 @@
+;;; $DOOMDIR/+editor.el -*- lexical-binding: t; -*-
+
 ;; Switch to the new window after splitting
 (setq evil-split-window-below t
       evil-vsplit-window-right t)

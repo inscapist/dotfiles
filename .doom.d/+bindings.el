@@ -1,3 +1,5 @@
+;;; $DOOMDIR/+bindings.el -*- lexical-binding: t; -*-
+
 (map! :n "q" nil
       :n "s" nil)
 
