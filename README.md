@@ -11,8 +11,8 @@ _/_/__/_(___/_____/____/___(____/___/______(____/___
 
 ## Doom Emacs
 
-![](doom.png)
+![](screenshots/doom.png)
 
 ## Vim/Tmux/Alacritty
 
-![](neovim.png)
+![](screenshots/neovim.png)
