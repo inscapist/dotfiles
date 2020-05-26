@@ -54,6 +54,18 @@
   (setq org-agenda-block-separator nil
         org-agenda-files (list felix/org-agenda-directory)
         org-agenda-start-with-log-mode t)
+  (setq org-tag-alist '((:startgroup . nil)
+                        ;; contexts
+                        ("@thinking" . ?t)
+                        ("@researching" . ?r)
+                        ("@coding" . ?c)
+                        ("@fun" . ?f)
+                        ("@learning" . ?l)
+                        (:endgroup . nil)
+                        ;; projects
+                        ("clarific" . ?pc)
+                        ("ubermensch" . ?pu)
+                        ("freelance" . ?pf)))
   (setq org-columns-default-format "%40ITEM(Task) %Effort(EE){:} %CLOCKSUM(Time Spent) %SCHEDULED(Scheduled) %DEADLINE(Deadline)")
   (setq org-agenda-custom-commands `((" " "Agenda"
                                       ((agenda ""
