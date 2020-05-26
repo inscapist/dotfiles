@@ -17,6 +17,7 @@
         org-log-done 'time
         org-log-redeadline 'note
         org-log-reschedule 'time
+        org-log-into-drawer t
         ;; customize tags
         org-tags-column 0
         org-tag-alist '((:startgroup . nil)
