@@ -9,8 +9,9 @@ _/_/__/_(___/_____/____/___(____/___/______(____/___
        (_ /                                         
 ```
 
-I am currently migrating [my vim configuration](.config/nvim) to [Doom emacs](.doom.d)
-Feel free to open an issue if you need clarification to my configs
+I am currently migrating [my vim configuration](.config/nvim) to [Doom emacs](.doom.d). 
+
+Feel free to open an issue if you need clarification to my configs.
 
 ## Screenshots
 
