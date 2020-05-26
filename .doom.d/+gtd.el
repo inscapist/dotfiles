@@ -50,9 +50,10 @@
         org-refile-use-outline-path 'file
         org-outline-path-complete-in-steps nil)
   (setq org-refile-targets '(("next.org" :level . 0)
-                             ("someday.org" :level . 0)
-                             ("readings.org" :level . 2)
-                             ("projects.org" :maxlevel . 2))))
+                             ("backlog.org" :maxlevel . 1)
+                             ("maybe.org" :maxlevel . 1)
+                             ("mylife.org" :maxlevel . 1)
+                             ("readings.org" :maxlevel . 1))))
 
 
 ;; Customize agenda
@@ -80,28 +81,38 @@
                                               (org-agenda-files '(,(concat felix/org-agenda-directory "next.org")
                                                                   ,(concat felix/org-agenda-directory "backlog.org")
                                                                   ,(concat felix/org-agenda-directory "maybe.org")
+                                                                  ,(concat felix/org-agenda-directory "mylife.org")
                                                                   ,(concat felix/org-agenda-directory "readings.org")))))
-                                       (todo "TODO"
+                                       (todo "TODO|PROJ"
                                              ;; what I should absolutely focus on right now
                                              ((org-agenda-overriding-header "NEXT")
                                               (org-agenda-max-entries 3)
                                               (org-agenda-files '(,(concat felix/org-agenda-directory "next.org")))))
-                                       (todo "TODO"
+                                       (todo "TODO|PROJ"
                                              ;; short term tasks to think about, don't show if it is already scheduled
                                              ((org-agenda-overriding-header "Backlog")
                                               (org-agenda-max-entries 5)
                                               (org-agenda-files '(,(concat felix/org-agenda-directory "backlog.org")))
                                               (org-agenda-skip-function '(org-agenda-skip-entry-if 'deadline 'scheduled))))
                                        (todo "TODO"
+                                             ;; clear my inbox
                                              ((org-agenda-overriding-header "To Refile")
                                               (org-agenda-max-entries 5)
                                               (org-agenda-files '(,(concat felix/org-agenda-directory "inbox.org")))))
-                                       (todo "TODO"
+                                       (tags-todo "+clarific/TODO|PROJ"
+                                             ;; My ideas, my product
+                                             ((org-agenda-overriding-header "Clarific")
+                                              (org-agenda-files '(,(concat felix/org-agenda-directory "next.org")
+                                                                  ,(concat felix/org-agenda-directory "backlog.org")
+                                                                  ,(concat felix/org-agenda-directory "maybe.org")
+                                                                  ,(concat felix/org-agenda-directory "mylife.org")
+                                                                  ,(concat felix/org-agenda-directory "readings.org")))))
+                                       (todo "TODO|PROJ"
                                              ;; how I lead my life
                                              ((org-agenda-overriding-header "My Life")
                                               (org-agenda-files '(,(concat felix/org-agenda-directory "mylife.org")))))
-                                       (todo "TODO"
-                                             ;; articles, books, stuffs that I want to commit reading
+                                       (todo "TODO|PROJ"
+                                             ;; articles, books that I want to commit to reading
                                              ((org-agenda-overriding-header "Readings")
                                               (org-agenda-max-entries 3)
                                               (org-agenda-files '(,(concat felix/org-agenda-directory "readings.org"))))))))))
