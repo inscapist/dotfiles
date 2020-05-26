@@ -64,6 +64,7 @@
        (:prefix-map ("n" . "notes")
         :desc "Org agenda" "a" #'felix/switch-to-agenda)))
 
+;; Refer https://github.com/Somelauw/evil-org-mode for keybindings
 (after! org-agenda
   (setq org-agenda-block-separator 95
         org-agenda-files (list felix/org-agenda-directory)

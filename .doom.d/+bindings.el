@@ -9,6 +9,7 @@
       :n "ss" #'evil-window-split
       :n "qq" #'evil-quit
       :n "F" #'avy-goto-char-timer
+      :n "gx" #'browse-url
       :n "J" #'evil-scroll-down
       :n "K" #'evil-scroll-up)
 
@@ -37,6 +38,15 @@
   "s-n"   #'+workspace/new
   "s-w"   #'+workspace/close-window-or-workspace
   "s-r"   #'+workspace/rename))
+
+;; Add org-agenda keybindings
+(map!
+ (:map org-agenda-mode-map
+  "s-l"   #'+workspace/switch-right
+  "s-n"   #'+workspace/new
+  "s-w"   #'+workspace/close-window-or-workspace
+  "s-r"   #'+workspace/rename))
+
 
 ;; Open terminal in vertical window
 (map! :leader
