@@ -75,23 +75,33 @@
                                       ((agenda ""
                                                ((org-agenda-span 'week)
                                                 (org-deadline-warning-days 365)))
-                                       (todo "TODO"
-                                             ((org-agenda-overriding-header "To Refile")
-                                              (org-agenda-files '(,(concat felix/org-agenda-directory "inbox.org")))))
-                                       (todo "STRT|PROJ"
+                                       (todo "STRT"
                                              ((org-agenda-overriding-header "In Progress")
-                                              (org-agenda-files '(,(concat felix/org-agenda-directory "someday.org")
-                                                                  ,(concat felix/org-agenda-directory "projects.org")
-                                                                  ,(concat felix/org-agenda-directory "next.org")
+                                              (org-agenda-files '(,(concat felix/org-agenda-directory "next.org")
+                                                                  ,(concat felix/org-agenda-directory "backlog.org")
+                                                                  ,(concat felix/org-agenda-directory "maybe.org")
                                                                   ,(concat felix/org-agenda-directory "readings.org")))))
                                        (todo "TODO"
-                                             ((org-agenda-overriding-header "Readings")
-                                              (org-agenda-files '(,(concat felix/org-agenda-directory "readings.org")))))
-                                       (todo "TODO|PROJ"
-                                             ((org-agenda-overriding-header "Projects")
-                                              (org-agenda-files '(,(concat felix/org-agenda-directory "projects.org")))))
+                                             ;; what I should absolutely focus on right now
+                                             ((org-agenda-overriding-header "NEXT")
+                                              (org-agenda-max-entries 3)
+                                              (org-agenda-files '(,(concat felix/org-agenda-directory "next.org")))))
                                        (todo "TODO"
-                                             ((org-agenda-overriding-header "Non-Scheduled Tasks")
-                                              (org-agenda-files '(,(concat felix/org-agenda-directory "next.org")
-                                                                  ,(concat felix/org-agenda-directory "someday.org")))
-                                              (org-agenda-skip-function '(org-agenda-skip-entry-if 'deadline 'scheduled)))))))))
+                                             ;; short term tasks to think about, don't show if it is already scheduled
+                                             ((org-agenda-overriding-header "Backlog")
+                                              (org-agenda-max-entries 5)
+                                              (org-agenda-files '(,(concat felix/org-agenda-directory "backlog.org")))
+                                              (org-agenda-skip-function '(org-agenda-skip-entry-if 'deadline 'scheduled))))
+                                       (todo "TODO"
+                                             ((org-agenda-overriding-header "To Refile")
+                                              (org-agenda-max-entries 5)
+                                              (org-agenda-files '(,(concat felix/org-agenda-directory "inbox.org")))))
+                                       (todo "TODO"
+                                             ;; how I lead my life
+                                             ((org-agenda-overriding-header "My Life")
+                                              (org-agenda-files '(,(concat felix/org-agenda-directory "mylife.org")))))
+                                       (todo "TODO"
+                                             ;; articles, books, stuffs that I want to commit reading
+                                             ((org-agenda-overriding-header "Readings")
+                                              (org-agenda-max-entries 3)
+                                              (org-agenda-files '(,(concat felix/org-agenda-directory "readings.org"))))))))))
