@@ -12,12 +12,14 @@
 (after! org
   (setq felix/org-agenda-directory (concat org-directory "/gtd/")
         org-archive-location (expand-file-name ".archive/%s::" org-directory)
+        ;; state transition behaviors
         org-enforce-todo-dependencies t
         org-log-done 'time
         org-log-redeadline 'note
         org-log-reschedule 'time
-        org-tags-column 0)
-  (setq org-tag-alist '((:startgroup . nil)
+        ;; customize tags
+        org-tags-column 0
+        org-tag-alist '((:startgroup . nil)
                         ;; contexts
                         ("@thinking" . ?t)
                         ("@researching" . ?r)
@@ -63,11 +65,12 @@
         :desc "Org agenda" "a" #'felix/switch-to-agenda)))
 
 (after! org-agenda
-  (setq org-agenda-block-separator nil
+  (setq org-agenda-block-separator 95
         org-agenda-files (list felix/org-agenda-directory)
-        org-agenda-start-with-log-mode t)
-  (setq org-columns-default-format "%40ITEM(Task) %Effort(EE){:} %CLOCKSUM(Time Spent) %SCHEDULED(Scheduled) %DEADLINE(Deadline)")
-  (setq org-agenda-custom-commands `((" " "Agenda"
+        org-agenda-start-with-log-mode t
+        ;; trigger column mode with C-c C-x C-c
+        org-columns-default-format "%40ITEM(Task) %Effort(EE){:} %CLOCKSUM(Time Spent) %SCHEDULED(Scheduled) %DEADLINE(Deadline)"
+        org-agenda-custom-commands `((" " "Agenda"
                                       ((agenda ""
                                                ((org-agenda-span 'week)
                                                 (org-deadline-warning-days 365)))
@@ -88,9 +91,7 @@
                                               (org-agenda-files '(,(concat felix/org-agenda-directory "projects.org")
                                                                   ,(concat felix/org-agenda-directory "next.org")))))
                                        (todo "TODO"
-                                             ((org-agenda-overriding-header "One-off Tasks")
+                                             ((org-agenda-overriding-header "Tasks")
                                               (org-agenda-files '(,(concat felix/org-agenda-directory "next.org")
                                                                   ,(concat felix/org-agenda-directory "someday.org")))
                                               (org-agenda-skip-function '(org-agenda-skip-entry-if 'deadline 'scheduled)))))))))
-
-
