@@ -64,9 +64,8 @@
        (:prefix-map ("n" . "notes")
         :desc "Org agenda" "a" #'felix/switch-to-agenda)))
 
-;; Refer https://github.com/Somelauw/evil-org-mode for keybindings
 (after! org-agenda
-  (setq org-agenda-block-separator 95
+  (setq org-agenda-block-separator ?_
         org-agenda-files (list felix/org-agenda-directory)
         org-agenda-start-with-log-mode t
         ;; trigger column mode with C-c C-x C-c
@@ -83,16 +82,15 @@
                                               (org-agenda-files '(,(concat felix/org-agenda-directory "someday.org")
                                                                   ,(concat felix/org-agenda-directory "projects.org")
                                                                   ,(concat felix/org-agenda-directory "next.org")
-                                                                  ,(concat felix/org-agenda-directory "reading.org")))))
+                                                                  ,(concat felix/org-agenda-directory "readings.org")))))
                                        (todo "TODO"
-                                             ((org-agenda-overriding-header "Reading")
-                                              (org-agenda-files '(,(concat felix/org-agenda-directory "reading.org")))))
+                                             ((org-agenda-overriding-header "Readings")
+                                              (org-agenda-files '(,(concat felix/org-agenda-directory "readings.org")))))
                                        (todo "TODO|PROJ"
                                              ((org-agenda-overriding-header "Projects")
-                                              (org-agenda-files '(,(concat felix/org-agenda-directory "projects.org")
-                                                                  ,(concat felix/org-agenda-directory "next.org")))))
+                                              (org-agenda-files '(,(concat felix/org-agenda-directory "projects.org")))))
                                        (todo "TODO"
-                                             ((org-agenda-overriding-header "Tasks")
+                                             ((org-agenda-overriding-header "Non-Scheduled Tasks")
                                               (org-agenda-files '(,(concat felix/org-agenda-directory "next.org")
                                                                   ,(concat felix/org-agenda-directory "someday.org")))
                                               (org-agenda-skip-function '(org-agenda-skip-entry-if 'deadline 'scheduled)))))))))
