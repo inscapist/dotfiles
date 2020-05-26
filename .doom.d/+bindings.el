@@ -8,6 +8,7 @@
       :n "vv" #'evil-window-vsplit
       :n "ss" #'evil-window-split
       :n "qq" #'evil-quit
+      :n "F" #'avy-goto-char-timer
       :n "J" #'evil-scroll-down
       :n "K" #'evil-scroll-up)
 

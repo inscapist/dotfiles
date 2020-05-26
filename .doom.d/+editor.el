@@ -18,3 +18,7 @@
       create-lockfiles nil
       history-length 500
       make-backup-files nil)
+
+
+;; Avy is the best
+(setq avy-all-windows t)
