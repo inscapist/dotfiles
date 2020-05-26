@@ -1,13 +1,7 @@
 ;;; $DOOMDIR/+bindings.el -*- lexical-binding: t; -*-
 
-(map! :n "q" nil
-      :n "s" nil)
-
 ;; Simple sugar
 (map! :n "S" #'save-buffer
-      :n "vv" #'evil-window-vsplit
-      :n "ss" #'evil-window-split
-      :n "qq" #'evil-quit
       :n "F" #'avy-goto-char-timer
       :n "gx" #'browse-url
       :n "J" #'evil-scroll-down
