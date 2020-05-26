@@ -42,6 +42,8 @@
 ;; Add org-agenda keybindings
 (map!
  (:map org-agenda-mode-map
+  "C-h"   #'evil-window-left
+  "C-l"   #'evil-window-right
   "s-h"   #'+workspace/switch-left
   "s-l"   #'+workspace/switch-right
   "s-n"   #'+workspace/new
