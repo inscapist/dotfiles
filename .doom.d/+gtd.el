@@ -16,7 +16,19 @@
         org-log-done 'time
         org-log-redeadline 'note
         org-log-reschedule 'time
-        org-tags-column -1000))
+        org-tags-column 0)
+  (setq org-tag-alist '((:startgroup . nil)
+                        ;; contexts
+                        ("@thinking" . ?t)
+                        ("@researching" . ?r)
+                        ("@coding" . ?c)
+                        ("@fun" . ?f)
+                        ("@learning" . ?l)
+                        (:endgroup . nil)
+                        ;; projects
+                        ("clarific" . nil)
+                        ("ubermensch" . nil)
+                        ("freelance" . nil))))
 
 
 ;; Refer https://www.gnu.org/software/emacs/manual/html_node/org/Template-elements.html#Template-elements
@@ -54,18 +66,6 @@
   (setq org-agenda-block-separator nil
         org-agenda-files (list felix/org-agenda-directory)
         org-agenda-start-with-log-mode t)
-  (setq org-tag-alist '((:startgroup . nil)
-                        ;; contexts
-                        ("@thinking" . ?t)
-                        ("@researching" . ?r)
-                        ("@coding" . ?c)
-                        ("@fun" . ?f)
-                        ("@learning" . ?l)
-                        (:endgroup . nil)
-                        ;; projects
-                        ("clarific" . ?pc)
-                        ("ubermensch" . ?pu)
-                        ("freelance" . ?pf)))
   (setq org-columns-default-format "%40ITEM(Task) %Effort(EE){:} %CLOCKSUM(Time Spent) %SCHEDULED(Scheduled) %DEADLINE(Deadline)")
   (setq org-agenda-custom-commands `((" " "Agenda"
                                       ((agenda ""
