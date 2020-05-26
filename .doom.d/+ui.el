@@ -6,10 +6,16 @@
 (setq doom-variable-pitch-font (font-spec :family "Overpass" :size 15 :weight 'Thin))
 (setq all-the-icons-scale-factor 0.8)
 
+;; customize treemacs
 (after! treemacs
   (setq treemacs--width-is-locked nil)
-  (setq treemacs-width 28))
-
+  (setq treemacs-width 28)
+  (with-eval-after-load 'treemacs
+    (defun treemacs-ignore-python-cache-dirs (filename absolute-path)
+      (or
+       (cl-search "__pycache__" absolute-path)
+       (cl-search ".pytest_cache" absolute-path)))
+    (add-to-list 'treemacs-ignored-file-predicates #'treemacs-ignore-python-cache-dirs)))
 
 ;; Make doom-modeline slightly smaller than editor font
 (custom-set-faces

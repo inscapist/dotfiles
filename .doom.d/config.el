@@ -20,4 +20,5 @@
 (load! "+bindings")
 (load! "+editor")
 (load! "+gtd")
+(load! "+langs")
 (load! "+ui")
