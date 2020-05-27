@@ -49,11 +49,11 @@
   (setq org-refile-allow-creating-parent-nodes 'confirm
         org-refile-use-outline-path 'file
         org-outline-path-complete-in-steps nil)
-  (setq org-refile-targets '(("next.org" :level . 0)
-                             ("backlog.org" :maxlevel . 1)
-                             ("maybe.org" :maxlevel . 1)
-                             ("mylife.org" :maxlevel . 1)
-                             ("readings.org" :maxlevel . 1))))
+  (setq org-refile-targets `((,(concat felix/org-agenda-directory "next.org") :level . 0)
+                             (,(concat felix/org-agenda-directory "backlog.org") :maxlevel . 1)
+                             (,(concat felix/org-agenda-directory "maybe.org") :maxlevel . 1)
+                             (,(concat felix/org-agenda-directory "mylife.org") :maxlevel . 1)
+                             (,(concat felix/org-agenda-directory "readings.org") :maxlevel . 1))))
 
 
 ;; Customize agenda
