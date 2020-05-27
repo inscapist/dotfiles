@@ -42,7 +42,7 @@
            "* TODO %?")
           ("r" "readings" entry
            (file+headline ,(expand-file-name "readings.org" felix/org-agenda-directory) "Uncategorized")
-           "* %?"))))
+           "* TODO %?"))))
 
 
 (after! org-refile
