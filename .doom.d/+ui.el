@@ -3,7 +3,7 @@
 (setq doom-theme 'doom-rouge)
 (setq doom-themes-enable-bold t)
 (setq doom-font (font-spec :family "OperatorMono Nerd Font" :size 17 :weight 'light))
-(setq doom-variable-pitch-font (font-spec :family "Overpass" :size 15 :weight 'Thin))
+(setq doom-variable-pitch-font (font-spec :family "Overpass" :size 15 :weight 'light))
 (setq all-the-icons-scale-factor 0.8)
 
 ;; customize treemacs
