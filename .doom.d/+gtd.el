@@ -27,6 +27,7 @@
                         ("@coding" . ?c)
                         ("@fun" . ?f)
                         ("@learning" . ?l)
+                        ("@meeting" . ?m)
                         (:endgroup . nil)
                         ;; projects
                         ("clarific" . nil)
@@ -83,10 +84,8 @@
                                       ((agenda ""
                                                ((org-agenda-span 'week)
                                                 (org-deadline-warning-days 365)))
-                                       (todo "STRT"
+                                       (todo "STRT|WAIT|HOLD"
                                              ((org-agenda-overriding-header "In Progress")))
-                                       (todo "WAIT|HOLD"
-                                             ((org-agenda-overriding-header "On Hold")))
                                        (todo "TODO|PROJ"
                                              ;; what I should absolutely focus on right now
                                              ((org-agenda-overriding-header "NEXT")
