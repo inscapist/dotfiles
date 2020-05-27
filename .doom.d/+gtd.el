@@ -79,7 +79,8 @@
         org-agenda-files (list felix/org-agenda-directory)
         org-agenda-start-with-log-mode t
         ;; trigger column mode with C-c C-x C-c
-        org-columns-default-format "%40ITEM(Task) %Effort(EE){:} %CLOCKSUM(Time Spent) %SCHEDULED(Scheduled) %DEADLINE(Deadline)"
+        ;; https://orgmode.org/worg/org-tutorials/org-column-view-tutorial.html
+        org-columns-default-format "%70ITEM(Task) %TAGS %Effort{:} %CLOCKSUM(Time Spent) %SCHEDULED(Scheduled) %DEADLINE(Deadline)"
         org-agenda-custom-commands `((" " "Agenda"
                                       ((agenda ""
                                                ((org-agenda-span 'week)
@@ -105,7 +106,7 @@
                                               (org-agenda-skip-function '(org-agenda-skip-entry-if 'deadline 'scheduled))))
                                        (tags-todo "clarific|ubermensch/TODO|PROJ"
                                              ;; shaping my own ideas
-                                             ((org-agenda-overriding-header "Clarific/Ubermensch")
+                                             ((org-agenda-overriding-header "Only What's My Own")
                                               (org-agenda-max-entries 5)
                                               (org-agenda-files '(,(concat felix/org-agenda-directory "backlog.org")
                                                                   ,(concat felix/org-agenda-directory "ideas.org")
