@@ -37,13 +37,18 @@
 ;; Refer https://www.gnu.org/software/emacs/manual/html_node/org/Template-elements.html#Template-elements
 (after! org-capture
   (setq org-capture-templates
-        `(("i" "inbox" entry
-           (file ,(expand-file-name "inbox.org" felix/org-agenda-directory))
+        `(("t" "task" entry
+           (file+headline ,(expand-file-name "inbox.org" felix/org-agenda-directory) "Tasks")
            "* TODO %?")
-          ("r" "readings" entry
-           (file+headline ,(expand-file-name "readings.org" felix/org-agenda-directory) "Uncategorized")
-           "* TODO %?"))))
-
+          ("r" "reading" entry
+           (file+headline ,(expand-file-name "inbox.org" felix/org-agenda-directory) "Readings")
+           "* TODO %? %^G\n%U")
+          ("i" "idea" entry
+           (file+headline ,(expand-file-name "inbox.org" felix/org-agenda-directory) "Ideas")
+           "* %? %^G\n%U")
+          ("n" "note" entry
+           (file+headline ,(expand-file-name "inbox.org" felix/org-agenda-directory) "Notes")
+           "* %? %^G\n%U"))))
 
 (after! org-refile
   (setq org-refile-allow-creating-parent-nodes 'confirm
@@ -52,6 +57,8 @@
   (setq org-refile-targets `((,(concat felix/org-agenda-directory "next.org") :level . 0)
                              (,(concat felix/org-agenda-directory "backlog.org") :maxlevel . 1)
                              (,(concat felix/org-agenda-directory "maybe.org") :maxlevel . 1)
+                             (,(concat felix/org-agenda-directory "ideas.org") :maxlevel . 1)
+                             (,(concat felix/org-agenda-directory "notes.org") :maxlevel . 1)
                              (,(concat felix/org-agenda-directory "mylife.org") :maxlevel . 1)
                              (,(concat felix/org-agenda-directory "readings.org") :maxlevel . 1))))
 
@@ -67,7 +74,7 @@
         :desc "Org agenda" "a" #'felix/switch-to-agenda)))
 
 (after! org-agenda
-  (setq org-agenda-block-separator ?_
+  (setq org-agenda-block-separator ?.
         org-agenda-files (list felix/org-agenda-directory)
         org-agenda-start-with-log-mode t
         ;; trigger column mode with C-c C-x C-c
@@ -77,38 +84,35 @@
                                                ((org-agenda-span 'week)
                                                 (org-deadline-warning-days 365)))
                                        (todo "STRT"
-                                             ((org-agenda-overriding-header "In Progress")
-                                              (org-agenda-files '(,(concat felix/org-agenda-directory "next.org")
-                                                                  ,(concat felix/org-agenda-directory "backlog.org")
-                                                                  ,(concat felix/org-agenda-directory "maybe.org")
-                                                                  ,(concat felix/org-agenda-directory "mylife.org")
-                                                                  ,(concat felix/org-agenda-directory "readings.org")))))
+                                             ((org-agenda-overriding-header "In Progress")))
+                                       (todo "WAIT|HOLD"
+                                             ((org-agenda-overriding-header "On Hold")))
                                        (todo "TODO|PROJ"
                                              ;; what I should absolutely focus on right now
                                              ((org-agenda-overriding-header "NEXT")
                                               (org-agenda-max-entries 3)
                                               (org-agenda-files '(,(concat felix/org-agenda-directory "next.org")))))
                                        (todo "TODO|PROJ"
-                                             ;; short term tasks to think about, don't show if it is already scheduled
-                                             ((org-agenda-overriding-header "Backlog")
-                                              (org-agenda-max-entries 5)
-                                              (org-agenda-files '(,(concat felix/org-agenda-directory "backlog.org")))
-                                              (org-agenda-skip-function '(org-agenda-skip-entry-if 'deadline 'scheduled))))
-                                       (todo "TODO"
                                              ;; clear my inbox
                                              ((org-agenda-overriding-header "To Refile")
-                                              (org-agenda-max-entries 5)
                                               (org-agenda-files '(,(concat felix/org-agenda-directory "inbox.org")))))
-                                       (tags-todo "+clarific/TODO|PROJ"
-                                             ;; My ideas, my product
-                                             ((org-agenda-overriding-header "Clarific")
-                                              (org-agenda-files '(,(concat felix/org-agenda-directory "next.org")
-                                                                  ,(concat felix/org-agenda-directory "backlog.org")
-                                                                  ,(concat felix/org-agenda-directory "maybe.org")
-                                                                  ,(concat felix/org-agenda-directory "mylife.org")
-                                                                  ,(concat felix/org-agenda-directory "readings.org")))))
+                                       (tags-todo "freelance/TODO|PROJ"
+                                             ;; freelancing
+                                             ((org-agenda-overriding-header "Freelance")
+                                              (org-agenda-max-entries 5)
+                                              (org-agenda-files '(,(concat felix/org-agenda-directory "backlog.org")
+                                                                  ,(concat felix/org-agenda-directory "ideas.org")
+                                                                  ,(concat felix/org-agenda-directory "notes.org")))
+                                              (org-agenda-skip-function '(org-agenda-skip-entry-if 'deadline 'scheduled))))
+                                       (tags-todo "clarific|ubermensch/TODO|PROJ"
+                                             ;; shaping my own ideas
+                                             ((org-agenda-overriding-header "Clarific/Ubermensch")
+                                              (org-agenda-max-entries 5)
+                                              (org-agenda-files '(,(concat felix/org-agenda-directory "backlog.org")
+                                                                  ,(concat felix/org-agenda-directory "ideas.org")
+                                                                  ,(concat felix/org-agenda-directory "notes.org")))
+                                              (org-agenda-skip-function '(org-agenda-skip-entry-if 'deadline 'scheduled))))
                                        (todo "TODO|PROJ"
-                                             ;; how I lead my life
                                              ((org-agenda-overriding-header "My Life")
                                               (org-agenda-files '(,(concat felix/org-agenda-directory "mylife.org")))))
                                        (todo "TODO|PROJ"
