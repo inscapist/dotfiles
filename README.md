@@ -15,6 +15,10 @@ Feel free to open an issue if you need clarification to my configs.
 
 ## Screenshots
 
+### Yabai (Tiling Window Manager)
+
+![](screenshots/tiling.png)
+
 ### Emacs (Editor View)
 
 ![](screenshots/doom.png)
