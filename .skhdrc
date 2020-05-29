@@ -6,10 +6,10 @@
 shift + cmd - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
 
 # directional navigation
-ctrl + cmd - h : yabai -m window --focus west
-ctrl + cmd - l : yabai -m window --focus east
-ctrl + cmd - j : yabai -m window --focus south
-ctrl + cmd - k : yabai -m window --focus north
+alt - h : yabai -m window --focus west
+alt - l : yabai -m window --focus east
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
 
 # swap windows by axis
 shift + cmd - v : yabai -m space --mirror y-axis
