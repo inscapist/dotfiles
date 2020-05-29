@@ -11,8 +11,9 @@ ctrl + cmd - l : yabai -m window --focus east
 ctrl + cmd - j : yabai -m window --focus south
 ctrl + cmd - k : yabai -m window --focus north
 
-# swap windows by y axis (left/right)
+# swap windows by axis
 shift + cmd - v : yabai -m space --mirror y-axis
+shift + cmd - s : yabai -m space --mirror -axis
 
 # swap windows by rotating clockwise
 shift + cmd - o : yabai -m space --rotate 270
