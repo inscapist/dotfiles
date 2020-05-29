@@ -54,12 +54,6 @@ shift + cmd - b : yabai -m window --space next; yabai -m space --focus next
 # pull window to back to prev space
 shift + cmd - p : yabai -m window --space prev; yabai -m space --focus prev
 
-# move space left
-shift + cmd - left : yabai -m space --move prev
-
-# move space right
-shift + cmd - right : yabai -m space --move next
-
 
 ##################################################################################
 # REFERENCES
