@@ -6,14 +6,31 @@
 shift + cmd - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
 
 # directional navigation
-alt - h : yabai -m window --focus west
-alt - l : yabai -m window --focus east
-alt - j : yabai -m window --focus south
-alt - k : yabai -m window --focus north
+ctrl + alt - h : yabai -m window --focus west
+ctrl + alt - l : yabai -m window --focus east
+ctrl + alt - j : yabai -m window --focus south
+ctrl + alt - k : yabai -m window --focus north
+
+# Resize windows
+ctrl + cmd - h : \
+    yabai -m window --resize left:-20:0 ; \
+    yabai -m window --resize right:-20:0
+
+ctrl + cmd - j : \
+    yabai -m window --resize bottom:0:20 ; \
+    yabai -m window --resize top:0:20
+
+ctrl + cmd - k : \
+    yabai -m window --resize top:0:-20 ; \
+    yabai -m window --resize bottom:0:-20
+
+ctrl + cmd - l : \
+    yabai -m window --resize right:20:0 ; \
+    yabai -m window --resize left:20:0
 
 # swap windows by axis
 shift + cmd - v : yabai -m space --mirror y-axis
-shift + cmd - s : yabai -m space --mirror -axis
+shift + cmd - s : yabai -m space --mirror x-axis
 
 # swap windows by rotating clockwise
 shift + cmd - o : yabai -m space --rotate 270
@@ -22,9 +39,10 @@ shift + cmd - o : yabai -m space --rotate 270
 shift + cmd - h : yabai -m space --focus prev
 shift + cmd - l : yabai -m space --focus next
 
-## Froms a chord with SHIFT+CMD+{j,b} below, create a new space and beam it over
+## TIPS
+## chord SHIFT+CMD+{j,b} to create a new space and beam it over
 
-# create desktop, move window and follow focus - uses jq for parsing json (brew install jq)
+# create desktop
 shift + cmd - j : yabai -m space --create
 
 # destroy spaces
@@ -32,6 +50,8 @@ shift + cmd - k : yabai -m space --destroy
 
 # beam window to next space
 shift + cmd - b : yabai -m window --space next; yabai -m space --focus next
+
+# pull window to back to prev space
 shift + cmd - p : yabai -m window --space prev; yabai -m space --focus prev
 
 # move space left
