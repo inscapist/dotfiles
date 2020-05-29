@@ -84,7 +84,7 @@
 shift + cmd - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
 
 # swap windows by y axis (left/right)
-shift + cmd - p : yabai -m space --mirror y-axis
+shift + cmd - v : yabai -m space --mirror y-axis
 
 # swap windows by rotating clockwise
 shift + cmd - o : yabai -m space --rotate 270
@@ -103,6 +103,7 @@ shift + cmd - k : yabai -m space --destroy
 
 # beam window to next space
 shift + cmd - b : yabai -m window --space next; yabai -m space --focus next
+shift + cmd - p : yabai -m window --space prev; yabai -m space --focus prev
 
 # move space left
 shift + cmd - left : yabai -m space --move prev
