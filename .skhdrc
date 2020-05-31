@@ -43,10 +43,12 @@ shift + cmd - l : yabai -m space --focus next
 ## chord SHIFT+CMD+{j,b} to create a new space and beam it over
 
 # create desktop
-shift + cmd - j : yabai -m space --create
+shift + cmd - n : yabai -m space --create && \
+                  index="$(yabai -m query --spaces --display | jq 'map(select(."native-fullscreen" == 0))[-1].index')" && \
+                  yabai -m space --focus "${index}"
 
 # destroy spaces
-shift + cmd - k : yabai -m space --destroy
+shift + cmd - w : yabai -m space --destroy
 
 # beam window to next space
 shift + cmd - b : yabai -m window --space next; yabai -m space --focus next
