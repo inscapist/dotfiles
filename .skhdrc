@@ -42,13 +42,14 @@ shift + cmd - f : yabai -m window --toggle native-fullscreen
 shift + cmd - v : yabai -m window --toggle split && \
                   yabai -m space --balance
 
-# create desktop
-shift + cmd - n : yabai -m space --create && \
+# create desktop, move window and follow focus - uses jq for parsing json (brew install jq)
+shift + cmd - j : yabai -m space --create && \
                   index="$(yabai -m query --spaces --display | jq 'map(select(."native-fullscreen" == 0))[-1].index')" && \
+                  yabai -m window --space "${index}" && \
                   yabai -m space --focus "${index}"
 
 # destroy spaces
-shift + cmd - w : yabai -m space --destroy
+shift + cmd - k : yabai -m space --destroy
 
 # move(m) window to next space
 shift + cmd - m : yabai -m window --space next; yabai -m space --focus next
