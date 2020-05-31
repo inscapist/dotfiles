@@ -28,19 +28,19 @@ ctrl + alt - l : \
     yabai -m window --resize right:20:0 ; \
     yabai -m window --resize left:20:0
 
-# swap windows by axis
-shift + cmd - v : yabai -m space --mirror y-axis
-shift + cmd - s : yabai -m space --mirror x-axis
-
-# swap windows by rotating clockwise
-shift + cmd - o : yabai -m space --rotate 270
-
 # move mission-control index left/right
 shift + cmd - h : yabai -m space --focus prev
 shift + cmd - l : yabai -m space --focus next
 
-## TIPS
-## chord SHIFT+CMD+{j,b} to create a new space and beam it over
+# layout actions
+shift + cmd - x : yabai -m space --mirror x-axis
+shift + cmd - y : yabai -m space --mirror y-axis
+shift + cmd - z : yabai -m space --rotate 270
+
+# toggle fullscreen or split
+shift + cmd - f : yabai -m window --toggle native-fullscreen
+shift + cmd - v : yabai -m window --toggle split && \
+                  yabai -m space --balance
 
 # create desktop
 shift + cmd - n : yabai -m space --create && \
@@ -50,8 +50,8 @@ shift + cmd - n : yabai -m space --create && \
 # destroy spaces
 shift + cmd - w : yabai -m space --destroy
 
-# beam window to next space
-shift + cmd - b : yabai -m window --space next; yabai -m space --focus next
+# move(m) window to next space
+shift + cmd - m : yabai -m window --space next; yabai -m space --focus next
 
 # pull window to back to prev space
 shift + cmd - p : yabai -m window --space prev; yabai -m space --focus prev
