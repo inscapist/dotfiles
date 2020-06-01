@@ -57,6 +57,9 @@ shift + cmd - m : yabai -m window --space next; yabai -m space --focus next
 # pull window to back to prev space
 shift + cmd - p : yabai -m window --space prev; yabai -m space --focus prev
 
+# open finder to desktop
+shift + cmd - o : open ~/Desktop
+
 
 ##################################################################################
 # REFERENCES

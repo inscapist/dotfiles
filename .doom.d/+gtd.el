@@ -2,6 +2,7 @@
 
 ;; Sets up a Getting-Things-Done (GTD) workflow using Org-mode
 ;; For doom defaults, refer https://github.com/hlissner/doom-emacs/blob/master/modules/lang/org/config.el
+;;
 ;; Some configs can be set in the header of org files.
 ;; For example
 ;;   #+STARTUP: http://doc.endlessparentheses.com/Var/org-startup-options.html
