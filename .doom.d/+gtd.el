@@ -59,7 +59,7 @@
   (setq org-refile-targets `((,(concat felix/org-agenda-directory "next.org") :level . 0)
                              (,(concat felix/org-agenda-directory "backlog.org") :maxlevel . 1)
                              (,(concat felix/org-agenda-directory "maybe.org") :maxlevel . 1)
-                             (,(concat felix/org-agenda-directory "ideas.org") :maxlevel . 1)
+                             (,(concat felix/org-agenda-directory "ideas.org") :maxlevel . 2)
                              (,(concat felix/org-agenda-directory "notes.org") :maxlevel . 1)
                              (,(concat felix/org-agenda-directory "mylife.org") :maxlevel . 1)
                              (,(concat felix/org-agenda-directory "readings.org") :maxlevel . 1))))
