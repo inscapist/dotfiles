@@ -106,7 +106,7 @@
 
        :lang
        ;;agda              ; types of types of types of types...
-       cc                ; C/C++/Obj-C madness
+       ;;cc                ; C/C++/Obj-C madness
        ;;clojure           ; java with a lisp
        ;;common-lisp       ; if you've seen one lisp, you've seen them all
        ;;coq               ; proofs-as-programs
@@ -143,7 +143,7 @@
        org               ; organize your plain life in plain text
        ;;perl              ; write code no one else can comprehend
        ;;php               ; perl's insecure younger brother
-       plantuml          ; diagrams for confusing people more
+       ;;plantuml          ; diagrams for confusing people more
        ;;purescript        ; javascript, but functional
        (python +lsp +pyenv)            ; beautiful is better than ugly
        ;;qt                ; the 'cutest' gui framework ever
@@ -159,7 +159,7 @@
        ;;solidity          ; do you need a blockchain? No.
        ;;swift             ; who asked for emoji variables?
        ;;terra             ; Earth and Moon in alignment for performance.
-       ;;web               ; the tubes
+       web               ; the tubes
        ;;yaml              ; JSON, but readable
 
        :email
