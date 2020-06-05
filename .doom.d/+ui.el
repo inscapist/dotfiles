@@ -20,9 +20,10 @@
     (add-to-list 'treemacs-ignored-file-predicates #'treemacs-ignore-python-cache-dirs)))
 
 ;; Make doom-modeline slightly smaller than editor font
-(custom-set-faces
-  '(mode-line ((t (:family "Overpass" :height 0.95))))
-  '(mode-line-inactive ((t (:family "Overpass" :height 0.95)))))
+(after! doom-modeline
+  (custom-set-faces
+    '(mode-line ((t (:family "Overpass" :height 0.90))))
+    '(mode-line-inactive ((t (:family "Overpass" :height 0.90))))))
 
 
 ;; Make evil usable in terminal
