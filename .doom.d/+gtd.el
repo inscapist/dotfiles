@@ -50,7 +50,10 @@
            "* %? %^G\n%U")
           ("n" "note" entry
            (file+headline ,(expand-file-name "inbox.org" felix/org-agenda-directory) "Notes")
-           "* %? %^G\n%U"))))
+           "* %? %^G\n%U")
+          ("j" "journal" entry
+           (file+datetree+prompt ,(expand-file-name "journal.org" felix/org-agenda-directory))
+           "** %? %^G\n%U"))))
 
 (after! org-refile
   (setq org-refile-allow-creating-parent-nodes 'confirm
