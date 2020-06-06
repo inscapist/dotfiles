@@ -4,7 +4,7 @@
 set nobackup
 set nowritebackup
 
-let g:coc_global_extensions = ["coc-tsserver", "coc-prettier", "coc-json", "coc-html", "coc-json", "coc-css", "coc-python", "coc-pyright"]
+let g:coc_global_extensions = ["coc-tsserver", "coc-prettier", "coc-json", "coc-html", "coc-json", "coc-css"]
 
 " Add status line support, for integration with other plugin, checkout `:h coc-status`
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
