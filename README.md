@@ -32,3 +32,23 @@ Feel free to open an issue if you need clarification to my configs.
 ### Vim/Tmux/Alacritty
 
 ![](screenshots/neovim.png)
+
+### Setting up Org capture
+
+a) Add the following bookmarklet
+``` 
+javascript:location.href ='org-protocol://capture?template=c&url='+   encodeURIComponent(location.href) +   '&title=' + encodeURIComponent(document.title) +   '&body=' + encodeURIComponent(window.getSelection())
+```
+
+b) Install EmacsClient (to handle org-protocol)
+
+``` sh
+brew cask install emacsclient
+```
+
+c) Inform emacsclient location using symlink
+
+``` sh
+ln -s /usr/local/bin/emacsclient /Applications/Emacs.app/Contents/MacOS/bin-x86_64-10_9/emacsclient
+```
+

@@ -39,21 +39,20 @@
 ;; Refer https://www.gnu.org/software/emacs/manual/html_node/org/Template-elements.html#Template-elements
 (after! org-capture
   (setq org-capture-templates
-        `(("t" "task" entry
-           (file+headline ,(expand-file-name "inbox.org" felix/org-agenda-directory) "Tasks")
-           "* TODO %?")
-          ("r" "reading" entry
-           (file+headline ,(expand-file-name "inbox.org" felix/org-agenda-directory) "Readings")
-           "* TODO %? %^G\n%U")
-          ("i" "idea" entry
-           (file+headline ,(expand-file-name "inbox.org" felix/org-agenda-directory) "Ideas")
-           "* %? %^G\n%U")
-          ("n" "note" entry
-           (file+headline ,(expand-file-name "inbox.org" felix/org-agenda-directory) "Notes")
-           "* %? %^G\n%U")
-          ("j" "journal" entry
-           (file+datetree+prompt ,(expand-file-name "journal.org" felix/org-agenda-directory))
-           "** %? %^G\n%U"))))
+        `(("t" "task" entry (file+headline ,(expand-file-name "inbox.org" felix/org-agenda-directory) "Tasks")
+               "* TODO %?")
+          ("r" "reading" entry (file+headline ,(expand-file-name "inbox.org" felix/org-agenda-directory) "Readings")
+              "* TODO %? %^G\n%U")
+          ("i" "idea" entry (file+headline ,(expand-file-name "inbox.org" felix/org-agenda-directory) "Ideas")
+               "* %? %^G\n%U")
+          ("n" "note" entry (file+headline ,(expand-file-name "inbox.org" felix/org-agenda-directory) "Notes")
+               "* %? %^G\n%U")
+          ("j" "journal" entry (file+datetree+prompt ,(expand-file-name "journal.org" felix/org-agenda-directory))
+               "** %? %^G\n%U")
+          ("c" "org-protocol-capture" entry (file+headline ,(expand-file-name "inbox.org" felix/org-agenda-directory) "Links")
+               "* TODO [[%:link][%:description]]\n\n %i"
+               :immediate-finish t))))
+
 
 (after! org-refile
   (setq org-refile-allow-creating-parent-nodes 'confirm
