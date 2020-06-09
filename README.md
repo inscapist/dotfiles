@@ -37,7 +37,7 @@ ln -s ~/dotfiles/.gitignore_global ~/.gitignore_global
 
 ### Setting up Org capture
 
-a) Add the following bookmark item (I am using[Vivaldi](https://vivaldi.com))
+a) Add the following bookmark item (I am using [Vivaldi](https://vivaldi.com))
 ``` 
 javascript:location.href ='org-protocol://capture?template=c&url='+   encodeURIComponent(location.href) +   '&title=' + encodeURIComponent(document.title) +   '&body=' + encodeURIComponent(window.getSelection())
 ```
