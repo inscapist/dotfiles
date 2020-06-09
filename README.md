@@ -59,19 +59,19 @@ ln -s /usr/local/bin/emacsclient /Applications/Emacs.app/Contents/MacOS/bin-x86_
 
 ### Yabai (Tiling Window Manager)
 
-![](screenshots/tiling.png)
+![](screenshots/tiling-v2.png)
 
 ### Emacs (Editor View)
 
-![](screenshots/doom.png)
+![](screenshots/doom-v2.png)
 
 
 ### Emacs (Org Agenda)
 
-![](screenshots/agenda.png)
+![](screenshots/agenda-v2.png)
 
 
 ### Vim/Tmux/Alacritty
 
-![](screenshots/neovim.png)
+![](screenshots/neovim-v2.png)
 
