@@ -2,7 +2,7 @@
 
 (setq doom-theme 'doom-gruvbox)
 (setq doom-themes-enable-bold t)
-(setq doom-font (font-spec :family "Operator Mono" :size 16 :weight 'semi-light))
+(setq doom-font (font-spec :family "Operator Mono" :size 17 :weight 'semi-light))
 (setq doom-variable-pitch-font (font-spec :family "Overpass" :size 15 :weight 'light))
 (setq all-the-icons-scale-factor 0.8)
 (setq org-superstar-headline-bullets-list '("☯" "☰" "☱" "☲" "☳" "☴" "☵" "☶" "☷"))
