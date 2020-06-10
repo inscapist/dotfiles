@@ -31,6 +31,7 @@
                         ("@meeting" . ?m)
                         (:endgroup . nil)
                         ;; projects
+                        ("storybook" . nil)
                         ("clarific" . nil)
                         ("ubermensch" . nil)
                         ("freelance" . nil))))
@@ -107,7 +108,7 @@
                                                                   ,(concat felix/org-agenda-directory "ideas.org")
                                                                   ,(concat felix/org-agenda-directory "notes.org")))
                                               (org-agenda-skip-function '(org-agenda-skip-entry-if 'deadline 'scheduled))))
-                                       (tags-todo "clarific|ubermensch/TODO|PROJ"
+                                       (tags-todo "storybook|clarific|ubermensch/TODO|PROJ"
                                              ;; shaping my own ideas
                                              ((org-agenda-overriding-header "Only What's My Own")
                                               (org-agenda-max-entries 5)
