@@ -17,6 +17,12 @@ ctrl + alt - l : yabai -m window --swap east
 ctrl + alt - j : yabai -m window --swap south
 ctrl + alt - k : yabai -m window --swap north
 
+# directional movement
+cmd + alt - h : yabai -m window --warp west
+cmd + alt - l : yabai -m window --warp east
+cmd + alt - j : yabai -m window --warp south
+cmd + alt - k : yabai -m window --warp north
+
 # move window to next(n) space
 ctrl + cmd - n : yabai -m window --space next; yabai -m space --focus next
 
