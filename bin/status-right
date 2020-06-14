@@ -1,0 +1,8 @@
+if [ "$(whats-playing)" == "" ]
+then
+  STATUS_RIGHT="#[fg=colour8,bg=colour235]#(tmux-mem-cpu-load --averages-count 0 --interval 2)"
+else
+  STATUS_RIGHT="#[fg=colour222,bg=colour238]#(whats-playing)"
+fi
+
+echo $STATUS_RIGHT
