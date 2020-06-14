@@ -47,4 +47,5 @@
 ;(package! builtin-package :recipe (:branch "develop"))
 
 (package! evil-snipe :disable t)
+(package! writegood-mode :disable t)
 (package! gruvbox-theme)
