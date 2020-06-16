@@ -35,6 +35,13 @@ ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/.gitignore_global ~/.gitignore_global
 ```
 
+### Installing tiling window manager
+
+1. Follow the instruction to disable SIP [here](https://github.com/koekeishiya/yabai/wiki/Disabling-System-Integrity-Protection)
+2. Install it [here](https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release))
+3. Install [Skhd](https://github.com/koekeishiya/skhd)
+4. yabai and skhd should be running in `brew services list`
+
 ### Setting up Org capture
 
 a) Add the following bookmark item (I am using [Vivaldi](https://vivaldi.com))
