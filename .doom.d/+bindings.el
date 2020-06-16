@@ -49,11 +49,15 @@
         "s-w"   #'+workspace/close-window-or-workspace
         "s-r"   #'+workspace/rename))
 
+;; Easier window split
+(map! :leader
+      "\\" #'evil-window-vsplit
+      "-" #'evil-window-split)
 
 ;; Open terminal in vertical window
-(map! :leader
-      "\\"
-      (lambda () (interactive)
-        (progn
-          (call-interactively #'evil-window-vsplit)
-          (call-interactively #'+vterm/here))))
+;; (map! :leader
+;;       "\\"
+;;       (lambda () (interactive)
+;;         (progn
+;;           (call-interactively #'evil-window-vsplit)
+;;           (call-interactively #'+vterm/here))))
