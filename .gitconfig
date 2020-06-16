@@ -4,9 +4,9 @@ required = true
 clean = git-lfs clean -- %f
 smudge = git-lfs smudge -- %f
 [user]
-	name = Felix
-	email = zen9.felix@gmail.com
-	signingKey = 534D1F4267E311C1
+name = Felix
+email = zen9.felix@gmail.com
+signingKey = 534D1F4267E311C1
 [alias]
 co = checkout
 br = branch
@@ -26,17 +26,17 @@ do-not-track = !"git update-index --assume-unchanged $1; git rm -f $1"
 local-history= !"git for-each-ref --sort=-committerdate refs/heads/ --color --format='%(color:white)%(committerdate:short)%(color:reset) %(color:bold blue)%(refname:short)%0a%(color:reset)  %(color:bold red)%(authorname):%(color:reset) %(subject)%0a'"
 remote-history= !"git for-each-ref --sort=-committerdate refs/remotes/ --color --format='%(color:white)%(committerdate:short)%(color:reset) %(color:bold blue)%(refname:short)%0a%(color:reset)  %(color:bold red)%(authorname):%(color:reset) %(subject)%0a'"
 [core]
-	excludesfile = /Users/felix/.gitignore_global
+excludesfile = /Users/felix/.gitignore_global
 [commit]
-  gpgsign = false
+gpgsign = false
 [url "git@gitlab.com:"]
-	insteadOf = https://gitlab.com/
+insteadOf = https://gitlab.com/
 [sendemail]
-	smtpencryption = tls
-  smtpserver = smtp.gmail.com
-  smtpuser = zen9.felix@gmail.com
-	smtpserverport = 587
+smtpencryption = tls
+smtpserver = smtp.gmail.com
+smtpuser = zen9.felix@gmail.com
+smtpserverport = 587
 [merge]
-	ff = false
+ff = false
 [gpg]
-	program = gpg
+program = gpg
