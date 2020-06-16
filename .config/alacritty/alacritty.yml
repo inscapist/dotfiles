@@ -113,6 +113,13 @@ key_bindings:
   - { key: N,         mods: Command,   chars: "\x60n"                       }
   - { key: W,         mods: Command,   chars: "\x60x"                       }
   - { key: K,         mods: Command,   chars: "\x60K"                       }
+  - { key: Key1,      mods: Command,   chars: "\x601"                       }
+  - { key: Key2,      mods: Command,   chars: "\x602"                       }
+  - { key: Key3,      mods: Command,   chars: "\x603"                       }
+  - { key: Key4,      mods: Command,   chars: "\x604"                       }
+  - { key: Key5,      mods: Command,   chars: "\x605"                       }
+  - { key: Key6,      mods: Command,   chars: "\x606"                       }
+  - { key: Key7,      mods: Command,   chars: "\x607"                       }
 
   # enter
   - { key: 36,        mods: Command,   action: ToggleFullscreen             }
