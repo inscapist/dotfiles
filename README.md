@@ -35,14 +35,18 @@ ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/.gitignore_global ~/.gitignore_global
 ```
 
-### Installing tiling window manager
+### Install tiling window manager (Yabai and Skhd)
+
+Yabai can be quite difficult to install. Just follow the following steps to install it.
 
 1. Follow the instruction to disable SIP [here](https://github.com/koekeishiya/yabai/wiki/Disabling-System-Integrity-Protection)
-2. Install it [here](https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release))
+2. Install [Yabai](https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release))
 3. Install [Skhd](https://github.com/koekeishiya/skhd)
 4. yabai and skhd should be running in `brew services list`
 
-### Setting up Org capture
+### Setup Org Protocol 
+
+I was using `Pocket` to bookmark webpages. This is the org equivalent
 
 a) Add the following bookmark item (I am using [Vivaldi](https://vivaldi.com))
 ``` 
