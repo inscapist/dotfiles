@@ -4,6 +4,9 @@
 (map! :n "S" #'save-buffer
       :n "F" #'avy-goto-char-timer
       :n "gx" #'browse-url
+      :n "gh" #'previous-buffer
+      :n "gl" #'next-buffer
+      :n "gk" #'doom/kill-other-buffers
       :n "J" #'evil-scroll-down
       :n "K" #'evil-scroll-up)
 
