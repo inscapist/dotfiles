@@ -1,15 +1,11 @@
 ;;; $DOOMDIR/+bindings.el -*- lexical-binding: t; -*-
 
-;; Unbind prefixes
-(map! :n "r" nil)
-
 ;; Simple sugar
 (map! :n "S" #'save-buffer
       :n "F" #'avy-goto-char-timer
       :n "gx" #'browse-url
       :n "J" #'evil-scroll-down
-      :n "K" #'evil-scroll-up
-      :n "rr" #'evil-ex-nohighlight)
+      :n "K" #'evil-scroll-up)
 
  ;; Easier navigation
 (map! :ne "C-h"   #'evil-window-left
