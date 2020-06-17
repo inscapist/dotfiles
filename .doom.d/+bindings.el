@@ -3,12 +3,12 @@
 ;; Simple sugar
 (map! :n "S" #'save-buffer
       :n "F" #'avy-goto-char-timer
+      :n "J" #'evil-scroll-down
+      :n "K" #'evil-scroll-up
       :n "gx" #'browse-url
       :n "gh" #'previous-buffer
       :n "gl" #'next-buffer
-      :n "gk" #'doom/kill-other-buffers
-      :n "J" #'evil-scroll-down
-      :n "K" #'evil-scroll-up)
+      :n "gk" #'doom/kill-other-buffers)
 
  ;; Easier navigation
 (map! :ne "C-h"   #'evil-window-left
