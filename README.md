@@ -39,10 +39,12 @@ ln -s ~/dotfiles/.gitignore_global ~/.gitignore_global
 
 Yabai can be quite difficult to install. Just follow the following steps to install it.
 
-1. Follow the instruction to disable SIP [here](https://github.com/koekeishiya/yabai/wiki/Disabling-System-Integrity-Protection)
-2. Install [Yabai](https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release))
-3. Install [Skhd](https://github.com/koekeishiya/skhd)
-4. yabai and skhd should be running in `brew services list`
+1. Enable `Displays have separate Spaces` under System Preferences -> Mission Control
+2. Follow the instruction to disable SIP [here](https://github.com/koekeishiya/yabai/wiki/Disabling-System-Integrity-Protection)
+3. Install [Yabai](https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release))
+4. Install [Skhd](https://github.com/koekeishiya/skhd)
+5. yabai and skhd should be running in `brew services list`
+6. if it doesn't work, check the error by running `tail -f /usr/local/var/log/yabai/yabai.err.log`
 
 ### Setup Org Protocol 
 
