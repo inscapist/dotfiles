@@ -9,7 +9,9 @@
       :n "J" #'evil-scroll-down
       :n "K" #'evil-scroll-up
       :n "gx" #'browse-url
-      :n "rr" #'evil-ex-nohighlight)
+      :n "rr" #'evil-ex-nohighlight
+      :n "rb" #'revert-buffer
+      :n "rc" #'lsp-workspace-restart)
 
  ;; Easier navigation
 (map! :ne "C-h"   #'evil-window-left
