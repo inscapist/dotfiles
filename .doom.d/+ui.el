@@ -8,6 +8,9 @@
 (setq org-superstar-headline-bullets-list '("☯" "☰" "☱" "☲" "☳" "☴" "☵" "☶" "☷"))
 
 
+;; disable shortmenu
+(remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
+
 ;; customize treemacs
 (after! treemacs
   (setq treemacs--width-is-locked nil)
@@ -18,6 +21,7 @@
        (cl-search "__pycache__" absolute-path)
        (cl-search ".pytest_cache" absolute-path)))
     (add-to-list 'treemacs-ignored-file-predicates #'treemacs-ignore-python-cache-dirs)))
+
 
 ;; Make doom-modeline slightly smaller than editor font
 (after! doom-modeline

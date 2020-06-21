@@ -48,4 +48,5 @@
 
 (package! evil-snipe :disable t)
 (package! writegood-mode :disable t)
-(package! gruvbox-theme)
+(package! undo-fu-session :disable t)
+(package! origami)
