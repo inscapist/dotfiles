@@ -19,7 +19,7 @@ Feel free to open an issue if you need clarification to my configs.
 ```sh
 brew tap d12frosted/emacs-plus
 brew install jansson 
-brew install emacs-plus@28 --with-jansson --with-no-titlebar --with-modern-icon-black-variant	
+brew install emacs-plus@27 --with-jansson --with-no-titlebar --with-modern-icon-black-variant	
 ```
 Now brew a coffee, because it is going to take awhile
 
