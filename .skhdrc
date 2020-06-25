@@ -37,8 +37,8 @@ shift + cmd - h : yabai -m space --focus prev
 shift + cmd - l : yabai -m space --focus next
 
 # toggle fullscreen or split
-shift + cmd - f : yabai -m window --toggle native-fullscreen
-shift + cmd - s : yabai -m window --toggle split && \
+ctrl + cmd - f : yabai -m window --toggle native-fullscreen
+ctrl + cmd - s : yabai -m window --toggle split && \
                   yabai -m space --balance
 
 # create desktop, move window and follow focus - uses jq for parsing json (brew install jq)
@@ -56,4 +56,8 @@ shift + cmd - o : open ~/Desktop
 # open apps: terminal(t), browser(b)
 shift + cmd - b : /Applications/Vivaldi.app/Contents/MacOS/Vivaldi
 shift + cmd - t : /Applications/Alacritty.app/Contents/MacOS/alacritty
+
+# volume contorl
+shift + cmd - 0 : osascript -e "set volume output muted true"
+shift + cmd - 9 : osascript -e "set volume output muted false"
 
