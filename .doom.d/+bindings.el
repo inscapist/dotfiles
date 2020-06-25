@@ -56,6 +56,9 @@
       "\\" #'evil-window-vsplit
       "-" #'evil-window-split)
 
+;; Ace window
+(map! :leader "w w" #'ace-window)
+
 ;; Open terminal in vertical window
 ;; (map! :leader
 ;;       "\\"
