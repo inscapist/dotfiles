@@ -2,8 +2,8 @@
 
 (setq doom-theme 'doom-gruvbox)
 (setq doom-themes-enable-bold t)
-(setq doom-font (font-spec :family "Iosevka" :size 17 :weight 'light))
-(setq doom-variable-pitch-font (font-spec :family "Overpass" :size 15 :weight 'light))
+(setq doom-font (font-spec :family "Iosevka" :size 16 :weight 'light))
+(setq doom-variable-pitch-font (font-spec :family "Overpass" :size 14 :weight 'light))
 (setq all-the-icons-scale-factor 0.8)
 (setq org-superstar-headline-bullets-list '("☯" "☰" "☱" "☲" "☳" "☴" "☵" "☶" "☷"))
 
@@ -14,7 +14,7 @@
 ;; customize treemacs
 (after! treemacs
   (setq treemacs--width-is-locked nil)
-  (setq treemacs-width 28)
+  (setq treemacs-width 35)
   (with-eval-after-load 'treemacs
     (defun treemacs-ignore-python-cache-dirs (_filename absolute-path)
       (or

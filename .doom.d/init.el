@@ -51,7 +51,7 @@
 
        :editor
        (evil +everywhere); come to the dark side, we have cookies
-       file-templates    ; auto-snippets for empty files
+       ;;file-templates    ; auto-snippets for empty files
        ;;fold              ; (nigh) universal code folding
        (format +onsave +format-with-lsp)  ; automated prettiness
        ;;god               ; run Emacs commands without modifier keys
@@ -145,7 +145,7 @@
        ;;php               ; perl's insecure younger brother
        ;;plantuml          ; diagrams for confusing people more
        ;;purescript        ; javascript, but functional
-       (python +lsp +pyenv)            ; beautiful is better than ugly
+       (python +lsp)            ; beautiful is better than ugly
        ;;qt                ; the 'cutest' gui framework ever
        ;; racket            ; a DSL for DSLs
        ;;rest              ; Emacs as a REST client
