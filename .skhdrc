@@ -47,6 +47,21 @@ shift + cmd - j : yabai -m space --create && \
                   yabai -m window --space "${index}" && \
                   yabai -m space --focus "${index}"
 
+# similar to above, but to the left
+shift + cmd - k : yabai -m space --create && \
+                  index="$(yabai -m query --spaces --display | jq 'map(select(."native-fullscreen" == 0))[-1].index')" && \
+                  yabai -m space "${index}" --move 1 && \
+                  yabai -m window --space 1 && \
+                  yabai -m space --focus 1
+
+# beam window to numbered space
+shift + cmd - 1 : yabai -m window --space 1
+shift + cmd - 2 : yabai -m window --space 2
+shift + cmd - 3 : yabai -m window --space 3
+shift + cmd - 4 : yabai -m window --space 4
+shift + cmd - 5 : yabai -m window --space 5
+shift + cmd - 6 : yabai -m window --space 6
+
 # destroy spaces
 shift + cmd - w : yabai -m space --destroy
 

@@ -3,7 +3,7 @@
 (setq doom-theme 'doom-gruvbox)
 (setq doom-themes-enable-bold t)
 (setq doom-font (font-spec :family "Iosevka" :size 16 :weight 'light))
-(setq doom-variable-pitch-font (font-spec :family "Overpass" :size 14 :weight 'light))
+(setq doom-variable-pitch-font (font-spec :family "Iosevka" :size 14 :weight 'light))
 (setq all-the-icons-scale-factor 0.8)
 (setq org-superstar-headline-bullets-list '("☯" "☰" "☱" "☲" "☳" "☴" "☵" "☶" "☷"))
 
@@ -26,8 +26,8 @@
 ;; Make doom-modeline slightly smaller than editor font
 (after! doom-modeline
   (custom-set-faces
-    '(mode-line ((t (:family "Overpass" :height 0.90))))
-    '(mode-line-inactive ((t (:family "Overpass" :height 0.90))))))
+    '(mode-line ((t (:family "Mononoki" :height 0.90))))
+    '(mode-line-inactive ((t (:family "Mononoki" :height 0.90))))))
 
 
 ;; Make evil usable in terminal
