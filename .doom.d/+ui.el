@@ -1,6 +1,6 @@
 ;;; $DOOMDIR/+ui.el -*- lexical-binding: t; -*-
 
-(setq doom-theme 'doom-dracula)
+(setq doom-theme 'doom-gruvbox)
 (setq doom-themes-enable-bold t)
 (setq doom-font (font-spec :family "Dank Mono" :size 17 :weight 'semi-light))
 (setq doom-variable-pitch-font (font-spec :family "Abel" :size 16 :weight 'light))
