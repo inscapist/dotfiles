@@ -77,23 +77,3 @@ ln -s /usr/local/bin/emacsclient /Applications/Emacs.app/Contents/MacOS/bin-x86_
 ```
 
 
-## Screenshots
-
-### Yabai (Tiling Window Manager)
-
-![](screenshots/yabai.png)
-
-### Emacs (Editor View)
-
-![](screenshots/doom-emacs.png)
-
-
-### Emacs (Org Agenda)
-
-![](screenshots/org-agenda.png)
-
-
-### Vim/Tmux/Alacritty
-
-![](screenshots/nvim.png)
-
