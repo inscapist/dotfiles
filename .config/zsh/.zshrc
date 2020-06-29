@@ -51,13 +51,10 @@ alias no="/usr/local/bin/n"
 alias np="npx"
 alias you="rm -f ~/.config/mps-youtube/cache_py_3.8.1; mpsyt"
 alias lg="lazygit"
-alias goo="googler"
-alias gowork="cd $GOWORK"
-alias ip="ipython"
 alias pi="pipenv"
 alias pis="pipenv shell"
-alias gc="gcloud"
 alias doom-cache-clear="rm -rf ~/.emacs.d/.local/cache/*"
+alias gowork="cd $GOWORK"
 alias pom="podman-machine"
 alias podman="podman-remote-darwin"
 alias docker="podman-remote-darwin"
@@ -134,6 +131,7 @@ zinit light-mode for \
 # End of Zinit's installer chunk
 # ----------------------------------------------------------------------------
 
+
 zinit light agkozak/zsh-z
 
 zinit ice silent has'pyenv' wait'!1'
@@ -146,9 +144,7 @@ zinit ice silent has'aws' wait
 zinit snippet OMZ::plugins/aws
 
 zinit wait lucid as'completion' is-snippet for \
-    'https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker' \
-    'https://github.com/docker/compose/blob/master/contrib/completion/zsh/_docker-compose' \
-    'https://github.com/containers/libpod/blob/master/completions/zsh/_podman'
+    'https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker'
 
 zinit wait lucid light-mode for \
   atinit"zicompinit; zicdreplay" \
