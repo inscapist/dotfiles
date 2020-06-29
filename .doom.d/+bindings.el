@@ -51,6 +51,13 @@
         "s-w"   #'+workspace/close-window-or-workspace
         "s-r"   #'+workspace/rename))
 
+;; Folding
+(map! :leader
+      "tt" #'origami-mode)
+(map! :after origami
+      (:map origami-mode-map
+            [tab] #'origami-toggle-node))
+
 ;; Easier window split
 (map! :leader
       "\\" #'evil-window-vsplit
