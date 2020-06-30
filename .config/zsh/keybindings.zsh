@@ -12,7 +12,9 @@ bindkey '^E' end-of-line
 bindkey '^K' kill-line
 bindkey '^W' backward-kill-word
 bindkey -s '^o' 'nvim $(fzf)\n' # open a fzf-found file
-bindkey -M vicmd '^[' vi-insert # escape from vi-mode
+
+# Quit vi-mode with ESC key (optional)
+# bindkey -M vicmd '^[' vi-insert
 
 
 
