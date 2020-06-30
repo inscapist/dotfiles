@@ -106,6 +106,9 @@ zinit snippet OMZ::plugins/pyenv
 zinit ice lucid has'rbenv' wait'!1'
 zinit snippet OMZ::plugins/rbenv
 
+zinit ice lucid wait'2' as"program" pick"$ZPFX/bin/git-*" src"etc/git-extras-completion.zsh" make"PREFIX=$ZPFX"
+zinit light tj/git-extras
+
 zinit wait lucid light-mode for \
   is-snippet "${ZDOTDIR}/aliases.zsh" \
   is-snippet "${ZDOTDIR}/tools.zsh"
