@@ -116,6 +116,8 @@ zinit wait lucid as'completion' is-snippet for \
 zinit wait lucid light-mode for \
   atinit"zicompinit; zicdreplay" \
       zdharma/fast-syntax-highlighting \
+  atload"_zsh_autosuggest_start" \
+      zsh-users/zsh-autosuggestions \
   blockf atpull'zinit creinstall -q .' \
-      zsh-users/zsh-completions \
+      zsh-users/zsh-completions
 
