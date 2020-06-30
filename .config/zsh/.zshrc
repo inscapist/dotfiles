@@ -50,24 +50,6 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' # case insensitive
 
 
 # ============================================================================
-# Keybindings
-# ============================================================================
-
-# http://zsh.sourceforge.net/Doc/Release/Zsh-Line-Editor.html
-# use zle -l to show available widgets
-export KEYTIMEOUT=1
-bindkey -v
-bindkey '^R' fzf-history-widget
-bindkey '^A' beginning-of-line
-bindkey '^E' end-of-line
-bindkey '^K' kill-line
-bindkey '^W' backward-kill-word
-bindkey -s '^o' 'nvim $(fzf)\n' # open a fzf-found file
-bindkey -M vicmd '^[' vi-insert # escape from vi-mode
-
-
-
-# ============================================================================
 # Added by Zinit's installer
 # ============================================================================
 
@@ -99,7 +81,7 @@ zinit light-mode for \
 # load immediately
 (( $+commands[starship] )) && eval "$(starship init zsh)"
 zinit light agkozak/zsh-z
-zinit snippet ${ZDOTDIR}/cursor.zsh
+zinit snippet ${ZDOTDIR}/keybindings.zsh
 
 # load in the background
 zinit ice lucid has'pyenv' wait'!1'
