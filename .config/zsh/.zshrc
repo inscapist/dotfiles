@@ -50,7 +50,7 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' # case insensitive
 
 
 # ============================================================================
-# Added by Zinit's installer
+# Added by Zinit's installer (30/6/2020)
 # ============================================================================
 
 if [[ ! -f $HOME/.config/zsh/.zinit/bin/zinit.zsh ]]; then
