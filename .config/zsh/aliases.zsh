@@ -1,5 +1,5 @@
 alias ..="cd .."
-alias .2="cd ../.."
+alias ...="cd ../.."
 
 alias a="aws"
 alias e="emacs -nw"
@@ -28,8 +28,6 @@ alias pis="pipenv shell"
 alias doom-cache-clear="rm -rf ~/.emacs.d/.local/cache/*"
 alias gowork="cd $GOWORK"
 alias pom="podman-machine"
-alias podman="podman-remote-darwin"
-alias docker="podman-remote-darwin"
 
 # aws aliases
 alias ec2-list="aws ec2 describe-instances | jq '[.Reservations | .[] | .Instances | .[] | {InstanceId: .InstanceId, State: .State, SubnetId: .SubnetId, VpcId: .VpcId, IamInstanceProfile: .IamInstanceProfile, Name: (.Tags[]|select(.Key==\"Name\")|.Value)}]'"

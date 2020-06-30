@@ -45,7 +45,6 @@ unsetopt CLOBBER            # Do not overwrite existing files with > and >>.
                             # Use >! and >>! to bypass.
 
 # others
-setopt COMPLETE_ALIASES # allow alias to get tab completions
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' # case insensitive
 
 
@@ -93,7 +92,7 @@ zinit snippet OMZ::plugins/rbenv
 zinit ice lucid wait'2' as"program" pick"$ZPFX/bin/git-*" src"etc/git-extras-completion.zsh" make"PREFIX=$ZPFX"
 zinit light tj/git-extras
 
-zinit wait lucid light-mode for \
+zinit wait lucid for \
   is-snippet "${ZDOTDIR}/aliases.zsh" \
   is-snippet "${ZDOTDIR}/tools.zsh"
 
