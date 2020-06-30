@@ -9,6 +9,11 @@ function zle-keymap-select {
        [[ $1 = 'beam' ]]; then
     echo -ne '\e[5 q'
   fi
+
+  # == starship specific stanza ==
+  starship_render
+  zle reset-prompt
+  # == starship specific stanza ==
 }
 zle -N zle-keymap-select
 zle-line-init() {
@@ -18,3 +23,4 @@ zle-line-init() {
 zle -N zle-line-init
 echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
+
