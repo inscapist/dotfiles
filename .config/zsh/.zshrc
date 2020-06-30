@@ -1,71 +1,52 @@
 # ============================================================================
 # Options
-# In the order of `man zshoptions`
 # ============================================================================
 
-HISTSIZE=10000
-SAVEHIST=10000
-HISTFILE=~/.zhistory
+# https://github.com/sorin-ionescu/prezto/blob/master/modules/history/init.zsh
+HISTFILE="${HISTFILE:-${ZDOTDIR:-$HOME}/.zhistory}"  # The path to the history file.
+HISTSIZE=10000                   # The maximum number of events to save in the internal history.
+SAVEHIST=10000                   # The maximum number of events to save in the history file.
+setopt BANG_HIST                 # Treat the '!' character specially during expansion.
+setopt EXTENDED_HISTORY          # Write the history file in the ':start:elapsed;command' format.
+setopt SHARE_HISTORY             # Share history between all sessions.
+setopt HIST_EXPIRE_DUPS_FIRST    # Expire a duplicate event first when trimming history.
+setopt HIST_IGNORE_DUPS          # Do not record an event that was just recorded again.
+setopt HIST_IGNORE_ALL_DUPS      # Delete an old recorded event if a new event is a duplicate.
+setopt HIST_FIND_NO_DUPS         # Do not display a previously found event.
+setopt HIST_IGNORE_SPACE         # Do not record an event starting with a space.
+setopt HIST_SAVE_NO_DUPS         # Do not write a duplicate event to the history file.
+setopt HIST_VERIFY               # Do not execute immediately upon history expansion.
+setopt HIST_BEEP                 # Beep when accessing non-existent history.
 
-# history
-setopt append_history                 # append instead of overwrite file
-setopt extended_history               # extended timestamps
-setopt hist_ignore_dups
-setopt hist_ignore_space              # omit from history if space prefixed
-setopt hist_reduce_blanks
-setopt hist_verify                    # verify when using history cmds/params
+
+# https://github.com/sorin-ionescu/prezto/blob/master/modules/environment/init.zsh
+setopt COMBINING_CHARS      # Combine zero-length punctuation characters (accents)
+                            # with the base character.
+setopt INTERACTIVE_COMMENTS # Enable comments in interactive shell.
+setopt RC_QUOTES            # Allow 'Henry''s Garage' instead of 'Henry'\''s Garage'.
+unsetopt MAIL_WARNING       # Don't print a warning message if a mail file has been accessed.
+setopt LONG_LIST_JOBS     # List jobs in the long format by default.
+setopt AUTO_RESUME        # Attempt to resume existing job before creating a new process.
+setopt NOTIFY             # Report status of background jobs immediately.
+unsetopt BG_NICE          # Don't run all background jobs at a lower priority.
+unsetopt HUP              # Don't kill jobs on shell exit.
+unsetopt CHECK_JOBS       # Don't report on jobs when shell exit.
+
+# https://github.com/sorin-ionescu/prezto/blob/master/modules/directory/init.zsh
+setopt AUTO_CD              # Auto changes to a directory without typing cd.
+setopt AUTO_PUSHD           # Push the old directory onto the stack on cd.
+setopt PUSHD_IGNORE_DUPS    # Do not store duplicates in the stack.
+setopt PUSHD_SILENT         # Do not print the directory stack after pushd or popd.
+setopt PUSHD_TO_HOME        # Push to home directory when no argument is given.
+setopt CDABLE_VARS          # Change directory to a path stored in a variable.
+setopt MULTIOS              # Write to multiple descriptors.
+setopt EXTENDED_GLOB        # Use extended globbing syntax.
+unsetopt CLOBBER            # Do not overwrite existing files with > and >>.
+                            # Use >! and >>! to bypass.
 
 # others
-setopt interactive_comments
-setopt complete_aliases
-setopt prompt_subst
-
-
-
-# ============================================================================
-# Alias
-# ============================================================================
-
-alias ..="cd .."
-alias .2="cd ../.."
-
-alias a="aws"
-alias e="emacs -nw"
-alias f="fd"
-alias g="git"
-alias j="z"
-alias l="exa -lbF --git"
-alias n="nvim"
-alias p="python"
-alias s="rg"
-alias t="tmux"
-alias y="yarn"
-
-alias cdd="cd ~/Desktop"
-alias cat="bat"
-alias ls="exa"
-alias la='exa -lbhHigUmuSa --git --color-scale'
-alias genrand="openssl rand -hex 32"
-alias csv="xsv"
-alias no="/usr/local/bin/n"
-alias np="npx"
-alias you="rm -f ~/.config/mps-youtube/cache_py_3.8.1; mpsyt"
-alias lg="lazygit"
-alias pi="pipenv"
-alias pis="pipenv shell"
-alias doom-cache-clear="rm -rf ~/.emacs.d/.local/cache/*"
-alias gowork="cd $GOWORK"
-alias pom="podman-machine"
-alias podman="podman-remote-darwin"
-alias docker="podman-remote-darwin"
-
-# aws aliases
-alias ec2-list="aws ec2 describe-instances | jq '[.Reservations | .[] | .Instances | .[] | {InstanceId: .InstanceId, State: .State, SubnetId: .SubnetId, VpcId: .VpcId, IamInstanceProfile: .IamInstanceProfile, Name: (.Tags[]|select(.Key==\"Name\")|.Value)}]'"
-alias ec2-sess="aws ssm start-session --target" # https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-working-with-install-plugin.html#install-plugin-macos
-
-# aws profiles
-alias jin="export AWS_PROFILE=jindesign"
-
+setopt COMPLETE_ALIASES # allow alias to get tab completions
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' # case insensitive
 
 
 # ============================================================================
@@ -85,29 +66,10 @@ bindkey -s '^o' 'nvim $(fzf)\n' # open a fzf-found file
 bindkey -M vicmd '^[' vi-insert # escape from vi-mode
 
 
-
 # ============================================================================
-# Conditional eval scripts
-# ============================================================================
-
-(( $+commands[starship] )) && eval "$(starship init zsh)"
-(( $+commands[podman-machine] )) && eval $(podman-machine env --varlink)
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# autoload -Uz compinit
-# compinit
-# autoload bashcompinit && bashcompinit
-# complete -o nospace -C /usr/local/bin/terraform terraform
-# complete -C '/usr/local/bin/aws_completer' aws
-
-
-
-# ============================================================================
-# Plugins
-# ============================================================================
-
-# ----------------------------------------------------------------------------
 # Added by Zinit's installer
+# ============================================================================
+
 if [[ ! -f $HOME/.config/zsh/.zinit/bin/zinit.zsh ]]; then
     print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
     command mkdir -p "$HOME/.config/zsh/.zinit" && command chmod g-rwX "$HOME/.config/zsh/.zinit"
@@ -128,20 +90,25 @@ zinit light-mode for \
     zinit-zsh/z-a-patch-dl \
     zinit-zsh/z-a-bin-gem-node
 
-# End of Zinit's installer chunk
-# ----------------------------------------------------------------------------
 
+# ============================================================================
+# Plugins
+# ============================================================================
 
+# load immediately
+(( $+commands[starship] )) && eval "$(starship init zsh)"
 zinit light agkozak/zsh-z
 
-zinit ice silent has'pyenv' wait'!1'
+# load in the background
+zinit ice lucid has'pyenv' wait'!1'
 zinit snippet OMZ::plugins/pyenv
 
-zinit ice silent has'rbenv' wait'!1'
+zinit ice lucid has'rbenv' wait'!1'
 zinit snippet OMZ::plugins/rbenv
 
-zinit ice silent has'aws' wait
-zinit snippet OMZ::plugins/aws
+zinit wait lucid light-mode for \
+  is-snippet "${ZDOTDIR}/aliases.zsh" \
+  is-snippet "${ZDOTDIR}/tools.zsh"
 
 zinit wait lucid as'completion' is-snippet for \
     'https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker'
