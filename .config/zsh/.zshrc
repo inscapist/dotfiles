@@ -66,6 +66,7 @@ bindkey -s '^o' 'nvim $(fzf)\n' # open a fzf-found file
 bindkey -M vicmd '^[' vi-insert # escape from vi-mode
 
 
+
 # ============================================================================
 # Added by Zinit's installer
 # ============================================================================
@@ -98,6 +99,7 @@ zinit light-mode for \
 # load immediately
 (( $+commands[starship] )) && eval "$(starship init zsh)"
 zinit light agkozak/zsh-z
+zinit snippet ${ZDOTDIR}/cursor.zsh
 
 # load in the background
 zinit ice lucid has'pyenv' wait'!1'
