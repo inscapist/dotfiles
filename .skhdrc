@@ -32,9 +32,9 @@ ctrl + cmd - p : yabai -m window --space prev; yabai -m space --focus prev
 # cycle layourts
 shift + cmd - c : yabai -m space --rotate 270
 
-# move mission-control index left/right
-shift + cmd - h : yabai -m space --focus prev
-shift + cmd - l : yabai -m space --focus next
+# move mission-control index left/right (replaced by native keyboard shortcuts)
+# shift + cmd - h : yabai -m space --focus prev
+# shift + cmd - l : yabai -m space --focus next
 
 # toggle fullscreen or split
 ctrl + cmd - f : yabai -m window --toggle native-fullscreen
@@ -75,4 +75,7 @@ shift + cmd - t : /Applications/Alacritty.app/Contents/MacOS/alacritty
 # volume contorl
 shift + cmd - 0 : osascript -e "set volume output muted true"
 shift + cmd - 9 : osascript -e "set volume output muted false"
+
+# mission control with thumbnail (requires cliclick)
+shift + cmd - m : cliclick -r m:0,0
 
