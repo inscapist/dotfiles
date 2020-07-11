@@ -9,8 +9,8 @@ yabai -m config window_opacity               on
 yabai -m config window_opacity_duration      0.0
 yabai -m config window_shadow                on
 yabai -m config insert_feedback_color        0xaad75f5f
-yabai -m config active_window_opacity        0.95
-yabai -m config normal_window_opacity        0.87
+yabai -m config active_window_opacity        1.0
+yabai -m config normal_window_opacity        1.0
 yabai -m config split_ratio                  0.50
 yabai -m config auto_balance                 off
 yabai -m config mouse_modifier               fn
@@ -19,11 +19,11 @@ yabai -m config mouse_action2                resize
 
 # general space settings
 yabai -m config layout                       bsp
-yabai -m config top_padding                  12
-yabai -m config bottom_padding               12
-yabai -m config left_padding                 12
-yabai -m config right_padding                12
-yabai -m config window_gap                   07
+yabai -m config top_padding                  9
+yabai -m config bottom_padding               9
+yabai -m config left_padding                 10
+yabai -m config right_padding                10
+yabai -m config window_gap                   7
 
 # ignore
 yabai -m rule --add app="^System Preferences$" manage=off
