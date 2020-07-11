@@ -50,3 +50,10 @@
 (package! writegood-mode :disable t)
 (package! undo-fu-session :disable t)
 (package! origami)
+
+;; Themes
+;; (package! kaolin-themes)
+(package! tao-theme)
+(package! doom-themes
+  :recipe (:host github :repo "sagittaros/emacs-doom-themes"))
+(unpin! doom-themes)

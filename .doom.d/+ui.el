@@ -1,12 +1,13 @@
 ;;; $DOOMDIR/+ui.el -*- lexical-binding: t; -*-
 
-(setq doom-theme 'doom-nord)
+(setq doom-theme 'doom-miramare)
 (setq doom-themes-enable-bold t)
 (setq doom-themes-enable-italic t)
 (setq doom-font (font-spec :family "Lekton" :size 17 :weight 'semi-light))
 (setq doom-variable-pitch-font (font-spec :family "Abel" :size 16 :weight 'light))
 (setq all-the-icons-scale-factor 0.8)
-(setq org-superstar-headline-bullets-list '("☯" "☰" "☱" "☲" "☳" "☴" "☵" "☶" "☷"))
+;; (setq org-superstar-headline-bullets-list '("☯" "☰" "☱" "☲" "☳" "☴" "☵" "☶" "☷"))
+(setq org-superstar-headline-bullets-list '("#"))
 
 
 ;; disable shortmenu
@@ -36,3 +37,18 @@
   (add-hook 'evil-insert-state-entry-hook (lambda () (send-string-to-terminal "\033[5 q")))
   (add-hook 'evil-normal-state-entry-hook (lambda () (send-string-to-terminal "\033[0 q"))))
 
+
+;; THEMES CUSTOMIZATION
+
+;; gruvbox override
+(setq doom-gruvbox-dark-variant "medium")
+
+;; nord override
+(setq doom-nord-comment-bg nil
+      doom-nord-brighter-comments nil)
+
+;; tao override
+(setq tao-theme-use-boxes nil
+      tao-theme-use-height nil
+      tao-theme-sepia-depth 10
+      tao-theme-sepia-saturation 1.03)
