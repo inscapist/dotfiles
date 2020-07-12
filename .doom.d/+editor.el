@@ -22,3 +22,7 @@
 
 ;; Avy is the best
 (setq avy-all-windows t)
+
+
+; Lsp optimization
+(setq read-process-output-max (* 1024 1024)) ;; 1mb
