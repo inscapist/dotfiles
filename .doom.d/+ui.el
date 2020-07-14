@@ -4,7 +4,7 @@
 (setq doom-themes-enable-bold t)
 (setq doom-themes-enable-italic t)
 (setq doom-font (font-spec :family "Lekton" :size 17 :weight 'semi-light))
-(setq doom-variable-pitch-font (font-spec :family "Abel" :size 16 :weight 'light))
+(setq doom-variable-pitch-font (font-spec :family "Advent Pro" :size 16 :weight 'light))
 (setq all-the-icons-scale-factor 0.8)
 ;; (setq org-superstar-headline-bullets-list '("☯" "☰" "☱" "☲" "☳" "☴" "☵" "☶" "☷"))
 (setq org-superstar-headline-bullets-list '("#"))
@@ -28,8 +28,8 @@
 ;; Make doom-modeline slightly smaller than editor font
 (after! doom-modeline
   (custom-set-faces
-    '(mode-line ((t (:family "Abel" :height 0.90))))
-    '(mode-line-inactive ((t (:family "Abel" :height 0.90))))))
+    '(mode-line ((t (:family "Advent Pro" :height 0.90))))
+    '(mode-line-inactive ((t (:family "Advent Pro" :height 0.90))))))
 
 
 ;; Make evil usable in terminal
