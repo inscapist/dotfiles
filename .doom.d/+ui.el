@@ -16,7 +16,7 @@
 ;; customize treemacs
 (after! treemacs
   (setq treemacs--width-is-locked nil)
-  (setq treemacs-width 35)
+  (setq treemacs-width 30)
   (with-eval-after-load 'treemacs
     (defun treemacs-ignore-python-cache-dirs (_filename absolute-path)
       (or
@@ -28,8 +28,8 @@
 ;; Make doom-modeline slightly smaller than editor font
 (after! doom-modeline
   (custom-set-faces
-    '(mode-line ((t (:family "Advent Pro" :height 0.90))))
-    '(mode-line-inactive ((t (:family "Advent Pro" :height 0.90))))))
+    '(mode-line ((t (:family "Advent Pro" :height 0.88))))
+    '(mode-line-inactive ((t (:family "Advent Pro" :height 0.88))))))
 
 
 ;; Make evil usable in terminal
