@@ -34,5 +34,6 @@ yabai -m rule --add app=Vivaldi space=1
 yabai -m rule --add app=Emacs space=2
 yabai -m rule --add app=Alacritty space=3
 yabai -m rule --add app=Spotify space=4
+yabai -m rule --add app=WhatsApp space=4
 
 echo "yabai configuration loaded.."
