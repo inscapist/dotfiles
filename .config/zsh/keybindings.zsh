@@ -13,6 +13,9 @@ bindkey '^K' kill-line
 bindkey '^W' backward-kill-word
 bindkey -s '^o' 'nvim $(fzf)\n' # open a fzf-found file
 
+# https://github.com/denysdovhan/spaceship-prompt/issues/91
+bindkey "^?" backward-delete-char
+
 # Quit vi-mode with ESC key (optional)
 # bindkey -M vicmd '^[' vi-insert
 

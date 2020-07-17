@@ -15,6 +15,7 @@ alias y="yarn"
 
 alias cdd="cd ~/Desktop"
 alias cat="bat"
+alias batt="battery"
 alias ls="exa"
 alias la='exa -lbhHigUmuSa --git --color-scale'
 alias genrand="openssl rand -hex 32"
