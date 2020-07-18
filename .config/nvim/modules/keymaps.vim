@@ -46,7 +46,7 @@ nnoremap <leader>K gg"_dG
 nnoremap <leader>C :%y+<CR>
 
 " Quick exit/save
-nnoremap <silent> Q :qa<CR>
+nnoremap <silent> Q :qa!<CR>
 nnoremap <silent> S :write<CR>
 
 " Pane navigation
