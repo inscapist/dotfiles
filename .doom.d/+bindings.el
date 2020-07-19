@@ -4,14 +4,14 @@
 (map! :n "r" nil)
 
 ;; Simple sugar
-(map! :n "S" #'save-buffer
-      :n "F" #'avy-goto-char-timer
-      :n "J" #'evil-scroll-down
-      :n "K" #'evil-scroll-up
-      :n "gx" #'browse-url
-      :n "rr" #'evil-ex-nohighlight
-      :n "rb" #'revert-buffer
-      :n "rc" #'lsp-workspace-restart)
+(map! :nv "S" #'save-buffer
+      :nv "F" #'avy-goto-char-timer
+      :nv "J" #'evil-scroll-down
+      :nv "K" #'evil-scroll-up
+      :nv "gx" #'browse-url
+      :nv "rr" #'evil-ex-nohighlight
+      :nv "rb" #'revert-bufferm
+      :nv "rc" #'lsp-workspace-restart)
 
  ;; Easier navigation
 (map! :ne "C-h"   #'evil-window-left
