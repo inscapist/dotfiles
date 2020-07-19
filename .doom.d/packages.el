@@ -46,9 +46,13 @@
 ;; our package manager can't deal with; see raxod502/straight.el#279)
 ;(package! builtin-package :recipe (:branch "develop"))
 
+;; Disable
 (package! evil-snipe :disable t)
 (package! writegood-mode :disable t)
 (package! undo-fu-session :disable t)
+(package! hl-line :disable t) ;; hl-line has huge performance penalty on 4k monitor + retina mac
+
+;; Extra packages
 (package! origami)
 
 ;; Themes
@@ -57,3 +61,4 @@
 (package! doom-themes
   :recipe (:host github :repo "sagittaros/emacs-doom-themes"))
 (unpin! doom-themes)
+
