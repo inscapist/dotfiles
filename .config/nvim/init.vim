@@ -8,24 +8,21 @@ Plug 'tpope/vim-abolish'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'ntpeters/vim-better-whitespace'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/goyo.vim'
-Plug 'mtth/scratch.vim'
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 " UI
 Plug 'morhetz/gruvbox'
 Plug 'Yggdroot/indentLine'
-Plug 'sheerun/vim-polyglot'
 " Language servers etc
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'leafgarland/typescript-vim'
 Plug 'mattn/emmet-vim'
-call plug#end() 
+call plug#end()
 
 
 " ===========================================================================
