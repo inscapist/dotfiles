@@ -28,8 +28,8 @@
 ;; Make doom-modeline slightly smaller than editor font
 (after! doom-modeline
   (custom-set-faces
-    '(mode-line ((t (:family "Advent Pro" :height 0.88))))
-    '(mode-line-inactive ((t (:family "Advent Pro" :height 0.88))))))
+   '(mode-line ((t (:family "Advent Pro" :height 0.85))))
+   '(mode-line-inactive ((t (:family "Advent Pro" :height 0.85))))))
 
 
 ;; Make evil usable in terminal
