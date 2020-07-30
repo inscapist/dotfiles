@@ -17,9 +17,10 @@ ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/.gitignore_global ~/.gitignore_global
 
 # install basic brew packages
-brew install openssl
+brew install openssl coreutils
 brew install git tmux zsh starship
-brew install glances jq fx htop httpie tree rg gpg graphviz tig lazygit pwgen
+brew install exa bat rg fd
+brew install glances jq fx htop httpie tree gpg graphviz tig lazygit pwgen
 brew install pyenv rbenv ruby-build awscli terraform
 
 # install tpm
