@@ -20,6 +20,7 @@ alias ls="exa"
 alias la='exa -lbhHigUmuSa --git --color-scale'
 alias genrand="openssl rand -hex 32"
 alias no="$HOME/n/bin/n"
+alias node="$HOME/n/bin/node"
 alias np="npx"
 alias you="rm -f ~/.config/mps-youtube/cache_py_3.8.1; mpsyt"
 alias lg="lazygit"

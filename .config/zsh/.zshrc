@@ -1,3 +1,33 @@
+#=======================================================================
+# Generic environment
+#=======================================================================
+export BROWSER='open'
+export EDITOR='nvim'
+export VISUAL='nvim'
+export PAGER='less'
+if [[ -z "$LANG" ]]; then
+  export LANG='en_US.UTF-8'
+fi
+
+# Ensure path arrays do not contain duplicates.
+typeset -gU cdpath fpath mailpath path
+
+path=(
+  /usr/local/{bin,sbin}
+  $path
+)
+
+# Set the default Less options.
+# Mouse-wheel scrolling has been disabled by -X (disable screen clearing).
+# Remove -X and -F (exit if the content fits on one screen) to enable it.
+export LESS='-F -g -i -M -R -S -w -X -z-4'
+
+# Set the Less input preprocessor.
+# Try both `lesspipe` and `lesspipe.sh` as either might exist on a system.
+if (( $#commands[(i)lesspipe(|.sh)] )); then
+  export LESSOPEN="| /usr/bin/env $commands[(i)lesspipe(|.sh)] %s 2>&-"
+fi
+
 # ============================================================================
 # Options
 # ============================================================================
@@ -95,7 +125,7 @@ zinit light tj/git-extras
 
 zinit wait lucid for \
   is-snippet "${ZDOTDIR}/aliases.zsh" \
-  is-snippet "${ZDOTDIR}/tools.zsh"
+  is-snippet "${ZDOTDIR}/extras.zsh"
 
 zinit wait lucid as'completion' is-snippet for \
     'https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker'
