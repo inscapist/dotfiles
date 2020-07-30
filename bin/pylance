@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-node $HOME/.vscode-insiders/extensions/ms-python.vscode-pylance-2020.7.3/server/server.bundle.js --stdio
+node $HOME/.vscode-insiders/extensions/ms-python.vscode-pylance-2020.7.4/server/server.bundle.js --stdio
