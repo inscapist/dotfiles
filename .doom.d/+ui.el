@@ -1,9 +1,13 @@
 ;;; $DOOMDIR/+ui.el -*- lexical-binding: t; -*-
 
+;; valid symbols:
+;; ultra-bold, extra-bold, bold, semi-bold, normal,
+;; semi-light, light, extra-light, ultra-light.
+
 (setq doom-theme 'doom-miramare)
 (setq doom-themes-enable-bold t)
 (setq doom-themes-enable-italic t)
-(setq doom-font (font-spec :family "Dank Mono" :size 17 :weight 'semi-light))
+(setq doom-font (font-spec :family "Lekton" :size 18 :weight 'light))
 (setq doom-variable-pitch-font (font-spec :family "Advent Pro" :size 16 :weight 'light))
 (setq all-the-icons-scale-factor 0.8)
 ;; (setq org-superstar-headline-bullets-list '("☯" "☰" "☱" "☲" "☳" "☴" "☵" "☶" "☷"))
