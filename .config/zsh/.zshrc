@@ -81,6 +81,7 @@ zinit light-mode for \
 (( $+commands[starship] )) && eval "$(starship init zsh)"
 zinit light agkozak/zsh-z
 zinit snippet ${ZDOTDIR}/keybindings.zsh
+zinit snippet ${ZDOTDIR}/secrets.zsh
 
 # load in the background
 zinit ice lucid has'pyenv' wait'!1'
