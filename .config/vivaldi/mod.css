@@ -1,0 +1,8 @@
+/* disable title bar */
+#header {
+  display: none !important;
+}
+
+#titlebar {
+  display: none !important;
+}
