@@ -31,7 +31,7 @@ source $ZDOTDIR/.zshrc
 ```sh
 brew tap d12frosted/emacs-plus
 brew install jansson 
-brew install emacs-plus@28 --with-jansson --with-no-titlebar --with-modern-black-variant-icon
+brew install emacs-plus@27 --with-jansson --with-no-titlebar --with-modern-black-variant-icon
 ```
 Now brew a coffee, because it is going to take awhile
 
