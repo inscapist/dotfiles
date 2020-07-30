@@ -15,25 +15,6 @@ Feel free to open an issue if you need clarification to my configs.
 
 ## Installation
 
-### Install script
-
-``` sh
-# editor, feel free to cherry pick
-mkdir ~/.config
-ln -s ~/dotfiles/.config/alacritty ~/.config/alacritty
-ln -s ~/dotfiles/.config/nvim ~/.config/nvim
-ln -s ~/dotfiles/.config/zsh ~/.config/zsh
-ln -s ~/dotfiles/.config/zsh/starship.toml ~/.config/starship.toml
-ln -s ~/dotfiles/.ctags.d ~/.ctags.d
-ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
-ln -s ~/dotfiles/.skhdrc ~/.skhdrc
-ln -s ~/dotfiles/.yabairc ~/.yabairc
-
-# git
-ln -s ~/dotfiles/.gitconfig ~/.gitconfig
-ln -s ~/dotfiles/.gitignore_global ~/.gitignore_global
-```
-
 ### Zsh
 I use [Zinit](https://github.com/zdharma/zinit) as ZSH's plugin manager. My `.zshrc` is [here](.config/zsh/.zshrc).
 I source it from another `.zshrc` that lives in $HOME.
@@ -50,14 +31,13 @@ source $ZDOTDIR/.zshrc
 ```sh
 brew tap d12frosted/emacs-plus
 brew install jansson 
-brew install emacs-plus@27 --with-jansson --with-no-titlebar --with-modern-icon-black-variant	
+brew install emacs-plus@28 --with-jansson --with-no-titlebar --with-modern-black-variant-icon
 ```
 Now brew a coffee, because it is going to take awhile
 
 ### Install doom emacs
 
 https://github.com/hlissner/doom-emacs
-
 
 ### Install tiling window manager (Yabai and Skhd)
 

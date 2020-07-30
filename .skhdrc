@@ -65,8 +65,8 @@ ctrl + cmd - 6 : yabai -m space --focus 6
 # destroy spaces
 shift + cmd - w : yabai -m space --destroy
 
-# open finder to desktop
-shift + cmd - o : open ~/Desktop
+# open finder to file storage drive
+shift + cmd - o : open /Volumes/Zitsh
 
 # open apps: terminal(t), browser(b)
 shift + cmd - b : /Applications/Vivaldi.app/Contents/MacOS/Vivaldi

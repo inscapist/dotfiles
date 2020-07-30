@@ -10,6 +10,7 @@ ln -s ~/dotfiles/.ctags.d ~/.ctags.d
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/.skhdrc ~/.skhdrc
 ln -s ~/dotfiles/.yabairc ~/.yabairc
+ln -s ~/dotfiles/.doom.d ~/.doom.d
 
 # git
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
