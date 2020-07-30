@@ -1,1 +1,0 @@
-/Users/felix/secrets/.zprofile

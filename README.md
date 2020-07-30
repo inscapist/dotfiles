@@ -37,11 +37,11 @@ ln -s ~/dotfiles/.gitignore_global ~/.gitignore_global
 ### Zsh
 I use [Zinit](https://github.com/zdharma/zinit) as ZSH's plugin manager. My `.zshrc` is [here](.config/zsh/.zshrc).
 It is a good idea to source it from another `.zshrc` that lives in $HOME.
+Sensitive environment variable should not be version controlled, I leave it in `$HOME/.zprofile`
 
 ```
 # $HOME/.zshrc
 
-source $HOME/.zprofile  # sensitive stuff
 export ZDOTDIR=$HOME/.config/zsh
 source $ZDOTDIR/.zshrc
 ```
