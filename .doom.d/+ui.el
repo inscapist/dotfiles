@@ -9,14 +9,13 @@
 ;; M-x: describe-face
 ;; https://www.gnu.org/software/emacs/manual/html_node/elisp/Face-Attributes.html
 (custom-set-faces!
-  '(italic :family "Dank Mono" :height 1.0 :slant italic)
   '(bold :family "Monoid" :height 0.8)
-  '(link :inherit 'italic :width condensed)
-  '(font-lock-comment-face :inherit 'italic)
-  '(font-lock-keyword-face :inherit 'italic)
+  '(link :slant italic :width condensed)
+  '(font-lock-comment-face :slant italic)
+  '(font-lock-keyword-face :slant italic)
   '(org-todo :inherit 'bold)
-  '(org-agenda-structure :inherit 'italic)
-  '(org-document-title :inherit 'italic))
+  '(org-agenda-structure :slant italic)
+  '(org-document-title :slant italic))
 
 ;; Make doom-modeline slightly smaller than editor font
 (after! doom-modeline
