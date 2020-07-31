@@ -1,33 +1,3 @@
-#=======================================================================
-# Generic environment
-#=======================================================================
-export BROWSER='open'
-export EDITOR='nvim'
-export VISUAL='nvim'
-export PAGER='less'
-if [[ -z "$LANG" ]]; then
-  export LANG='en_US.UTF-8'
-fi
-
-# Ensure path arrays do not contain duplicates.
-typeset -gU cdpath fpath mailpath path
-
-path=(
-  /usr/local/{bin,sbin}
-  $path
-)
-
-# Set the default Less options.
-# Mouse-wheel scrolling has been disabled by -X (disable screen clearing).
-# Remove -X and -F (exit if the content fits on one screen) to enable it.
-export LESS='-F -g -i -M -R -S -w -X -z-4'
-
-# Set the Less input preprocessor.
-# Try both `lesspipe` and `lesspipe.sh` as either might exist on a system.
-if (( $#commands[(i)lesspipe(|.sh)] )); then
-  export LESSOPEN="| /usr/bin/env $commands[(i)lesspipe(|.sh)] %s 2>&-"
-fi
-
 # ============================================================================
 # Options
 # ============================================================================
@@ -138,3 +108,28 @@ zinit wait lucid light-mode for \
   blockf atpull'zinit creinstall -q .' \
       zsh-users/zsh-completions
 
+
+#=======================================================================
+# Custom environment
+# Since this is only loaded on login, source it after making any changes
+#=======================================================================
+
+path=(
+  $HOME/n/bin # installed with n-install (see http://git.io/n-install-repo).
+  $HOME/.cargo/bin
+  $HOME/go/bin
+  $HOME/dotfiles/bin
+  $HOME/.emacs.d/bin
+  /usr/local/opt/texinfo/bin
+  /usr/local/opt/openssl@1.1/bin
+  /Applications/Alacritty.app/Contents/MacOS
+  /Applications/Vivaldi.app/Contents/MacOS
+  $path
+)
+
+export GOWORK="~/go/src/github.com/sagittaros"
+export GPG_TTY=$(tty) # Sign git commit with gpg
+
+# For compilers
+export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
+export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"

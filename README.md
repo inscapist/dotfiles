@@ -13,19 +13,30 @@ I am currently migrating [my vim configuration](.config/nvim) to [Doom emacs](.d
 
 Feel free to open an issue if you need clarification to my configs.
 
+## What's special?
+
+### Self-contained
+- No zsh cluttering `$HOME`
+- Language and version specific binaries with the use of pyenv, rbenv, `tj/n`
+
+### Speedy
+- `Zinit` is currently the fastest option out there
+- Rust variants are used whenever possible: `fd`, `exa`, `rg`, `bat` etc
+
+### Rich shell features
+- Changing between vi-mode and insert-mode
+- Useful information display with the help of `starship.rs`
+
+### Self-proclaimed Great Looks
+I have scoured every corners of the universe for the best themes and fonts, from expensive `Operator Mono` to oblivious `Lekton`, `M+ 1m`
+
 ## Installation
 
 ### Zsh
 I use [Zinit](https://github.com/zdharma/zinit) as ZSH's plugin manager. My `.zshrc` is [here](.config/zsh/.zshrc).
-I source it from another `.zshrc` that lives in $HOME.
-Sensitive environment variable should not be version controlled, I place it in `secrets.zsh`
+`$ZDOTDIR` is set in `$HOME/.zshenv`, so that zsh configs are self-contained
+Sensitive environment variables should not be version controlled, they are placed in `secrets.zsh`
 
-```
-# $HOME/.zshrc
-
-export ZDOTDIR=$HOME/.config/zsh
-source $ZDOTDIR/.zshrc
-```
 
 ### Install latest emacs
 ```sh
