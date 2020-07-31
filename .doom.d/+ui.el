@@ -1,33 +1,22 @@
 ;;; $DOOMDIR/+ui.el -*- lexical-binding: t; -*-
 
-;; valid symbols:
-;; ultra-bold, extra-bold, bold, semi-bold, normal,
-;; semi-light, light, extra-light, ultra-light.
 
 (setq doom-theme 'doom-miramare)
 (setq doom-themes-enable-bold t)
 (setq doom-themes-enable-italic t)
-(setq doom-font (font-spec :family "Lekton" :size 18 :weight 'light))
-(setq doom-variable-pitch-font (font-spec :family "Advent Pro" :size 16 :weight 'light))
-(setq all-the-icons-scale-factor 0.8)
-;; (setq org-superstar-headline-bullets-list '("☯" "☰" "☱" "☲" "☳" "☴" "☵" "☶" "☷"))
-(setq org-superstar-headline-bullets-list '("#"))
 
-
-;; disable shortmenu
-(remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
-
-;; customize treemacs
-(after! treemacs
-  (setq treemacs--width-is-locked nil)
-  (setq treemacs-width 30)
-  (with-eval-after-load 'treemacs
-    (defun treemacs-ignore-python-cache-dirs (_filename absolute-path)
-      (or
-       (cl-search "__pycache__" absolute-path)
-       (cl-search ".pytest_cache" absolute-path)))
-    (add-to-list 'treemacs-ignored-file-predicates #'treemacs-ignore-python-cache-dirs)))
-
+;; M-x: list-faces-display
+;; M-x: describe-face
+;; https://www.gnu.org/software/emacs/manual/html_node/elisp/Face-Attributes.html
+(custom-set-faces!
+  '(italic :family "Dank Mono" :height 1.0 :slant italic)
+  '(bold :family "Monoid" :height 0.8)
+  '(link :inherit 'italic :width condensed)
+  '(font-lock-comment-face :inherit 'italic)
+  '(font-lock-keyword-face :inherit 'italic)
+  '(org-todo :inherit 'bold)
+  '(org-agenda-structure :inherit 'italic)
+  '(org-document-title :inherit 'italic))
 
 ;; Make doom-modeline slightly smaller than editor font
 (after! doom-modeline
@@ -35,11 +24,13 @@
    '(mode-line ((t (:family "Advent Pro" :height 0.85))))
    '(mode-line-inactive ((t (:family "Advent Pro" :height 0.85))))))
 
+(setq doom-font (font-spec :family "Dank Mono" :size 16 :weight 'light))
+(setq doom-variable-pitch-font (font-spec :family "Advent Pro" :size 16 :weight 'light))
+(setq all-the-icons-scale-factor 0.8)
+(setq org-superstar-headline-bullets-list '("#"))
 
-;; Make evil usable in terminal
-(when (not (display-graphic-p))
-  (add-hook 'evil-insert-state-entry-hook (lambda () (send-string-to-terminal "\033[5 q")))
-  (add-hook 'evil-normal-state-entry-hook (lambda () (send-string-to-terminal "\033[0 q"))))
+;; disable shortmenu
+(remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
 
 
 ;; THEMES CUSTOMIZATION
