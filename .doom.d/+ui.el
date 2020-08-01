@@ -36,7 +36,7 @@
 (custom-set-faces!
   `(bold :family ,felix/bold-font :weight semi-bold :height ,felix/bold-height)
   `(link :family ,felix/cursive-font :slant italic :weight light)
-  `(font-lock-comment-face :family ,felix/cursive-font :slant italic)
+  `(font-lock-comment-face :slant italic)
   `(font-lock-keyword-face :family ,felix/cursive-font :slant italic)
   `(org-todo :inherit bold)
   `(org-agenda-structure :family ,felix/cursive-font :slant italic)
