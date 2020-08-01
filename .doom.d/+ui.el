@@ -4,15 +4,15 @@
 ;; UI variables
 ;; =======================================================================
 
-(setq felix/default-font "Dank Mono"
-      felix/default-font-size 17
-      felix/default-font-weight 'light
-      felix/cursive-font "Dank Mono"
+(setq felix/default-font "Dank Mono" ;; alternatively, Victor Mono
+      felix/default-font-size 16
+      felix/default-font-weight 'semi-light
+      felix/cursive-font "Dank Mono" ;; alternative, Victor Mono
       felix/book-font "Ubuntu Mono"
       felix/bold-font "Ubuntu Mono" ;; alterantively, Monoid
       felix/bold-height 1.0
-      felix/ui-font "Advent Pro" ;; alternatively, Overpass
-      felix/ui-font-size 17
+      felix/ui-font "Advent Pro" ;; alternatively, Overpass/Ubuntu
+      felix/ui-font-size 15
       felix/ui-font-weight 'light
       felix/mode-line-height 0.9)
 
