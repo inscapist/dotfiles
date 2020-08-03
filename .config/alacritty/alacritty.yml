@@ -16,7 +16,7 @@ font:
   italic:
     family: Monoid Nerd Font
     style: Italic
-  size: 13
+  size: 10
   offset:
     x: 0
     y: 1
