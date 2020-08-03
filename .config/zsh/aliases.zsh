@@ -14,8 +14,10 @@ alias t="tmux"
 alias y="yarn"
 
 alias cdd="cd ~/Desktop"
+alias ccat="/bin/cat"
 alias cat="bat"
 alias batt="battery"
+alias lls="/bin/ls"
 alias ls="exa"
 alias la='exa -lbhHigUmuSa --git --color-scale'
 alias genrand="openssl rand -hex 32"
