@@ -9,6 +9,7 @@
       felix/default-font-weight 'semi-light
       felix/cursive-font "Dank Mono" ;; alternative, Victor Mono
       felix/book-font "Ubuntu Mono"
+      felix/book-height 1.05
       felix/bold-font "Ubuntu Mono" ;; alterantively, Monoid
       felix/bold-height 1.0
       felix/ui-font "Advent Pro" ;; alternatively, Overpass/Ubuntu
@@ -41,14 +42,14 @@
   `(org-todo :inherit bold)
   `(org-agenda-structure :family ,felix/cursive-font :slant italic)
   `(org-document-title :family ,felix/cursive-font :slant italic)
-  `(outline-1 :family ,felix/book-font :weight semi-bold :height 1.1)
-  `(outline-2 :family ,felix/book-font :weight normal :foreground "#e39b7b")
-  `(outline-3 :family ,felix/book-font :weight normal)
-  `(outline-4 :family ,felix/book-font :weight semi-light)
-  `(outline-5 :family ,felix/book-font :weight semi-light)
-  `(outline-6 :family ,felix/book-font :weight semi-light)
-  `(outline-7 :family ,felix/book-font :weight semi-light)
-  `(outline-8 :family ,felix/book-font :weight semi-light))
+  `(outline-1 :family ,felix/book-font :weight semi-bold :height ,felix/book-height)
+  `(outline-2 :family ,felix/book-font :weight normal :height ,felix/book-height :foreground "#89beba")
+  `(outline-3 :family ,felix/book-font :weight normal :height ,felix/book-height)
+  `(outline-4 :family ,felix/book-font :weight semi-light :height ,felix/book-height)
+  `(outline-5 :family ,felix/book-font :weight semi-light :height ,felix/book-height)
+  `(outline-6 :family ,felix/book-font :weight semi-light :height ,felix/book-height)
+  `(outline-7 :family ,felix/book-font :weight semi-light :height ,felix/book-height)
+  `(outline-8 :family ,felix/book-font :weight semi-light :height ,felix/book-height))
 
 ;; Make doom-modeline slightly smaller than editor font
 (after! doom-modeline
