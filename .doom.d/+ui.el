@@ -35,11 +35,10 @@
 ;; M-x: describe-face
 ;; https://www.gnu.org/software/emacs/manual/html_node/elisp/Face-Attributes.html
 (custom-set-faces!
-  `(bold :family ,felix/bold-font :weight semi-bold :height ,felix/bold-height)
   `(link :family ,felix/cursive-font :slant italic :weight light)
   `(font-lock-comment-face :slant italic)
   `(font-lock-keyword-face :family ,felix/cursive-font :slant italic)
-  `(org-todo :inherit bold)
+  `(org-todo :family ,felix/bold-font :weight semi-bold :height ,felix/bold-height)
   `(org-agenda-structure :family ,felix/cursive-font :slant italic)
   `(org-document-title :family ,felix/cursive-font :slant italic)
   `(outline-1 :family ,felix/book-font :weight semi-bold :height ,felix/book-height)
@@ -55,7 +54,16 @@
 (after! doom-modeline
   (custom-set-faces
    `(mode-line ((t (:family ,felix/ui-font :height ,felix/mode-line-height))))
+   `(mode-line-buffer-id ((t (:family ,felix/ui-font :height ,felix/mode-line-height))))
+   `(mode-line-emphasis ((t (:family ,felix/ui-font :height ,felix/mode-line-height))))
+   `(mode-line-highlight ((t (:family ,felix/ui-font :height ,felix/mode-line-height))))
    `(mode-line-inactive ((t (:family ,felix/ui-font :height ,felix/mode-line-height))))))
+
+   ;; `(doom-modeline-bar ((t (:family ,felix/ui-font :height ,felix/mode-line-height))))
+   ;; `(doom-modeline-bar-inactive ((t (:family ,felix/ui-font :height ,felix/mode-line-height))))
+   ;; `(doom-modeline-buffer-file ((t (:family ,felix/ui-font :height ,felix/mode-line-height))))
+   ;; `(doom-modeline-buffer-major-mode ((t (:family ,felix/ui-font :height ,felix/mode-line-height))))
+   ;; `(doom-modeline-buffer-major-mode ((t (:family ,felix/ui-font :height ,felix/mode-line-height))))))
 
 ;; disable shortmenu
 (remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
