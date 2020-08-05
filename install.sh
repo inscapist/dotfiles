@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # editor and terminal
-mkdir ~/.config
+mkdir -p ~/.config
 ln -s ~/dotfiles/.zshenv ~/.zshenv
 ln -s ~/dotfiles/.config/zsh ~/.config/zsh
 ln -s ~/dotfiles/.config/starship.toml ~/.config/starship.toml
@@ -16,6 +16,9 @@ ln -s ~/dotfiles/.doom.d ~/.doom.d
 # git
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/.gitignore_global ~/.gitignore_global
+
+mkdir -p ~/Library/Application\ Support/ptpython
+ln -s ~/dotfiles/.ptpython/config.py ~/Library/Application\ Support/ptpython/config.py
 
 # install basic brew packages
 brew install openssl coreutils
