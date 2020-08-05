@@ -28,6 +28,9 @@
 (setq org-superstar-headline-bullets-list '("#"))
 
 
+;; disable shortmenu
+(remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
+
 ;; =======================================================================
 ;; FACES CUSTOMIZATION
 ;; =======================================================================
@@ -58,22 +61,30 @@
 
 ;; Make doom-modeline slightly smaller than editor font
 (after! doom-modeline
-  (custom-set-faces
-   `(mode-line ((t (:family ,felix/ui-font :height ,felix/mode-line-height))))
-   `(mode-line-buffer-id ((t (:family ,felix/ui-font :height ,felix/mode-line-height))))
-   `(mode-line-emphasis ((t (:family ,felix/ui-font :height ,felix/mode-line-height))))
-   `(mode-line-highlight ((t (:family ,felix/ui-font :height ,felix/mode-line-height))))
-   `(mode-line-inactive ((t (:family ,felix/ui-font :height ,felix/mode-line-height))))))
+  (custom-set-faces!
+   `(mode-line :family ,felix/ui-font :height ,felix/mode-line-height)
+   `(mode-line-inactive :inherit mode-line :height 0.9)))
 
-   ;; `(doom-modeline-bar ((t (:family ,felix/ui-font :height ,felix/mode-line-height))))
-   ;; `(doom-modeline-bar-inactive ((t (:family ,felix/ui-font :height ,felix/mode-line-height))))
-   ;; `(doom-modeline-buffer-file ((t (:family ,felix/ui-font :height ,felix/mode-line-height))))
-   ;; `(doom-modeline-buffer-major-mode ((t (:family ,felix/ui-font :height ,felix/mode-line-height))))
-   ;; `(doom-modeline-buffer-major-mode ((t (:family ,felix/ui-font :height ,felix/mode-line-height))))))
-
-;; disable shortmenu
-(remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
-
+   ;; `(mode-line-emphasis :inherit mode-line)
+   ;; `(mode-line-highlight :inherit mode-line)
+   ;; `(doom-modeline-bar :inherit mode-line)
+   ;; `(doom-modeline-panel :inherit mode-line)
+   ;; `(doom-modeline-host :inherit mode-line)
+   ;; `(doom-modeline-info :inherit mode-line)
+   ;; `(doom-modeline-project-dir :inherit mode-line)
+   ;; `(doom-modeline-project-parent-dir :inherit mode-line)
+   ;; `(doom-modeline-project-root-dir :inherit mode-line)
+   ;; `(doom-modeline-bar-inactive :inherit mode-line)
+   ;; `(doom-modeline-buffer-file :inherit mode-line)
+   ;; `(doom-modeline-buffer-modified :inherit mode-line)
+   ;; `(doom-modeline-buffer-path :inherit mode-line)
+   ;; `(doom-modeline-buffer-major-mode :inherit mode-line)
+   ;; `(doom-modeline-buffer-minor-mode :inherit mode-line)
+   ;; `(doom-modeline-debug :inherit mode-line)
+   ;; `(doom-modeline-lsp-error :inherit mode-line)
+   ;; `(doom-modeline-lsp-running :inherit mode-line)
+   ;; `(doom-modeline-lsp-success :inherit mode-line)
+   ;; `(doom-modeline-lsp-warning :inherit mode-line)))
 
 ;; =======================================================================
 ;; THEMES CUSTOMIZATION
