@@ -4,11 +4,11 @@
 ;; UI variables
 ;; =======================================================================
 
-(setq felix/default-font "Lekton" ;; alternatively, Victor Mono
+(setq felix/default-font "LektonDank" ;; alternatively, Victor Mono
       felix/default-font-size 13
       felix/default-font-weight 'light
       felix/cursive-font "Dank Mono" ;; alternative, Victor Mono
-      felix/cursive-height 0.9
+      felix/cursive-height 1
       felix/book-font "Ubuntu Mono"
       felix/book-height 1.0
       felix/bold-font "Monoid HalfTight" ;; alterantively, Monoid
