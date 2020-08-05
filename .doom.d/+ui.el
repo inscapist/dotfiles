@@ -4,14 +4,15 @@
 ;; UI variables
 ;; =======================================================================
 
-(setq felix/default-font "Dank Mono" ;; alternatively, Victor Mono
+(setq felix/default-font "Lekton" ;; alternatively, Victor Mono
       felix/default-font-size 13
-      felix/default-font-weight 'semi-light
+      felix/default-font-weight 'light
       felix/cursive-font "Dank Mono" ;; alternative, Victor Mono
+      felix/cursive-height 0.9
       felix/book-font "Ubuntu Mono"
-      felix/book-height 1.05
-      felix/bold-font "Ubuntu Mono" ;; alterantively, Monoid
-      felix/bold-height 1.0
+      felix/book-height 1.0
+      felix/bold-font "Monoid HalfTight" ;; alterantively, Monoid
+      felix/bold-height 0.75
       felix/ui-font "Advent Pro" ;; alternatively, Overpass/Ubuntu
       felix/ui-font-size 12
       felix/ui-font-weight 'light
@@ -35,9 +36,11 @@
 ;; M-x: describe-face
 ;; https://www.gnu.org/software/emacs/manual/html_node/elisp/Face-Attributes.html
 (custom-set-faces!
-  `(link :family ,felix/cursive-font :slant italic :weight light)
+  `(bold :family ,felix/bold-font :weight semi-bold :height ,felix/bold-height)
+  `(link :family ,felix/cursive-font :slant italic :weight light :height ,felix/cursive-height)
   `(font-lock-comment-face :slant italic)
-  `(font-lock-keyword-face :family ,felix/cursive-font :slant italic)
+  `(font-lock-keyword-face :family ,felix/cursive-font :slant italic :height ,felix/cursive-height)
+  `(font-lock-constant-face :family ,felix/bold-font :weight semi-bold :height ,felix/bold-height)
   `(org-todo :family ,felix/bold-font :weight semi-bold :height ,felix/bold-height)
   `(org-agenda-structure :family ,felix/cursive-font :slant italic)
   `(org-document-title :family ,felix/cursive-font :slant italic)

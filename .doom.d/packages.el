@@ -59,6 +59,7 @@
 ;; (package! kaolin-themes)
 (package! tao-theme)
 (package! doom-themes
-  :recipe (:host github :repo "sagittaros/emacs-doom-themes"))
-(unpin! doom-themes)
+  :recipe (:host github :repo "sagittaros/emacs-doom-themes")
+  :pin "4d09acc")
 
+(unpin! doom-themes)

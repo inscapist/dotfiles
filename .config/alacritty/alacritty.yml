@@ -19,7 +19,7 @@ font:
   size: 10
   offset:
     x: 0
-    y: 1
+    y: 0
   use_thin_strokes: true
 
 background_opacity: 1.0
