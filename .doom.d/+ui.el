@@ -59,6 +59,9 @@
   `(outline-8 :family ,felix/book-font :weight semi-light :height ,felix/book-height))
 
 (after! doom-modeline
+  (display-battery-mode 1)
+  (setq doom-modeline-lsp nil)
+  (setq doom-modeline-env-version t)
   (custom-set-faces
    `(mode-line ((t (:family ,felix/ui-font :height ,felix/mode-line-height))))
    `(mode-line-buffer-id ((t (:family ,felix/ui-font :height ,felix/mode-line-height))))
