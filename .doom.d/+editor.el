@@ -10,7 +10,7 @@
 
 
 ;; Do not display line number
-(setq display-line-numbers-type nil)
+(setq display-line-numbers-type t)
 
 
 ;; History & backup settings (save nothing, that's what git is for)

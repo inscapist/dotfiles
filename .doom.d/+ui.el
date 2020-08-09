@@ -4,15 +4,16 @@
 ;; UI variables
 ;; =======================================================================
 
-(setq felix/default-font "LektonDank" ;; alternatively, Victor Mono
+(setq felix/default-font "LektonDank" ;; alternatively, Victor/Recursive Mono
       felix/default-font-size 13
       felix/default-font-weight 'light
-      felix/cursive-font "Dank Mono" ;; alternative, Victor Mono
+      felix/cursive-font "Dank Mono" ;; alternatively, Victor Mono
       felix/cursive-height 1.0
       felix/book-font "Ubuntu Mono"
       felix/book-height 1.0
-      felix/bold-font "Monoid HalfTight" ;; alterantively, Monoid
-      felix/bold-height 0.75
+      felix/punk-font "Monoid HalfTight" ;; alternatively, Iosevka
+      felix/punk-height 0.75
+      felix/punk-height-smaller 0.7
       felix/ui-font "Advent Pro" ;; alternatively, Overpass/Ubuntu
       felix/ui-font-size 12
       felix/ui-font-weight 'light
@@ -38,12 +39,12 @@
 ;; M-x: describe-face
 ;; https://www.gnu.org/software/emacs/manual/html_node/elisp/Face-Attributes.html
 (custom-set-faces!
-  `(bold :family ,felix/bold-font :weight semi-bold :height ,felix/bold-height)
-  `(link :family ,felix/cursive-font :slant italic :weight light :height ,felix/cursive-height)
+  `(bold :family ,felix/punk-font :weight semi-bold :height ,felix/punk-height)
+  `(link :family ,felix/punk-font :slant normal :weight semi-bold :height ,felix/punk-height-smaller)
   `(font-lock-comment-face :slant italic)
   `(font-lock-keyword-face :family ,felix/cursive-font :slant italic :height ,felix/cursive-height)
-  `(font-lock-constant-face :family ,felix/bold-font :weight semi-bold :height ,felix/bold-height)
-  `(org-todo :family ,felix/bold-font :weight semi-bold :height ,felix/bold-height)
+  `(font-lock-constant-face :family ,felix/punk-font :weight semi-bold :height ,felix/punk-height)
+  `(org-todo :family ,felix/punk-font :weight semi-bold :height ,felix/punk-height)
   `(+org-todo-onhold :inherit org-todo)
   `(+org-todo-project :inherit org-todo)
   `(+org-todo-active :inherit org-todo)
