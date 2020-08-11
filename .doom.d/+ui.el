@@ -8,7 +8,7 @@
       felix/default-font-size 13
       felix/default-font-weight 'light
       felix/cursive-font "Dank Mono" ;; alternatively, Victor Mono
-      felix/cursive-height 1.0
+      felix/cursive-height 0.95
       felix/book-font "Ubuntu Mono"
       felix/book-height 1.0
       felix/punk-font "Monoid HalfTight" ;; alternatively, Iosevka

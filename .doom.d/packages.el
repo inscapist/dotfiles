@@ -60,6 +60,6 @@
 (package! tao-theme)
 (package! doom-themes
   :recipe (:host github :repo "sagittaros/emacs-doom-themes")
-  :pin "7c8db6b")
+  :pin "ddf7a7c")
 
 (unpin! doom-themes)
