@@ -4,7 +4,7 @@
 ;; UI variables
 ;; =======================================================================
 
-(setq felix/default-font "LektonDank" ;; alternatively, Victor/Recursive Mono
+(setq felix/default-font "Dank Mono" ;; alternatively, Victor/Recursive Mono
       felix/default-font-size 13
       felix/default-font-weight 'light
       felix/cursive-font "Dank Mono" ;; alternatively, Victor Mono
@@ -50,7 +50,7 @@
   `(+org-todo-active :inherit org-todo)
   `(org-agenda-structure :family ,felix/cursive-font :slant italic)
   `(org-document-title :family ,felix/cursive-font :slant italic)
-  `(outline-1 :family ,felix/book-font :weight semi-bold :height ,felix/book-height)
+  `(outline-1 :family ,felix/punk-font :weight semi-bold :height ,felix/punk-height)
   `(outline-2 :family ,felix/book-font :weight normal :height ,felix/book-height :foreground "#89beba")
   `(outline-3 :family ,felix/book-font :weight normal :height ,felix/book-height)
   `(outline-4 :family ,felix/book-font :weight semi-light :height ,felix/book-height)
