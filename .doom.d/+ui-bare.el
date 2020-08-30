@@ -4,10 +4,10 @@
 ;; UI variables
 ;; =======================================================================
 
-(setq felix/default-font "Monoid HalfTight" ;; alternatively, Victor/Recursive Mono
+(setq felix/default-font "Monoid"
       felix/default-font-size 11
-      felix/default-font-weight 'ultra-light
-      felix/ui-font "Advent Pro" ;; alternatively, Overpass/Ubuntu
+      felix/default-font-weight 'light
+      felix/ui-font "Advent Pro"
       felix/ui-font-size 12
       felix/ui-font-weight 'light
       felix/mode-line-height 1.0)
@@ -35,3 +35,6 @@
    `(mode-line-highlight ((t (:family ,felix/ui-font :height ,felix/mode-line-height))))
    `(mode-line-inactive ((t (:family ,felix/ui-font :height ,felix/mode-line-height))))))
 
+(custom-set-faces!
+  `(font-lock-constant-face :weight semi-bold)
+  `(font-lock-doc-face :foreground "#678f67"))
