@@ -21,4 +21,5 @@
 (load! "+editor")
 (load! "+gtd")
 (load! "+langs")
-(load! "+ui")
+;; (load! "+ui")
+(load! "+ui-bare")
