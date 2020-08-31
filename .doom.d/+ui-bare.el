@@ -4,13 +4,13 @@
 ;; UI variables
 ;; =======================================================================
 
-(setq felix/default-font "Monoid"
-      felix/default-font-size 11
-      felix/default-font-weight 'light
+(setq felix/default-font "Dank Mono"
+      felix/default-font-size 14
+      felix/default-font-weight 'semi-light
       felix/ui-font "Advent Pro"
       felix/ui-font-size 12
       felix/ui-font-weight 'light
-      felix/mode-line-height 1.0)
+      felix/mode-line-height 0.8)
 
 (setq doom-theme 'doom-miramare
       doom-themes-enable-bold t
@@ -36,5 +36,7 @@
    `(mode-line-inactive ((t (:family ,felix/ui-font :height ,felix/mode-line-height))))))
 
 (custom-set-faces!
+  `(font-lock-comment-face :slant italic)
+  `(font-lock-keyword-face :slant italic)
   `(font-lock-constant-face :weight semi-bold)
   `(font-lock-doc-face :foreground "#678f67"))
