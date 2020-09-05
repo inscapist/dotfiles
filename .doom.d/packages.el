@@ -57,4 +57,4 @@
 
 ;; Themes
 ;; (package! kaolin-themes)
-(package! doom-themes :pin "bd668b7687e862f12466a32e2779fb43aa66664c")
+(package! doom-themes :recipe (:branch "master"))
