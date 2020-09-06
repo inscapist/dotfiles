@@ -10,14 +10,14 @@
       felix/ui-font "Envy Code R"
       felix/ui-font-size 12
       felix/ui-font-weight 'light
-      felix/mode-line-height 0.8)
+      felix/mode-line-height 0.9)
 
 (setq doom-theme 'doom-miramare
       doom-themes-enable-bold t
       doom-themes-enable-italic t
       doom-font (font-spec :family felix/default-font :size felix/default-font-size :weight felix/default-font-weight)
       doom-variable-pitch-font (font-spec :family felix/ui-font :size felix/ui-font-size :weight felix/ui-font-weight)
-      all-the-icons-scale-factor 0.8)
+      all-the-icons-scale-factor 0.9)
 
 (setq org-superstar-headline-bullets-list '("#"))
 
