@@ -16,8 +16,11 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/goyo.vim'
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 " UI
+Plug 'ayu-theme/ayu-vim'
+Plug 'franbach/miramare'
 Plug 'morhetz/gruvbox'
 Plug 'Yggdroot/indentLine'
+Plug 'sheerun/vim-polyglot'
 " Language servers etc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'leafgarland/typescript-vim'
@@ -91,11 +94,18 @@ let g:user_emmet_mode='inv'  "enable for insert, visual, normal mode
 " ===========================================================================
 set background=dark
 set termguicolors
-let g:gruvbox_contrast_dark='medium'
-let g:gruvbox_contrast_light='soft'
-let g:gruvbox_italic=1
-let g:gruvbox_bold=1
-colorscheme gruvbox
+
+" use gruvbox
+" let g:gruvbox_contrast_dark='medium'
+" let g:gruvbox_contrast_light='soft'
+" let g:gruvbox_italic=1
+" let g:gruvbox_bold=1
+" colorscheme gruvbox
+
+" use miramare
+let g:miramare_enable_italic = 1
+let g:miramare_disable_italic_comment = 1
+colorscheme miramare
 
 
 " ===========================================================================
