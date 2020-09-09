@@ -19,7 +19,7 @@ Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'morhetz/gruvbox'
 Plug 'Yggdroot/indentLine'
 " Language servers etc
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'leafgarland/typescript-vim'
 Plug 'mattn/emmet-vim'
 call plug#end()
@@ -111,7 +111,7 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " ===========================================================================
 source ~/.config/nvim/modules/denite.vim
 source ~/.config/nvim/modules/floating-window.vim
-" source ~/.config/nvim/modules/intellisense.vim
+source ~/.config/nvim/modules/intellisense.vim
 source ~/.config/nvim/modules/keymaps.vim
 source ~/.config/nvim/modules/nerdtree.vim
 source ~/.config/nvim/modules/syntax.vim
