@@ -16,14 +16,11 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/goyo.vim'
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 " UI
-Plug 'ayu-theme/ayu-vim'
 Plug 'franbach/miramare'
 Plug 'morhetz/gruvbox'
 Plug 'Yggdroot/indentLine'
 Plug 'sheerun/vim-polyglot'
 " Language servers etc
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'leafgarland/typescript-vim'
 Plug 'mattn/emmet-vim'
 call plug#end()
 
@@ -79,7 +76,6 @@ endif
 " PLUGINS CONFIG
 " ===========================================================================
 let g:AutoPairsMapBS=1
-let g:scratch_persistence_file="~/.scratchpad"
 let g:EasyMotion_smartcase=1
 " toggle indent line with :IndentLinesEnable
 let g:indentLine_enabled=1
@@ -115,13 +111,11 @@ colorscheme miramare
 :au FocusLost * silent! wa
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-
 " ===========================================================================
 " MODULES
 " ===========================================================================
 source ~/.config/nvim/modules/denite.vim
 source ~/.config/nvim/modules/floating-window.vim
-source ~/.config/nvim/modules/intellisense.vim
 source ~/.config/nvim/modules/keymaps.vim
 source ~/.config/nvim/modules/nerdtree.vim
 source ~/.config/nvim/modules/syntax.vim
