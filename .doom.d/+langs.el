@@ -16,3 +16,5 @@
     :initialized-fn (lambda (workspace)
                       (with-lsp-workspace workspace
                         (lsp--set-configuration (lsp-configuration-section "python")))))))
+
+(setq web-mode-code-indent-offset 2)
