@@ -124,10 +124,12 @@ path=(
   /usr/local/opt/openssl@1.1/bin
   /Applications/Alacritty.app/Contents/MacOS
   /Applications/Vivaldi.app/Contents/MacOS
+  /Applications/Firefox.app/Contents/MacOS
   $path
 )
 
 export GOWORK="~/go/src/github.com/sagittaros"
+export GOPATH="/Users/felix/go"
 export GPG_TTY=$(tty) # Sign git commit with gpg
 
 # For compilers
