@@ -5,4 +5,4 @@ if [[ -n "$pipenv_pid" ]]; then
   ps -o state=,comm= -p $(pstree -p $pipenv_pid | awk '{ print $2 }' | grep -v '[^0-9]')
 else
   ps -o state=,comm= -t $pane_tty
-fi | grep -iqE '^[^TXZ ]+ +(\\S+\\/)?g?(view|n?vim?x?)(diff)?$'
+fi | grep -iqE '^[^TXZ ]+ +(\\S+\\/)?g?(view|n?vim?x?)(diff)?$|emacs.*$'

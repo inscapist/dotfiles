@@ -38,9 +38,3 @@
        (cl-search "__pycache__" absolute-path)
        (cl-search ".pytest_cache" absolute-path)))
     (add-to-list 'treemacs-ignored-file-predicates #'treemacs-ignore-python-cache-dirs)))
-
-;; Make evil usable in terminal
-(when (not (display-graphic-p))
-  (add-hook 'evil-insert-state-entry-hook (lambda () (send-string-to-terminal "\033[5 q")))
-  (add-hook 'evil-normal-state-entry-hook (lambda () (send-string-to-terminal "\033[0 q"))))
-

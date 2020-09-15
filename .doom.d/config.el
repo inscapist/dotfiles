@@ -24,5 +24,6 @@
 (load! "+editor")
 (load! "+gtd")
 (load! "+langs")
+(load! "+navigate")
 ;; (load! "+ui")
 (load! "+ui-bare")
