@@ -66,6 +66,9 @@
 ;; Ace window
 (map! :leader "w w" #'ace-window)
 
+;; Elfeed;
+(map! :leader "o o" #'elfeed)
+
 ;; Open terminal in vertical window
 ;; (map! :leader
 ;;       "\\"
