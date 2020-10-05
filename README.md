@@ -27,9 +27,6 @@ Feel free to open an issue if you need clarification to my configs.
 - Changing between vi-mode and insert-mode
 - Useful information display with the help of `starship.rs`
 
-### Self-proclaimed Great Looks
-I have scoured every corners of the universe for the best themes and fonts, from expensive `Operator Mono` to oblivious `Lekton`, `M+ 1m`
-
 ## Installation
 
 ### Zsh
@@ -42,7 +39,7 @@ Sensitive environment variables should not be version controlled, they are place
 ```sh
 brew tap d12frosted/emacs-plus
 brew install jansson 
-brew install emacs-plus@27 --with-jansson --with-no-titlebar --with-modern-black-variant-icon
+brew install emacs-plus@27 --with-no-titlebar --with-modern-black-variant-icon --HEAD
 ```
 Now brew a coffee, because it is going to take awhile
 
