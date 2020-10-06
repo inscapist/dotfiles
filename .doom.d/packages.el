@@ -54,6 +54,7 @@
 
 ;; Extra packages
 (package! origami)
+(package! graphviz-dot-mode)
 
 ;; Themes
 ;; (package! kaolin-themes)
