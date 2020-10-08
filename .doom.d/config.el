@@ -17,7 +17,7 @@
       user-mail-address "zen9.felix@gmail.com")
 
 (after! elfeed
-  (setq elfeed-search-filter "@1-days-ago"))
+  (setq elfeed-search-filter "@5-days-ago"))
 (add-hook! 'elfeed-search-mode-hook 'elfeed-update)
 
 (load! "+bindings")
