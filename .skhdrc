@@ -82,7 +82,7 @@ shift + cmd - 8 : osascript -e "set volume output volume ((output volume of (get
 shift + cmd - m : cliclick -r m:0,0
 
 # hide mouse cursor
-shift + cmd - p : cliclick m:2560,1440
+shift + cmd - q : cliclick m:2560,1440
 
 # beam apps to their rightful positions
 ctrl + cmd - b : yabai -m rule --add app=Vivaldi space=1 && \
