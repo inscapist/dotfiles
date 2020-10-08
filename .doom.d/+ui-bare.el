@@ -5,7 +5,7 @@
 ;; =======================================================================
 
 (setq felix/default-font "Dank Mono"
-      felix/default-font-size 14
+      felix/default-font-size 13
       felix/default-font-weight 'semi-light
       felix/ui-font "Envy Code R"
       felix/ui-font-size 12
