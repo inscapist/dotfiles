@@ -13,6 +13,7 @@ I am currently migrating [my vim configuration](.config/nvim) to [Doom emacs](.d
 
 Feel free to open an issue if you need clarification to my configs.
 
+![Screenshot](screenshot.png)
 
 
 ## What's special?
