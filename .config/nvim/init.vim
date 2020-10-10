@@ -92,16 +92,16 @@ set background=dark
 set termguicolors
 
 " use gruvbox
-" let g:gruvbox_contrast_dark='medium'
-" let g:gruvbox_contrast_light='soft'
-" let g:gruvbox_italic=1
-" let g:gruvbox_bold=1
-" colorscheme gruvbox
+let g:gruvbox_contrast_dark='medium'
+let g:gruvbox_contrast_light='soft'
+let g:gruvbox_italic=1
+let g:gruvbox_bold=1
+colorscheme gruvbox
 
 " use miramare
-let g:miramare_enable_italic = 1
-let g:miramare_disable_italic_comment = 1
-colorscheme miramare
+" let g:miramare_enable_italic = 1
+" let g:miramare_disable_italic_comment = 1
+" colorscheme miramare
 
 
 " ===========================================================================
