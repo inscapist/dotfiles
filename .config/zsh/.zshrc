@@ -128,8 +128,8 @@ path=(
   $path
 )
 
-export GOWORK="~/go/src/github.com/sagittaros"
-export GOPATH="/Users/felix/go"
+# export GOWORK="~/go/src/github.com/sagittaros"
+# export GOPATH="/Users/felix/go"
 export GPG_TTY=$(tty) # Sign git commit with gpg
 
 # For compilers
