@@ -13,6 +13,8 @@ I am currently migrating [my vim configuration](.config/nvim) to [Doom emacs](.d
 
 Feel free to open an issue if you need clarification to my configs.
 
+
+
 ## What's special?
 
 ### Self-contained
@@ -27,13 +29,14 @@ Feel free to open an issue if you need clarification to my configs.
 - Changing between vi-mode and insert-mode
 - Useful information display with the help of `starship.rs`
 
+
+
 ## Installation
 
 ### Zsh
 I use [Zinit](https://github.com/zdharma/zinit) as ZSH's plugin manager. My `.zshrc` is [here](.config/zsh/.zshrc).
 `$ZDOTDIR` is set in `$HOME/.zshenv`, so that zsh configs are self-contained
 Sensitive environment variables should not be version controlled, they are placed in `secrets.zsh`
-
 
 ### Install latest emacs
 ```sh
@@ -79,4 +82,12 @@ c) Inform emacsclient location using symlink
 ln -s /usr/local/bin/emacsclient /Applications/Emacs.app/Contents/MacOS/bin-x86_64-10_9/emacsclient
 ```
 
+
+## Configuration
+
+To disable font smoothing (Mac only), run
+
+``` sh
+defaults write org.gnu.Emacs AppleFontSmoothing -int 0
+```
 
