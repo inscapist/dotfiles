@@ -126,6 +126,7 @@ path=(
   /Applications/Vivaldi.app/Contents/MacOS
   /Applications/Firefox.app/Contents/MacOS
   /Applications/Onivim2.app/Contents/MacOS
+  /Applications/VimR.app/Contents/MacOS
   $path
 )
 
