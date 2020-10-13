@@ -8,15 +8,15 @@ env:
 
 font:
   normal:
-    family: Monoid Nerd Font
-    style: Retina
+    family: JetBrainsMono Nerd Font
+    style: Regular
   bold:
-    family: Monoid Nerd Font
-    style: Bold
+    family: JetBrainsMono Nerd Font
+    style: Medium
   italic:
-    family: Monoid Nerd Font
+    family: JetBrainsMono Nerd Font
     style: Italic
-  size: 11
+  size: 13
   offset:
     x: 0
     y: 0
