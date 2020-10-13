@@ -10,13 +10,13 @@
 (setq felix/default-font "Dank Mono" ;; Iosevka is not bad  too
       felix/default-font-size 14
       felix/default-font-weight 'light
-      felix/ui-font "Envy Code R"
+      felix/ui-font "JetBrains Mono"
       felix/ui-font-size 12
-      felix/ui-font-weight 'light
-      felix/mode-line-height 0.9)
+      felix/ui-font-weight 'semi-light
+      felix/mode-line-height 0.85)
 
 (setq doom-theme 'doom-miramare
-      doom-themes-enable-bold t
+      doom-themes-enable-bold nil
       doom-themes-enable-italic t
       doom-font (font-spec :family felix/default-font :size felix/default-font-size :weight felix/default-font-weight)
       doom-variable-pitch-font (font-spec :family felix/ui-font :size felix/ui-font-size :weight felix/ui-font-weight)
@@ -40,6 +40,4 @@
 
 (custom-set-faces!
   `(font-lock-comment-face :slant italic)
-  `(font-lock-keyword-face :slant italic)
-  `(font-lock-constant-face :weight semi-bold)
-  `(font-lock-doc-face :foreground "#678f67"))
+  `(font-lock-keyword-face :slant italic))
