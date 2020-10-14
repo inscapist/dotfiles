@@ -6,6 +6,7 @@
 ;; Simple sugar
 (map! :nv "S" #'save-buffer
       :nv "F" #'avy-goto-char-timer
+      :nv "f" #'avy-goto-char-in-line
       :nv "J" #'evil-scroll-down
       :nv "K" #'evil-scroll-up
       :nv "gx" #'browse-url
