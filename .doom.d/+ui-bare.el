@@ -27,6 +27,7 @@
 (remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
 
 ;; uniformize doom-modeline style
+;; there is a simpler way from Henrik! https://discordapp.com/channels/406534637242810369/603399769015975996/765837027152363550
 (after! doom-modeline
   (display-battery-mode 1)
   (setq doom-modeline-lsp nil)
