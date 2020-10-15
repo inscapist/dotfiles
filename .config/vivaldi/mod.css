@@ -3,6 +3,6 @@
   display: none !important;
 }
 
-#titlebar {
-  display: none !important;
-}
+##titlebar {
+#  display: none !important;
+#}
