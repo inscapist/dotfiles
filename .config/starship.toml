@@ -2,10 +2,9 @@ add_newline = true
 
 # Replace the "❯" symbol in the prompt with "➜"
 [character]
-symbol = "▲"
+success_symbol = "▲"
 error_symbol = "▼"
 vicmd_symbol = "△"
-use_symbol_for_status = true
 
 [cmd_duration]
 style="yellow"
@@ -13,16 +12,18 @@ style="yellow"
 [aws]
 style = "bold yellow"
 symbol = "  "
-displayed_items = "profile"
+format=' [$profile]($style) '
 [aws.region_aliases]
 ap-southeast-1 = "sg"
 ap-southeast-2 = "au"
 
-[kubernetes]
-disabled = false
+[battery]
+charging_symbol = "⚡️"
+discharging_symbol = " "
 
-[conda]
-symbol = " "
+[[battery.display]]
+threshold = 20
+style = "purple"
 
 [golang]
 symbol = " "
@@ -50,11 +51,3 @@ symbol = " "
 
 [ruby]
 symbol = " "
-
-[battery]
-charging_symbol = "⚡️"
-discharging_symbol = " "
-
-[[battery.display]]
-threshold = 20
-style = "purple"

@@ -112,7 +112,6 @@ zinit wait lucid light-mode for \
 #=======================================================================
 
 path=(
-  $HOME/n/bin # installed with n-install (see http://git.io/n-install-repo).
   $HOME/.cargo/bin
   $HOME/go/bin
   $HOME/dotfiles/bin
@@ -122,7 +121,6 @@ path=(
   /Applications/Alacritty.app/Contents/MacOS
   /Applications/Vivaldi.app/Contents/MacOS
   /Applications/Firefox.app/Contents/MacOS
-  /Applications/Onivim2.app/Contents/MacOS
   /Applications/VimR.app/Contents/MacOS
   $path
 )
@@ -134,3 +132,5 @@ export GPG_TTY=$(tty) # Sign git commit with gpg
 # For compilers
 export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
+
+export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
