@@ -7,11 +7,11 @@
 ;; To disable font smoothing, run
 ;; defaults write org.gnu.Emacs AppleFontSmoothing -int 0
 ;;
-(setq felix/default-font "Dank Mono" ;; Iosevka is not bad  too
+(setq felix/default-font "Dank Mono"
       felix/default-font-size 13
       felix/default-font-weight 'light
-      felix/ui-font "Envy Code R"
-      felix/ui-font-size 11
+      felix/ui-font "Megrim"
+      felix/ui-font-size 12
       felix/ui-font-weight 'bold
       felix/mode-line-height 0.9)
 
