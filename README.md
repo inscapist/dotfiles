@@ -18,7 +18,7 @@ Feel free to open an issue if you need clarification to my configs.
 - Somewhat heavily configurated [Emacs config](.doom.d) based on [Doom](https://github.com/hlissner/doom-emacs)
     - Org-Roam (aka Roam Research on Emacs)
     - Elfeed (RSS feed reader)
-    - Working example of [Org Agenda](./doom.d/+org.el) configuration
+    - Working example of [Org Agenda](./doom.d/%2Borg.el) configuration
 - A working tiling window manager configuration for Mac (with [yabai](.yabairc))
 - Minimal mouse dependency with [skhd](.skhdrc)
 - Embedded [floating window](.config/nvim/modules/floating-window) in Vim, see [screenshot](screenshot-vim-modal.png)
