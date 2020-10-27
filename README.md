@@ -27,6 +27,7 @@ Feel free to open an issue if you need clarification to my configs.
 - Seamless integration between [tmux](.tmux.conf), [vim](bin/isvim2) and [alacritty](.config/alacritty)
 - [Shows](bin/whats-playing) currently played Spotify song using 
 - Customized command prompt with [starship](.config/starship.toml)
+- Modularized [zsh config](.config/zsh) with the demonstration of [Zinit](https://github.com/zdharma/zinit) async syntax
 - An earthy theme ported from [Miramare](https://github.com/franbach/miramare)
 
 
