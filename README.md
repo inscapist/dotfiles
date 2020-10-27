@@ -16,11 +16,14 @@ Feel free to open an issue if you need clarification to my configs.
 
 ## What's in the box?
 - Somewhat heavily configurated [Emacs config](.doom.d) based on [Doom](https://github.com/hlissner/doom-emacs)
-- Org Roam (aka Roam Research on Emacs)
+    - Org-Roam (aka Roam Research on Emacs)
+    - Elfeed (RSS feed reader)
+    - Working example of [Org Agenda](./doom.d/+org.el) configuration
 - A working tiling window manager configuration for Mac (with [yabai](.yabairc))
 - Minimal mouse dependency with [skhd](.skhdrc)
 - Embedded [floating window](.config/nvim/modules/floating-window) in Vim, see [screenshot](screenshot-vim-modal.png)
 - Seamless integration between [tmux](.tmux.conf), [vim](.config/nvim/) and [alacritty](.config/alacritty)
+- Customized command prompt with [starship](./config/starship.toml)
 
 
 ## What's special?
@@ -70,7 +73,7 @@ Yabai can be quite difficult to install. Just follow the following steps to inst
 
 ### Setup Org Protocol 
 
-I was using `Pocket` to bookmark webpages. This is the org equivalent
+I was using `Pocket` to bookmark webpages. This is the org equivalent, for org-roam, please refer [official orgroam manual](https://www.orgroam.com/manual/Installation-_00281_0029.html#Installation-_00281_0029)
 
 a) Add the following bookmark item (I am using [Vivaldi](https://vivaldi.com))
 ``` 
