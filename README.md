@@ -18,12 +18,16 @@ Feel free to open an issue if you need clarification to my configs.
 - Somewhat heavily configurated [Emacs config](.doom.d) based on [Doom](https://github.com/hlissner/doom-emacs)
     - Org-Roam (aka Roam Research on Emacs)
     - Elfeed (RSS feed reader)
-    - Working example of [Org Agenda](./doom.d/%2Borg.el) configuration
+    - Working example of [Org Agenda](.doom.d/+org.el) configuration
+    - Opinionated [keybindings](.doom.d/+bindings.el). J and K would scroll, S would save buffer
+- Simple and quick [Neovim config](.config/nvim)
 - A working tiling window manager configuration for Mac (with [yabai](.yabairc))
 - Minimal mouse dependency with [skhd](.skhdrc)
 - Embedded [floating window](.config/nvim/modules/floating-window) in Vim, see [screenshot](screenshot-vim-modal.png)
-- Seamless integration between [tmux](.tmux.conf), [vim](.config/nvim/) and [alacritty](.config/alacritty)
-- Customized command prompt with [starship](./config/starship.toml)
+- Seamless integration between [tmux](.tmux.conf), [vim](bin/isvim2) and [alacritty](.config/alacritty)
+- [Shows](bin/whats-playing) currently played Spotify song using 
+- Customized command prompt with [starship](.config/starship.toml)
+- An earthy theme ported from [Miramare](https://github.com/franbach/miramare)
 
 
 ## What's special?
@@ -39,6 +43,11 @@ Feel free to open an issue if you need clarification to my configs.
 ### Rich shell features
 - Changing between vi-mode and insert-mode
 - Useful information display with the help of `starship.rs`
+
+### With interesting fonts
+- For UI, I use [Megrim](https://fonts.google.com/specimen/Megrim) but UnicaOne is cool too
+- For code, I use Dank Mono, but I like Iosevka and Ubuntu Mono as well
+- For terminal, I used Monoid and currently using JetBrains Mono
 
 
 ## Installation
