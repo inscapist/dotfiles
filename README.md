@@ -9,11 +9,18 @@ _/_/__/_(___/_____/____/___(____/___/______(____/___
        (_ /                                         
 ```
 
-I am currently migrating [my vim configuration](.config/nvim) to [Doom emacs](.doom.d). 
-
 Feel free to open an issue if you need clarification to my configs.
 
 ![Screenshot](screenshot.png)
+
+
+## What's in the box?
+- Somewhat heavily configurated [Emacs config](.doom.d) based on [Doom](https://github.com/hlissner/doom-emacs)
+- Org Roam (aka Roam Research on Emacs)
+- A working tiling window manager configuration for Mac (with [yabai](.yabairc))
+- Minimal mouse dependency with [skhd](.skhdrc)
+- Embedded [floating window](.config/nvim/modules/floating-window) in Vim, see [screenshot](screenshot-vim-modal.png)
+- Seamless integration between [tmux](.tmux.conf), [vim](.config/nvim/) and [alacritty](.config/alacritty)
 
 
 ## What's special?
@@ -29,7 +36,6 @@ Feel free to open an issue if you need clarification to my configs.
 ### Rich shell features
 - Changing between vi-mode and insert-mode
 - Useful information display with the help of `starship.rs`
-
 
 
 ## Installation
