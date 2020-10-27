@@ -1,4 +1,4 @@
-;;; $DOOMDIR/+gtd.el -*- lexical-binding: t; -*-
+;;; $DOOMDIR/+org.el -*- lexical-binding: t; -*-
 
 ;; Sets up a Getting-Things-Done (GTD) workflow using Org-mode
 ;; For doom defaults, refer https://github.com/hlissner/doom-emacs/blob/master/modules/lang/org/config.el
@@ -9,10 +9,12 @@
 ;;   #+TAGS: https://orgmode.org/manual/Setting-Tags.html#Setting-Tags
 ;;   #+FILETAGS: http://doc.norang.ca/org-mode.html
 
+(setq felix/org-agenda-directory (concat org-directory "/gtd/")
+      org-roam-tag-sources '(prop all-directories))
+
 
 (after! org
-  (setq felix/org-agenda-directory (concat org-directory "/gtd/")
-        org-archive-location (expand-file-name ".archive/%s::" org-directory)
+  (setq org-archive-location (expand-file-name ".archive/%s::" org-directory)
         ;; state transition behaviors
         org-enforce-todo-dependencies t
         org-log-done 'time

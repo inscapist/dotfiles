@@ -22,7 +22,7 @@
 
 (load! "+bindings")
 (load! "+editor")
-(load! "+gtd")
 (load! "+langs")
 (load! "+navigate")
+(load! "+org")
 (load! "+ui")
