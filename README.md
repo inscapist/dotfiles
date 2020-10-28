@@ -25,7 +25,7 @@ Feel free to open an issue if you need clarification to my configs.
 - Minimal mouse dependency with [skhd](.skhdrc)
 - Embedded [floating window](.config/nvim/modules/floating-window) in Vim, see [screenshot](screenshot-vim-modal.png)
 - Seamless integration between [tmux](.tmux.conf), [vim](bin/isvim2) and [alacritty](.config/alacritty)
-- [Shows](bin/whats-playing) currently played Spotify song using 
+- [Shows](bin/whats-playing) currently played Spotify song
 - Customized command prompt with [starship](.config/starship.toml)
 - Modularized [zsh config](.config/zsh) with the demonstration of [Zinit](https://github.com/zdharma/zinit) async syntax
 - An earthy theme ported from [Miramare](https://github.com/franbach/miramare)
@@ -55,8 +55,9 @@ Feel free to open an issue if you need clarification to my configs.
 
 ### Zsh
 I use [Zinit](https://github.com/zdharma/zinit) as ZSH's plugin manager. My `.zshrc` is [here](.config/zsh/.zshrc).
-`$ZDOTDIR` is set in `$HOME/.zshenv`, so that zsh configs are self-contained
-Sensitive environment variables should not be version controlled, they are placed in `secrets.zsh`
+`$ZDOTDIR` is set in `$HOME/.zshenv`, so that zsh configs are self-contained.
+
+Sensitive environment variables should not be version controlled, they are placed in `secrets.zsh`.
 
 ### Install latest emacs
 ```sh
