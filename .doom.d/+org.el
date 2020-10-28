@@ -9,7 +9,7 @@
 ;;   #+TAGS: https://orgmode.org/manual/Setting-Tags.html#Setting-Tags
 ;;   #+FILETAGS: http://doc.norang.ca/org-mode.html
 
-(setq felix/org-agenda-directory (concat org-directory "/gtd/")
+(setq felix/org-agenda-directory "~/org/gtd/"
       org-roam-tag-sources '(prop all-directories))
 
 
