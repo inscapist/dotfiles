@@ -51,10 +51,7 @@
           ("n" "note" entry (file+headline ,(expand-file-name "inbox.org" felix/org-agenda-directory) "Notes")
                "* %? %^G\n%U")
           ("j" "journal" entry (file+datetree+prompt ,(expand-file-name "journal.org" felix/org-agenda-directory))
-               "** %? %^G\n%U")
-          ("c" "org-protocol-capture" entry (file+headline ,(expand-file-name "inbox.org" felix/org-agenda-directory) "Links")
-               "* TODO [[%:link][%:description]]\n\n %i"
-               :immediate-finish t))))
+               "** %? %^G\n%U"))))
 
 
 (after! org-refile
@@ -110,7 +107,7 @@
                                                                   ,(concat felix/org-agenda-directory "ideas.org")
                                                                   ,(concat felix/org-agenda-directory "notes.org")))
                                               (org-agenda-skip-function '(org-agenda-skip-entry-if 'deadline 'scheduled))))
-                                       (tags-todo "storybook|clarific|ubermensch/TODO|PROJ"
+                                       (tags-todo "aegis|voicelane|clarific|ubermensch/TODO|PROJ"
                                              ;; shaping my own ideas
                                              ((org-agenda-overriding-header "Only What's My Own")
                                               (org-agenda-max-entries 5)
