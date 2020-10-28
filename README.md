@@ -47,7 +47,7 @@ Feel free to open an issue if you need clarification to my configs.
 
 ### With interesting fonts
 - For UI, I use [Megrim](https://fonts.google.com/specimen/Megrim) but [Unica One](https://fonts.google.com/specimen/Unica+One) is cool too
-- For code, I use Dank Mono, but I like [Iosevka](https://github.com/be5invis/Iosevka) and [Ubuntu Mono](https://design.ubuntu.com/font/) as well
+- For code, I use [Dank Mono](https://gumroad.com/l/dank-mono), but I like [Iosevka](https://github.com/be5invis/Iosevka) and [Ubuntu Mono](https://design.ubuntu.com/font/) as well
 - For terminal, I used Monoid and currently using [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
 
 
