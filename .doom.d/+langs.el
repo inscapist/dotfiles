@@ -20,3 +20,6 @@
 ;;                         (lsp--set-configuration (lsp-configuration-section "python")))))))
 
 (setq web-mode-code-indent-offset 2)
+
+;; typescript lsp has no corresponding formatter, fallback to prettier
+(setq-hook! 'typescript-tsx-mode-hook +format-with-lsp nil)
