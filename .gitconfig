@@ -1,42 +1,44 @@
 [filter "lfs"]
-process = git-lfs filter-process
-required = true
-clean = git-lfs clean -- %f
-smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
 [user]
-name = Felix
-email = zen9.felix@gmail.com
-signingKey = 534D1F4267E311C1
+  name = Felix
+  email = zen9.felix@gmail.com
+  signingKey = 534D1F4267E311C1
 [alias]
-co = checkout
-br = branch
-ci = commit
-recommit = !"git add --all; git commit --amend --no-edit"
-ver = describe --abbrev=0 --tags
-st = status
-mer = merge
-merc = merge --no-commit --no-ff
-reset-remote = !"git reset --hard $(git rev-parse --abbrev-ref '@{upstream}')"
-reset-head = reset --hard HEAD
-reset-back = reset --hard HEAD~1
-abort = merge --abort
-remote-tag = ls-remote --tags origin
-prune-local = !"git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}' | xargs git branch -d"
-do-not-track = !"git update-index --assume-unchanged $1; git rm -f $1"
-local-history= !"git for-each-ref --sort=-committerdate refs/heads/ --color --format='%(color:white)%(committerdate:short)%(color:reset) %(color:bold blue)%(refname:short)%0a%(color:reset)  %(color:bold red)%(authorname):%(color:reset) %(subject)%0a'"
-remote-history= !"git for-each-ref --sort=-committerdate refs/remotes/ --color --format='%(color:white)%(committerdate:short)%(color:reset) %(color:bold blue)%(refname:short)%0a%(color:reset)  %(color:bold red)%(authorname):%(color:reset) %(subject)%0a'"
+  co = checkout
+  br = branch
+  ci = commit
+  recommit = !"git add --all; git commit --amend --no-edit"
+  ver = describe --abbrev=0 --tags
+  st = status
+  mer = merge
+  merc = merge --no-commit --no-ff
+  reset-remote = !"git reset --hard $(git rev-parse --abbrev-ref '@{upstream}')"
+  reset-head = reset --hard HEAD
+  reset-back = reset --hard HEAD~1
+  abort = merge --abort
+  remote-tag = ls-remote --tags origin
+  prune-local = !"git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}' | xargs git branch -d"
+  do-not-track = !"git update-index --assume-unchanged $1; git rm -f $1"
+  local-history= !"git for-each-ref --sort=-committerdate refs/heads/ --color --format='%(color:white)%(committerdate:short)%(color:reset) %(color:bold blue)%(refname:short)%0a%(color:reset)  %(color:bold red)%(authorname):%(color:reset) %(subject)%0a'"
+  remote-history= !"git for-each-ref --sort=-committerdate refs/remotes/ --color --format='%(color:white)%(committerdate:short)%(color:reset) %(color:bold blue)%(refname:short)%0a%(color:reset)  %(color:bold red)%(authorname):%(color:reset) %(subject)%0a'"
 [core]
-excludesfile = /Users/felix/.gitignore_global
-[commit]
-gpgsign = false
+  excludesfile = /Users/felix/.gitignore_global
 [url "git@gitlab.com:"]
-insteadOf = https://gitlab.com/
+  insteadOf = https://gitlab.com/
 [sendemail]
-smtpencryption = tls
-smtpserver = smtp.gmail.com
-smtpuser = zen9.felix@gmail.com
-smtpserverport = 587
+  smtpencryption = tls
+  smtpserver = smtp.gmail.com
+  smtpuser = zen9.felix@gmail.com
+  smtpserverport = 587
 [merge]
-ff = false
+  ff = false
+[pull]
+	ff = only
+[commit]
+  gpgsign = false
 [gpg]
-program = gpg
+  program = gpg
