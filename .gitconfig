@@ -37,7 +37,7 @@
 [merge]
   ff = false
 [pull]
-	ff = only
+  ff = only
 [commit]
   gpgsign = false
 [gpg]
