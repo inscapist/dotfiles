@@ -25,6 +25,7 @@ alias pi="pipenv"
 alias pis="pipenv shell"
 alias pt="ptpython"
 alias doom-cache-clear="rm -rf ~/.emacs.d/.local/cache/*"
+alias dns-clear="sudo killall -HUP mDNSResponder;sudo dscacheutil -flushcache"
 alias gowork="cd $GOWORK"
 alias pom="podman-machine"
 
