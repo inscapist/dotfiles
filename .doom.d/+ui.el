@@ -7,10 +7,10 @@
 ;; To disable font smoothing, run
 ;; defaults write org.gnu.Emacs AppleFontSmoothing -int 0
 ;;
-(setq felix/default-font "Dank Mono"
-      felix/default-font-size 13
+(setq felix/default-font "UbuntuMono Nerd Font"
+      felix/default-font-size 14
       felix/default-font-weight 'light
-      felix/ui-font "Megrim"
+      felix/ui-font "Unica One"
       felix/ui-font-size 12
       felix/ui-font-weight 'bold
       felix/mode-line-height 0.9)
