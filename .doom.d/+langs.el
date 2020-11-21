@@ -21,6 +21,5 @@
 
 (setq web-mode-code-indent-offset 2)
 
-;; typescript lsp has no corresponding formatter, fallback to prettier
-(setq-hook! 'typescript-mode-hook +format-with-lsp nil)
-(setq-hook! 'typescript-tsx-mode-hook +format-with-lsp nil)
+(setq-hook! 'web-mode-hook +format-with 'prettier)
+(setq-hook! 'html-mode-hook +format-with 'prettier)

@@ -120,7 +120,7 @@ path=(
   /usr/local/opt/openssl@1.1/bin
   /Applications/Alacritty.app/Contents/MacOS
   /Applications/Vivaldi.app/Contents/MacOS
-  /Applications/Firefox.app/Contents/MacOS
+  "/Applications/Firefox Developer Edition.app/Contents/MacOS"
   /Applications/VimR.app/Contents/MacOS
   $path
 )
