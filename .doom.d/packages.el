@@ -59,3 +59,4 @@
 ;; Themes
 ;; (package! kaolin-themes)
 (package! doom-themes :recipe (:branch "master"))
+(package! format-all :recipe (:branch "master"))
