@@ -16,7 +16,7 @@
       felix/mode-line-height 0.95)
 
 (setq doom-theme 'doom-miramare
-      doom-themes-enable-bold t
+      doom-themes-enable-bold nil
       doom-themes-enable-italic t
       doom-font (font-spec :family felix/default-font :size felix/default-font-size :weight felix/default-font-weight)
       doom-variable-pitch-font (font-spec :family felix/ui-font :size felix/ui-font-size :weight felix/ui-font-weight)
