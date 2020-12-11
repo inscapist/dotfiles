@@ -14,7 +14,7 @@
       :nv "rb" #'revert-bufferm
       :nv "rc" #'lsp-workspace-restart)
 
- ;; Easier navigation
+;; Easier navigation
 (map! :ne "C-h"   #'evil-window-left
       :ne "C-l"   #'evil-window-right
       :ne "C-j"   #'evil-window-down
@@ -63,7 +63,7 @@
       "tt" #'origami-mode)
 (map! :after origami
       (:map origami-mode-map
-            [tab] #'origami-toggle-node))
+       [tab] #'origami-toggle-node))
 
 ;; Easier window split
 (map! :leader

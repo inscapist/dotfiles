@@ -7,20 +7,25 @@
 ;; To disable font smoothing, run
 ;; defaults write org.gnu.Emacs AppleFontSmoothing -int 0
 ;;
-(setq felix/default-font "Iosevka Maya"
-      felix/default-font-size 13
+(setq felix/default-font "Victor Mono"
+      felix/default-font-size 12
       felix/default-font-weight 'normal
       felix/ui-font "Unica One"
       felix/ui-font-size 12
       felix/ui-font-weight 'bold
-      felix/mode-line-height 0.9)
+      felix/mode-line-height 0.95)
 
 (setq doom-theme 'doom-miramare
-      doom-themes-enable-bold nil
+      doom-themes-enable-bold t
       doom-themes-enable-italic t
       doom-font (font-spec :family felix/default-font :size felix/default-font-size :weight felix/default-font-weight)
       doom-variable-pitch-font (font-spec :family felix/ui-font :size felix/ui-font-size :weight felix/ui-font-weight)
       all-the-icons-scale-factor 0.9)
+
+;; configure nord-theme
+;; (after! nord-theme
+;;   (setq nord-uniform-mode-lines nil
+;;         nord-region-highlight "frost"))
 
 
 ;; disable shortmenu
@@ -35,7 +40,7 @@
 
 (custom-set-faces!
   `(font-lock-comment-face :slant italic)
-  `(font-lock-keyword-face :slant italic)
+  `(font-lock-keyword-face :slant normal)
   `(treemacs-root-face :family ,felix/ui-font :size ,felix/ui-font-size :weight ,felix/ui-font-weight)
 
   ;; https://discordapp.com/channels/406534637242810369/603399769015975996/765837027152363550

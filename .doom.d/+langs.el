@@ -26,3 +26,6 @@
 
 (setq-hook! 'web-mode-hook +format-with 'prettier)
 (setq-hook! 'html-mode-hook +format-with 'prettier)
+
+(after! rustic
+  (setq rustic-lsp-server 'rls))

@@ -56,7 +56,10 @@
 (package! origami)
 (package! graphviz-dot-mode)
 
-;; Themes
-;; (package! kaolin-themes)
+;; Use latest packages
 (package! doom-themes :recipe (:branch "master"))
 (package! format-all :recipe (:branch "master"))
+(package! nord-theme :recipe
+  (:host github
+   :repo "arcticicestudio/nord-emacs"
+   :branch "develop"))
