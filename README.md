@@ -100,21 +100,16 @@ Follow the following steps to install it, require reboots and messing with `csru
 
 ### Install additional packages
 
-`myPackages` includes a number of packages, refer [here](.config/nixpkgs/config.nix)
+`basicPackages` includes a number of packages, refer [here](.config/nixpkgs/config.nix)
 
 ```sh
 # install Nix and cachix, follow the instructions
 curl -L https://nixos.org/nix/install | sh
 
 nix-channel --update
-nix-env -iA cachix -f https://cachix.org/api/v1/install
 
 # includes python, yarn, nodejs
-nix-env -iA nixpkgs.myPackages
-
-# optional if you know what you are doing
-# https://github.com/LnL7/nix-darwin
-# read: https://stackoverflow.com/questions/53335308/what-does-nix-darwin-provide
+nix-env -iA nixpkgs.basicPackages
 
 # rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -134,8 +129,7 @@ go get -u github.com/cweill/gotests/...
 go get -u github.com/fatih/gomodifytags
 
 # python and pips
-curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-python get-pip.py
+curl https://bootstrap.pypa.io/get-pip.py | python
 pip install black pyflakes isort nose pytest pipenv
 
 # others via yarn
@@ -143,7 +137,7 @@ yarn global add marked
 yarn global add stylelint prettier js-beautify
 
 # others via brew
-brew install cliclick
+brew install cliclick starship yabai shkd gh
 ```
 
 ## Configuration

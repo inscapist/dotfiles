@@ -23,7 +23,7 @@
         nodejs-14_x
         yarn
       ];
-      pathsToLink = [ "/share" "/bin" "/Applications" ];
+      pathsToLink = [ "/share" "/bin" ];
     };
   };
 }

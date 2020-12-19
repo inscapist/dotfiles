@@ -85,8 +85,6 @@ let g:indentLine_fileType=["python"]
 " emmet
 let g:user_emmet_leader_key=','
 let g:user_emmet_mode='inv'  "enable for insert, visual, normal mode
-" denite/pynvim
-let g:python3_host_prog = "~/.pyenv/shims/python"
 
 
 " ===========================================================================
