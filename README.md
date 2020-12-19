@@ -90,6 +90,13 @@ Follow the following steps to install it, require reboots and messing with `csru
 
 `basicPackages` includes a number of packages, refer [here](.config/nixpkgs/config.nix)
 
+Find packages at https://search.nixos.org/packages
+
+* `nix-env -iA nixpkgs.<package-name>` installs a package with exact match
+* `nix-env -q` shows installed packages
+* `nix-env --uninstall <installed-package>` uninstalls package
+
+
 ```sh
 # install Nix and cachix, follow the instructions
 curl -L https://nixos.org/nix/install | sh
