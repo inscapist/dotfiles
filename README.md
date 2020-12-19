@@ -30,39 +30,27 @@ Feel free to open an issue if you need clarification to my configs.
 - Modularized [zsh config](.config/zsh) with the demonstration of [Zinit](https://github.com/zdharma/zinit) async syntax
 - An earthy theme ported from [Miramare](https://github.com/franbach/miramare)
 
-## What's special?
-
-### Works with GccEmacs (feature/native-comp)
-
-- Everything is so much faster. Most noticeable with frontend development (TSX/JSX)
-- Ligature works out of the box (Emacs 28)
-
-### Self-contained
-
-- No zsh cluttering `$HOME`
-- Language and version specific binaries with the use of pyenv, rbenv, `tj/n`
-
-### Speedy
-
-- `Zinit` is currently the fastest option out there
-- Rust variants are used whenever possible: `fd`, `exa`, `rg`, `bat` etc
-
-### Rich shell features
-
-- Changing between vi-mode and insert-mode
-- Useful information display with the help of `starship.rs`
-
-### Ask me anything
+## Ask me anything
 
 Send me a PR to let me know what issues you find. I am hoping to turn this into a reproducible bundle, but I might overlooked some hardcoded variables.
 
-### With interesting fonts
-
-- For UI, I use [Megrim](https://fonts.google.com/specimen/Megrim) but [Unica One](https://fonts.google.com/specimen/Unica+One) is cool too
-- For code, I use [Dank Mono](https://gumroad.com/l/dank-mono), but I like [Iosevka](https://github.com/be5invis/Iosevka) and [Ubuntu Mono](https://design.ubuntu.com/font/) as well
-- For terminal, I used Monoid and currently using [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
-
 ## Installation
+
+```sh
+git clone https://github.com/sagittaros/dotfiles.git
+cd dotfiles
+./install.sh
+```
+
+### Neovim
+
+For first time access, run the following commands in order:
+
+```
+:PlugInstall
+:UpdateRemotePlugins
+:checkhealth
+```
 
 ### Zsh
 
