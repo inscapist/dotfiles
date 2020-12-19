@@ -14,6 +14,12 @@ ln -sfn ~/dotfiles/.yabairc ~/.yabairc
 ln -sfn ~/dotfiles/.doom.d ~/.doom.d
 touch .config/zsh/secrets.zsh
 
+# this is blank, should be made a separate repository
+mkdir -p ~/org/roam
+mkdir -p ~/org/gtd
+mkdir -p ~/org/notes
+mkdir -p ~/org/elfeed.org
+
 # install tpm
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 

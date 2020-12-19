@@ -57,7 +57,8 @@ For first time access, run the following commands in order:
 I use [Zinit](https://github.com/zdharma/zinit) as ZSH's plugin manager. My `.zshrc` is [here](.config/zsh/.zshrc).
 `$ZDOTDIR` is set in `$HOME/.zshenv`, so that zsh configs are self-contained.
 
-Sensitive environment variables should not be version controlled, they are placed in `secrets.zsh`.
+* Sensitive environment variables should not be version controlled, they are placed in `$ZDOTDIR/secrets.zsh`.
+* Add additional zsh scripts to the bottom of `$ZDOTDIR/.zshrc`
 
 ### Install Emacs
 
@@ -72,6 +73,11 @@ Read [here](https://www.emacswiki.org/emacs/GccEmacs) about GccEmacs
 ### Install doom emacs
 
 https://github.com/hlissner/doom-emacs
+
+```sh
+git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
+~/.emacs.d/bin/doom install
+```
 
 after installation, run `doom doctor` to determine missing packages
 
@@ -92,21 +98,25 @@ Follow the following steps to install it, require reboots and messing with `csru
 
 Find packages at https://search.nixos.org/packages
 
-* `nix-env -iA nixpkgs.<package-name>` installs a package with exact match
-* `nix-env -q` shows installed packages
-* `nix-env --uninstall <installed-package>` uninstalls package
-
+- `nix-env -iA nixpkgs.<package-name>` installs a package with exact match
+- `nix-env -q` shows installed packages
+- `nix-env --uninstall <installed-package>` uninstalls package
 
 ```sh
 # Essential libraries with brew
 brew install cliclick starship yabai shkd gh coreutils fontconfig
+
+# Fzf history search
+brew install fzf
+$(brew --prefix)/opt/fzf/install
+
 
 # install Nix and cachix, follow the instructions
 curl -L https://nixos.org/nix/install | sh
 
 nix-channel --update
 
-# includes python, yarn, nodejs
+# install nix packages
 nix-env -iA nixpkgs.basicPackages
 
 # rust
@@ -133,11 +143,16 @@ pip install black pyflakes isort nose pytest pipenv
 # others via yarn
 yarn global add marked
 yarn global add stylelint prettier js-beautify
+
+# required by org +roam
+nix-env -iA nixpkgs.sqlite # it is required for org-roam to work properly
+brew cask install mactex
 ```
 
 ## Configuration
 
 ### Emacs Font Smoothing
+
 ```sh
 # default = -int 1
 defaults write org.gnu.Emacs AppleFontSmoothing -int 0

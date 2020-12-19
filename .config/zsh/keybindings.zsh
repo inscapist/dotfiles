@@ -6,6 +6,7 @@
 # use zle -l to show available widgets
 export KEYTIMEOUT=1
 bindkey -v
+bindkey '^R' fzf-history-widget
 bindkey '^A' beginning-of-line
 bindkey '^E' end-of-line
 bindkey '^K' kill-line
