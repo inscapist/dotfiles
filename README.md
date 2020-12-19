@@ -57,8 +57,8 @@ For first time access, run the following commands in order:
 I use [Zinit](https://github.com/zdharma/zinit) as ZSH's plugin manager. My `.zshrc` is [here](.config/zsh/.zshrc).
 `$ZDOTDIR` is set in `$HOME/.zshenv`, so that zsh configs are self-contained.
 
-* Sensitive environment variables should not be version controlled, they are placed in `$ZDOTDIR/secrets.zsh`.
-* Add additional zsh scripts to the bottom of `$ZDOTDIR/.zshrc`
+- Sensitive environment variables should not be version controlled, they are placed in `$ZDOTDIR/secrets.zsh`.
+- Add additional zsh scripts to the bottom of `$ZDOTDIR/.zshrc`
 
 ### Install Emacs
 
@@ -143,6 +143,7 @@ pip install black pyflakes isort nose pytest pipenv
 # others via yarn
 yarn global add marked
 yarn global add stylelint prettier js-beautify
+yarn global add pyright
 
 # required by org +roam
 nix-env -iA nixpkgs.sqlite # it is required for org-roam to work properly
