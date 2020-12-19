@@ -52,6 +52,10 @@ Feel free to open an issue if you need clarification to my configs.
 - Changing between vi-mode and insert-mode
 - Useful information display with the help of `starship.rs`
 
+### Ask me anything
+
+Send me a PR to let me know what issues you find. I am hoping to turn this into a reproducible bundle, but I might overlooked some hardcoded variables.
+
 ### With interesting fonts
 
 - For UI, I use [Megrim](https://fonts.google.com/specimen/Megrim) but [Unica One](https://fonts.google.com/specimen/Unica+One) is cool too
@@ -67,7 +71,13 @@ I use [Zinit](https://github.com/zdharma/zinit) as ZSH's plugin manager. My `.zs
 
 Sensitive environment variables should not be version controlled, they are placed in `secrets.zsh`.
 
-### Emacs 28.05 of branch feature/native-comp
+### Install Emacs
+
+Pick any distro that you like.
+
+1. [Emacs Mac Port (recommended)](https://github.com/railwaycat/homebrew-emacsmacport)
+2. [Emacs Plus](https://github.com/d12frosted/homebrew-emacs-plus)
+3. [GccEmacs](https://github.com/twlz0ne/nix-gccemacs-darwin)
 
 Read [here](https://www.emacswiki.org/emacs/GccEmacs) about GccEmacs
 
@@ -87,9 +97,11 @@ Restart the system or relogin. `which emacs` should reveal the new emacs locatio
 
 https://github.com/hlissner/doom-emacs
 
+after installation, run `doom doctor` to determine missing packages
+
 ### Install tiling window manager (Yabai and Skhd)
 
-Yabai can be quite difficult to install. Just follow the following steps to install it.
+Follow the following steps to install it, require reboots and messing with `csrutil`
 
 1. Enable `Displays have separate Spaces` under System Preferences -> Mission Control
 2. Follow the instruction to disable SIP [here](https://github.com/koekeishiya/yabai/wiki/Disabling-System-Integrity-Protection)
@@ -98,26 +110,56 @@ Yabai can be quite difficult to install. Just follow the following steps to inst
 5. yabai and skhd should be running in `brew services list`
 6. if it doesn't work, check the error by running `tail -f /usr/local/var/log/yabai/yabai.err.log`
 
-### Use Nixpkgs to manage languages
+### Install additional packages
 
 ```sh
-nix-env -iA nixpkgs.stack # haskell
-nix-env -iA nixpkgs.nodejs-14_x # latest nodejs
+# install Nix and cachix
+curl -L https://nixos.org/nix/install | sh
+nix-env -iA cachix -f https://cachix.org/api/v1/install
 
-# python
+# rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# haskell
+curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+
+# golang
+nix-env -iA nixpkgs.go
+go get -u github.com/motemen/gore/cmd/gore
+go get -u github.com/stamblerre/gocode
+go get -u golang.org/x/tools/cmd/godoc
+go get -u golang.org/x/tools/cmd/goimports
+go get -u golang.org/x/tools/cmd/gorename
+go get -u golang.org/x/tools/cmd/guru
+go get -u github.com/cweill/gotests/...
+go get -u github.com/fatih/gomodifytags
+
+# latest nodejs
+nix-env -iA nixpkgs.nodejs-14_x
+nix-env -iA nixpkgs.yarn
+
+# python and pips
 nix-env -iA nixpkgs.python39
+nix-env -iA nixpkgs.poetry
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python get-pip.py
+pip install black pyflakes isort nose pytest pipenv
+
+# others via nix
+nix-env -iA nixpkgs.graphviz
+nix-env -iA nixpkgs.shellcheck
+nix-env -iA nixpkgs.proselint
+
+# others via yarn
+yarn global add marked
+yarn global add stylelint prettier js-beautify
 ```
-
-### Setup OrgRoam Protocol
-
-I was using `Pocket` to bookmark webpages. This is the org equivalent, for org-roam, please refer [official orgroam manual](https://www.orgroam.com/manual/Installation-_00281_0029.html#Installation-_00281_0029)
 
 ## Configuration
 
 To disable font smoothing (Mac only), run
 
 ```sh
+# default = -int 1
 defaults write org.gnu.Emacs AppleFontSmoothing -int 0
 ```

@@ -128,5 +128,6 @@ export GPG_TTY=$(tty) # Sign git commit with gpg
 export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
 
-if [ -e /Users/felix/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/felix/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-source "$HOME/.cargo/env"
+if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+[ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env" # cargo-env
+[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
