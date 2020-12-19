@@ -1,16 +1,13 @@
 {
   packageOverrides = pkgs: with pkgs; {
-    myPackages = pkgs.buildEnv {
-      name = "my-packages";
+    basicPackages = pkgs.buildEnv {
+      name = "basic-packages";
       paths = [
-        # use unstable channel
-        nixUnstable 
-
         # compiler
         openssl coreutils emscripten
 
         # basics
-        git tmux starship zsh
+        git tmux zsh
 
         # tools
         ffmpeg
@@ -19,8 +16,6 @@
         graphviz shellcheck proselint
 
         # applications
-        alacritty
-        emacsMacport
         neovim
 
         # essential
