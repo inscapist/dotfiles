@@ -89,7 +89,7 @@ zinit light tj/git-extras
 
 zinit wait lucid for \
   is-snippet "${ZDOTDIR}/aliases.zsh" \
-  is-snippet "${ZDOTDIR}/extras.zsh"
+  is-snippet "${ZDOTDIR}/autocomplete.zsh"
 
 zinit wait lucid as'completion' is-snippet for \
     'https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker'

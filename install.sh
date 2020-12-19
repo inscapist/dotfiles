@@ -1,18 +1,22 @@
 #!/bin/sh
 
-# editor and terminal
-cd ~
+cd "$HOME" || return
 mkdir -p ~/.config
-ln -s ~/dotfiles/.zshenv ~/.zshenv
-ln -s ~/dotfiles/.config/zsh ~/.config/zsh
-ln -s ~/dotfiles/.config/starship.toml ~/.config/starship.toml
-ln -s ~/dotfiles/.config/alacritty ~/.config/alacritty
-ln -s ~/dotfiles/.config/nvim ~/.config/nvim
-ln -s ~/dotfiles/.ctags.d ~/.ctags.d
-ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
-ln -s ~/dotfiles/.skhdrc ~/.skhdrc
-ln -s ~/dotfiles/.yabairc ~/.yabairc
-ln -s ~/dotfiles/.doom.d ~/.doom.d
+ln -sfn ~/dotfiles/.zshenv ~/.zshenv
+ln -sfn ~/dotfiles/.config/starship.toml ~/.config/starship.toml
+ln -sfn ~/dotfiles/.config/alacritty ~/.config/alacritty
+ln -sfn ~/dotfiles/.config/nixpkgs ~/.config/nixpkgs
+ln -sfn ~/dotfiles/.config/nvim ~/.config/nvim
+ln -sfn ~/dotfiles/.config/zsh ~/.config/zsh
+ln -sfn ~/dotfiles/.ctags.d ~/.ctags.d
+ln -sfn ~/dotfiles/.tmux.conf ~/.tmux.conf
+ln -sfn ~/dotfiles/.skhdrc ~/.skhdrc
+ln -sfn ~/dotfiles/.yabairc ~/.yabairc
+ln -sfn ~/dotfiles/.doom.d ~/.doom.d
+touch .config/zsh/secrets.zsh
+
+# install tpm
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # git
 # ln -s ~/dotfiles/.gitconfig ~/.gitconfig
@@ -20,25 +24,3 @@ ln -s ~/dotfiles/.doom.d ~/.doom.d
 
 # mkdir -p ~/Library/Application\ Support/ptpython
 # ln -s ~/dotfiles/.ptpython/config.py ~/Library/Application\ Support/ptpython/config.py
-
-# install basic brew packages
-brew install openssl coreutils
-brew install git tmux zsh starship
-brew install exa bat rg fd
-# brew install glances jq fx htop httpie tree gpg graphviz tig lazygit pwgen
-# brew install pyenv rbenv ruby-build awscli terraform
-
-# install tpm
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
-# install node
-curl -L https://git.io/n-install | bash
-
-# install fzf
-brew install fzf
-$(brew --prefix)/opt/fzf/install
-
-# install cliclick
-brew install cliclick
-
-echo "Create missing secrets.zsh manually in .config/zsh"

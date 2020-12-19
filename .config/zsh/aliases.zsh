@@ -27,7 +27,6 @@ alias pt="ptpython"
 alias doom-cache-clear="rm -rf ~/.emacs.d/.local/cache/*"
 alias dns-clear="sudo killall -HUP mDNSResponder;sudo dscacheutil -flushcache"
 alias gowork="cd $GOWORK"
-alias pom="podman-machine"
 
 # aws aliases
 alias ec2-list="aws ec2 describe-instances | jq '[.Reservations | .[] | .Instances | .[] | {InstanceId: .InstanceId, State: .State, SubnetId: .SubnetId, VpcId: .VpcId, IamInstanceProfile: .IamInstanceProfile, Name: (.Tags[]|select(.Key==\"Name\")|.Value)}]'"

@@ -81,18 +81,6 @@ Pick any distro that you like.
 
 Read [here](https://www.emacswiki.org/emacs/GccEmacs) about GccEmacs
 
-```sh
-# install nix and follow through with the instruction
-curl -L https://nixos.org/nix/install | sh
-
-# src: https://gist.github.com/AllenDang/f019593e65572a8e0aefc96058a2d23e
-nix-env -iA cachix -f https://cachix.org/api/v1/install
-cachix use gccemacs-darwin
-nix-env -iA emacsGccDarwin -f https://github.com/twlz0ne/nix-gccemacs-darwin/archive/master.zip
-```
-
-Restart the system or relogin. `which emacs` should reveal the new emacs location. GUI Emacs is under `~/.nix-profile/Applications` in my case.
-
 ### Install doom emacs
 
 https://github.com/hlissner/doom-emacs
@@ -112,10 +100,21 @@ Follow the following steps to install it, require reboots and messing with `csru
 
 ### Install additional packages
 
+`myPackages` includes a number of packages, refer [here](.config/nixpkgs/config.nix)
+
 ```sh
-# install Nix and cachix
+# install Nix and cachix, follow the instructions
 curl -L https://nixos.org/nix/install | sh
+
+nix-channel --update
 nix-env -iA cachix -f https://cachix.org/api/v1/install
+
+# includes python, yarn, nodejs
+nix-env -iA nixpkgs.myPackages
+
+# optional if you know what you are doing
+# https://github.com/LnL7/nix-darwin
+# read: https://stackoverflow.com/questions/53335308/what-does-nix-darwin-provide
 
 # rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -134,31 +133,22 @@ go get -u golang.org/x/tools/cmd/guru
 go get -u github.com/cweill/gotests/...
 go get -u github.com/fatih/gomodifytags
 
-# latest nodejs
-nix-env -iA nixpkgs.nodejs-14_x
-nix-env -iA nixpkgs.yarn
-
 # python and pips
-nix-env -iA nixpkgs.python39
-nix-env -iA nixpkgs.poetry
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python get-pip.py
 pip install black pyflakes isort nose pytest pipenv
 
-# others via nix
-nix-env -iA nixpkgs.graphviz
-nix-env -iA nixpkgs.shellcheck
-nix-env -iA nixpkgs.proselint
-
 # others via yarn
 yarn global add marked
 yarn global add stylelint prettier js-beautify
+
+# others via brew
+brew install cliclick
 ```
 
 ## Configuration
 
-To disable font smoothing (Mac only), run
-
+### Emacs Font Smoothing
 ```sh
 # default = -int 1
 defaults write org.gnu.Emacs AppleFontSmoothing -int 0
