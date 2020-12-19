@@ -88,7 +88,7 @@ Follow the following steps to install it, require reboots and messing with `csru
 
 ### Install additional packages
 
-`basicPackages` includes a number of packages, refer [here](.config/nixpkgs/config.nix)
+`basicPackages` includes a number of packages, refer [.config/nixpkgs/config.nix](.config/nixpkgs/config.nix)
 
 Find packages at https://search.nixos.org/packages
 
