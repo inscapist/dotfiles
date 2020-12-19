@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # editor and terminal
+cd ~
 mkdir -p ~/.config
 ln -s ~/dotfiles/.zshenv ~/.zshenv
 ln -s ~/dotfiles/.config/zsh ~/.config/zsh
@@ -14,18 +15,18 @@ ln -s ~/dotfiles/.yabairc ~/.yabairc
 ln -s ~/dotfiles/.doom.d ~/.doom.d
 
 # git
-ln -s ~/dotfiles/.gitconfig ~/.gitconfig
-ln -s ~/dotfiles/.gitignore_global ~/.gitignore_global
+# ln -s ~/dotfiles/.gitconfig ~/.gitconfig
+# ln -s ~/dotfiles/.gitignore_global ~/.gitignore_global
 
-mkdir -p ~/Library/Application\ Support/ptpython
-ln -s ~/dotfiles/.ptpython/config.py ~/Library/Application\ Support/ptpython/config.py
+# mkdir -p ~/Library/Application\ Support/ptpython
+# ln -s ~/dotfiles/.ptpython/config.py ~/Library/Application\ Support/ptpython/config.py
 
 # install basic brew packages
 brew install openssl coreutils
 brew install git tmux zsh starship
 brew install exa bat rg fd
-brew install glances jq fx htop httpie tree gpg graphviz tig lazygit pwgen
-brew install pyenv rbenv ruby-build awscli terraform
+# brew install glances jq fx htop httpie tree gpg graphviz tig lazygit pwgen
+# brew install pyenv rbenv ruby-build awscli terraform
 
 # install tpm
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -34,6 +35,10 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 curl -L https://git.io/n-install | bash
 
 # install fzf
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
+brew install fzf
+$(brew --prefix)/opt/fzf/install
 
+# install cliclick
+brew install cliclick
+
+echo "Create missing secrets.zsh manually in .config/zsh"

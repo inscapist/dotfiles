@@ -67,17 +67,7 @@ I use [Zinit](https://github.com/zdharma/zinit) as ZSH's plugin manager. My `.zs
 
 Sensitive environment variables should not be version controlled, they are placed in `secrets.zsh`.
 
-### Choice 1: Install Stable Emacs 27 from EmacsPlus
-
-```sh
-brew tap d12frosted/emacs-plus
-brew install jansson
-brew install emacs-plus@27 --with-no-titlebar --with-modern-black-variant-icon --HEAD
-```
-
-Now brew a coffee, because it is going to take awhile
-
-### Choice 2: Install Speedy Emacs 28 of feature/native-comp
+### Emacs 28.05 of branch feature/native-comp
 
 Read [here](https://www.emacswiki.org/emacs/GccEmacs) about GccEmacs
 
@@ -107,6 +97,18 @@ Yabai can be quite difficult to install. Just follow the following steps to inst
 4. Install [Skhd](https://github.com/koekeishiya/skhd)
 5. yabai and skhd should be running in `brew services list`
 6. if it doesn't work, check the error by running `tail -f /usr/local/var/log/yabai/yabai.err.log`
+
+### Use Nixpkgs to manage languages
+
+```sh
+nix-env -iA nixpkgs.stack # haskell
+nix-env -iA nixpkgs.nodejs-14_x # latest nodejs
+
+# python
+nix-env -iA nixpkgs.python39
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python get-pip.py
+```
 
 ### Setup OrgRoam Protocol
 

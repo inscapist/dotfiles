@@ -84,9 +84,6 @@ zinit snippet ${ZDOTDIR}/keybindings.zsh
 zinit snippet ${ZDOTDIR}/secrets.zsh
 
 # load in the background
-zinit ice lucid has'pyenv' wait'!1'
-zinit snippet OMZ::plugins/pyenv
-
 zinit ice lucid wait'2' as"program" pick"$ZPFX/bin/git-*" src"etc/git-extras-completion.zsh" make"PREFIX=$ZPFX"
 zinit light tj/git-extras
 
@@ -112,7 +109,7 @@ zinit wait lucid light-mode for \
 #=======================================================================
 
 path=(
-  $HOME/.cargo/bin
+  $HOME/.local/bin
   $HOME/go/bin
   $HOME/dotfiles/bin
   $HOME/.emacs.d/bin
@@ -120,8 +117,6 @@ path=(
   /usr/local/opt/openssl@1.1/bin
   /Applications/Alacritty.app/Contents/MacOS
   /Applications/Vivaldi.app/Contents/MacOS
-  "/Applications/Firefox Developer Edition.app/Contents/MacOS"
-  /Applications/VimR.app/Contents/MacOS
   $path
 )
 
@@ -133,4 +128,5 @@ export GPG_TTY=$(tty) # Sign git commit with gpg
 export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
 
-export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
+if [ -e /Users/felix/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/felix/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+source "$HOME/.cargo/env"
