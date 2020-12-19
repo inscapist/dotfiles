@@ -99,7 +99,7 @@ Find packages at https://search.nixos.org/packages
 
 ```sh
 # Essential libraries with brew
-brew install cliclick starship yabai shkd gh coreutils
+brew install cliclick starship yabai shkd gh coreutils fontconfig
 
 # install Nix and cachix, follow the instructions
 curl -L https://nixos.org/nix/install | sh
