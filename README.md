@@ -98,6 +98,9 @@ Find packages at https://search.nixos.org/packages
 
 
 ```sh
+# Essential libraries with brew
+brew install cliclick starship yabai shkd gh coreutils
+
 # install Nix and cachix, follow the instructions
 curl -L https://nixos.org/nix/install | sh
 
@@ -130,9 +133,6 @@ pip install black pyflakes isort nose pytest pipenv
 # others via yarn
 yarn global add marked
 yarn global add stylelint prettier js-beautify
-
-# others via brew
-brew install cliclick starship yabai shkd gh
 ```
 
 ## Configuration
