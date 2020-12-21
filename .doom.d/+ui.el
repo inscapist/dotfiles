@@ -93,3 +93,10 @@
      doom-modeline-urgent
      doom-modeline-warning)
     :family ,felix/ui-font :height ,felix/mode-line-height :weight ,felix/ui-font-weight))
+
+
+;; https://www.fileformat.info/info/unicode/category/Sm/list.htm
+(plist-put! +ligatures-extra-symbols
+  :and           "⋀"
+  :or            "⋁"
+  :return        "🌊")

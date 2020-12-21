@@ -23,6 +23,6 @@
 (load! "+bindings")
 (load! "+editor")
 (load! "+langs")
-(load! "+navigate")
+;;(load! "+navigate")
 (load! "+org")
 (load! "+ui")
