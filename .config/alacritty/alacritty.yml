@@ -8,15 +8,15 @@ env:
 
 font:
   normal:
-    family: JetBrainsMono Nerd Font
-    style: Regular
+    family: agave Nerd Font
+    style: r
   bold:
-    family: JetBrainsMono Nerd Font
-    style: Medium
+    family: agave Nerd Font
+    style: r
   italic:
-    family: JetBrainsMono Nerd Font
-    style: Italic
-  size: 13
+    family: agave Nerd Font
+    style: r
+  size: 15
   offset:
     x: 0
     y: 0
