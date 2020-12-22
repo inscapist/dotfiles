@@ -38,11 +38,11 @@
       "s-w"   #'+workspace/close-window-or-workspace
       "s-r"   #'+workspace/rename)
 
-(map! :map eshell-mode-map
-      :nv "C-h" #'evil-window-left
-      :nv "C-l" #'evil-window-right
-      :nv "C-j" #'evil-window-down
-      :nv "C-k" #'evil-window-up)
+;; (map! :map eshell-mode-map
+;;       :nv "C-h" #'evil-window-left
+;;       :nv "C-l" #'evil-window-right
+;;       :nv "C-j" #'evil-window-down
+;;       :nv "C-k" #'evil-window-up)
 
 ;; Add org-agenda keybindings
 (map! :after evil-org-agenda
