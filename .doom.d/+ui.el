@@ -97,6 +97,7 @@
 
 ;; https://www.fileformat.info/info/unicode/category/Sm/list.htm
 (plist-put! +ligatures-extra-symbols
-  :and           "⋀"
-  :or            "⋁"
-  :return        "🌊")
+            :and           "⋀"
+            :or            "⋁"
+            :return        "↚"
+            :tuple nil)
