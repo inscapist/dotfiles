@@ -19,7 +19,7 @@
         neovim
 
         # essential
-        python38
+        python39
         nodejs-14_x
         yarn
       ];
