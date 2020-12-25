@@ -161,6 +161,30 @@ defaults write org.gnu.Emacs AppleFontSmoothing -int 0
 
 ## Keybindings
 
+### Tmux + Nvim, in Alacritty
+
+```
+Cmd + H: Move to left tmux tab
+Cmd + L: Move to right tmux tab
+Cmd + K: Clear buffer
+Cmd + n: New tab
+Cmd + w: Kill tab
+Cmd + e: Rename tab
+Cmd + s: Rename session
+Cmd + Enter: Toggle Full Screen
+
+~ + o: View all open tmux windows
+~ + \: Split tmux pane to the right
+~ + -: Split tmux pane to the bottom
+
+Ctrl + HJKL: Move between panes (even across neovim/tmux)
+```
+
+For more, refer:
+
+- [tmux.conf](https://github.com/sagittaros/dotfiles/blob/master/.tmux.conf)
+- [alacritty.conf](https://github.com/sagittaros/dotfiles/blob/8bcd9ceb35b02d1d484aafe2adea17e42477ad19/.config/alacritty/alacritty.yml#L108)
+
 #### ZSH
 
 ```shell
@@ -214,30 +238,6 @@ bindkey -s '^o' 'nvim $(fzf)\n'
 ```
 
 [More here](https://github.com/sagittaros/dotfiles/blob/master/.doom.d/+bindings.el)
-
-### Tmux + Nvim, in Alacritty
-
-```
-Cmd + H: Move to left tmux tab
-Cmd + L: Move to right tmux tab
-Cmd + K: Clear buffer
-Cmd + n: New tab
-Cmd + w: Kill tab
-Cmd + e: Rename tab
-Cmd + s: Rename session
-Cmd + Enter: Toggle Full Screen
-
-~ + o: View all open tmux windows
-~ + \: Split tmux pane to the right
-~ + -: Split tmux pane to the bottom
-
-Ctrl + HJKL: Move between panes (even across neovim/tmux)
-```
-
-For more, refer:
-
-- [tmux.conf](https://github.com/sagittaros/dotfiles/blob/master/.tmux.conf)
-- [alacritty.conf](https://github.com/sagittaros/dotfiles/blob/8bcd9ceb35b02d1d484aafe2adea17e42477ad19/.config/alacritty/alacritty.yml#L108)
 
 ### [Neo]vim
 
