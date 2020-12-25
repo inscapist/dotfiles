@@ -158,3 +158,116 @@ brew cask install mactex
 # default = -int 1
 defaults write org.gnu.Emacs AppleFontSmoothing -int 0
 ```
+
+## Keybindings
+
+#### ZSH
+
+```shell
+# `i` to enter vim mode
+# ESC to quit vim mode
+
+bindkey -v
+bindkey '^R' fzf-history-widget # ctrl+r to search history with fzf
+
+# emacs style 0
+bindkey '^A' beginning-of-line
+bindkey '^E' end-of-line
+bindkey '^K' kill-line
+bindkey '^W' backward-kill-word
+
+# open a fzf-found file
+bindkey -s '^o' 'nvim $(fzf)\n'
+```
+
+### Emacs
+
+```emacs-lisp
+(map! :nv "S" #'save-buffer
+      :nv "F" #'avy-goto-char-timer
+      :nv "f" #'avy-goto-char-in-line
+      :nv "J" #'evil-scroll-down
+      :nv "K" #'evil-scroll-up
+      :nv "gx" #'browse-url
+      :nv "rr" #'evil-ex-nohighlight
+      :nv "rb" #'revert-bufferm
+      :nv "rc" #'lsp-workspace-restart)
+
+;; Easier navigation
+(map! :ne "C-h"   #'evil-window-left
+      :ne "C-l"   #'evil-window-right
+      :ne "C-j"   #'evil-window-down
+      :ne "C-k"   #'evil-window-up
+      :ne "s-h"   #'+workspace/switch-left
+      :ne "s-l"   #'+workspace/switch-right
+      :ne "s-n"   #'+workspace/new
+      :ne "s-w"   #'+workspace/close-window-or-workspace
+      :ne "s-r"   #'+workspace/rename)
+
+;; Easier window split
+(map! :leader
+      "\\" #'evil-window-vsplit
+      "-" #'evil-window-split)
+
+;; Ace window
+(map! :leader "w w" #'ace-window)
+```
+
+[More here](https://github.com/sagittaros/dotfiles/blob/master/.doom.d/+bindings.el)
+
+### Tmux + Nvim, in Alacritty
+
+```
+Cmd + H: Move to left tmux tab
+Cmd + L: Move to right tmux tab
+Cmd + K: Clear buffer
+Cmd + n: New tab
+Cmd + w: Kill tab
+Cmd + e: Rename tab
+Cmd + s: Rename session
+Cmd + Enter: Toggle Full Screen
+
+~ + o: View all open tmux windows
+~ + \: Split tmux pane to the right
+~ + -: Split tmux pane to the bottom
+
+Ctrl + HJKL: Move between panes (even across neovim/tmux)
+```
+
+For more, refer:
+
+- [tmux.conf](https://github.com/sagittaros/dotfiles/blob/master/.tmux.conf)
+- [alacritty.conf](https://github.com/sagittaros/dotfiles/blob/8bcd9ceb35b02d1d484aafe2adea17e42477ad19/.config/alacritty/alacritty.yml#L108)
+
+### [Neo]vim
+
+```vim-snippet
+# simple glucose
+nnoremap <silent> rr :noh<cr>
+nnoremap <silent> re :e!<cr>
+nnoremap <silent> rw <C-w>=
+nnoremap <silent> rf :set foldmethod=manual<CR> zE
+inoremap <silent> jj <Esc>
+nnoremap j gj
+nnoremap k gk
+vnoremap B ^
+vnoremap E $
+nnoremap B ^
+nnoremap E $
+nmap f <Plug>(easymotion-sl)
+nmap F <Plug>(easymotion-s2)
+
+# split screen
+nnoremap <silent> ss :sp<CR>
+nnoremap <silent> vv :vsp<CR>
+nnoremap <silent> qq <C-w>q
+
+# toggle embedded LazyGit
+nnoremap <silent> <space>lg :<C-u>call ToggleLazyGit()<CR>
+
+# quick scroll
+nnoremap <silent> K :call ScrollQuarter('up')<CR>
+nnoremap <silent> J :call ScrollQuarter('down')<CR>
+```
+
+[More here](https://github.com/sagittaros/dotfiles/blob/master/.config/nvim/modules/keymaps.vim)
