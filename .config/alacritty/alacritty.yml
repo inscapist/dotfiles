@@ -22,7 +22,7 @@ font:
     y: 0
   use_thin_strokes: true
 
-background_opacity: 0.8
+background_opacity: 0.85
 live_config_reload: true
 
 # Colors (Gruvbox dark)
