@@ -101,3 +101,7 @@
             :or            "⋁"
             :return        "↚"
             :tuple nil)
+
+;transparent adjustment
+(set-frame-parameter (selected-frame) 'alpha '(95 . 85))
+(add-to-list 'default-frame-alist '(alpha . (95 . 85)))
