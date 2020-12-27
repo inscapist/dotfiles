@@ -25,4 +25,4 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # git
 # ln -s ~/dotfiles/.gitconfig ~/.gitconfig
-# ln -s ~/dotfiles/.gitignore_global ~/.gitignore_global
+ln -sfn ~/dotfiles/.gitignore_global ~/.gitignore_global
