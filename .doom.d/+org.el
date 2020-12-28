@@ -99,24 +99,15 @@
                                              ;; clear my inbox
                                              ((org-agenda-overriding-header "To Refile")
                                               (org-agenda-files '(,(concat felix/org-agenda-directory "inbox.org")))))
-                                       (tags-todo "freelance/TODO|PROJ"
-                                             ;; freelancing
-                                             ((org-agenda-overriding-header "Freelance")
-                                              (org-agenda-max-entries 5)
-                                              (org-agenda-files '(,(concat felix/org-agenda-directory "backlog.org")
-                                                                  ,(concat felix/org-agenda-directory "ideas.org")
-                                                                  ,(concat felix/org-agenda-directory "notes.org")))
-                                              (org-agenda-skip-function '(org-agenda-skip-entry-if 'deadline 'scheduled))))
-                                       (tags-todo "aegis|voicelane|clarific|ubermensch/TODO|PROJ"
-                                             ;; shaping my own ideas
-                                             ((org-agenda-overriding-header "Only What's My Own")
-                                              (org-agenda-max-entries 5)
+                                       (todo "TODO|PROJ"
+                                             ((org-agenda-overriding-header "Work")
+                                              (org-agenda-max-entries 10)
                                               (org-agenda-files '(,(concat felix/org-agenda-directory "backlog.org")
                                                                   ,(concat felix/org-agenda-directory "ideas.org")
                                                                   ,(concat felix/org-agenda-directory "notes.org")))
                                               (org-agenda-skip-function '(org-agenda-skip-entry-if 'deadline 'scheduled))))
                                        (todo "TODO|PROJ"
-                                             ((org-agenda-overriding-header "My Life")
+                                             ((org-agenda-overriding-header "C'est ma Vie")
                                               (org-agenda-files '(,(concat felix/org-agenda-directory "mylife.org")))))
                                        (todo "TODO|PROJ"
                                              ;; articles, books that I want to commit to reading

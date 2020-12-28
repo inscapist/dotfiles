@@ -48,15 +48,14 @@
 (map! :after evil-org-agenda
       (:map evil-org-agenda-mode-map :m "S" nil)
       (:map org-agenda-mode-map
-        "S"     #'org-save-all-org-buffers
-        "r"     #'org-agenda-filter-remove-all
-        "C-h"   #'evil-window-left
-        "C-l"   #'evil-window-right
-        "s-h"   #'+workspace/switch-left
-        "s-l"   #'+workspace/switch-right
-        "s-n"   #'+workspace/new
-        "s-w"   #'+workspace/close-window-or-workspace
-        "s-r"   #'+workspace/rename))
+       "S"     #'org-save-all-org-buffers
+       "C-h"   #'evil-window-left
+       "C-l"   #'evil-window-right
+       "s-h"   #'+workspace/switch-left
+       "s-l"   #'+workspace/switch-right
+       "s-n"   #'+workspace/new
+       "s-w"   #'+workspace/close-window-or-workspace
+       "s-r"   #'+workspace/rename))
 
 ;; Folding
 (map! :leader
