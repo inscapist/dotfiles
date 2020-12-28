@@ -10,7 +10,7 @@
 (setq felix/default-font "Ellograph CF"
       felix/default-font-size 13
       felix/default-font-weight 'ultra-light
-      felix/ui-font "Agave"
+      felix/ui-font "Unica One"
       felix/ui-font-size 12
       felix/ui-font-weight 'normal
       felix/mode-line-height 0.95)
@@ -21,11 +21,6 @@
       doom-font (font-spec :family felix/default-font :size felix/default-font-size :weight felix/default-font-weight)
       doom-variable-pitch-font (font-spec :family felix/ui-font :size felix/ui-font-size :weight felix/ui-font-weight)
       all-the-icons-scale-factor 0.9)
-
-;; configure nord-theme
-;; (after! nord-theme
-;;   (setq nord-uniform-mode-lines nil
-;;         nord-region-highlight "frost"))
 
 
 ;; disable shortmenu
@@ -103,5 +98,5 @@
             :tuple nil)
 
 ;transparent adjustment
-(set-frame-parameter (selected-frame) 'alpha '(95 . 85))
-(add-to-list 'default-frame-alist '(alpha . (95 . 85)))
+(set-frame-parameter (selected-frame) 'alpha '(96 . 88))
+(add-to-list 'default-frame-alist '(alpha . (96 . 88)))
