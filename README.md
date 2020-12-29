@@ -137,6 +137,7 @@ go get -u github.com/cweill/gotests/...
 go get -u github.com/fatih/gomodifytags
 
 # python and pips
+nix-env -iA nixpkgs.python38 # or python39
 curl https://bootstrap.pypa.io/get-pip.py | python
 pip install black pyflakes isort nose pytest pipenv
 
