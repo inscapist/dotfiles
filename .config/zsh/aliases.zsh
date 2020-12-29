@@ -26,14 +26,10 @@ alias genrand="openssl rand -hex 32"
 alias lg="lazygit"
 alias po="poetry"
 alias pos="poetry shell"
-alias pt="ptpython"
 alias doom-cache-clear="rm -rf ~/.emacs.d/.local/cache/*"
 alias dns-clear="sudo killall -HUP mDNSResponder;sudo dscacheutil -flushcache"
-alias gowork="cd $GOWORK"
 
 # aws aliases
 alias ec2-list="aws ec2 describe-instances | jq '[.Reservations | .[] | .Instances | .[] | {InstanceId: .InstanceId, State: .State, SubnetId: .SubnetId, VpcId: .VpcId, IamInstanceProfile: .IamInstanceProfile, Name: (.Tags[]|select(.Key==\"Name\")|.Value)}]'"
 alias ec2-sess="aws ssm start-session --target" # https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-working-with-install-plugin.html#install-plugin-macos
 
-# aws profiles
-alias jin="export AWS_PROFILE=jindesign"
