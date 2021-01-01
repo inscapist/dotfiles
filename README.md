@@ -1,4 +1,8 @@
+<br/>
+
 > “ We become what we behold. We shape our tools, and thereafter our tools shape us. ”
+
+<br/>
 
 This is my dotfiles.
 Feel free to open an issue if you need clarification to my configs.
