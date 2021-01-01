@@ -29,6 +29,11 @@ Feel free to open an issue if you need clarification to my configs.
 - An earthy theme ported from [Miramare](https://github.com/franbach/miramare)
 - Highly customizable Prose linter/checker using [Vale](https://github.com/errata-ai/vale)
 
+### Still prefer VsCode?
+
+See here:
+https://gist.github.com/sagittaros/a632a853e6e3f78c64f1b4c017217b30
+
 ## Ask me anything
 
 Send me a PR to let me know what issues you find. I am hoping to turn this into a reproducible bundle, but I might overlooked some hardcoded variables.
