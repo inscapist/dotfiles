@@ -273,3 +273,7 @@ nnoremap <silent> J :call ScrollQuarter('down')<CR>
 ```
 
 [More here](https://github.com/sagittaros/dotfiles/blob/master/.config/nvim/modules/keymaps.vim)
+
+## TODO
+
+- Write a flycheck's checker for =vale=
