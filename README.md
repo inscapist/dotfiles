@@ -1,3 +1,6 @@
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![zsh](https://img.shields.io/badge/Shell-zsh-yellow.svg)](.config/zsh)
+
 <br/>
 
 > “ We shape our tools, and thereafter our tools shape us. ”
