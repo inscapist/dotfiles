@@ -8,5 +8,8 @@
 (setq-hook! 'web-mode-hook +format-with 'prettier)
 (setq-hook! 'html-mode-hook +format-with 'prettier)
 
+(after! lsp-mode
+  (setq lsp-enable-file-watchers nil))
+
 ;; (after! rustic
 ;;   (setq rustic-lsp-server 'rls))
