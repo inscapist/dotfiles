@@ -139,7 +139,8 @@ go get -u github.com/fatih/gomodifytags
 # python and pips
 nix-env -iA nixpkgs.python38 # or python39
 curl https://bootstrap.pypa.io/get-pip.py | python
-pip install black pyflakes isort nose pytest pipenv
+pip install black pyflakes isort nose pytest pipenv pipx
+pipx install grip # for markdown preview
 
 # others via yarn
 yarn global add marked
