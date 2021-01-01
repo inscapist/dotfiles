@@ -1,6 +1,8 @@
 <br/>
 
-> “ We become what we behold. We shape our tools, and thereafter our tools shape us. ”
+> “ We shape our tools, and thereafter our tools shape us. ”
+>
+> - distorted from original quote, by Marshall McLuhan
 
 <br/>
 
