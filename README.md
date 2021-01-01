@@ -1,14 +1,6 @@
-```
-____________________________________________________
-                     _____      __   ______     __
-                     /    )   /    )   /      /    )
----_--_-------------/----/---/----/---/-------\-----
-  / /  ) /   /     /    /   /    /   /         \
-_/_/__/_(___/_____/____/___(____/___/______(____/___
-           /
-       (_ /
-```
+> “ We become what we behold. We shape our tools, and thereafter our tools shape us. ”
 
+This is my dotfiles.
 Feel free to open an issue if you need clarification to my configs.
 
 ![Screenshot](screenshot.png)
