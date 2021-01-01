@@ -12,7 +12,15 @@ ln -sfn ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -sfn ~/dotfiles/.skhdrc ~/.skhdrc
 ln -sfn ~/dotfiles/.yabairc ~/.yabairc
 ln -sfn ~/dotfiles/.doom.d ~/.doom.d
+ln -sfn ~/dotfiles/vale/.vale.ini ~/.vale.ini
 touch .config/zsh/secrets.zsh
+
+# vale
+mkdir -p ~/.config/vale
+cp -rp ~/dotfiles/vale/Microsoft ~/.config/vale/
+cp -rp ~/dotfiles/vale/proselint ~/.config/vale/
+cp -rp ~/dotfiles/vale/write-good ~/.config/vale/
+echo "Drop new vale styles into '~/.config/vale/'. Symlinks won't work"
 
 # this is blank, should be made a separate repository
 mkdir -p ~/org/roam

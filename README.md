@@ -29,6 +29,7 @@ Feel free to open an issue if you need clarification to my configs.
 - Customized command prompt with [starship](.config/starship.toml)
 - Modularized [zsh config](.config/zsh) with the demonstration of [Zinit](https://github.com/zdharma/zinit) async syntax
 - An earthy theme ported from [Miramare](https://github.com/franbach/miramare)
+- Highly customizable Prose linter/checker using [Vale](https://github.com/errata-ai/vale)
 
 ## Ask me anything
 
@@ -105,6 +106,7 @@ Find packages at https://search.nixos.org/packages
 ```sh
 # Essential libraries with brew
 brew install cliclick starship yabai shkd gh coreutils fontconfig
+brew install vale # modern proselint
 
 # Fzf history search
 brew install fzf
