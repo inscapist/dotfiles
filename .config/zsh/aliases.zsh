@@ -26,6 +26,8 @@ alias genrand="openssl rand -hex 32"
 alias lg="lazygit"
 alias po="poetry"
 alias pos="poetry shell"
+alias zap="brew uninstall --cask --zap"
+
 alias doom-cache-clear="rm -rf ~/.emacs.d/.local/cache/*"
 alias dns-clear="sudo killall -HUP mDNSResponder;sudo dscacheutil -flushcache"
 
