@@ -13,7 +13,7 @@
         ffmpeg
         bat exa fd fx httpie htop jq ripgrep
         gitAndTools.tig lazygit # git tools
-        graphviz shellcheck
+        graphviz shellcheck shfmt
 
         # applications
         neovim
