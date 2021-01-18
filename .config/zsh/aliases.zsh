@@ -1,3 +1,7 @@
+# to recompile zinit, simply
+# zinit update -s
+# where -s = snippets
+
 alias ..="cd .."
 alias ...="cd ../.."
 
