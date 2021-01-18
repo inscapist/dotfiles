@@ -55,7 +55,10 @@
 ;; Extra packages
 (package! origami)
 (package! graphviz-dot-mode)
+(package! darktooth-theme)
+(package! kaolin-themes)
 
 ;; Use latest packages
 (package! doom-themes :recipe (:branch "master"))
 (package! format-all :recipe (:branch "master"))
+;; (package! lsp-mode :recipe (:branch "master"))
