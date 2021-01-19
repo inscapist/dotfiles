@@ -10,7 +10,7 @@
 (setq felix/default-font "Ellograph CF"
       felix/default-font-size 13
       felix/default-font-weight 'light
-      felix/ui-font "Unica One"
+      felix/ui-font "Hermit"
       felix/ui-font-size 12
       felix/ui-font-weight 'normal
       felix/mode-line-height 0.95)
@@ -18,7 +18,7 @@
 (setq
  ;; doom-theme 'doom-miramare
  ;; doom-theme 'darktooth
- doom-theme 'kaolin-temple
+ doom-theme 'kaolin-mono-dark
  doom-themes-enable-bold t
  doom-themes-enable-italic t
  doom-font (font-spec :family felix/default-font :size felix/default-font-size :weight felix/default-font-weight)
@@ -35,6 +35,14 @@
   (setq doom-modeline-lsp nil)
   (setq doom-modeline-env-version t))
 
+(custom-set-faces!
+  `(font-lock-comment-face :slant italic)
+  `(font-lock-keyword-face :slant italic)
+   `((mode-line
+      mode-line-inactive)
+     :height ,felix/mode-line-height))
+
+
 ;; https://www.fileformat.info/info/unicode/category/Sm/list.htm
 (plist-put! +ligatures-extra-symbols
             :and           "⋀"
@@ -43,8 +51,8 @@
             :tuple nil)
 
 ;transparent adjustment
-(set-frame-parameter (selected-frame) 'alpha '(96 . 88))
-(add-to-list 'default-frame-alist '(alpha . (96 . 88)))
+(set-frame-parameter (selected-frame) 'alpha '(92 . 88))
+(add-to-list 'default-frame-alist '(alpha . (92 . 88)))
 
 
 ;; ==========================
@@ -53,6 +61,6 @@
 ;;
 ;; (after! lsp-ui
 ;;   (setq lsp-ui-doc-enable t))
-
+;;
 ;; (after! darktooth-theme
 ;;         (darktooth-modeline))

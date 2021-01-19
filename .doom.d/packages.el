@@ -53,10 +53,14 @@
 (package! hl-line :disable t) ;; hl-line has huge performance penalty on 4k monitor + retina mac
 
 ;; Extra packages
-(package! origami)
 (package! graphviz-dot-mode)
-(package! darktooth-theme)
 (package! kaolin-themes)
+(package! origami)
+(package! darktooth-theme)
+(package! ample-theme)
+(package! acme-theme)
+(package! tao-theme)
+(package! chocolate-theme)
 
 ;; Use latest packages
 (package! doom-themes :recipe (:branch "master"))

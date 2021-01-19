@@ -8,15 +8,15 @@ env:
 
 font:
   normal:
-    family: agave Nerd Font
-    style: r
+    family: Ellograph CF
+    style: Regular
   bold:
-    family: agave Nerd Font
-    style: r
+    family: Ellograph CF
+    style: Bold
   italic:
-    family: agave Nerd Font
-    style: r
-  size: 15
+    family: Ellograph CF
+    style: Light Italic
+  size: 14
   offset:
     x: 0
     y: 0
