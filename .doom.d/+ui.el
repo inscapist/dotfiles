@@ -47,6 +47,16 @@
             :return        "↚"
             :tuple nil)
 
-;; transparent adjustment, may not work on certain Emacs distro (eg. emacs-plus)
+;; ==========================
+;; Optional
+;; ==========================
+;;
+;; ;; transparent adjustment, may not work on certain Emacs distro (eg. emacs-plus)
 ;; (set-frame-parameter (selected-frame) 'alpha '(92 . 88))
 ;; (add-to-list 'default-frame-alist '(alpha . (92 . 88)))
+;;
+;; (after! lsp-ui
+;;   (setq lsp-ui-doc-enable t))
+;;
+;; (after! darktooth-theme
+;;         (darktooth-modeline))

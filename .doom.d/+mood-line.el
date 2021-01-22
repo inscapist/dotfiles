@@ -1,14 +1,5 @@
 ;;; $DOOMDIR/+mood-line.el -*- lexical-binding: t; -*-
 ;;
-;; ==========================
-;; Optional
-;; ==========================
-;;
-;; (after! lsp-ui
-;;   (setq lsp-ui-doc-enable t))
-;;
-;; (after! darktooth-theme
-;;         (darktooth-modeline))
 
 ;;; mood-line.el --- A minimal mode-line inspired by doom-modeline -*- lexical-binding: t; -*-
 
