@@ -37,6 +37,7 @@
 (custom-set-faces!
   `(font-lock-comment-face :slant italic)
   `(font-lock-keyword-face :slant italic)
+  `(lsp-ui-doc-background :background "#16211C") ;; to match kaolin-mono-dark
   `(treemacs-root-face :family ,felix/default-font :slant italic :weight normal))
 
 
@@ -50,13 +51,14 @@
 ;; ==========================
 ;; Optional
 ;; ==========================
-;;
-;; ;; transparent adjustment, may not work on certain Emacs distro (eg. emacs-plus)
-;; (set-frame-parameter (selected-frame) 'alpha '(92 . 88))
-;; (add-to-list 'default-frame-alist '(alpha . (92 . 88)))
-;;
-;; (after! lsp-ui
-;;   (setq lsp-ui-doc-enable t))
-;;
-;; (after! darktooth-theme
-;;         (darktooth-modeline))
+
+;; transparent adjustment, may not work on certain Emacs distro (eg. emacs-plus)
+(doom/set-frame-opacity 92)
+
+;; Useful for showing types in haskell
+(after! lsp-ui
+  (setq lsp-ui-doc-enable t
+        lsp-ui-doc-use-childframe t
+        lsp-ui-doc-max-width 300
+        lsp-ui-doc-max-height 200))
+
