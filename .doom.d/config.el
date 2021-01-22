@@ -23,7 +23,7 @@
 (load! "+bindings")
 (load! "+editor")
 (load! "+langs")
-(load! "+mood-line")
+;;(load! "+mood-line")
 ;;(load! "+navigate")
 (load! "+org")
 (load! "+ui")

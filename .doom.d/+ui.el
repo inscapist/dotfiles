@@ -9,8 +9,7 @@
       felix/default-font-weight 'light
       felix/ui-font "Hermit"
       felix/ui-font-size 12
-      felix/ui-font-weight 'normal
-      felix/mode-line-height 0.95)
+      felix/ui-font-weight 'normal)
 
 (setq
  ;; ;; choose your pokemon =>
@@ -27,12 +26,6 @@
 
 ;; disable shortmenu
 (remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
-
-;; uniformize doom-modeline style
-(after! doom-modeline
-  (display-battery-mode 1)
-  (setq doom-modeline-lsp nil)
-  (setq doom-modeline-env-version t))
 
 (custom-set-faces!
   `(font-lock-comment-face :slant italic)
@@ -52,8 +45,19 @@
 ;; Optional
 ;; ==========================
 
+;; successor of golden-ratio.el
+(use-package zoom
+  :hook (doom-first-input . zoom-mode)
+  :config
+  (setq zoom-size '(0.7 . 0.7)
+        zoom-ignored-major-modes '(dired-mode vterm-mode help-mode helpful-mode rxt-help-mode help-mode-menu org-mode)
+        zoom-ignored-buffer-names '("*doom:scratch*" "*info*" "*helpful variable: argv*")
+        zoom-ignored-buffer-name-regexps '("^\\*calc" "\\*helpful variable: .*\\*")
+        zoom-ignore-predicates (list (lambda () (< (count-lines (point-min) (point-max)) 20)))))
+
+
 ;; transparent adjustment, may not work on certain Emacs distro (eg. emacs-plus)
-(doom/set-frame-opacity 92)
+(doom/set-frame-opacity 93)
 
 ;; Useful for showing types in haskell
 (after! lsp-ui
@@ -62,3 +66,12 @@
         lsp-ui-doc-max-width 300
         lsp-ui-doc-max-height 200))
 
+
+;; modeline
+(setq telephone-line-primary-left-separator 'telephone-line-cubed-left
+      telephone-line-secondary-left-separator 'telephone-line-cubed-hollow-left
+      telephone-line-primary-right-separator 'telephone-line-cubed-right
+      telephone-line-secondary-right-separator 'telephone-line-cubed-hollow-right
+      telephone-line-height 21
+      telephone-line-evil-use-short-tag nil)
+(telephone-line-mode t)

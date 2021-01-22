@@ -189,7 +189,7 @@
                              (propertize "✖ " 'face face))
                             (t
                              (setq face 'mood-line-status-neutral)
-                             (propertize "✔ " 'face face)))
+                             (propertize "" 'face face)))
                       (propertize (substring vc-mode (+ (if (eq backend 'Hg) 2 3) 2))
                                   'face face
                                   'mouse-face face)
@@ -209,7 +209,7 @@
                                          'face (if .error
                                                    'mood-line-status-error
                                                  'mood-line-status-warning))))
-                       (propertize "✔ Good  " 'face 'mood-line-status-success)))
+                       (propertize "Good  " 'face 'mood-line-status-success)))
           ('running (propertize "Δ Checking  " 'face 'mood-line-status-info))
           ('errored (propertize "✖ Error  " 'face 'mood-line-status-error))
           ('interrupted (propertize "⏸ Paused  " 'face 'mood-line-status-neutral))

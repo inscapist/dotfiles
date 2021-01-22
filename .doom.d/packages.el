@@ -54,10 +54,14 @@
 
 ;; Extra packages
 (package! graphviz-dot-mode)
+(package! telephone-line)
+(package! zoom)
+;;(package! origami)
+
+;; Themes
 (package! kaolin-themes)
 (package! chocolate-theme)
 (package! darktooth-theme)
-;;(package! origami)
 ; (package! ample-theme)
 ; (package! acme-theme)
 ; (package! tao-theme)
