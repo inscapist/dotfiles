@@ -56,6 +56,7 @@
 (package! graphviz-dot-mode)
 (package! telephone-line)
 (package! zoom)
+(package! nov)
 ;;(package! origami)
 
 ;; Themes

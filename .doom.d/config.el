@@ -26,4 +26,5 @@
 ;;(load! "+mood-line")
 ;;(load! "+navigate")
 (load! "+org")
+(load! "+reader")
 (load! "+ui")
