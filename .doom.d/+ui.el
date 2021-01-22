@@ -5,10 +5,10 @@
 ;; =======================================================================
 
 (setq felix/default-font "Ellograph CF"
-      felix/default-font-size 13
-      felix/default-font-weight 'light
+      felix/default-font-size 18
+      felix/default-font-weight 'normal
       felix/ui-font "Hermit"
-      felix/ui-font-size 12
+      felix/ui-font-size 16
       felix/ui-font-weight 'normal)
 
 (setq
@@ -57,7 +57,7 @@
 
 
 ;; transparent adjustment, may not work on certain Emacs distro (eg. emacs-plus)
-(doom/set-frame-opacity 93)
+(doom/set-frame-opacity 92)
 
 ;; Useful for showing types in haskell
 (after! lsp-ui

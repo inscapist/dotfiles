@@ -56,13 +56,13 @@
 (package! graphviz-dot-mode)
 (package! telephone-line)
 (package! zoom)
-(package! nov)
+;;(package! nov)
 ;;(package! origami)
 
 ;; Themes
 (package! kaolin-themes)
 (package! chocolate-theme)
-(package! darktooth-theme)
+; (package! darktooth-theme)
 ; (package! ample-theme)
 ; (package! acme-theme)
 ; (package! tao-theme)
