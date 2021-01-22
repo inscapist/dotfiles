@@ -55,12 +55,12 @@
 ;; Extra packages
 (package! graphviz-dot-mode)
 (package! kaolin-themes)
-(package! origami)
-(package! darktooth-theme)
-(package! ample-theme)
-(package! acme-theme)
-(package! tao-theme)
 (package! chocolate-theme)
+(package! darktooth-theme)
+;;(package! origami)
+; (package! ample-theme)
+; (package! acme-theme)
+; (package! tao-theme)
 
 ;; Use latest packages
 (package! doom-themes :recipe (:branch "master"))

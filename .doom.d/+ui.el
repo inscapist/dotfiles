@@ -4,9 +4,6 @@
 ;; UI variables
 ;; =======================================================================
 
-;; To disable font smoothing, run
-;; defaults write org.gnu.Emacs AppleFontSmoothing -int 0
-;;
 (setq felix/default-font "Ellograph CF"
       felix/default-font-size 13
       felix/default-font-weight 'light
@@ -16,8 +13,10 @@
       felix/mode-line-height 0.95)
 
 (setq
+ ;; ;; choose your pokemon =>
  ;; doom-theme 'doom-miramare
  ;; doom-theme 'darktooth
+ ;; doom-theme 'chocolate
  doom-theme 'kaolin-mono-dark
  doom-themes-enable-bold t
  doom-themes-enable-italic t
@@ -38,9 +37,7 @@
 (custom-set-faces!
   `(font-lock-comment-face :slant italic)
   `(font-lock-keyword-face :slant italic)
-   `((mode-line
-      mode-line-inactive)
-     :height ,felix/mode-line-height))
+  `(treemacs-root-face :family ,felix/default-font :slant italic :weight normal))
 
 
 ;; https://www.fileformat.info/info/unicode/category/Sm/list.htm
@@ -50,17 +47,6 @@
             :return        "↚"
             :tuple nil)
 
-;transparent adjustment
-(set-frame-parameter (selected-frame) 'alpha '(92 . 88))
-(add-to-list 'default-frame-alist '(alpha . (92 . 88)))
-
-
-;; ==========================
-;; Optional
-;; ==========================
-;;
-;; (after! lsp-ui
-;;   (setq lsp-ui-doc-enable t))
-;;
-;; (after! darktooth-theme
-;;         (darktooth-modeline))
+;; transparent adjustment, may not work on certain Emacs distro (eg. emacs-plus)
+;; (set-frame-parameter (selected-frame) 'alpha '(92 . 88))
+;; (add-to-list 'default-frame-alist '(alpha . (92 . 88)))
