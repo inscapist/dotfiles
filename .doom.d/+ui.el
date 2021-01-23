@@ -5,18 +5,19 @@
 ;; =======================================================================
 
 (setq felix/default-font "Ellograph CF"
-      felix/default-font-size 18
-      felix/default-font-weight 'normal
-      felix/ui-font "Hermit"
-      felix/ui-font-size 16
-      felix/ui-font-weight 'normal)
+      felix/default-font-size 17
+      felix/default-font-weight 'light
+      felix/ui-font "Unica One"
+      felix/ui-font-size 15
+      felix/ui-font-weight 'light)
 
 (setq
  ;; ;; choose your pokemon =>
  ;; doom-theme 'doom-miramare
  ;; doom-theme 'darktooth
  ;; doom-theme 'chocolate
- doom-theme 'kaolin-mono-dark
+ ;; doom-theme 'kaolin-mono-dark
+ doom-theme 'kaolin-valley-light
  doom-themes-enable-bold t
  doom-themes-enable-italic t
  doom-font (font-spec :family felix/default-font :size felix/default-font-size :weight felix/default-font-weight)
@@ -30,7 +31,8 @@
 (custom-set-faces!
   `(font-lock-comment-face :slant italic)
   `(font-lock-keyword-face :slant italic)
-  `(lsp-ui-doc-background :background "#16211C") ;; to match kaolin-mono-dark
+  ;; `(lsp-ui-doc-background :background "#16211C") ;; to match dark themes
+  `(lsp-ui-doc-background :background "#f3e7d3") ;; to match light themes
   `(treemacs-root-face :family ,felix/default-font :slant italic :weight normal))
 
 
@@ -57,7 +59,7 @@
 
 
 ;; transparent adjustment, may not work on certain Emacs distro (eg. emacs-plus)
-(doom/set-frame-opacity 92)
+(doom/set-frame-opacity 95)
 
 ;; Useful for showing types in haskell
 (after! lsp-ui
@@ -75,3 +77,4 @@
       telephone-line-height 21
       telephone-line-evil-use-short-tag nil)
 (telephone-line-mode t)
+
