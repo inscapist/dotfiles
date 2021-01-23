@@ -14,6 +14,13 @@ Feel free to open an issue if you need clarification to my configs.
 
 ![Screenshot](screenshot.png)
 
+## What languages has been tested?
+
+- React/Typescript with LSP
+- Haskell with LSP
+- Python with pyright and poetry
+- Elixir
+
 ## What's in the box?
 
 - Somewhat heavily configurated [Emacs config](.doom.d) based on [Doom](https://github.com/hlissner/doom-emacs)
