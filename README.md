@@ -190,9 +190,9 @@ Cmd + e: Rename tab
 Cmd + s: Rename session
 Cmd + Enter: Toggle Full Screen
 
-~ + o: View all open tmux windows
-~ + \: Split tmux pane to the right
-~ + -: Split tmux pane to the bottom
+` + o: View all open tmux windows
+` + \: Split tmux pane to the right
+` + -: Split tmux pane to the bottom
 
 Ctrl + HJKL: Move between panes (even across neovim/tmux)
 ```
