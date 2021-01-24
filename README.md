@@ -12,6 +12,7 @@
 This is my dotfiles.
 Feel free to open an issue if you need clarification to my configs.
 
+![Screenshot](screenshot-light.jpg)
 ![Screenshot](screenshot.png)
 
 ## What languages has been tested?
