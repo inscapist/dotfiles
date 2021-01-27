@@ -1,5 +1,8 @@
 ;;; $DOOMDIR/+editor.el -*- lexical-binding: t; -*-
 
+;; Do not ask for "Confirm exit Emacs"
+(setq confirm-kill-emacs nil)
+
 ;; Switch to the new window after splitting
 (setq evil-split-window-below t
       evil-vsplit-window-right t)

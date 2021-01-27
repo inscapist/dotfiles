@@ -16,8 +16,8 @@
  ;; doom-theme 'doom-miramare
  ;; doom-theme 'darktooth
  ;; doom-theme 'chocolate
- ;; doom-theme 'kaolin-mono-dark
- doom-theme 'kaolin-valley-light
+ doom-theme 'kaolin-mono-dark
+ ;; doom-theme 'kaolin-valley-light
  doom-themes-enable-bold t
  doom-themes-enable-italic t
  doom-font (font-spec :family felix/default-font :size felix/default-font-size :weight felix/default-font-weight)
@@ -61,12 +61,12 @@
 ;; transparent adjustment, may not work on certain Emacs distro (eg. emacs-plus)
 (doom/set-frame-opacity 95)
 
-;; Useful for showing types in haskell
-(after! lsp-ui
-  (setq lsp-ui-doc-enable t
-        lsp-ui-doc-use-childframe t
-        lsp-ui-doc-max-width 300
-        lsp-ui-doc-max-height 200))
+;; Useful for showing types in haskell but obtrusive
+;; (after! lsp-ui
+;;   (setq lsp-ui-doc-enable t
+;;         lsp-ui-doc-use-childframe t
+;;         lsp-ui-doc-max-width 80
+;;         lsp-ui-doc-max-height 20))
 
 
 ;; modeline

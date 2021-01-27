@@ -75,6 +75,8 @@
 ;; Elfeed;
 (map! :leader "o o" #'elfeed)
 
+;; toggle LSP Doc
+(map! :leader "h h" #'lsp-describe-thing-at-point)
 ;; Open terminal in vertical window
 ;; (map! :leader
 ;;       "\\"
