@@ -40,8 +40,9 @@
 (plist-put! +ligatures-extra-symbols
             :and           "⋀"
             :or            "⋁"
-            :return        "↚"
-            :tuple nil)
+            :return        nil
+            :yield         nil
+            :tuple         nil)
 
 ;; ==========================
 ;; Optional
