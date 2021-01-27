@@ -38,6 +38,14 @@
       "s-w"   #'+workspace/close-window-or-workspace
       "s-r"   #'+workspace/rename)
 
+;; Override alchemist-mode
+(map! :after alchemist
+      :map alchemist-mode-map
+      :ne "C-h"   #'evil-window-left
+      :ne "C-l"   #'evil-window-right
+      :ne "C-j"   #'evil-window-down
+      :ne "C-k"   #'evil-window-up)
+
 ;; (map! :map eshell-mode-map
 ;;       :nv "C-h" #'evil-window-left
 ;;       :nv "C-l" #'evil-window-right
