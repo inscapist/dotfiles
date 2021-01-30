@@ -44,7 +44,8 @@
       :ne "C-h"   #'evil-window-left
       :ne "C-l"   #'evil-window-right
       :ne "C-j"   #'evil-window-down
-      :ne "C-k"   #'evil-window-up)
+      :ne "C-k"   #'evil-window-up
+      :ne "g d"   #'alchemist-goto-definition-at-point)
 
 ;; (map! :map eshell-mode-map
 ;;       :nv "C-h" #'evil-window-left

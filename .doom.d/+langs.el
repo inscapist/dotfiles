@@ -5,7 +5,6 @@
 ;; Elixir
 (after! lsp-mode
   (setq lsp-enable-file-watchers nil)
-  (setq lsp-elixir-project-dir "web")
   (add-to-list 'exec-path "~/elixir-ls/release"))
 
 ;; Typescript
