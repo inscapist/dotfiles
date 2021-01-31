@@ -39,7 +39,8 @@
     (defun treemacs-ignore-python-cache-dirs (_filename absolute-path)
       (or
        (cl-search "__pycache__" absolute-path)
-       (cl-search ".pytest_cache" absolute-path)))
+       (cl-search ".pytest_cache" absolute-path)
+       (cl-search "deps" absolute-path)))
     (add-to-list 'treemacs-ignored-file-predicates #'treemacs-ignore-python-cache-dirs)))
 
 ;; Make evil usable in terminal
