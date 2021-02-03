@@ -61,7 +61,7 @@
 
 ;; Themes
 (package! kaolin-themes)
-(package! chocolate-theme)
+; (package! chocolate-theme)
 ; (package! darktooth-theme)
 ; (package! ample-theme)
 ; (package! acme-theme)

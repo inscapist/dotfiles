@@ -6,7 +6,7 @@
 
 (setq felix/default-font "Ellograph CF"
       felix/default-font-size 16
-      felix/default-font-weight 'normal
+      felix/default-font-weight 'light
       felix/ui-font "Unica One"
       felix/ui-font-size 14
       felix/ui-font-weight 'light)
@@ -16,26 +16,37 @@
  ;; doom-theme 'doom-miramare
  ;; doom-theme 'darktooth
  ;; doom-theme 'chocolate
- doom-theme 'kaolin-mono-dark
- ;; doom-theme 'kaolin-valley-light
  doom-themes-enable-bold t
  doom-themes-enable-italic t
  doom-font (font-spec :family felix/default-font :size felix/default-font-size :weight felix/default-font-weight)
  doom-variable-pitch-font (font-spec :family felix/ui-font :size felix/ui-font-size :weight felix/ui-font-weight)
  all-the-icons-scale-factor 0.9)
 
+;; use kaolin theme
+(use-package kaolin-themes
+  :config
+  (load-theme 'kaolin-mono-dark t)
+  (setq kaolin-themes-italic-comments t)
+  (kaolin-treemacs-theme))
 
-;; disable shortmenu
-(remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
 
+;; customize faces. list with SPC-h-F
 (custom-set-faces!
   `(font-lock-comment-face :slant italic)
   `(font-lock-keyword-face :slant italic)
   ;; `(lsp-ui-doc-background :background "#16211C") ;; to match dark themes
-  `(lsp-ui-doc-background :background "#f3e7d3") ;; to match light themes
+  ;; `(lsp-ui-doc-background :background "#f3e7d3") ;; to match light themes
   `(treemacs-root-face :family ,felix/default-font :slant italic :weight normal))
 
 
+;; ==========================
+;; Optional
+;; ==========================
+
+;; disable shortmenu
+;; (remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
+
+;; Customize or disable extra ligatures
 ;; https://www.fileformat.info/info/unicode/category/Sm/list.htm
 (plist-put! +ligatures-extra-symbols
             :and           "⋀"
@@ -44,9 +55,6 @@
             :yield         nil
             :tuple         nil)
 
-;; ==========================
-;; Optional
-;; ==========================
 
 ;; successor of golden-ratio.el
 (use-package zoom
@@ -60,7 +68,7 @@
 
 
 ;; transparent adjustment, may not work on certain Emacs distro (eg. emacs-plus)
-(doom/set-frame-opacity 95)
+(doom/set-frame-opacity 89)
 
 ;; Useful for showing types in haskell but obtrusive
 ;; (after! lsp-ui
