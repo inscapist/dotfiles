@@ -8,7 +8,7 @@
       felix/default-font-size 16
       felix/default-font-weight 'light
       felix/ui-font "Unica One"
-      felix/ui-font-size 14
+      felix/ui-font-size 11
       felix/ui-font-weight 'light)
 
 (setq
@@ -20,7 +20,7 @@
  doom-themes-enable-italic t
  doom-font (font-spec :family felix/default-font :size felix/default-font-size :weight felix/default-font-weight)
  doom-variable-pitch-font (font-spec :family felix/ui-font :size felix/ui-font-size :weight felix/ui-font-weight)
- all-the-icons-scale-factor 0.9)
+ all-the-icons-scale-factor 0.7)
 
 ;; use kaolin theme
 (use-package kaolin-themes
@@ -68,7 +68,7 @@
 
 
 ;; transparent adjustment, may not work on certain Emacs distro (eg. emacs-plus)
-(doom/set-frame-opacity 89)
+(doom/set-frame-opacity 91)
 
 ;; Useful for showing types in haskell but obtrusive
 ;; (after! lsp-ui

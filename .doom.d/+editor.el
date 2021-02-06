@@ -34,7 +34,7 @@
 ;; customize treemacs
 (after! treemacs
   (setq treemacs--width-is-locked nil)
-  (setq treemacs-width 30)
+  (setq treemacs-width 21)
   (with-eval-after-load 'treemacs
     (defun treemacs-ignore-python-cache-dirs (_filename absolute-path)
       (or
