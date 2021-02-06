@@ -126,6 +126,8 @@ brew install vale # modern proselint
 brew install fzf
 $(brew --prefix)/opt/fzf/install
 
+# Install emacs 28
+brew install emacs-head@28 --with-cocoa --with-native-comp --with-native-full-aot --with-modern-icon-doom-cacodemon
 
 # install Nix and cachix, follow the instructions
 curl -L https://nixos.org/nix/install | sh

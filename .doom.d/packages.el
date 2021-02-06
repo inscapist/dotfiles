@@ -53,9 +53,9 @@
 (package! hl-line :disable t) ;; hl-line has huge performance penalty on 4k monitor + retina mac
 
 ;; Extra packages
-(package! graphviz-dot-mode)
 (package! telephone-line)
 (package! zoom)
+;;(package! graphviz-dot-mode)
 ;;(package! nov)
 ;;(package! origami)
 

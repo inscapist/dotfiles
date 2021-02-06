@@ -63,6 +63,7 @@ set updatetime=500
 set shortmess+=c
 set signcolumn=yes
 set foldmethod=manual
+set number
 
 set autoindent                  " Autoindent based on current line
 set tabstop=2 shiftwidth=2 expandtab

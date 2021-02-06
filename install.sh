@@ -36,3 +36,6 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ln -sfn ~/dotfiles/.gitignore_global ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global 
 
+# fix compinit issues
+compaudit | xargs chmod g-w
+

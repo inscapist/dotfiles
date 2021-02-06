@@ -11,43 +11,11 @@ style="yellow"
 
 [aws]
 style = "bold yellow"
-symbol = "  "
 format=' [$profile]($style) '
+
 [aws.region_aliases]
 ap-southeast-1 = "sg"
-ap-southeast-2 = "au"
-
-[battery]
-charging_symbol = "⚡️"
-discharging_symbol = " "
 
 [[battery.display]]
 threshold = 20
 style = "purple"
-
-[golang]
-symbol = " "
-
-[hg_branch]
-symbol = " "
-
-[java]
-symbol = " "
-
-[memory_usage]
-symbol = " "
-
-[nodejs]
-symbol = " "
-
-[package]
-symbol = " "
-
-[php]
-symbol = " "
-
-[python]
-symbol = " "
-
-[ruby]
-symbol = " "
