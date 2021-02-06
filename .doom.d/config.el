@@ -22,6 +22,7 @@
 
 (load! "+bindings")
 (load! "+editor")
+(load! "+hydra")
 (load! "+langs")
 (load! "+org")
 (load! "+ui")

@@ -4,15 +4,15 @@
 (map! :n "r" nil)
 
 ;; Simple sugar
-(map! :nv "S" #'save-buffer
-      :nv "F" #'avy-goto-char-timer
-      :nv "f" #'avy-goto-char-in-line
-      :nv "J" #'evil-scroll-down
-      :nv "K" #'evil-scroll-up
-      :nv "gx" #'browse-url
-      :nv "rr" #'evil-ex-nohighlight
-      :nv "rb" #'revert-bufferm
-      :nv "rc" #'lsp-workspace-restart)
+(map!
+ ;; :nv "S" #'save-buffer
+ :nv "F" #'avy-goto-char-timer
+ :nv "J" #'evil-scroll-down
+ :nv "K" #'evil-scroll-up
+ :nv "gx" #'browse-url
+ :nv "rr" #'evil-ex-nohighlight
+ :nv "rb" #'revert-bufferm
+ :nv "rc" #'lsp-workspace-restart)
 
 ;; Easier navigation
 (map! :ne "C-h"   #'evil-window-left
@@ -38,7 +38,7 @@
       "s-w"   #'+workspace/close-window-or-workspace
       "s-r"   #'+workspace/rename)
 
-;; Override alchemist-mode
+;; Elixir. Override alchemist-mode
 (map! :after alchemist
       :map alchemist-mode-map
       :ne "C-h"   #'evil-window-left
@@ -46,12 +46,6 @@
       :ne "C-j"   #'evil-window-down
       :ne "C-k"   #'evil-window-up
       :ne "g d"   #'alchemist-goto-definition-at-point)
-
-;; (map! :map eshell-mode-map
-;;       :nv "C-h" #'evil-window-left
-;;       :nv "C-l" #'evil-window-right
-;;       :nv "C-j" #'evil-window-down
-;;       :nv "C-k" #'evil-window-up)
 
 ;; Add org-agenda keybindings
 (map! :after evil-org-agenda
@@ -66,13 +60,6 @@
        "s-w"   #'+workspace/close-window-or-workspace
        "s-r"   #'+workspace/rename))
 
-;; Folding
-(map! :leader
-      "tt" #'origami-mode)
-(map! :after origami
-      (:map origami-mode-map
-       [tab] #'origami-toggle-node))
-
 ;; Easier window split
 (map! :leader
       "\\" #'evil-window-vsplit
@@ -86,10 +73,3 @@
 
 ;; toggle LSP Doc
 (map! :leader "h h" #'lsp-describe-thing-at-point)
-;; Open terminal in vertical window
-;; (map! :leader
-;;       "\\"
-;;       (lambda () (interactive)
-;;         (progn
-;;           (call-interactively #'evil-window-vsplit)
-;;           (call-interactively #'+vterm/here))))

@@ -47,7 +47,6 @@
 ;(package! builtin-package :recipe (:branch "develop"))
 
 ;; Disable
-(package! evil-snipe :disable t)
 (package! writegood-mode :disable t)
 (package! undo-fu-session :disable t)
 (package! hl-line :disable t) ;; hl-line has huge performance penalty on 4k monitor + retina mac
@@ -55,9 +54,9 @@
 ;; Extra packages
 (package! telephone-line)
 (package! zoom)
+(package! origami)
 ;;(package! graphviz-dot-mode)
 ;;(package! nov)
-;;(package! origami)
 
 ;; Themes
 (package! kaolin-themes)
@@ -68,6 +67,5 @@
 ; (package! tao-theme)
 
 ;; Use latest packages
-(package! doom-themes :recipe (:branch "master"))
 (package! format-all :recipe (:branch "master"))
 ;; (package! lsp-mode :recipe (:branch "master"))
