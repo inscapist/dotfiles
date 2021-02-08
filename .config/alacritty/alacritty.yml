@@ -16,13 +16,13 @@ font:
   italic:
     family: Ellograph CF
     style: Thin Italic
-  size: 13
+  size: 14
   offset:
     x: 0
     y: 0
   use_thin_strokes: true
 
-background_opacity: 0.9
+background_opacity: 1.0
 live_config_reload: true
 
 # Colors (Gruvbox dark)

@@ -4,18 +4,22 @@
 (map! :leader
       "z" #'hydra-folding/body)
 
+;; https://github.com/gregsexton/origami.el
 (defhydra hydra-folding (:color red)
-  "
-  fold mode (_z_)
-  _o_pen node    _n_ext fold       toggle _f_orward  _s_how current only
-  _c_lose node   _p_revious fold   toggle _a_ll      _t_oggle fold
-  "
-  ("z" origami-mode)
-  ("o" origami-open-node)
-  ("c" origami-close-node)
-  ("n" origami-next-fold)
-  ("p" origami-previous-fold)
-  ("f" origami-forward-toggle-node)
-  ("t" origami-toggle-node)
-  ("a" origami-toggle-all-nodes)
-  ("s" origami-show-only-node))
+  ("Z" origami-mode "Toggle origami mode" :column "Main")
+  ("S" origami-show-only-node "Close everything except folds")
+  ("u" origami-undo "Undo folds")
+  ("r" origami-redo "Redo folds")
+  ("R" origami-reset "Reset folds")
+
+  ("C" origami-close-all-nodes "Close all folds" :column "Fold/Unfold")
+  ("O" origami-open-all-nodes "Open all folds")
+  ("c" origami-close-node "Close a fold node")
+  ("o" origami-open-node "Open a fold node")
+  ("t" origami-toggle-node "Toggle a fold")
+  ("T" origami-toggle-all-nodes "Toggle every folds")
+
+  ("j" origami-next-fold "Next fold" :column "Movement")
+  ("k" origami-previous-fold "Prev fold")
+
+  ("q" nil "quit menu" :color blue :column nil))

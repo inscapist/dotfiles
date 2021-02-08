@@ -22,12 +22,9 @@
 
 (load! "+bindings")
 (load! "+editor")
+(load! "+extras")
 (load! "+hydra")
 (load! "+langs")
 (load! "+org")
 (load! "+ui")
 
-;; optional
-;; (load! "+mood-line")
-;; (load! "+navigate")
-;; (load! "+reader")

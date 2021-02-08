@@ -1,5 +1,10 @@
 #!/usr/bin/env sh
 
+# necessary to load scripting-addition during startup on macOS Big Sur
+# *yabai --load-sa* is configured to run through sudo without a password
+sudo yabai --load-sa
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+
 # global settings
 yabai -m config mouse_follows_focus          off
 yabai -m config focus_follows_mouse          off
@@ -9,9 +14,9 @@ yabai -m config window_opacity               on
 yabai -m config window_opacity_duration      0.0
 yabai -m config window_shadow                on
 yabai -m config insert_feedback_color        0xaad75f5f
-yabai -m config active_window_opacity        1.0
-yabai -m config normal_window_opacity        1.0
-yabai -m config split_ratio                  0.50
+yabai -m config active_window_opacity        0.97
+yabai -m config normal_window_opacity        0.88
+yabai -m config split_ratio                  0.60
 yabai -m config auto_balance                 off
 yabai -m config mouse_modifier               fn
 yabai -m config mouse_action1                move
@@ -27,13 +32,12 @@ yabai -m config window_gap                   7
 
 # ignore
 yabai -m rule --add app="^System Preferences$" manage=off
-yabai -m rule --add app=Steam manage=off
 
 # default space arrangement
 yabai -m rule --add app=Vivaldi space=1
-yabai -m rule --add app=Emacs space=2
-yabai -m rule --add app=Spotify space=4
+yabai -m rule --add app=Emacs space=2 opacity=0.91
+yabai -m rule --add app=Spotify space=4 
 yabai -m rule --add app=WhatsApp space=4
-yabai -m rule --add app=Emacs manage=on
+yabai -m rule --add app=Books manage=on opacity=1.0
 
 echo "yabai configuration loaded.."

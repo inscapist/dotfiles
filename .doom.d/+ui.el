@@ -5,7 +5,7 @@
 ;; =======================================================================
 
 (setq felix/default-font "Ellograph CF"
-      felix/default-font-size 14
+      felix/default-font-size 16
       felix/default-font-weight 'light
       felix/ui-font "Unica One"
       felix/ui-font-size 11
@@ -39,51 +39,12 @@
   `(treemacs-root-face :family ,felix/default-font :slant italic :weight normal))
 
 
-;; ==========================
-;; Optional
-;; ==========================
-
-;; disable shortmenu
-;; (remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
-
-;; Customize or disable extra ligatures
-;; https://www.fileformat.info/info/unicode/category/Sm/list.htm
-(plist-put! +ligatures-extra-symbols
-            :and           "⋀"
-            :or            "⋁"
-            :return        nil
-            :yield         nil
-            :tuple         nil)
+;; uniformize doom-modeline style
+(after! doom-modeline
+  (display-battery-mode 1)
+  (setq doom-modeline-lsp t)
+  (setq doom-modeline-env-version t))
 
 
-;; successor of golden-ratio.el
-(use-package zoom
-  :hook (doom-first-input . zoom-mode)
-  :config
-  (setq zoom-size '(0.618 . 0.618)
-        zoom-ignored-major-modes '(dired-mode vterm-mode help-mode helpful-mode rxt-help-mode help-mode-menu org-mode)
-        zoom-ignored-buffer-names '("*doom:scratch*" "*info*" "*helpful variable: argv*")
-        zoom-ignored-buffer-name-regexps '("^\\*calc" "\\*helpful variable: .*\\*")
-        zoom-ignore-predicates (list (lambda () (< (count-lines (point-min) (point-max)) 20)))))
-
-
-;; transparent adjustment, may not work on certain Emacs distro (eg. emacs-plus)
-(doom/set-frame-opacity 91)
-
-;; Useful for showing types in haskell but obtrusive
-;; (after! lsp-ui
-;;   (setq lsp-ui-doc-enable t
-;;         lsp-ui-doc-use-childframe t
-;;         lsp-ui-doc-max-width 80
-;;         lsp-ui-doc-max-height 20))
-
-
-;; modeline
-(setq telephone-line-primary-left-separator 'telephone-line-cubed-left
-      telephone-line-secondary-left-separator 'telephone-line-cubed-hollow-left
-      telephone-line-primary-right-separator 'telephone-line-cubed-right
-      telephone-line-secondary-right-separator 'telephone-line-cubed-hollow-right
-      telephone-line-height 21
-      telephone-line-evil-use-short-tag nil)
-(telephone-line-mode t)
-
+;; Yabai can handle this better, globally
+;; (doom/set-frame-opacity 88)
