@@ -5,7 +5,7 @@
 ;; =======================================================================
 
 (setq felix/default-font "Ellograph CF"
-      felix/default-font-size 16
+      felix/default-font-size 15
       felix/default-font-weight 'light
       felix/ui-font "Unica One"
       felix/ui-font-size 11

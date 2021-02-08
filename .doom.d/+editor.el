@@ -35,13 +35,14 @@
 (after! treemacs
   (setq treemacs--width-is-locked nil)
   (setq treemacs-width 21)
+  (treemacs-git-mode 'extended)
   (with-eval-after-load 'treemacs
     (defun treemacs-ignore-python-cache-dirs (_filename absolute-path)
       (or
        (cl-search "__pycache__" absolute-path)
-       (cl-search ".pytest_cache" absolute-path)
-       (cl-search "deps" absolute-path)))
-    (add-to-list 'treemacs-ignored-file-predicates #'treemacs-ignore-python-cache-dirs)))
+       (cl-search ".pytest_cache" absolute-path)))
+    (add-to-list 'treemacs-ignored-file-predicates #'treemacs-ignore-python-cache-dirs)
+    (add-to-list 'treemacs-pre-file-insert-predicates #'treemacs-is-file-git-ignored?)))
 
 ;; Make evil usable in terminal
 (when (not (display-graphic-p))

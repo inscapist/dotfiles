@@ -2,10 +2,12 @@
 
 ;; Unbind prefixes
 (map! :n "r" nil)
+(map! :map evil-snipe-mode-map :nmo "S" nil)
 
 
 ;; Simple sugar
 (map!
+ :nv "S" #'save-buffer
  :nv "F" #'avy-goto-char-timer
  :nv "J" #'evil-scroll-down
  :nv "K" #'evil-scroll-up
