@@ -30,6 +30,8 @@ alias genrand="openssl rand -hex 32"
 alias lg="lazygit"
 alias po="poetry"
 alias pos="poetry shell"
+alias yya="yarn global add"
+alias ya="yarn add"
 alias zap="brew uninstall --cask --zap"
 
 alias doom-cache-clear="rm -rf ~/.emacs.d/.local/cache/*"
