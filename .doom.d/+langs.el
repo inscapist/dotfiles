@@ -5,7 +5,7 @@
 ;; Elixir
 (after! lsp-mode
   (setq lsp-enable-file-watchers nil)
-  (add-to-list 'exec-path "~/elixir-ls/release"))
+  (add-to-list 'exec-path "~/elixir-ls"))
 
 ;; Typescript
 (setq-hook! 'typescript-mode-hook +format-with-lsp nil)
