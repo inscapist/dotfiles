@@ -80,6 +80,7 @@ shift + cmd - 8 : osascript -e "set volume output volume ((output volume of (get
 
 # mission control with thumbnail (requires cliclick)
 shift + cmd - m : cliclick -r m:0,0
+ctrl - up : cliclick -r m:0,0
 
 # hide mouse cursor
 shift + cmd - q : cliclick m:2560,1440
