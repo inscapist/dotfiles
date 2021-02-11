@@ -14,12 +14,15 @@
 
   ("C" origami-close-all-nodes "Close all folds" :column "Fold/Unfold")
   ("O" origami-open-all-nodes "Open all folds")
-  ("c" origami-close-node "Close a fold node")
-  ("o" origami-open-node "Open a fold node")
+  ("c" origami-close-node-recursively "Close a fold node (recursively)")
+  ("o" origami-open-node-recursively "Open a fold node (recursively)")
   ("t" origami-toggle-node "Toggle a fold")
   ("T" origami-toggle-all-nodes "Toggle every folds")
+  ("f" origami-forward-toggle-node "Search fold and toggle")
 
-  ("j" origami-next-fold "Next fold" :column "Movement")
-  ("k" origami-previous-fold "Prev fold")
+  ("C-j" origami-next-fold "Next fold" :column "Movement")
+  ("C-k" origami-previous-fold "Prev fold")
+  ("j" evil-next-line "Next line")
+  ("k" evil-previous-line "Previous line")
 
   ("q" nil "quit menu" :color blue :column nil))
