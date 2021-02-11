@@ -81,7 +81,7 @@ nnoremap <space>ss :%s///g
 nnoremap <space>sc :cfdo %s///g \| update
 
 " Denite shorcuts
-nnoremap <silent> <expr> <space><space> (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Denite file/rec -start-filter=1\<cr>"
+nnoremap <silent> <expr> <space><space> (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Denite file/rec \<cr>"
 nnoremap <silent> <expr> <space>or (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Denite -resume\<cr>"
 nnoremap <silent> <expr> <space>b (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Denite buffer -auto-action=preview -no-empty\<cr>"
 nnoremap <silent> <expr> <space>fw (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":\<c-u>Denite grep:. -auto-action=preview -no-empty\<cr>"

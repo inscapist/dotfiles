@@ -113,6 +113,5 @@ call denite#custom#option('_', {
        \ 'auto_resize': 1,
        \ 'highlight_matched_char': 'Underlined',
        \ 'highlight_mode_normal': 'CursorLine',
-       \ 'start_filter': 0,
        \})
 
