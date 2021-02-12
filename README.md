@@ -12,9 +12,6 @@
 This is my dotfiles.
 Feel free to open an issue if you need clarification to my configs.
 
-![Screenshot](screenshot-light.jpg)
-![Screenshot](screenshot.png)
-
 ## What languages has been tested?
 
 - React/Typescript with LSP
@@ -32,7 +29,7 @@ Feel free to open an issue if you need clarification to my configs.
 - Simple and quick [Neovim config](.config/nvim)
 - A working tiling window manager configuration for Mac (with [yabai](.yabairc))
 - Minimal mouse dependency with [skhd](.skhdrc)
-- Embedded [floating window](.config/nvim/modules/floating-window) in Vim, see [screenshot](screenshot-vim-modal.png)
+- Embedded [floating window](.config/nvim/modules/floating-window) in Vim, see [screenshot](gallery/screenshot-vim-modal.png)
 - Seamless integration between [tmux](.tmux.conf), [vim](bin/isvim2) and [alacritty](.config/alacritty)
 - [Shows](bin/whats-playing) currently played Spotify song
 - Customized command prompt with [starship](.config/starship.toml)
@@ -116,6 +113,12 @@ Find packages at https://search.nixos.org/packages
 - `nix-env -iA nixpkgs.<package-name>` installs a package with exact match
 - `nix-env -q` shows installed packages
 - `nix-env --uninstall <installed-package>` uninstalls package
+
+# Gallery
+
+![Screenshot](gallery/screenshot.png)
+![Screenshot](gallery/screenshot-light.jpg)
+![Screenshot](gallery/screenshot-miramare.png)
 
 ```sh
 # Essential libraries with brew
