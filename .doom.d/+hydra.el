@@ -17,6 +17,7 @@
   ("c" origami-close-node-recursively "Close a fold node (recursively)")
   ("o" origami-open-node-recursively "Open a fold node (recursively)")
   ("t" origami-toggle-node "Toggle a fold")
+  ("<tab>" origami-toggle-node "Toggle a fold")
   ("T" origami-toggle-all-nodes "Toggle every folds")
   ("f" origami-forward-toggle-node "Search fold and toggle")
 
@@ -24,5 +25,7 @@
   ("C-k" origami-previous-fold "Prev fold")
   ("j" evil-next-line "Next line")
   ("k" evil-previous-line "Previous line")
+  ("J" evil-scroll-down "Scroll down")
+  ("K" evil-scroll-up "Scroll up")
 
   ("q" nil "quit menu" :color blue :column nil))

@@ -6,7 +6,7 @@
 
 (setq felix/default-font "Ellograph CF"
       felix/default-font-size 15
-      felix/default-font-weight 'light
+      felix/default-font-weight 'light ;; refer font-weight-table variable
       felix/ui-font "Unica One"
       felix/ui-font-size 11
       felix/ui-font-weight 'light)
@@ -32,8 +32,9 @@
 
 ;; customize faces. list with SPC-h-F
 (custom-set-faces!
-  `(font-lock-comment-face :slant italic)
-  `(font-lock-keyword-face :slant italic)
+  `(font-lock-comment-face :slant italic :weight thin)
+  `(font-lock-keyword-face :slant italic :weight thin :height 1.0)
+  `(font-lock-function-name-face :slant normal :weight normal)
   ;; `(lsp-ui-doc-background :background "#16211C") ;; to match dark themes
   ;; `(lsp-ui-doc-background :background "#f3e7d3") ;; to match light themes
   `(treemacs-root-face :family ,felix/default-font :slant italic :weight normal))
