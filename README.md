@@ -120,6 +120,8 @@ Find packages at https://search.nixos.org/packages
 ![Screenshot](gallery/screenshot-light.jpg)
 ![Screenshot](gallery/screenshot-miramare.png)
 
+# Extras
+
 ```sh
 # Essential libraries with brew
 brew install cliclick starship yabai shkd gh coreutils fontconfig
