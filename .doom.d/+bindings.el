@@ -42,11 +42,6 @@
  "s-w"   #'+workspace/close-window-or-workspace
  "s-r"   #'+workspace/rename)
 
-;; Elixir. Override alchemist-mode
-(map! :after alchemist
-      :map alchemist-mode-map
-      :ne "g d"   #'alchemist-goto-definition-at-point)
-
 ;; Add org-agenda keybindings
 (map! :after evil-org-agenda
       (:map evil-org-agenda-mode-map :m "S" nil)
