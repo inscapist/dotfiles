@@ -48,6 +48,8 @@
 
 ;; Disable
 (package! undo-fu-session :disable t)
+(package! alchemist :disable t)
+(package! alchemist-company :disable t)
 
 ;; writegood can be annoying
 ;; (package! writegood-mode :disable t)
