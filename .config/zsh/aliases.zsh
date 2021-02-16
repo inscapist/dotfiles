@@ -37,6 +37,7 @@ alias zap="brew uninstall --cask --zap"
 
 alias doom-cache-clear="rm -rf ~/.emacs.d/.local/cache/*"
 alias dns-clear="sudo killall -HUP mDNSResponder;sudo dscacheutil -flushcache"
+alias reset-multipass="ps -ef | grep -i multipass | awk '{print "sudo kill -9 "$2}' | sh"
 
 # aws aliases
 alias ec2-list="aws ec2 describe-instances | jq '[.Reservations | .[] | .Instances | .[] | {InstanceId: .InstanceId, State: .State, SubnetId: .SubnetId, VpcId: .VpcId, IamInstanceProfile: .IamInstanceProfile, Name: (.Tags[]|select(.Key==\"Name\")|.Value)}]'"
