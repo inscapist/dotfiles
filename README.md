@@ -79,6 +79,7 @@ Pick any distro that you like.
 1. [Emacs Mac Port (recommended)](https://github.com/railwaycat/homebrew-emacsmacport)
 2. [Emacs Plus](https://github.com/d12frosted/homebrew-emacs-plus)
 3. [GccEmacs](https://github.com/twlz0ne/nix-gccemacs-darwin)
+4. [Emacs Head](https://github.com/daviderestivo/homebrew-emacs-head)
 
 Example:
 ```sh
