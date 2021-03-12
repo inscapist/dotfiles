@@ -82,6 +82,7 @@ Pick any distro that you like.
 4. [Emacs Head](https://github.com/daviderestivo/homebrew-emacs-head)
 
 Example:
+
 ```sh
 # Takes about 15 mins
 brew install emacs-head@28 --with-cocoa --with-native-comp --with-modern-icon-black-dragon
@@ -123,12 +124,6 @@ Find packages at https://search.nixos.org/packages
 - `nix-env -iA nixpkgs.<package-name>` installs a package with exact match
 - `nix-env -q` shows installed packages
 - `nix-env --uninstall <installed-package>` uninstalls package
-
-# Gallery
-
-![Screenshot](gallery/screenshot.png)
-![Screenshot](gallery/screenshot-light.jpg)
-![Screenshot](gallery/screenshot-miramare.png)
 
 # Extras
 
