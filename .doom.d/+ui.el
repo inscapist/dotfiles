@@ -25,7 +25,7 @@
 ;; use kaolin theme
 (use-package kaolin-themes
   :config
-  (load-theme 'kaolin-mono-dark t)
+  (load-theme 'kaolin-dark t)
   (setq kaolin-themes-italic-comments t)
   (kaolin-treemacs-theme))
 
@@ -38,13 +38,6 @@
   ;; `(lsp-ui-doc-background :background "#16211C") ;; to match dark themes
   ;; `(lsp-ui-doc-background :background "#f3e7d3") ;; to match light themes
   `(treemacs-root-face :family ,felix/default-font :slant italic :weight normal))
-
-
-;; uniformize doom-modeline style
-(after! doom-modeline
-  (display-battery-mode 1)
-  (setq doom-modeline-lsp t)
-  (setq doom-modeline-env-version t))
 
 
 ;; Yabai can handle this better, globally
