@@ -41,5 +41,6 @@ yabai -m rule --add app=Safari space=4
 yabai -m rule --add app=WhatsApp space=5
 yabai -m rule --add app=Discord space=5
 yabai -m rule --add app=Books manage=on opacity=1.0
+yabai -m rule --add app=Preview opacity=1.0
 
 echo "yabai configuration loaded.."

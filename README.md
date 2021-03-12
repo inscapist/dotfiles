@@ -80,6 +80,15 @@ Pick any distro that you like.
 2. [Emacs Plus](https://github.com/d12frosted/homebrew-emacs-plus)
 3. [GccEmacs](https://github.com/twlz0ne/nix-gccemacs-darwin)
 
+Example:
+```sh
+# Takes about 15 mins
+brew install emacs-head@28 --with-cocoa --with-native-comp --with-modern-icon-black-dragon
+
+# Can take up to an hour
+brew install emacs-head@28 --with-cocoa --with-native-comp --with-native-full-aot --with-modern-icon-black-dragon
+```
+
 Read [here](https://www.emacswiki.org/emacs/GccEmacs) about GccEmacs
 
 ### Install doom emacs
