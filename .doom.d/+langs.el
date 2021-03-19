@@ -15,3 +15,11 @@
 (setq-hook! 'web-mode-hook +format-with 'prettier)
 (setq-hook! 'html-mode-hook +format-with 'prettier)
 
+
+;; electric rjsx
+;; https://github.com/felipeochoa/rjsx-mode/issues/112
+(defun +javascript-rjsx-electric-gt-a (_)
+  (when (and (looking-back "<>")
+             (looking-at-p "/>"))
+    (save-excursion (insert "<"))))
+(advice-add #'rjsx-electric-gt :after #'+javascript-rjsx-electric-gt-a)
