@@ -53,3 +53,7 @@
 ;; origami
 (global-origami-mode)
 (add-hook 'lsp-after-open-hook #'lsp-origami-try-enable)
+
+
+;; ace window fix
+(require 'ace-window)
