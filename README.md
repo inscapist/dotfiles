@@ -15,9 +15,11 @@ Feel free to open an issue if you need clarification to my configs.
 ## What languages has been tested?
 
 - React/Typescript with LSP
+- Jsx support with rjsx-mode
 - Haskell with LSP
 - Python with pyright and poetry
 - Elixir
+- Clojure (WIP)
 
 ## What's in the box?
 
