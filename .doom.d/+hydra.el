@@ -18,6 +18,7 @@
   ("o" origami-open-node-recursively "Open a fold node (recursively)")
   ("t" origami-toggle-node "Toggle a fold")
   ("<tab>" origami-toggle-node "Toggle a fold")
+  ("SPC" origami-toggle-node "Toggle a fold")
   ("T" origami-toggle-all-nodes "Toggle every folds")
   ("f" origami-forward-toggle-node "Search fold and toggle")
 

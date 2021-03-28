@@ -7,14 +7,8 @@
   (setq lsp-enable-file-watchers nil)
   (add-to-list 'exec-path "~/elixir-ls"))
 
-;; Typescript
-(setq-hook! 'typescript-mode-hook +format-with-lsp nil)
-(setq-hook! 'typescript-tsx-mode-hook +format-with-lsp nil)
-
-;; Web/HTML/Js
-(setq-hook! 'web-mode-hook +format-with 'prettier)
-(setq-hook! 'html-mode-hook +format-with 'prettier)
-
+;; disable lsp formatting
+(setq +format-with-lsp nil)
 
 ;; electric rjsx
 ;; https://github.com/felipeochoa/rjsx-mode/issues/112

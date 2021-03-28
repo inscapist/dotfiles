@@ -25,7 +25,7 @@
 ;; use kaolin theme
 (use-package kaolin-themes
   :config
-  (load-theme 'kaolin-dark t)
+  (load-theme 'kaolin-mono-dark t)
   (setq kaolin-themes-italic-comments t)
   (kaolin-treemacs-theme))
 
