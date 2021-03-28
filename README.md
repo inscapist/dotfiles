@@ -14,7 +14,7 @@ Feel free to open an issue if you need clarification to my configs.
 
 ## What languages has been tested?
 
-- Latex
+- LaTex
 - React/Typescript with LSP
 - Jsx support with rjsx-mode
 - Haskell with LSP
@@ -312,10 +312,10 @@ nnoremap <silent> J :call ScrollQuarter('down')<CR>
 
 [More here](https://github.com/sagittaros/dotfiles/blob/master/.config/nvim/modules/keymaps.vim)
 
-### Latex workflow
+### LaTex workflow
 
 To compile the document, `C-c C-c` and select `LaTex` in the menu.
-To preview Latex while editing, `C-c C-v`. I use "Skim.app" for previewing
+To preview LaTex while editing, `C-c C-v`. I use "Skim.app" for previewing
 
 ## TODO
 
