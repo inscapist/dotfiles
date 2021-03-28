@@ -14,6 +14,7 @@ Feel free to open an issue if you need clarification to my configs.
 
 ## What languages has been tested?
 
+- Latex
 - React/Typescript with LSP
 - Jsx support with rjsx-mode
 - Haskell with LSP
@@ -179,7 +180,14 @@ yarn global add pyright
 
 # required by org +roam
 nix-env -iA nixpkgs.sqlite # it is required for org-roam to work properly
-brew cask install mactex
+
+# LATEX and some fonts (See latex keybindings at the bottom of this doc)
+brew install --cask mactex
+brew install --cask skim # preview app
+brew install latexindent
+brew install --cask font-gentium-plus
+brew install --cask font-tex-gyre-pagella
+brew install --cask font-tex-gyre-pagella-math
 ```
 
 ## Configuration
@@ -303,6 +311,11 @@ nnoremap <silent> J :call ScrollQuarter('down')<CR>
 ```
 
 [More here](https://github.com/sagittaros/dotfiles/blob/master/.config/nvim/modules/keymaps.vim)
+
+### Latex workflow
+
+To compile the document, `C-c C-c` and select `LaTex` in the menu.
+To preview Latex while editing, `C-c C-v`. I use "Skim.app" for previewing
 
 ## TODO
 
