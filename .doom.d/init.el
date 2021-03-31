@@ -78,9 +78,8 @@
        ;;vterm             ; the best terminal emulation in Emacs
 
        :checkers
-       syntax              ; tasing you for every semicolon you forget
-       spell
-       ;;(spell +flyspell) ; tasing you for misspelling mispelling
+       (syntax +childframe)              ; tasing you for every semicolon you forget
+       ;;(spell +flyspell) ;; SPC t s to toggle
        ;;grammar           ; tasing grammar mistake every you make
 
        :tools

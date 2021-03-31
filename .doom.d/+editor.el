@@ -10,8 +10,8 @@
 ;; Silence all that useless output
 (setq direnv-always-show-summary nil)
 
-;; Display line number
-(setq display-line-numbers-type t)
+;; Display line number, use `SPC t l' to toggle
+(setq display-line-numbers-type nil)
 
 ;; History & backup settings (save nothing, that's what git is for)
 (setq auto-save-default nil

@@ -5,7 +5,7 @@
 ;; =======================================================================
 
 (setq felix/default-font "Ellograph CF"
-      felix/default-font-size 13
+      felix/default-font-size 14
       felix/default-font-weight 'light ;; refer font-weight-table variable
       felix/ui-font "Unica One"
       felix/ui-font-size 11
@@ -42,3 +42,6 @@
 
 ;; Yabai can handle this better, globally
 ;; (doom/set-frame-opacity 88)
+
+;; thinner modeline for (modeline +light)
+(setq +modeline-height 20)
