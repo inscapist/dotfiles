@@ -9,7 +9,9 @@
       felix/default-font-weight 'light ;; refer font-weight-table variable
       felix/ui-font "Unica One"
       felix/ui-font-size 11
-      felix/ui-font-weight 'light)
+      felix/ui-font-weight 'light
+      felix/modeline-font "Ellograph CF"
+      felix/modeline-height 0.94)
 
 (setq
  ;; ;; choose your pokemon =>
@@ -35,6 +37,9 @@
   `(font-lock-comment-face :slant italic :weight thin)
   `(font-lock-keyword-face :slant italic :weight thin :height 1.0)
   `(font-lock-function-name-face :slant normal :weight normal)
+  `(mode-line :height ,felix/modeline-height :family ,felix/modeline-font)
+  `(mode-line-inactive :height ,felix/modeline-height ,felix/modeline-font)
+  ;; ;; lsp UI only
   ;; `(lsp-ui-doc-background :background "#16211C") ;; to match dark themes
   ;; `(lsp-ui-doc-background :background "#f3e7d3") ;; to match light themes
   `(treemacs-root-face :family ,felix/default-font :slant italic :weight normal))
@@ -44,4 +49,4 @@
 ;; (doom/set-frame-opacity 88)
 
 ;; thinner modeline for (modeline +light)
-(setq +modeline-height 20)
+(setq +modeline-height 18)
