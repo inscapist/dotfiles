@@ -27,6 +27,10 @@
  :ne "s-n"   #'+workspace/new
  :ne "s-w"   #'+workspace/close-window-or-workspace
  :ne "s-r"   #'+workspace/rename)
+(map! :leader
+      "o o" #'dired-jump
+      "o O" #'projectile-dired)
+
 
 ;; Add/override treemacs keybindings
 (map!
@@ -64,7 +68,7 @@
 (map! :leader "w w" #'ace-window)
 
 ;; Elfeed;
-(map! :leader "o o" #'elfeed)
+(map! :leader "e l" #'elfeed)
 
 ;; toggle LSP Doc
 (map! :leader "h h" #'lsp-describe-thing-at-point)
