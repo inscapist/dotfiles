@@ -31,6 +31,9 @@
       "o o" #'dired-jump
       "o O" #'projectile-dired)
 
+(map! :after ranger
+      (:map ranger-mode-map
+       [escape] #'ranger-close ))
 
 ; ;; Add/override treemacs keybindings
 ; (map!
