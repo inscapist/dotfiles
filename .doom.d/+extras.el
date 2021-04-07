@@ -6,12 +6,12 @@
 
 ;; Customize or disable extra ligatures
 ;; https://www.fileformat.info/info/unicode/category/Sm/list.htm
-(plist-put! +ligatures-extra-symbols
-            :and           "⋀"
-            :or            "⋁"
-            :return        nil
-            :yield         nil
-            :tuple         nil)
+;; (plist-put! +ligatures-extra-symbols
+;;             :and           "⋀"
+;;             :or            "⋁"
+;;             :return        nil
+;;             :yield         nil
+;;             :tuple         nil)
 
 
 ;; successor of golden-ratio.el
