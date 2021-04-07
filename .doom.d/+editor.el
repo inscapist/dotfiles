@@ -58,3 +58,5 @@
 (add-hook 'lsp-after-open-hook #'lsp-origami-try-enable)
 
 
+;; https://emacs.stackexchange.com/questions/28135/in-evil-mode-how-can-i-prevent-adding-to-the-kill-ring-when-i-yank-text-visual
+(setq-default evil-kill-on-visual-paste nil)
