@@ -33,7 +33,7 @@
 ;;         lsp-ui-doc-max-height 20))
 
 
-;; telephone modeline (doom-modeline alternative)
+;; ;; telephone modeline (doom-modeline alternative)
 ;; (setq telephone-line-primary-left-separator 'telephone-line-cubed-left
 ;;       telephone-line-secondary-left-separator 'telephone-line-cubed-hollow-left
 ;;       telephone-line-primary-right-separator 'telephone-line-cubed-right
