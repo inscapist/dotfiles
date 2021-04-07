@@ -317,6 +317,6 @@ nnoremap <silent> J :call ScrollQuarter('down')<CR>
 To compile the document, `C-c C-c` and select `LaTex` in the menu.
 To preview LaTex while editing, `C-c C-v`. I use "Skim.app" for previewing
 
-## TODO
+## Some Reference and Reading Materials
 
-- Write a flycheck's checker for =vale=
+- [How to learn Nix](https://ianthehenry.com/posts/how-to-learn-nix/)
