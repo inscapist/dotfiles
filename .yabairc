@@ -24,19 +24,19 @@ yabai -m config mouse_action2 resize
 
 # general space settings
 yabai -m config layout bsp
-yabai -m config top_padding 15
-yabai -m config bottom_padding 15
-yabai -m config left_padding 15
-yabai -m config right_padding 15
-yabai -m config window_gap 7
+yabai -m config top_padding 14
+yabai -m config bottom_padding 14
+yabai -m config left_padding 14
+yabai -m config right_padding 14
+yabai -m config window_gap 6
 
 # ignore
 yabai -m rule --add app="^System Preferences$" manage=off
 
 # default space arrangement
 yabai -m rule --add app=Vivaldi space=1
-yabai -m rule --add app=Emacs space=2 opacity=0.91
-yabai -m rule --add app=Spotify space=4
+yabai -m rule --add app=Emacs space=2 opacity=0.88
+yabai -m rule --add app=Spotify space=4 opacity=1.0
 yabai -m rule --add app=Safari space=4
 yabai -m rule --add app=WhatsApp space=5
 yabai -m rule --add app=Discord space=5
