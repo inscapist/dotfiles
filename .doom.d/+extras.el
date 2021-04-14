@@ -22,7 +22,8 @@
         zoom-ignored-major-modes '(vterm-mode help-mode helpful-mode rxt-help-mode help-mode-menu org-mode)
         zoom-ignored-buffer-names '("*doom:scratch*" "*info*" "*helpful variable: argv*")
         zoom-ignored-buffer-name-regexps '("^\\*calc" "\\*helpful variable: .*\\*")
-        zoom-ignore-predicates (list (lambda () (< (count-lines (point-min) (point-max)) 10)))))
+        ;; zoom-ignore-predicates (list (lambda () (< (count-lines (point-min) (point-max)) 10)))
+        ))
 
 
 ;; ;; Useful for showing types in haskell but obtrusive
