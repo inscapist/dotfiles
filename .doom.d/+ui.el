@@ -6,7 +6,7 @@
 
 ;; custom variables
 (setq felix/default-font "Ellograph CF"
-      felix/default-font-size 17
+      felix/default-font-size 16
       felix/default-font-weight 'light ;; refer font-weight-table variable
       felix/muted-font-height 0.95
       felix/modeline-font "Ellograph CF"
