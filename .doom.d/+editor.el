@@ -22,30 +22,30 @@
 ;; Avy is the best
 (setq avy-all-windows t)
 
-; Lsp optimization
+;; Lsp optimization
 (setq read-process-output-max (* 1024 1024)) ;; 1mb
 
-; disable symbol highlighting
+;; disable symbol highlighting
 (setq lsp-enable-symbol-highlighting nil)
 
 ;; start with lisp interaction mode in scratch buffer
 (setq doom-scratch-initial-major-mode 'lisp-interaction-mode)
 
-; ;; customize treemacs
-; (after! treemacs
-;   (setq treemacs--width-is-locked nil)
-;   (setq treemacs-width 21)
-;   (treemacs-git-mode 'extended)
-;   (with-eval-after-load 'treemacs
-;     (defun treemacs-ignore-python-cache-dirs (_filename absolute-path)
-;       (or
-;        (cl-search "__pycache__" absolute-path)
-;        (cl-search ".pytest_cache" absolute-path)))
-;     (add-to-list 'treemacs-ignored-file-predicates #'treemacs-ignore-python-cache-dirs)
-;     (add-to-list 'treemacs-pre-file-insert-predicates #'treemacs-is-file-git-ignored?)))
+;; ;; customize treemacs
+;; (after! treemacs
+;;   (setq treemacs--width-is-locked nil)
+;;   (setq treemacs-width 21)
+;;   (treemacs-git-mode 'extended)
+;;   (with-eval-after-load 'treemacs
+;;     (defun treemacs-ignore-python-cache-dirs (_filename absolute-path)
+;;       (or
+;;        (cl-search "__pycache__" absolute-path)
+;;        (cl-search ".pytest_cache" absolute-path)))
+;;     (add-to-list 'treemacs-ignored-file-predicates #'treemacs-ignore-python-cache-dirs)
+;;     (add-to-list 'treemacs-pre-file-insert-predicates #'treemacs-is-file-git-ignored?)))
 
-; ;; ace window fix (required by treemacs)
-; (require 'ace-window)
+;; ;; ace window fix (required by treemacs)
+;; (require 'ace-window)
 
 ;; Make evil usable in terminal
 (when (not (display-graphic-p))
@@ -60,3 +60,7 @@
 
 ;; https://emacs.stackexchange.com/questions/28135/in-evil-mode-how-can-i-prevent-adding-to-the-kill-ring-when-i-yank-text-visual
 (setq-default evil-kill-on-visual-paste nil)
+
+
+;; don't show code action on sideline, as it blocks the code
+(setq lsp-ui-sideline-show-code-actions nil)
