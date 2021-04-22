@@ -132,7 +132,7 @@ Find packages at https://search.nixos.org/packages
 
 ```sh
 # Essential libraries with brew
-brew install cliclick starship yabai shkd gh coreutils fontconfig
+brew install cliclick starship yabai shkd gh coreutils fontconfig ranger
 brew install vale # modern proselint
 
 # Fzf history search
@@ -188,6 +188,12 @@ brew install latexindent
 brew install --cask font-gentium-plus
 brew install --cask font-tex-gyre-pagella
 brew install --cask font-tex-gyre-pagella-math
+
+# Cabal setup (I don't use stack)
+cabal install implicit-hie # gen-hie > hie.yaml (required for haskell-language-server)
+cabal install cabal-fmt 
+cabal install stylish-haskell
+cabal install hoogle 
 ```
 
 ## Configuration

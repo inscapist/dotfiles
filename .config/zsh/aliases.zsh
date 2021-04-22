@@ -6,7 +6,7 @@ alias ..="cd .."
 alias ...="cd ../.."
 
 alias a="aws"
-alias c="choose"
+alias c="cabal"
 alias e="emacs -nw"
 alias f="fd"
 alias g="git"
@@ -29,6 +29,7 @@ alias batt="battery"
 alias lls="/bin/ls"
 alias ls="exa"
 alias la='exa -lbhHigUmuSa --git --color-scale'
+alias np='nix-env -f "<nixpkgs>"'
 alias genrand="openssl rand -hex 32"
 alias lg="lazygit"
 alias po="poetry"
