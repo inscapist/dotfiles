@@ -28,5 +28,4 @@
 ;; (package! tao-theme)
 
 ;; Use latest packages
-(package! format-all :pin "eb5906c7070b667432194da3991daf21f24b516a")
-(package! language-id :pin "30a5bc267af7de167d0a835ead828016e6e7e14c")
+;; (unpin! format-all) ;; https://github.com/lassik/emacs-format-all-the-code/issues/27
