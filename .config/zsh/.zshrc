@@ -110,7 +110,6 @@ zinit wait lucid light-mode for \
 
 path=(
   $HOME/.local/bin
-  $HOME/go/bin
   $HOME/dotfiles/bin
   $HOME/.emacs.d/bin
   /usr/local/opt/texinfo/bin
@@ -129,9 +128,8 @@ export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
 
 if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-[ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env" # cargo-env
-[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export PATH="$HOME/.poetry/bin:$PATH"
+# hook up direnv (and nix)
+eval "$(direnv hook zsh)"
