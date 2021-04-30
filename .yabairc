@@ -35,7 +35,7 @@ yabai -m rule --add app="^System Preferences$" manage=off
 
 # default space arrangement
 yabai -m rule --add app=Vivaldi space=1
-yabai -m rule --add app=Emacs space=2 opacity=0.88
+yabai -m rule --add app=Emacs space=2 opacity=0.88 manage=on
 yabai -m rule --add app=Spotify space=4 opacity=1.0
 yabai -m rule --add app=Safari space=4
 yabai -m rule --add app=WhatsApp space=5

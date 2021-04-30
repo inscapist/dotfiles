@@ -31,28 +31,6 @@
 ;; start with lisp interaction mode in scratch buffer
 (setq doom-scratch-initial-major-mode 'lisp-interaction-mode)
 
-;; ;; customize treemacs
-;; (after! treemacs
-;;   (setq treemacs--width-is-locked nil)
-;;   (setq treemacs-width 21)
-;;   (treemacs-git-mode 'extended)
-;;   (with-eval-after-load 'treemacs
-;;     (defun treemacs-ignore-python-cache-dirs (_filename absolute-path)
-;;       (or
-;;        (cl-search "__pycache__" absolute-path)
-;;        (cl-search ".pytest_cache" absolute-path)))
-;;     (add-to-list 'treemacs-ignored-file-predicates #'treemacs-ignore-python-cache-dirs)
-;;     (add-to-list 'treemacs-pre-file-insert-predicates #'treemacs-is-file-git-ignored?)))
-
-;; ;; ace window fix (required by treemacs)
-;; (require 'ace-window)
-
-;; Make evil usable in terminal
-(when (not (display-graphic-p))
-  (add-hook 'evil-insert-state-entry-hook (lambda () (send-string-to-terminal "\033[5 q")))
-  (add-hook 'evil-normal-state-entry-hook (lambda () (send-string-to-terminal "\033[0 q"))))
-
-
 ;; origami
 (global-origami-mode)
 (add-hook 'lsp-after-open-hook #'lsp-origami-try-enable)
