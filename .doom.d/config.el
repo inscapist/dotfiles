@@ -28,3 +28,11 @@
 (load! "+org")
 (load! "+ui")
 
+
+;; Safe variables
+(let ((always-true (lambda (_) t)))
+  (progn
+    (put 'cider-shadow-cljs-default-options 'safe-local-variable always-true)
+    (put 'cider-default-cljs-repl 'safe-local-variable always-true)
+    )
+  )
