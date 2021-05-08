@@ -51,3 +51,6 @@
 
 ;; thinner modeline for (modeline +light)
 (setq +modeline-height 18)
+
+;; Prevents some cases of Emacs flickering
+;;(add-to-list 'default-frame-alist '(inhibit-double-buffering . t))

@@ -11,7 +11,7 @@
 (setq direnv-always-show-summary nil)
 
 ;; Display line number, use `SPC t l' to toggle
-(setq display-line-numbers-type nil)
+(setq display-line-numbers-type t)
 
 ;; History & backup settings (save nothing, that's what git is for)
 (setq auto-save-default nil
@@ -26,7 +26,7 @@
 (setq read-process-output-max (* 1024 1024)) ;; 1mb
 
 ;; disable symbol highlighting
-(setq lsp-enable-symbol-highlighting nil)
+(setq lsp-enable-symbol-highlighting t)
 
 ;; start with lisp interaction mode in scratch buffer
 (setq doom-scratch-initial-major-mode 'lisp-interaction-mode)

@@ -14,8 +14,8 @@ yabai -m config window_opacity on
 yabai -m config window_opacity_duration 0.0
 yabai -m config window_shadow on
 yabai -m config insert_feedback_color 0xaad75f5f
-yabai -m config active_window_opacity 0.95
-yabai -m config normal_window_opacity 0.88
+yabai -m config active_window_opacity 0.93
+yabai -m config normal_window_opacity 0.83
 yabai -m config split_ratio 0.65
 yabai -m config auto_balance off
 yabai -m config mouse_modifier fn
@@ -35,11 +35,11 @@ yabai -m rule --add app="^System Preferences$" manage=off
 
 # default space arrangement
 yabai -m rule --add app=Vivaldi space=1
-yabai -m rule --add app=Emacs space=2 opacity=0.88 manage=on
-yabai -m rule --add app=Spotify space=4 opacity=1.0
-yabai -m rule --add app=Safari space=4
-yabai -m rule --add app=WhatsApp space=5
-yabai -m rule --add app=Discord space=5
+yabai -m rule --add app=Emacs space=2
+yabai -m rule --add app=WhatsApp space=4
+yabai -m rule --add app=Discord space=4
+yabai -m rule --add app=Spotify space=5 opacity=1.0
+yabai -m rule --add app=Safari space=5
 yabai -m rule --add app=Books manage=on opacity=1.0
 yabai -m rule --add app=Preview opacity=1.0
 
