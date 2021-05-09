@@ -42,3 +42,8 @@
 
 ;; don't show code action on sideline, as it blocks the code
 (setq lsp-ui-sideline-show-code-actions nil)
+
+;; popup rules
+(after! cider
+  (set-popup-rule! "^*cider-repl" :side 'right :size 0.35 :select t :modeline nil :quit nil :ttl nil))
+
