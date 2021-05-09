@@ -32,8 +32,8 @@
 (setq doom-scratch-initial-major-mode 'lisp-interaction-mode)
 
 ;; origami
-(global-origami-mode)
-(add-hook 'lsp-after-open-hook #'lsp-origami-try-enable)
+;;(global-origami-mode)
+;;(add-hook 'lsp-after-open-hook #'lsp-origami-try-enable)
 
 
 ;; https://emacs.stackexchange.com/questions/28135/in-evil-mode-how-can-i-prevent-adding-to-the-kill-ring-when-i-yank-text-visual

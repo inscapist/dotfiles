@@ -35,20 +35,6 @@
       (:map ranger-mode-map
        [escape] #'ranger-close ))
 
-; ;; Add/override treemacs keybindings
-; (map!
-;  :map treemacs-mode-map
-;  "p"     #'treemacs-peek
-;  "x"     #'treemacs-collapse-parent-node
-;  "X"     #'treemacs-collapse-all-projects
-;  "C-h"   #'evil-window-left
-;  "C-l"   #'evil-window-right
-;  "s-h"   #'+workspace/switch-left
-;  "s-l"   #'+workspace/switch-right
-;  "s-n"   #'+workspace/new
-;  "s-w"   #'+workspace/close-window-or-workspace
-;  "s-r"   #'+workspace/rename)
-
 ;; Add org-agenda keybindings
 (map! :after evil-org-agenda
       (:map evil-org-agenda-mode-map :m "S" nil)
