@@ -63,4 +63,5 @@
 (map! :leader "h h" #'lsp-describe-thing-at-point)
 
 ;; where smartparens lives, summon some cleverness
+;; Ma, I can now slurp and barf as i pleased T_T
 (add-hook 'smartparens-mode-hook #'evil-cleverparens-mode)
