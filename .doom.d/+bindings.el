@@ -75,3 +75,6 @@
 
 ;; toggle LSP Doc
 (map! :leader "h h" #'lsp-describe-thing-at-point)
+
+;; where smartparens lives, summon some cleverness
+(add-hook 'smartparens-mode-hook #'evil-cleverparens-mode)

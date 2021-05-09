@@ -16,8 +16,10 @@
 ;; Extra packages
 ;;(package! telephone-line)
 (package! zoom)
-(package! origami)
-(package! lsp-origami)
+(package! evil-cleverparens)
+
+;; (package! origami)
+;; (package! lsp-origami)
 ;;(package! graphviz-dot-mode)
 
 ;; Themes
