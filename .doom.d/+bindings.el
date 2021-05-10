@@ -3,6 +3,9 @@
 ;; Unbind prefixes
 (map! :n "r" nil)
 (map! :map evil-snipe-mode-map :nmo "S" nil)
+(map! :map evil-cleverparens-mode-map
+      :nmo "s" nil
+      :nmo "S" nil)
 
 
 ;; Simple sugar
