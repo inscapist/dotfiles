@@ -6,7 +6,7 @@
 
 ;; custom variables
 (setq felix/default-font "Ellograph CF"
-      felix/default-font-size 13
+      felix/default-font-size 14
       felix/default-font-weight 'light ;; refer font-weight-table variable
       felix/muted-font-height 0.95
       felix/treemacs-font "Unica One"
@@ -16,12 +16,11 @@
       felix/modeline-height 0.95)
 
 ;; font settings
-(setq
- doom-themes-enable-bold t
- doom-themes-enable-italic t
- doom-font (font-spec :family felix/default-font :size felix/default-font-size :weight felix/default-font-weight)
- doom-variable-pitch-font (font-spec :family felix/treemacs-font :size felix/treemacs-font-size :weight felix/treemacs-font-weight)
- all-the-icons-scale-factor 0.7)
+(setq doom-themes-enable-bold t
+      doom-themes-enable-italic t
+      doom-font (font-spec :family felix/default-font :size felix/default-font-size :weight felix/default-font-weight)
+      doom-variable-pitch-font (font-spec :family felix/treemacs-font :size felix/treemacs-font-size :weight felix/treemacs-font-weight)
+      all-the-icons-scale-factor 0.7)
 
 
 ;; use kaolin theme
