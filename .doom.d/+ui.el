@@ -13,7 +13,7 @@
       felix/treemacs-font-size 11
       felix/treemacs-font-weight 'light
       felix/modeline-font "Ellograph CF"
-      felix/modeline-height 0.95)
+      felix/modeline-height 0.93)
 
 ;; font settings
 (setq doom-themes-enable-bold t

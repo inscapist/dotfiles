@@ -49,8 +49,9 @@
 
 ;; customize treemacs
 (after! treemacs
-  (setq treemacs--width-is-locked nil)
-  (setq treemacs-width 21)
+  (setq treemacs--width-is-locked nil
+        treemacs-width 21
+        treemacs-read-string-input 'from-minibuffer)
   (treemacs-git-mode 'extended)
   (with-eval-after-load 'treemacs
     (defun treemacs-ignore-python-cache-dirs (_filename absolute-path)
