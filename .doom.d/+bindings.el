@@ -5,8 +5,9 @@
 (map! :map evil-snipe-mode-map :nmo "S" nil)
 (map! :map evil-cleverparens-mode-map
       :nmo "s" nil
-      :nmo "S" nil)
-
+      :nmo "S" nil
+      :nmo "C-\\" nil)
+(map! :nmo "\\" nil)
 
 ;; Simple sugar
 (map!
@@ -48,6 +49,11 @@
  "s-w"   #'+workspace/close-window-or-workspace
  "s-r"   #'+workspace/rename)
 
+;; Add some sugar in smartparens mode
+(map!
+ :map smartparens-mode-map
+ "C-\\"   #'evil-jump-item
+ "\\"     #'evil-cp-next-closing)
 
 (map! :after ranger
       (:map ranger-mode-map
