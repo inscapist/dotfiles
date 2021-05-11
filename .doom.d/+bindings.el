@@ -51,9 +51,10 @@
 
 ;; Add some sugar in smartparens mode
 (map!
- :map smartparens-mode-map
- "C-\\"   #'evil-jump-item
- "\\"     #'evil-cp-next-closing)
+ :map evil-cleverparens-mode-map
+ :nmo "C-\\"   #'evil-jump-item
+ :nmo "\\"     #'evil-cp-next-closing
+ :nmo "o"      #'evil-cp-open-below-form)
 
 (map! :after ranger
       (:map ranger-mode-map
