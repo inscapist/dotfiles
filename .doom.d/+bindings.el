@@ -53,8 +53,8 @@
 (map!
  :map evil-cleverparens-mode-map
  :nmo "C-\\"   #'evil-jump-item
- :nmo "\\"     #'evil-cp-next-closing
- :nmo "o"      #'evil-cp-open-below-form)
+ :nmo "\\"     #'evil-cp-next-closing)
+ ;; :nmo "o"      #'evil-cp-open-below-form)
 
 (map! :after ranger
       (:map ranger-mode-map
