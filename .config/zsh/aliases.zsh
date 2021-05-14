@@ -23,7 +23,7 @@ alias t="tmux"
 alias y="yarn"
 
 
-alias la='exa -lbhHigUmuSa --git --color-scale'
+alias la='exa -la --git --color-scale'
 alias lg="lazygit"
 alias ls="exa"
 alias np='nix-env -f "<nixpkgs>"'
@@ -41,6 +41,7 @@ alias sha="npx shadow-cljs"
 alias yya="yarn global add"
 alias ya="yarn add"
 alias zap="brew uninstall --cask --zap"
+alias ports="sudo lsof -PiTCP -sTCP:LISTEN"
 
 alias doom-cache-clear="rm -rf ~/.emacs.d/.local/cache/*"
 alias dns-clear="sudo killall -HUP mDNSResponder;sudo dscacheutil -flushcache"

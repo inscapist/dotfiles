@@ -79,22 +79,9 @@ I use [Zinit](https://github.com/zdharma/zinit) as ZSH's plugin manager. My `.zs
 
 Pick any distro that you like.
 
-1. [Emacs Mac Port (recommended)](https://github.com/railwaycat/homebrew-emacsmacport)
+1. [Emacs Mac Port](https://github.com/railwaycat/homebrew-emacsmacport)
 2. [Emacs Plus](https://github.com/d12frosted/homebrew-emacs-plus)
-3. [GccEmacs](https://github.com/twlz0ne/nix-gccemacs-darwin)
-4. [Emacs Head (what i use)](https://github.com/daviderestivo/homebrew-emacs-head)
-
-Example:
-
-```sh
-# Takes about 15 mins
-brew install emacs-head@28 --with-cocoa --with-native-comp --with-modern-icon-black-dragon
-
-# Can take up to an hour
-brew install emacs-head@28 --with-cocoa --with-native-comp --with-native-full-aot --with-modern-icon-black-dragon
-```
-
-Read [here](https://www.emacswiki.org/emacs/GccEmacs) about GccEmacs
+3. [Emacs OSX](https://github.com/sagittaros/emacs-osx)
 
 ### Install doom emacs
 
@@ -191,9 +178,9 @@ brew install --cask font-tex-gyre-pagella-math
 
 # Cabal setup (I don't use stack)
 cabal install implicit-hie # gen-hie > hie.yaml (required for haskell-language-server)
-cabal install cabal-fmt 
+cabal install cabal-fmt
 cabal install stylish-haskell
-cabal install hoogle 
+cabal install hoogle
 ```
 
 ## Configuration

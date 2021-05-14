@@ -51,6 +51,8 @@
 (after! treemacs
   (setq treemacs--width-is-locked nil
         treemacs-width 21
+        treemacs-position 'left
+        treemacs-show-cursor t
         treemacs-read-string-input 'from-minibuffer)
   (treemacs-git-mode 'extended)
   (with-eval-after-load 'treemacs
