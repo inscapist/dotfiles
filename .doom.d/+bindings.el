@@ -46,15 +46,19 @@
  "s-h"   #'+workspace/switch-left
  "s-l"   #'+workspace/switch-right
  "s-n"   #'+workspace/new
- "s-w"   #'+workspace/close-window-or-workspace
- "s-r"   #'+workspace/rename)
+ "s-w"   #'+workspace/close-window-or-workspace)
 
 ;; Add some sugar in smartparens mode
 (map!
  :map evil-cleverparens-mode-map
+ :nmo "s-y"    #'evil-cp-yank-sexp
+ :nmo "s-r"    #'sp-raise-sexp
+ :nmo "s-\\"   #'evil-cp-copy-paste-form
+ :nmo "s-9"    #'evil-cp-wrap-next-round
+ :nmo "s-["    #'evil-cp-wrap-next-square
+ :nmo "s-{"    #'evil-cp-wrap-next-curly
  :nmo "C-\\"   #'evil-cp-previous-opening
  :nmo "\\"     #'evil-cp-next-closing)
- ;; :nmo "o"      #'evil-cp-open-below-form)
 
 (map! :after ranger
       (:map ranger-mode-map
