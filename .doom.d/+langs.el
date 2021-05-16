@@ -8,7 +8,7 @@
   (add-to-list 'exec-path "~/elixir-ls"))
 
 ;; disable lsp formatting
-(setq +format-with-lsp nil)
+;; (setq +format-with-lsp nil)
 
 ;; electric rjsx
 ;; https://github.com/felipeochoa/rjsx-mode/issues/112
