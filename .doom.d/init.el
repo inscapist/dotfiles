@@ -190,3 +190,7 @@
 
 ;; https://github.com/kiwanami/emacs-epc/issues/35
 (setq byte-compile-warnings '(cl-functions))
+
+(defadvice! shut-up-emacs28 (_msg form &optional _compile-only)
+  :override #'macroexp-warn-and-return
+  form)
