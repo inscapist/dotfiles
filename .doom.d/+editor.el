@@ -45,7 +45,8 @@
 
 ;; popup rules
 (after! cider
-  (set-popup-rule! "^*cider-repl" :side 'right :size 0.35 :select t :modeline nil :quit nil :ttl nil))
+  (set-popup-rule! "^*cider-repl" :side 'right :size 0.35 :select t :modeline nil :quit nil :ttl nil)
+  (set-popup-rule! "^*ivy" :side 'bottom :select t :modeline nil :quit nil :ttl nil))
 
 ;; customize treemacs
 (after! treemacs
