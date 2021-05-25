@@ -23,6 +23,8 @@ alias t="tmux"
 alias y="yarn"
 
 
+alias gp="git pull"
+alias gf="git fetch"
 alias la='exa -la --git --color-scale'
 alias lg="lazygit"
 alias ls="exa"
