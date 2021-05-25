@@ -5,6 +5,8 @@
 (package! undo-fu-session :disable t)
 (package! alchemist :disable t)
 (package! alchemist-company :disable t)
+(package! lsp-ui :disable t)
+
 
 ;; Extra packages
 (package! zoom)
