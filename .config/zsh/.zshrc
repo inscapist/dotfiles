@@ -133,3 +133,4 @@ if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc
 
 # hook up direnv (and nix)
 eval "$(direnv hook zsh)"
+export DIRENV_LOG_FORMAT=""
