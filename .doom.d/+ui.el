@@ -9,9 +9,6 @@
       felix/default-font-size 13
       felix/default-font-weight 'light ;; refer font-weight-table variable
       felix/muted-font-height 0.95
-      felix/treemacs-font "Unica One"
-      felix/treemacs-font-size 11
-      felix/treemacs-font-weight 'light
       felix/modeline-font "Ellograph CF"
       felix/modeline-height 0.93)
 
@@ -27,8 +24,7 @@
 (use-package kaolin-themes
   :config
   (load-theme 'kaolin-mono-dark t)
-  (setq kaolin-themes-italic-comments t)
-  (kaolin-treemacs-theme))
+  (setq kaolin-themes-italic-comments t))
 
 
 ;; customize faces. list with SPC-h-F
@@ -37,8 +33,7 @@
   `(font-lock-keyword-face :slant italic :weight thin :height ,felix/muted-font-height)
   `(font-lock-function-name-face :slant normal :weight normal)
   `(mode-line :height ,felix/modeline-height :family ,felix/modeline-font)
-  `(mode-line-inactive :height ,felix/modeline-height ,felix/modeline-font)
-  `(treemacs-root-face :family ,felix/default-font :slant italic :weight normal))
+  `(mode-line-inactive :height ,felix/modeline-height ,felix/modeline-font))
 
 ;; performance hack
 (setq inhibit-compacting-font-caches t)
@@ -46,9 +41,3 @@
 ;; thinner modeline for (modeline +light)
 (setq +modeline-height 18)
 
-
-;; Yabai can handle this better, globally
-;; (doom/set-frame-opacity 88)
-
-;; ;; Prevents some cases of Emacs flickering
-;; (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))

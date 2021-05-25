@@ -48,21 +48,3 @@
   (set-popup-rule! "^*cider-repl" :side 'right :size 0.35 :select t :modeline nil :quit nil :ttl nil)
   (set-popup-rule! "^*ivy" :side 'bottom :select t :modeline nil :quit nil :ttl nil))
 
-;; customize treemacs
-(after! treemacs
-  (setq treemacs--width-is-locked nil
-        treemacs-width 21
-        treemacs-position 'left
-        treemacs-show-cursor t
-        treemacs-read-string-input 'from-minibuffer)
-  (treemacs-git-mode 'extended)
-  (with-eval-after-load 'treemacs
-    (defun treemacs-ignore-python-cache-dirs (_filename absolute-path)
-      (or
-       (cl-search "__pycache__" absolute-path)
-       (cl-search ".pytest_cache" absolute-path)))
-    (add-to-list 'treemacs-ignored-file-predicates #'treemacs-ignore-python-cache-dirs)
-    (add-to-list 'treemacs-pre-file-insert-predicates #'treemacs-is-file-git-ignored?)))
-
-;; ace window fix
-(require 'ace-window)
