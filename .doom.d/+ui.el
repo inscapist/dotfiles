@@ -16,7 +16,6 @@
 (setq doom-themes-enable-bold t
       doom-themes-enable-italic t
       doom-font (font-spec :family felix/default-font :size felix/default-font-size :weight felix/default-font-weight)
-      doom-variable-pitch-font (font-spec :family felix/treemacs-font :size felix/treemacs-font-size :weight felix/treemacs-font-weight)
       all-the-icons-scale-factor 0.7)
 
 
