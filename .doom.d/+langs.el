@@ -7,9 +7,6 @@
   (setq lsp-enable-file-watchers nil)
   (add-to-list 'exec-path "~/elixir-ls"))
 
-;; disable lsp formatting
-;; (setq +format-with-lsp nil)
-
 ;; electric rjsx
 ;; https://github.com/felipeochoa/rjsx-mode/issues/112
 (defun +javascript-rjsx-electric-gt-a (_)
