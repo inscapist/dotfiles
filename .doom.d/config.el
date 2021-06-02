@@ -27,6 +27,7 @@
 (load! "+langs")
 (load! "+org")
 (load! "+ui")
+(load! "+filetree")
 
 
 ;; Safe variables
