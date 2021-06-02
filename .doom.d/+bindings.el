@@ -1,13 +1,19 @@
 ;;; $DOOMDIR/+bindings.el -*- lexical-binding: t; -*-
 
 ;; Unbind prefixes
-(map! :n "r" nil)
-(map! :map evil-snipe-mode-map :nmo "S" nil)
+(map! :nmo "r" nil
+      :nmo "\\" nil
+      :nmo "," nil)
+(map! :map evil-snipe-mode-map
+      :nmo "S" nil
+      :nmo "," nil)
+(map! :map evil-snipe-override-mode-map
+      :nmo "S" nil
+      :nmo "," nil)
 (map! :map evil-cleverparens-mode-map
       :nmo "s" nil
       :nmo "S" nil
       :nmo "C-\\" nil)
-(map! :nmo "\\" nil)
 
 ;; Simple sugar
 (map!
