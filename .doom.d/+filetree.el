@@ -23,3 +23,6 @@
        (cl-search ".pytest_cache" absolute-path)))
     (add-to-list 'treemacs-ignored-file-predicates #'treemacs-ignore-python-cache-dirs)
     (add-to-list 'treemacs-pre-file-insert-predicates #'treemacs-is-file-git-ignored?)))
+
+;; ace window fix
+(require 'ace-window)

@@ -15,5 +15,10 @@
 ;;(package! lsp-origami)
 ;;(package! graphviz-dot-mode)
 
+
 ;; Themes
 (package! kaolin-themes)
+
+
+;; Unpin
+(unpin! (:lang clojure python elixir javascript))

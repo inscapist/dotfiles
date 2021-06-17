@@ -80,8 +80,8 @@
 
        :checkers
        syntax              ; tasing you for every semicolon you forget
-       ;;(spell +flyspell) ;; SPC t s to toggle
-       ;;grammar           ; tasing grammar mistake every you make
+       (spell +flyspell) ;; SPC t s to toggle
+       grammar           ; tasing grammar mistake every you make
 
        :tools
        ;;ansible
@@ -137,7 +137,7 @@
        (javascript +lsp)        ; all(hope(abandon(ye(who(enter(here))))))
        ;;julia             ; a better, faster MATLAB
        ;;kotlin            ; a better, slicker Java(Script)
-       (latex +fold)             ; writing papers in Emacs has never been so fun
+       (latex +fold +lsp)             ; writing papers in Emacs has never been so fun
        ;;lean
        ;;factor
        ;;ledger            ; an accounting system in Emacs

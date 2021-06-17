@@ -47,4 +47,11 @@
 (after! cider
   (set-popup-rule! "^*cider-repl" :side 'right :size 0.35 :select t :modeline nil :quit nil :ttl nil)
   (set-popup-rule! "^*ivy" :side 'bottom :select t :modeline nil :quit nil :ttl nil))
+  ;;(setq cider-ns-refresh-show-log-buffer t))
 
+
+;; Allow local variables to be set
+(put 'cider-ns-refresh-before-fn 'safe-local-variable (lambda (_) t))
+(put 'cider-ns-refresh-after-fn 'safe-local-variable (lambda (_) t))
+(put 'cider-default-cljs-repl 'safe-local-variable (lambda (_) t))
+(put 'cider-shadow-cljs-default-options 'safe-local-variable (lambda (_) t))
