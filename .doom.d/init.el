@@ -80,8 +80,8 @@
 
        :checkers
        syntax              ; tasing you for every semicolon you forget
-       (spell +flyspell) ;; SPC t s to toggle
-       grammar           ; tasing grammar mistake every you make
+       ;;(spell +flyspell) ;; SPC t s to toggle
+       grammar           ; M-x langtool-check
 
        :tools
        ;;ansible
