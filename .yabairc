@@ -32,6 +32,7 @@ yabai -m config window_gap 6
 
 # ignore
 yabai -m rule --add app="^System Preferences$" manage=off
+yabai -m rule --add app="^Transmission$" manage=off
 
 # default space arrangement
 yabai -m rule --add app=Vivaldi space=1
