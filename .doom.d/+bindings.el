@@ -59,6 +59,7 @@
  :map evil-cleverparens-mode-map
  :nmo "s-y"    #'evil-cp-yank-sexp
  :nmo "s-r"    #'sp-raise-sexp
+ :nmo "s-k"    #'delete-indentation
  :nmo "s-\\"   #'evil-cp-copy-paste-form
  :nmo "s-9"    #'evil-cp-wrap-next-round
  :nmo "s-["    #'evil-cp-wrap-next-square

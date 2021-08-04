@@ -15,6 +15,8 @@
     (save-excursion (insert "<"))))
 (advice-add #'rjsx-electric-gt :after #'+javascript-rjsx-electric-gt-a)
 
+;; typescript tsx use prettier
+(setq-hook! 'typescript-tsx-mode-hook +format-with-lsp nil)
 
 ;; where smartparens lives, summon some cleverness
 ;; Ma, I can now slurp and barf as i pleased T_T
