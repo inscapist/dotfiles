@@ -37,9 +37,14 @@
  :ne "s-n"   #'+workspace/new
  :ne "s-w"   #'+workspace/close-window-or-workspace
  :ne "s-r"   #'+workspace/rename)
+
 (map! :leader
       "o o" #'dired-jump
       "o O" #'projectile-dired)
+
+;; Utils
+(map!
+ "C-c C-\\" #'evil-make)
 
 ;; Add/override treemacs keybindings
 (map!

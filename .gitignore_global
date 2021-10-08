@@ -83,3 +83,6 @@ __pycache__
 /dist/
 ## Python egg metadata, regenerated from source files by setuptools.
 /*.egg-info
+
+# nodejs
+node_modules/

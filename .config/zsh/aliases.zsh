@@ -46,7 +46,12 @@ alias sha="npx shadow-cljs"
 alias yya="yarn global add"
 alias ya="yarn add"
 alias zap="brew uninstall --cask --zap"
+alias pip="python -m pip"
 alias ports="sudo lsof -PiTCP -sTCP:LISTEN"
+
+# postgresql
+alias pg-start="launchctl load ~/Library/LaunchAgents"
+alias pg-stop="launchctl unload ~/Library/LaunchAgents"
 
 alias doom-cache-clear="rm -rf ~/.emacs.d/.local/cache/*"
 alias dns-clear="sudo killall -HUP mDNSResponder;sudo dscacheutil -flushcache"

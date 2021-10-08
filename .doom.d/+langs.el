@@ -5,6 +5,7 @@
 ;; Elixir
 (after! lsp-mode
   (setq lsp-enable-file-watchers nil)
+  (setq lsp-clients-typescript-init-opts '(:importModuleSpecifierPreference "non-relative"))
   (add-to-list 'exec-path "~/elixir-ls"))
 
 ;; electric rjsx
@@ -17,6 +18,11 @@
 
 ;; typescript tsx use prettier
 (setq-hook! 'typescript-tsx-mode-hook +format-with-lsp nil)
+(setq-hook! 'typescript-mode-hook +format-with-lsp nil)
+
+;; do not format markdown slidev
+(setq-hook! 'markdown-mode-hook +format-with :none)
+
 
 ;; where smartparens lives, summon some cleverness
 ;; Ma, I can now slurp and barf as i pleased T_T

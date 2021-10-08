@@ -134,3 +134,11 @@ if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc
 # hook up direnv (and nix)
 eval "$(direnv hook zsh)"
 export DIRENV_LOG_FORMAT=""
+
+export PATH="$HOME/.poetry/bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/xi/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/xi/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/xi/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/xi/google-cloud-sdk/completion.zsh.inc'; fi

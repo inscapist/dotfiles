@@ -7,6 +7,8 @@
 ;; https://github.com/gregsexton/origami.el
 (defhydra hydra-folding (:color red)
   ("Z" origami-mode "Toggle origami mode" :column "Main")
+  ("/" origami-mode "Toggle origami mode")
+  ("\\" lsp-origami-mode "Toggle origami mode")
   ("S" origami-show-only-node "Close everything except folds")
   ("u" origami-undo "Undo folds")
   ("r" origami-redo "Redo folds")

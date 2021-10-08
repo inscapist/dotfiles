@@ -8,13 +8,13 @@ env:
 
 font:
   normal:
-    family: Ellograph CF
-    style: Light
+    family: Cartograph CF Testing
+    style: Light Italic
   bold:
-    family: Ellograph CF
-    style: Demi Bold
+    family: Cartograph CF Testing
+    style: Bold
   italic:
-    family: Ellograph CF
+    family: Cartograph CF Testing
     style: Thin Italic
   size: 12
   offset:
