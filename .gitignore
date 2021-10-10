@@ -1,2 +1,3 @@
 bin/chatcutter
 .config/zsh/secrets.zsh
+/.config/zsh/.zcompcache/

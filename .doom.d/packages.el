@@ -18,6 +18,7 @@
 (package! origami)
 (package! lsp-origami)
 (package! graphviz-dot-mode)
+(package! sqlformat)
 
 
 ;; Themes
