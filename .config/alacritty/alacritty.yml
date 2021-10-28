@@ -8,14 +8,14 @@ env:
 
 font:
   normal:
-    family: Cartograph CF Testing
-    style: Light Italic
+    family: Sarasa Term CL
+    style: Regular
   bold:
-    family: Cartograph CF Testing
+    family: Sarasa Term CL
     style: Bold
   italic:
-    family: Cartograph CF Testing
-    style: Thin Italic
+    family: Sarasa Term CL
+    style: ExtraLight Italic
   size: 12
   offset:
     x: 0
