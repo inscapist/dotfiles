@@ -10,7 +10,7 @@
 
 ;; SQL
 (setq sqlformat-command 'pgformatter)
-(setq sqlformat-args '("-s2" "-g"))
+(setq sqlformat-args '("-s2" "-g" "-u" "2" "-U" "1"))
 
 ;; electric rjsx
 ;; https://github.com/felipeochoa/rjsx-mode/issues/112
