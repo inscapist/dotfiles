@@ -11,7 +11,7 @@
 ;; customize treemacs
 (after! treemacs
   (setq treemacs--width-is-locked nil
-        treemacs-width 21
+        treemacs-width 28
         treemacs-position 'left
         treemacs-show-cursor t
         treemacs-read-string-input 'from-minibuffer)
